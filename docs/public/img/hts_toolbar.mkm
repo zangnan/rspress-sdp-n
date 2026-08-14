@@ -1,0 +1,16 @@
+<MKM version="2.0" imageFileUrl="file:///D:/work/ddit/code/dumi.saas.2303.21/docs/static/img/hts_toolbar.png">
+  <Marks>
+    <LengthMark direction="3" color="16711680" length="51" x="597" y="91"/>
+    <LengthMark direction="12" color="16711680" length="20" x="-1" y="24"/>
+    <LengthMark direction="12" color="16711680" length="20" x="980" y="25"/>
+    <TextMark defaultDirection="10" direction="10" color="16711680" x="8" y="35" textMaxWidth="157" offsetX="38" offsetY="23" text="外层面板内间距20px"/>
+    <TextMark defaultDirection="6" direction="6" color="16711680" x="994" y="37" textMaxWidth="141" offsetX="24" offsetY="22" text="外层面板内间距20px"/>
+    <TextMark defaultDirection="10" direction="10" color="16711680" x="309" y="29" textMaxWidth="100" offsetX="40" offsetY="30" text="标题字号16px"/>
+    <TextMark defaultDirection="10" direction="10" color="16711680" x="610" y="40" textMaxWidth="175" offsetX="39" offsetY="19" text="链接类型按钮，前后间距0px"/>
+    <LengthMark direction="12" color="16711680" length="10" x="911" y="115"/>
+    <TextMark defaultDirection="6" direction="6" color="16711680" x="918" y="127" textMaxWidth="176" offsetX="43" offsetY="21" text="链接按钮与图标按钮间距10px"/>
+    <TextMark defaultDirection="10" direction="10" color="16711680" x="115" y="137" textMaxWidth="144" offsetX="56" offsetY="13" text="作则放置筛选条件"/>
+    <TextMark defaultDirection="10" direction="10" color="16711680" x="127" y="224" textMaxWidth="100" offsetX="101" offsetY="27" text="左侧放置单位"/>
+    <TextMark defaultDirection="10" direction="10" color="16711680" x="185" y="44" textMaxWidth="100" offsetX="30" offsetY="16" text="左侧放置标题"/>
+  </Marks>
+</MKM>

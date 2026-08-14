@@ -1,0 +1,172 @@
+# 事件 & API
+
+## API
+
+### DDBaseGrid
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| [config](/component/api/basegrid/api_event.html#config) | 基础配置 | object | - |
+| func | 列的自定义渲染、操作列设置、行单/双击事件，参照 [后端分页---复杂示例](/component/api/basegrid/eg_code.html#后端分页---复杂示例) | object | - |
+| actionRef | 列表ref，参照 [后端分页---复杂示例](/component/api/basegrid/eg_code.html#后端分页---复杂示例) | RefObject | - |
+| queryParam | 查询接口携带参数，参照 [后端分页---复杂示例](/component/api/basegrid/eg_code.html#后端分页---复杂示例) | object | - |
+| onRow | 行事件，参照 [后端分页---复杂示例](/component/api/basegrid/eg_code.html#后端分页---复杂示例) | object | - |
+| afterReloadGridData | 数据加载后执行，参照 [后端分页---复杂示例](/component/api/basegrid/eg_code.html#后端分页---复杂示例) | function | - |
+| userDataSource | 直接传入列表数据，参照 [传入数据---前端分页](/component/api/basegrid/eg_code.html#传入数据--前端分页) | function | - |
+| [Antd Table](https://ant.design/component/table-cn#api) | 支持所有Antd Table属性设置 | - | - |
+
+### config
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| api_grid_query | 列表查询api | string | - |
+| grid_sticky_affix | 列表锁定高度 | number | - |
+| grid_scroll_y | y轴滚动条，默认null | number | - |
+| grid_scroll_x | x轴滚动条，默认700px | number | 700 |
+| grid_border | 是否显示序号 | boolean | true |
+| grid_handle_width | 自定义操作列宽度 | number | - |
+| grid_row_key | 主键 | string\|array | uuid |
+| grid_show_serial_number | 是否显示序号 | boolean | false |
+| grid_click_checked |  是否开启单击或双击勾选事件，1单击勾选，2双击勾选 | `1`\|`2`\|`-` | - |
+| [grid_columns](/component/api/basegrid/api_event.html#configgrid_columns) | 列表列 | array | - |
+
+### config.grid_columns
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| title | 列头显示文字 | string | - |
+| dataIndex | 数据key | string | - |
+| width | 列宽度 | number | - |
+| fixed | 列是否固定 | `left`\|`right` | - |
+| titleTooltip | 列头说明文字 | string | - |
+| align | 列对齐方式 | `left`\|`right`\|`center` | `left` |
+| ellipsis | 超过宽度自动省略 | boolean | false |
+| hidden | 隐藏列 | boolean | false |
+| sorter | 排序 | boolean | false |
+| sum | 是否开启求和 | boolean | false |
+| sum2 | 是否开启后端求和 | boolean | false |
+| children | 分组表头 | grid_columns[] | - |
+| [render](/component/api/basegrid/api_event.html#configgrid_columnsrender) | 列渲染 | objcet | - |
+| [filter](/component/api/basegrid/api_event.html#configgrid_columnsfilter) | 表头筛选 | objcet | - |
+| [codeTable](/component/api/basegrid/api_event.html#configgrid_columnscodetable) | 码表转换 | objcet | - |
+
+### config.grid_columns.render
+
+#### 格式化数值
+
+```ts
+render: { type: 'number', format: '0,0.0000' }
+render: { type: 'number', format: '0,0.00' }
+```
+
+#### 格式化时间
+
+```ts
+render: { type: 'date', format: 'YYYY-MM-DD' }
+render: { type: 'date', format: 'YYYY-MM-DD HH:mm:ss' }
+```
+
+#### 前端格式化码表
+
+* 也可以利用 [codeTable](/component/api/basegrid/api_event.html#configgrid_columnscodetable) 属性格式化码表
+* 可结合 [格式化图标类](/component/api/basegrid/api_event.html#格式化图标类) 配套使用
+
+```ts
+render: {
+  map: [
+    { value: 'Y', text: '检查通过' },
+    { value: 'N', text: '检查未通过' },
+    { value: '', text: '未检查' },
+  ]
+}
+```
+
+#### 格式化图标类
+
+```ts
+// color可选: default|success|processing|error|warning
+render: {
+  // Tag
+  tag: [
+    { value: '0139', color: 'default' },
+    { value: '0130', color: 'error' },
+    { value: '', color: 'processing' },
+  ],
+  // 图标
+  icon: [
+    { value: '0139', icon: 'CheckOutlined', color: 'default' },
+    { value: '0130', icon: 'CoffeeOutlined', color: 'error' },
+    { value: '', icon: 'RobotOutlined', color: 'processing' },
+  ],
+  // 状态点
+  circle: [
+    { value: '0139', color: 'default' },
+    { value: '0130', color: 'error' },
+    { value: '', color: 'processing' },
+  ]
+}
+
+```
+
+#### 自定义格式化
+
+* 需要结合func属性配套使用
+* 参照示例 [后端分页 - 复杂示例](/component/api/basegrid/eg_code.html#后端分页---复杂示例)
+
+```ts
+render: { func: 'renderExampleXh4' }
+```
+
+### config.grid_columns.codeTable
+
+* 也可以利用 config.grid_columns.render [前端格式化码表](/component/api/basegrid/api_event.html#前端格式化码表) 属性格式化码表
+* 可结合 [格式化图标类](/component/api/basegrid/api_event.html#格式化图标类) 配套使用
+
+```ts
+codeTable: ['code_dm_ckts_hgjldw', '01']
+```
+
+### config.grid_columns.filter
+
+#### 多选
+
+```ts
+// 基于码表取值
+filter: {
+  type: 'Select',
+  codeTable: ['code_dm_ckts_hgjgfs', '01'],
+  showCode: true,
+}
+// 基于前端取值
+filter: {
+  type: 'Select',
+  list: [
+    { text: '已结关', value: 'yjg' },
+    { text: '未结关', value: 'wjg' },
+  ],
+}
+```
+
+#### 单选
+
+```ts
+// 基于码表取值
+filter: {
+  type: 'Radio',
+  codeTable: ['code_dm_ckts_hgzfjsfs', '01'],
+},
+// 基于前端取值
+filter: {
+  type: 'Radio',
+  list: [
+    { text: '全部', value: 'qb' },
+    { text: '通过', value: 'tg' },
+    { text: '驳回', value: 'bh' },
+  ],
+},
+```
+
+#### 录入框
+
+```ts
+filter: {
+  type: 'Input',
+}
+```

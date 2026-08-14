@@ -1,0 +1,10 @@
+[
+  { "type": "file", "name": "index", "label": "组件总览" },
+  { "type": "section-header", "label": "组件" },
+  { "type": "dir", "name": "basegrid", "label": "基础列表", "collapsible": true, "collapsed": false },
+  { "type": "dir", "name": "baseform", "label": "基础表单", "collapsible": true, "collapsed": false },
+  { "type": "dir", "name": "unit", "label": "基础单元", "collapsible": true, "collapsed": false },
+  { "type": "dir", "name": "unit_tree", "label": "基础单元树", "collapsible": true, "collapsed": false },
+  { "type": "section-header", "label": "通用" },
+  { "type": "file", "name": "util", "label": "工具类" }
+]

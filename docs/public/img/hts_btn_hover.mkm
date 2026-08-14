@@ -1,0 +1,9 @@
+<MKM version="2.0" imageFileUrl="file:///D:/work/ddit/apache-tomcat-7.0.37/webapps/md/hts_btn_hover.png">
+  <Marks>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="548015" offsetX="52" offsetY="40" x="19" y="40"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="548015" offsetX="50" offsetY="12" x="209" y="31"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="548015" offsetX="64" offsetY="24" x="195" y="35"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="548015" offsetX="86" offsetY="41" x="142" y="44"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="548015" offsetX="105" offsetY="66" x="123" y="35"/>
+  </Marks>
+</MKM>

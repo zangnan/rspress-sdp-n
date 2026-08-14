@@ -1,0 +1,11 @@
+<MKM version="2.0" imageFileUrl="file:///D:/work/ddit/code/dumi.saas.2303.21/docs/static/img/hts_loading0.png">
+  <Marks>
+    <LengthMark direction="12" color="16711680" length="32" x="16" y="7"/>
+    <LengthMark direction="3" color="16711680" length="32" x="6" y="15"/>
+    <LengthMark direction="12" color="16711680" length="10" x="19" y="61"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="2194943" offsetX="54" offsetY="7" x="23" y="22"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="6464511" offsetX="36" offsetY="4" x="41" y="21"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="10799871" offsetX="36" offsetY="9" x="41" y="40"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="9354751" offsetX="53" offsetY="23" x="24" y="40"/>
+  </Marks>
+</MKM>

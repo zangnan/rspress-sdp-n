@@ -1,0 +1,20 @@
+<MKM version="2.0" imageFileUrl="file:///D:/work/ddit/code/dumi.saas.2303.21/public/img/hts_layout.png">
+  <Marks>
+    <LengthMark direction="12" color="16711680" length="200" x="0" y="206"/>
+    <LengthMark direction="3" color="16711680" length="40" x="191" y="64"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="14541027" offsetX="86" offsetY="37" x="174" y="276"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="3294810" offsetX="109" offsetY="47" x="312" y="31"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="1976886" offsetX="100" offsetY="53" x="510" y="40"/>
+    <LengthMark direction="12" color="16711680" length="16" x="0" y="122"/>
+    <LengthMark direction="12" color="16711680" length="16" x="185" y="124"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="3294810" offsetX="154" offsetY="76" x="105" y="89"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="16777215" offsetX="101" offsetY="17" x="159" y="92"/>
+    <LengthMark direction="12" color="16711680" length="20" x="434" y="8"/>
+    <LengthMark direction="12" color="16711680" length="20" x="562" y="8"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="13756671" offsetX="80" offsetY="54" x="659" y="24"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="16777215" offsetX="67" offsetY="52" x="543" y="21"/>
+    <LengthMark direction="3" color="16711680" length="20" x="248" y="44"/>
+    <LengthMark direction="12" color="16711680" length="20" x="201" y="70"/>
+    <LengthMark direction="3" color="16711680" length="44" x="755" y="1"/>
+  </Marks>
+</MKM>

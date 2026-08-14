@@ -1,0 +1,6 @@
+<MKM version="2.0" imageFileUrl="file:///D:/work/ddit/apache-tomcat-7.0.37/webapps/md/hts_btn_toolbar_right.png">
+  <Marks>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="12303291" offsetX="37" offsetY="11" x="70" y="22"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="545952" offsetX="46" offsetY="21" x="61" y="30"/>
+  </Marks>
+</MKM>

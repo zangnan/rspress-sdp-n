@@ -1,0 +1,11 @@
+<MKM version="2.0" imageFileUrl="file:///D:/work/ddit/apache-tomcat-7.0.37/webapps/md/hts_filter.png">
+  <Marks>
+    <LengthMark direction="3" color="16711680" length="69" x="288" y="13"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="16412160" offsetX="37" offsetY="10" x="371" y="81"/>
+    <LengthMark direction="3" color="16711680" length="20" x="102" y="14"/>
+    <LengthMark direction="12" color="16711680" length="20" x="12" y="44"/>
+    <LengthMark direction="12" color="16711680" length="20" x="1032" y="38"/>
+    <LengthMark direction="12" color="16711680" length="220" x="832" y="74"/>
+    <LengthMark direction="3" color="16711680" length="18" x="595" y="63"/>
+  </Marks>
+</MKM>
