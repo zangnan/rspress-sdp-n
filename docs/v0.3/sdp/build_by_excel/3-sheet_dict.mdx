@@ -2,72 +2,72 @@ import { Badge } from '@theme';
 
 # Sheet.字段
 
-## 数据表
-### 图示 1~10
-![](/excel_intro/module_intro_15.png)
-### 参数取值说明
+## 填写示例
+
+详见填写说明
+
+## 填写说明
+
+### 字段
+
+#### 模块分组标题、数据字典、字段名称、字段中文名、关联字段表达式、字段初始排序
+
+![](/excel_intro/module_intro_86.png)
+
+- 参数取值说明
+
 | 参数 | 可选值 | 对应api参数 | 说明 |
 | --- | --- | --- | --- |
-| 1.分组标题 | | | 数据字典中文及英文名称，格式：`中文名 英文名` |
-| 2.主表字段 | | grid_columns[].dataIndex & *_items[].name | 数据库建表标识，用于列表及表单展示中的基于数据库主表的字段，格式：表名.字段名 |
-| 3.关联表字段 | | grid_columns[].dataIndex & *_items[].name | 数据库建表标识，用于列表及表单展示中的基于数据库从表的字段，格式：表名.字段名 |
-| 4.字段中文名 | | grid_columns[].title & *_items[].label | 数据库建表标识，用于页面展示：列表列标题，表单项名称，筛选项名称 |
-| 5.数据类型 | | | 数据库建表标识，数据类型 |
-| 6.键 | `主键` | | 数据库建表标识，键标识 |
-| 7.默认值 | | | 数据库建表标识，默认值标识 |
-| 8.非空 | `N` | | 数据库建表标识，非空标识 |
-| 9.关联字段表达式 | | | 数据库查询标识 |
-| 10.字段过滤器 | | | 预留字段 |
-#### 参数2.主表字段 <Badge text="2024-10-17" type="tip" />
-* 无需书写表名，名表通过当前数据字典查找**表管理sheet**页获取
-* 字段为小写格式
-#### 参数3.关联表字段 <Badge text="2024-10-17" type="tip" />
-* 需按需写表名，格式为**表明.字段名**，如查询申报表的出口商品代码，则标记为**mts_tssb.cksp_dm**
-* 字段为小写格式
-#### 参数5.数据类型
-**示例**
-* 表关联：`varchar(32)`
-* 表关联：`char(5)`
-* 表关联：`datetime`
-* 表关联：`decimal(18,6)`
-* 表关联：`char(5)`
-#### 参数9.关联字段表达式 <Badge text="2024-10-17" type="tip" />
-**示例**
-* 表关联：`left join mts_tssb.ssq`
-* 字段重命名：`ext:sbny`，接口中，重命名字段名称
-* 关联字段：`ref:gnqyfs_dm`，多用于码表中文所需要的关联字段
-* 字段初始排序：`order:asc`，标识当前字段用于列表展示时的初始排序，且标识排序规则
-* 分词 <Badge text="2024-11-26" type="tip" />：`fc:2|fc_content1|0`，`|`号分割3个参数依次代表分词`分词字典类别`、`来源字段`、`分词规则`
+| 模块分组标题 | | | 表名称，格式：`模块中文名 模块英文名` |
+| 数据字典 | | | 字段所属表 |
+| 字段名称 | | grid_columns[].dataIndex & *_items[].name | 字段名，用于列表及表单展示中的基于数据库主表的字段，格式：表名.字段名 |
+| 字段中文名 | | grid_columns[].title & *_items[].label | 用于页面展示：列表列标题，表单项名称，筛选项名称 |
+| 关联字段表达式 | | | 用于描述表间关系，如`left join ...` |
+| 字段初始排序 | | | 如`asc,10`、`desc,20`|
 
-## 列表项
-### 图示 3、5、11
+- 数据字典取自`表sheet页`分组中的英文表名。
+- 字段名称取自`表sheet页``字段`。
+- 关联字段表达式，用于描述表间关系，如`left join eg_mts_tssb on eg_mts_tsjh.ssq = eg_mts_tssb.ssq`、`left join eg_mts_tssb`
+- 字段初始排序：如`asc,10`、`desc,20`，标识当前字段用于列表展示时的初始排序及排序顺位。
+
+### 列表项
+
+#### 对齐方式、固定列、合并列头
+
 ![](/excel_intro/module_intro_07.png)
-### 图示 4、7、8、9
-![](/excel_intro/module_intro_08.png)
-### 图示 12
-![](/excel_intro/module_intro_13.png)
-### 参数取值说明
+
+- 参数取值说明
+
 | 参数 | 默认值 | 可选值 | 对应api参数 |
 | --- | --- | --- | --- |
-| 1.列表项开启标识 | | `1` | - |
-| 2.列表项主键标识 | | `1` | - |
-| 3.列表项对齐方式 | `L` | `L` \| `R` \| `C` | grid_columns[].align |
-| 4.列表项列宽 | | number |  grid_columns[].width |
-| 5.列表项固定列 | | `L` \| `R` | grid_columns[].fixed |
-| 6.列表项隐藏标识 | | `1` | grid_columns[].hidden |
-| 7.列表项超出隐藏 | | `1` | grid_columns[].ellipsis |
-| 8.列表项格式化列 | | `YYYY-MM-DD HH:mm:ss` \| `0,0.00` \| string (自定义方法的名称) | grid_columns[].render |
-| 9.列表项排序开关 | | `1` \| `mul` | grid_columns[].sorter |
-| 10.列表项序列 | | number | - |
-| 11.列表项合并列头 | | number | grid_columns[].children |
-| 12.列表项统计 | | `1` \| `min` \| `max` \| `avg` \| `sum` | grid_columns[].min2/max2/avg2/sum2 |
-#### 参数1.列表项开启标识
-标识当前字段是否用于列表中。
-#### 参数2.列表项主键标识
-标识当前字段为列表主键。如果需要对当前行数据进行操作，如单选、多选、编辑当前行数据，则必须开启。
-#### 参数6.列表项隐藏标识
-一般用于配置列表主键时开启，开启后当前字段不显示在页面中。
-#### 参数8.列表项格式化列
+| 列表项对齐方式 | `L` | `L` \| `R` \| `C` | grid_columns[].align |
+| 列表项固定列 | | `L` \| `R` | grid_columns[].fixed |
+| 列表项合并列头 | | number | grid_columns[].children |
+
+#### 列宽、排序开关、超出隐藏、格式化列、开启标识、主键标识、隐藏标识、序列
+
+![](/excel_intro/module_intro_08.png)
+
+- 参数取值说明
+
+| 参数 | 默认值 | 可选值 | 对应api参数 |
+| --- | --- | --- | --- |
+| 列表项列宽 | | number |  grid_columns[].width |
+| 列表项排序开关 | | `1` \| `mul` | grid_columns[].sorter |
+| 列表项超出隐藏 | | `1` | grid_columns[].ellipsis |
+| 列表项格式化列 | | `YYYY-MM-DD HH:mm:ss` \| `0,0.00` \| string (自定义方法的名称) | grid_columns[].render |
+| 列表项开启标识 | | `1` | - |
+| 列表项主键标识 | | `1` | - |
+| 列表项隐藏标识 | | `1` | grid_columns[].hidden |
+| 列表项序列 | | number | - |
+
+- 列表项开启标识，标识当前字段是否用于列表中。
+- 列表项主键标识，标识当前字段为列表主键。如果需要对当前行数据进行操作，如单选、多选、编辑当前行数据，则必须开启。
+- 列表项隐藏标识，一般用于配置列表主键时开启，开启后当前字段不显示在页面中。
+- 列表项排序开关，如填写`mul`，表示开启多列排序
+- 列表项序列，    如配置列表项序列数值，则列表列展示顺序通过配置的数值由小到大排列。
+
+##### 列表项格式化列
 * 日期格式示例：**YYYY-MM-DD HH:mm:ss**
 * 数值格式示例：**0,0.00**
 * 自定义格式化：**formatXXX** (自定义方法的名称)
@@ -76,7 +76,9 @@ import { Badge } from '@theme';
   卡片视频地址：`media:videopath` \
   卡片标题：`media:title` \
   卡片描述：`media:description` \
+
 ![](/excel_intro/module_intro_21.png)
+
 * 树格式化  <Badge text="2024-12-12" type="tip" /> \
   树结构数据id：`tree:key` \
   树结构数据名称：`tree:title` \
@@ -104,55 +106,79 @@ import { Badge } from '@theme';
     {code: 'ELSE', color: myUtil.theme.getColor({type: 'error'})},
   ]
   ```
-#### 参数9.列表项排序开关
-如填写`mul`，表示开启多列排序
-#### 参数10.列表项序列
-如配置列表项序列数值，则列表列展示顺序通过配置的数值由小到大排列。
-#### 参数12.列表项统计
-用于对数值字段的统计，按需配置最大、最小、合计、平均，如填写1，则表示统计全部4项信息。
+  
+#### 统计
 
-## 筛选项
-### 图示 1、2、4、5、6
+![](/excel_intro/module_intro_13.png)
+
+- 参数取值说明
+
+| 参数 | 默认值 | 可选值 | 对应api参数 |
+| --- | --- | --- | --- |
+| 列表项统计 | | `1` \| `min` \| `max` \| `avg` \| `sum` | grid_columns[].min2/max2/avg2/sum2 |
+
+- 列表项统计，用于对数值字段的统计，按需配置最大、最小、合计、平均，如填写1，则表示统计全部4项信息。
+
+
+
+### 筛选项
+
+#### 类型、类型扩展参数、名称、位置、占位符
+
 ![](/excel_intro/module_intro_09.png)
-### 图示 3、7
-![](/excel_intro/module_intro_10.png)
-### 参数取值说明
-| 参数 | 默认值 | 可选值 | 对应api参数 |
-| --- | --- | --- | --- |
-| 1.筛选项类型 | | `input` \| `select` \| `date` \| `radio` \| `checkbox` \| `treeSelect` <Badge text="2025-05-29" type="tip" /> | filter_items[].type |
-| 2.筛选项类型扩展参数 | | `range` \| string (码表key) | filter_items[].range & filter_items[].codeTable & filter_items[].treeTable |
-| 3.筛选项序列 | | number | - |
-| 4.筛选项名称 | | string | filter_items[].label |
-| 5.筛选项位置 | | `工具栏` \| `列表头` | grid_columns[].filter & filter_items & grid_filter_quick |
-| 6.筛选项占位符 | | string | filter_items[].placeholder |
-| 7.筛选项布局 | | `100` \| `66` | filter_items[].layout |
-#### 参数3.筛选项序列
-如配置筛选项序列数值，则筛选列展示顺序通过配置的数值由小到大排列。
-`****`
-#### 参数5.筛选项位置 <Badge text="2024-10-17" type="tip" />
-如配置为`列表头`，则需要同步配置`筛选项类型`为`Radio`(单选radio形式）或`Select`(多选select形式）,同时配置`筛选项类型扩展参数`，增加对应码表。
 
-## 表单项
-### 图示 1~11
-![](/excel_intro/module_intro_11.png)
-### 参数取值说明
+#### 序列、布局
+
+![](/excel_intro/module_intro_10.png)
+
+- 筛选项序列，如配置筛选项序列数值，则筛选列展示顺序通过配置的数值由小到大排列。
+
+- 参数取值说明
+
 | 参数 | 默认值 | 可选值 | 对应api参数 |
 | --- | --- | --- | --- |
-| 1.表单项开启 | | `1` | - |
-| 2.表单项类型 | | [参数2.表单项类型](/component/build_sys/build_by_excel/4-sheet_dict.html#参数2表单项类型) | form_items[].type |
-| 3.表单项格式化 | | [参数3.表单项格式化](/component/build_sys/build_by_excel/4-sheet_dict.html#参数3表单项格式化) | form_items[].format |
-| 4.表单项只读 | | `1` | form_items[].readOnly |
-| 5.表单项类型扩展参数 | | `range` \| string (码表key) | form_items[].range & form_items[].codeTable & form_items[].maxCount & filter_items[].treeTable |
-| 6.表单项布局 | | `100` \| `66` | form_items[].layout |
-| 7.表单项事件失去焦点 | | string (自定义方法的名称) | form_items[].eventOnBlur |
-| 8.表单项事件得到焦点 | | string (自定义方法的名称) | form_items[].eventOnFocus |
-| 9.表单项事件值改变 | | string (自定义方法的名称) | form_items[].eventOnChange |
-| 10.表单项事件查询 <Badge text="2024-11-19" type="tip" /> | | string (自定义方法的名称) | form_items[].eventOnChange |
-| 11.表单项验证 | | [参数10.表单项验证](/component/build_sys/build_by_excel/4-sheet_dict.html#参数10表单项验证) | form_items[].rules |
-| 12.表单项序列 | | number | - |
-#### 参数1.表单项开启
-标识当前字段是否用于表单中。
-#### 参数2.表单项类型
+| 筛选项类型 | | `input` \| `select` \| `date` \| `radio` \| `checkbox` \| `treeSelect` <Badge text="2025-05-29" type="tip" /> | filter_items[].type |
+| 筛选项类型扩展参数 | | `range` \| string (码表key) | filter_items[].range & filter_items[].codeTable & filter_items[].treeTable |
+| 筛选项序列 | | number | - |
+| 筛选项名称 | | string | filter_items[].label |
+| 筛选项位置 | | `工具栏` \| `列表头` | grid_columns[].filter & filter_items & grid_filter_quick |
+| 筛选项占位符 | | string | filter_items[].placeholder |
+| 筛选项布局 | | `100` \| `66` | filter_items[].layout |
+
+- 筛选项位置，如配置为`列表头`，则需要同步配置`筛选项类型`为`Radio`(单选radio形式）或`Select`(多选select形式）,同时配置`筛选项类型扩展参数`，增加对应码表。 
+<Badge text="2024-10-17" type="tip" />
+
+### 表单项
+
+#### 表单项开启、类型、格式化、只读、类型扩展参数、布局、事件失去焦点、事件得到焦点、事件值改变、事件查询、验证、序列
+
+![](/excel_intro/module_intro_11.png)
+
+- 参数取值说明
+
+| 参数 | 默认值 | 可选值 | 对应api参数 |
+| --- | --- | --- | --- |
+| 表单项开启 | | `1` | - |
+| 表单项类型 | | [参数2.表单项类型](/component/build_sys/build_by_excel/4-sheet_dict.html#参数2表单项类型) | form_items[].type |
+| 表单项格式化 | | [参数3.表单项格式化](/component/build_sys/build_by_excel/4-sheet_dict.html#参数3表单项格式化) | form_items[].format |
+| 表单项只读 | | `1` | form_items[].readOnly |
+| 表单项类型扩展参数 | | `range` \| string (码表key) | form_items[].range & form_items[].codeTable & form_items[].maxCount & filter_items[].treeTable |
+| 表单项布局 | | `100` \| `66` | form_items[].layout |
+| 表单项事件失去焦点 | | string (自定义方法的名称) | form_items[].eventOnBlur |
+| 表单项事件得到焦点 | | string (自定义方法的名称) | form_items[].eventOnFocus |
+| 表单项事件值改变 | | string (自定义方法的名称) | form_items[].eventOnChange |
+| 表单项事件查询 <Badge text="2024-11-19" type="tip" /> | | string (自定义方法的名称) | form_items[].eventOnChange |
+| 表单项验证 | | [参数10.表单项验证](/component/build_sys/build_by_excel/4-sheet_dict.html#参数10表单项验证) | form_items[].rules |
+| 表单项序列 | | number | - |
+
+- 表单项开启，标识当前字段是否用于表单中。
+- 表单项事件失去焦点，表单项onblur事件，仅表示方法名称，后续需要自行开发对应方法。
+- 表单项事件得到焦点，表单项onfocus事件，仅表示方法名称，后续需要自行开发对应方法。
+- 表单项事件值改变，表单项onchange事件，仅表示方法名称，后续需要自行开发对应方法。
+- 表单项事件查询，表单项onsearch事件，仅表示方法名称，后续需要自行开发对应方法。<Badge text="2024-11-19" type="tip" />
+- 表单项序列，如配置表单项序列数值，则表单项展示顺序通过配置的数值由小到大排列。
+
+##### 表单项类型
 * Input
 * InputNumber
 * Select
@@ -171,25 +197,21 @@ import { Badge } from '@theme';
 * MarkdownEditor <Badge text="2025-09-23" type="tip" />
 * MediaLibrary <Badge text="2024-11-19" type="tip" /> \
   当配置`MediaLibrary`类型时，点击表单项中放大镜，弹出如下媒体选择窗体。
+
 ![](/excel_intro/module_intro_22.png)
-#### 参数3.表单项格式化
+
+##### 表单项格式化
 * 日期格式 **YYYY-MM-DD HH:mm:ss**
 * 数值格式 **0,0.00**
 * 自定义方法，string类型，后续需要自行开发对应方法
-#### 参数5.表单项类型扩展参数
+
+##### 表单项类型扩展参数
 * `maxCount`：Upload、UploadVideo、UploadAudio、UploadPicture类型时，可配置如：`maxCount=3`，标识最大上传数量为3
 * `multiple`：Select类型时，可配置，标识多选类型
 * `showTime` <Badge text="2024-11-19" type="tip" />：日历组件中展示时间，通常需要与表单项格式化同步使用，如设置`YYYY-MM-DD HH:mm:ss`
 * `formula`<Badge text="2024-11-26" type="tip" />: 当前项目公式，如填写：`formula:{flp1}+{flp2}`。表示当前表单项目取值来自flp1、flp2字段之和。表单中用到项目需要`大括号`包裹
-#### 参数7.表单项事件失去焦点
-表单项onblur事件，仅表示方法名称，后续需要自行开发对应方法。
-#### 参数8.表单项事件得到焦点
-表单项onfocus事件，仅表示方法名称，后续需要自行开发对应方法。
-#### 参数9.表单项事件值改变
-表单项onchange事件，仅表示方法名称，后续需要自行开发对应方法。
-#### 参数10.表单项事件查询 <Badge text="2024-11-19" type="tip" />
-表单项onsearch事件，仅表示方法名称，后续需要自行开发对应方法。
-#### 参数11.表单项验证
+
+##### 表单项验证
 * [必录](/component/api/baseform/api_event.html#基础校验)
 * [数字](/component/api/baseform/api_event.html#基础校验)
 * [数字字母](/component/api/baseform/api_event.html#基础校验)
@@ -210,14 +232,16 @@ import { Badge } from '@theme';
 * yyyy-MM-dd
 * yyyyMM
 * [string (自定义方法的名称)]
-#### 参数12.表单项序列
-如配置表单项序列数值，则表单项展示顺序通过配置的数值由小到大排列。
 
-## 其他
-### 参数取值说明
+### 其他
+
+#### 扩展信息
+
+- 参数取值说明
+
 | 参数 | 默认值 | 可选值 | 对应api参数 |
 | --- | --- | --- | --- |
-| 1.扩展信息 | - | - | - |
-#### 参数1.扩展信息
-当前可用于配置列表列头、筛选、表单采集时的tooltip。
+| 扩展信息 | - | - | - |
+
+- 扩展信息，当前可用于配置列表列头、筛选、表单采集时的tooltip。
 如：`tooltipForm:表单提示&&&tooltipGrid:列表提示&&&tooltipFilter:筛选提示`

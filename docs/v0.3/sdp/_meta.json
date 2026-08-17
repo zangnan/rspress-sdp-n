@@ -1,7 +1,6 @@
 [
   { "type": "file", "name": "summary", "label": "设计概述" },
   { "type": "file", "name": "what_can_do", "label": "我能做什么" },
-  { "type": "file", "name": "changelog", "label": "更新日志" },
   { "type": "divider", "dashed": true },
   { "type": "section-header", "label": "开始" },
   { "type": "file", "name": "env_init", "label": "快速开始" },
@@ -12,5 +11,6 @@
   { "type": "file", "name": "instruction", "label": "高级能力" },
   { "type": "file", "name": "customer_dev", "label": "自定义开发" },
   { "type": "section-header", "label": "其他" },
+  { "type": "file", "name": "changelog", "label": "更新日志" },
   { "type": "file", "name": "docs_map", "label": "文档地图" }
 ]

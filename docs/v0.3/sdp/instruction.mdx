@@ -2,9 +2,8 @@ import { Badge } from '@theme';
 
 # 高级能力
 
-## 工具栏
+## f1. 维度表统计
 
-### 维度表统计
 1. 点击工具栏上`维度表统计`按钮，在展开弹窗中设置统计方案，包括行列维度字段、统计字段及方案名称，弹窗中4列含义如下：
     * rows：行维度统计字段
     * columns：列维度统计字段
@@ -18,7 +17,8 @@ import { Badge } from '@theme';
 1. 上述设计方案将自动保存于浏览器中（非数据库保存），后续可直接在工具栏中选择方案查询。
     ![](/excel_intro/module_intro_32.png)
 
-### 图表统计 <Badge text="2025-07-04" type="tip" />
+## f2. 图表统计
+
 基于字典生成图表，自由组合字段，生成`饼状图`、`线图`、`柱图`、`面积图`、`多轴多类型图`（多线比较、多柱分组）。
 1. 点击工具栏上`图表统计`按钮，在展开弹窗中设置统计方案，包括数据范围、指标维度、各图表类型下详细设置、方案标题、方案备注。如设置折线图：
     ![](/excel_intro/module_intro_38.png)
@@ -30,7 +30,18 @@ import { Badge } from '@theme';
     * 基于方案
     ![](/excel_intro/module_intro_40.png)
 
-### 帮助文档 <Badge text="2025-09-23" type="tip" />
+## f3. 列表高级筛选
+## f4. 列表视图设置
+## f5. 列表数据导出
+
+## f6. 生成设计文档
+1. 用于生成基于数据字典生成的模块文档，可选文档范围，及常用Word排版设定，如字体、行距、字号...
+1. 需要生成文档的模块，其路由后缀规则为：`/cfgp/模块key`
+    ![](/excel_intro/module_intro_45.png)
+    ![](/excel_intro/module_intro_46.png)
+
+
+## f7. 管理帮助文档
 1. 用于维护系统的帮助文档，可以挂载到菜单作为菜单模块的帮助说明，也可作为文档生成内容输出至Word文件。
 1. 文档采集模式包括富文本、Markdown、普通长文本。
     * Markdown：目前作为系统内部帮助说明使用，通过匹配菜单路由自动链接至关联文档。
@@ -39,13 +50,11 @@ import { Badge } from '@theme';
     ![](/excel_intro/module_intro_43.png)
     ![](/excel_intro/module_intro_44.png)
 
-### 文档生成 <Badge text="2025-09-23" type="tip" />
-1. 用于生成基于数据字典生成的模块文档，可选文档范围，及常用Word排版设定，如字体、行距、字号...
-1. 需要生成文档的模块，其路由后缀规则为：`/cfgp/模块key`
-    ![](/excel_intro/module_intro_45.png)
-    ![](/excel_intro/module_intro_46.png)
-
-### 皮肤设置 <Badge text="2025-09-23" type="tip" />
+## f8. 管理色彩主题及布局
 1. 除系统预制的皮肤外，看自行添加自定义主题，从而匹配客户或三方系统UI要求。
 2. 添加的皮肤可设定为方案。
     ![](/excel_intro/module_intro_47.png)
+
+## f9. AI生成主题 <Badge text="2026-01-12" type="tip" />
+    
+## f10. AI模块生成 <Badge text="2026-07-15" type="tip" />

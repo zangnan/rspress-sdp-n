@@ -8,12 +8,12 @@ hero:
   actions:
     - theme: brand
       text: Quick Start
-      link: /component/index.html
+      link: /sdp/summary.html
     - theme: alt
       text: GitHub
-      link: https://github.com/web-infra-dev/rspress
+      link: https://github.com/zangnan/rspress-sdp-n
   image:
-    src: /rspress-icon.png
+    src: /rspress-icon3.png
     alt: Logo
 features:
   - title: Blazing fast build speed

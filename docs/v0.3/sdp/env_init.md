@@ -30,7 +30,7 @@
    * 查看版本：`tyarn -v` -->
 
 ## 项目搭建
-1. `svn`、`git`，或`在线文档-敏捷开发平台DDIT-SDP`中获取项目代码
+1. 下载项目代码
 1. 项目依赖安装
    * 项目安装目录下执行 `pnpm install` 或 `yarn`
    ```bash
@@ -46,23 +46,20 @@
    * `API_URL_BASE`：后端接口根目录地址
 1. 启动项目 **npm start**
 1. 系统初始化
-   * **http://localhost:3001/easy_dev/init**
+   * **http://localhost:3001/easy_dev_dc/init**
    * 一键初始化系统基础构建：创建系统默认表及导入系统默认表初始数据。
       1. ) 初始化基本表结构
       1. ) 初始化系统基本信息
-      1. ) 初始化系统管理模块
    * 自定义初始化：下载模板，按需调整表结构及数据，依次完成初始化。
 1. 登录
    * **http://localhost:3001/user/login**
    * 默认用户名/密码：admin/ddit@1234
 1. 通过Excel完成采集
-   * 菜单中进入`敏捷开发 - 系统构建`模块，构建业务系统，参照[Excel构建说明](/component/build_sys/build_by_excel/4-sheet_dict)
-      1. ) 菜单构建
+   * 菜单中进入`敏捷开发 - 系统构建`模块，构建业务系统，参照[Excel构建](/component/build_sys/build_by_excel/4-sheet_dict)
+      1. ) 表
       1. ) 模块
-      1. ) 表管理
-      1. ) 字典构建
-      1. ) 业务码表
-      1. ) 业务表共通字段
+      1. ) 字段
+      1. ) 菜单
       1. ) 自定义SQL
       1. ) 自定义码表
 

@@ -153,7 +153,7 @@
 ![](/excel_intro/module_intro_57.png)
 ![](/excel_intro/module_intro_58.png)
 
-#### f3. 高级筛选
+#### f3. 列表高级筛选
 * 查询方案维护
 * 查询条件可选：and、or
 * 查询条件可多层嵌套组合
@@ -185,6 +185,10 @@
 * 可选择系统预制的色彩主题
 * 可自定义色彩主题并保存为方案 [🚀使用说明](/component/build_sys/instruction.html#皮肤设置)
 ![](/excel_intro/module_intro_63.png)
+
+#### f9. AI生成主题
+
+#### f10. AI模块生成
 
 ## 二、开发者进阶
 ### 1. 添加自定义按钮
