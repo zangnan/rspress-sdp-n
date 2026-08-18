@@ -43,13 +43,16 @@
 ![](/excel_intro/module_intro_64.png)
 【图m1. 数据列表 **⤴** 】
 
-##### 配置
-1. 配置列表　[📗配置说明](/sdp/build_by_excel/1-sheet_table.html) [📗配置列表项](/sdp/build_by_excel/2-sheet_module.html#列表)
-1. 配置筛选　[📗配置说明](/sdp/build_by_excel/3-sheet_dict.html#筛选项)
-1. 配置表单　[📗配置说明](/sdp/build_by_excel/2-sheet_module.html#表单) [📗配置表单项](/sdp/build_by_excel/3-sheet_dict.html#表单项)
-1. 配置工具栏　[📗配置说明](/sdp/build_by_excel/2-sheet_module.html#工具栏默认按钮)
-1. 配置列表默认操作列　[📗配置说明](/sdp/build_by_excel/2-sheet_module.html#列编辑列删除列详情)
-1. 配置自定义按钮（位于工具栏或列表列），`💻需要配合自定义开发`　[📗配置说明](/sdp/build_by_excel/2-sheet_module.html#自定义按钮)
+##### 配置流程
+1. [配置菜单](/sdp/build_by_excel/4-sheet_menu.html)
+1. [配置表](/sdp/build_by_excel/1-sheet_table.html)
+1. [配置列表属性](/sdp/build_by_excel/2-sheet_module.html#列表)
+1. [配置筛选项](/sdp/build_by_excel/3-sheet_dict.html#筛选项)
+1. [配置表单属性](/sdp/build_by_excel/2-sheet_module.html#表单)
+1. [配置表单项](/sdp/build_by_excel/3-sheet_dict.html#表单项)
+1. [配置工具栏默认按钮](/sdp/build_by_excel/2-sheet_module.html#工具栏默认按钮)
+1. [配置列表默认操作列](/sdp/build_by_excel/2-sheet_module.html#列编辑列删除列详情)
+1. [配置自定义按钮（位于工具栏或列表列）](/sdp/build_by_excel/2-sheet_module.html#自定义按钮)`💻需要配合自定义开发` 
 ##### 展示 & 使用
 1. 查列表
    * 单表查询
@@ -97,9 +100,9 @@
 ![](/excel_intro/module_intro_51.png)
 【图m2. 媒体列表 - 列表形态 **⤴** 】
 
-##### 配置
+##### 配置流程
 1. 配置媒体列表形态　[📗配置说明](/sdp/build_by_excel/2-sheet_module.html#列表扩展)
-1. 配置卡片属性，卡片标题、说明、图片、预览地址可匹配任意字段　[📗配置说明](/sdp/build_by_excel/3-sheet_dict.html#参数8列表项格式化列)
+1. 配置卡片属性，卡片标题、说明、图片、预览地址可匹配任意字段　[📗配置说明](/sdp/build_by_excel/3-sheet_dict.html#列宽排序开关超出隐藏格式化列开启标识主键标识隐藏标识序列)
 
 ##### 展示 & 使用
 1. 切换媒体卡片形态、列表形态
@@ -114,8 +117,8 @@
 
 ##### 应用场景
 如人员管理中对学历、工作经验等一对多数据维护，或发票明细数据，报关单明细数据等
-##### 配置
-1. 子表配置　[📗配置说明](/sdp/build_by_excel/3-sheet_dict.html#参数8列表项格式化列)
+##### 配置流程
+1. 子表配置　[📗配置说明](/sdp/build_by_excel/3-sheet_dict.html#列宽排序开关超出隐藏格式化列开启标识主键标识隐藏标识序列)
    * 关联数据及id可匹配任意模块和字段
    * 子列表标题可匹配主表任意字段
 ##### 展示 & 使用
@@ -127,8 +130,8 @@
 ![](/excel_intro/module_intro_52.png)
 【图m4.关联表展示 - 设置关联 **⤴** 】
 
-##### 配置
-1. 关联表配置数据关系维护　[📗配置说明](/sdp/build_by_excel/3-sheet_dict.html#参数8列表项格式化列)
+##### 配置流程
+1. 关联表配置数据关系维护　[📗配置说明](/sdp/build_by_excel/3-sheet_dict.html#列宽排序开关超出隐藏格式化列开启标识主键标识隐藏标识序列)
 ##### 展示 & 使用
 1. 关联表数据关系维护
 1. 上述`m1.`数据列表+采集的功能
@@ -139,8 +142,10 @@
 【图m5.树状数据+采集 **⤴** 】
 
 * **使用场景**：如菜单维护、组织机构维护等业务场景。
-##### 配置
-1. 树配置　[📗配置说明](/sdp/build_by_excel/3-sheet_dict.html#参数8列表项格式化列)
+##### 配置流程
+1. 树配置
+   [📗配置说明](/sdp/build_by_excel/4-sheet_menu.html#菜单路径--组件)
+   [📙配置说明](/sdp/build_by_excel/3-sheet_dict.html#列宽排序开关超出隐藏格式化列开启标识主键标识隐藏标识序列)
    *  配置数据父子节点，可匹配任意字段
    *  配置树节点标题，可匹配任意字段
 ##### 展示 & 使用
@@ -151,17 +156,17 @@
 ![](/excel_intro/module_intro_53.png)
 【图m6.树状数据+数据列表 **⤴** 】
 
-##### 配置
+##### 配置流程
 1. 数据关系维护
-   [📗配置说明](/sdp/build_by_excel/1-sheet_table.html#参数8组件)
-   [📙配置说明]/sdp/customer_dev.html#7-树列表组合系数据类型的采集及展示)
+   [📗配置说明](/sdp/build_by_excel/4-sheet_menu.html#菜单路径--组件)
+   [📙配置说明](/sdp/customer_dev.html#7-树列表组合系数据类型的采集及展示)
 ##### 展示 & 使用
 1. 树节点关联数据查询
-1. 右侧为数据列表+采集，涵盖其所有功能
+1. 右侧为`m1. 数据列表+采集`，涵盖其所有功能
 
 
 
-## 三. 预制的功能
+## 三. 高阶能力
 
 ### f1. 维度表统计
    [🚀使用说明](/sdp/instruction.html#f1-维度表统计)
