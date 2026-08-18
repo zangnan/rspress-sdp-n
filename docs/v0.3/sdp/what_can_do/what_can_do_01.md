@@ -47,6 +47,7 @@
 1. [配置菜单](/sdp/build_by_excel/4-sheet_menu.html)
 1. [配置表](/sdp/build_by_excel/1-sheet_table.html)
 1. [配置列表属性](/sdp/build_by_excel/2-sheet_module.html#列表)
+1. [配置列表项](/sdp/build_by_excel/3-sheet_dict.html#列表项)
 1. [配置筛选项](/sdp/build_by_excel/3-sheet_dict.html#筛选项)
 1. [配置表单属性](/sdp/build_by_excel/2-sheet_module.html#表单)
 1. [配置表单项](/sdp/build_by_excel/3-sheet_dict.html#表单项)
@@ -101,8 +102,19 @@
 【图m2. 媒体列表 - 列表形态 **⤴** 】
 
 ##### 配置流程
-1. 配置媒体列表形态　[📗配置说明](/sdp/build_by_excel/2-sheet_module.html#列表扩展)
-1. 配置卡片属性，卡片标题、说明、图片、预览地址可匹配任意字段　[📗配置说明](/sdp/build_by_excel/3-sheet_dict.html#列宽排序开关超出隐藏格式化列开启标识主键标识隐藏标识序列)
+
+1. [配置菜单](/sdp/build_by_excel/4-sheet_menu.html)
+1. [配置表](/sdp/build_by_excel/1-sheet_table.html)
+1. [配置列表属性](/sdp/build_by_excel/2-sheet_module.html#列表)
+1. [**配置列表媒体形态** *](/sdp/build_by_excel/2-sheet_module.html#列表扩展)
+1. [配置列表项](/sdp/build_by_excel/3-sheet_dict.html#列表项)
+1. [**配置卡片属性，卡片标题、说明、图片、预览地址可匹配任意字段** *](/sdp/build_by_excel/3-sheet_dict.html#列宽排序开关超出隐藏格式化列开启标识主键标识隐藏标识序列)
+1. [配置筛选项](/sdp/build_by_excel/3-sheet_dict.html#筛选项)
+1. [配置表单属性](/sdp/build_by_excel/2-sheet_module.html#表单)
+1. [配置表单项](/sdp/build_by_excel/3-sheet_dict.html#表单项)
+1. [配置工具栏默认按钮](/sdp/build_by_excel/2-sheet_module.html#工具栏默认按钮)
+1. [配置列表默认操作列](/sdp/build_by_excel/2-sheet_module.html#列编辑列删除列详情)
+1. [配置自定义按钮（位于工具栏或列表列）](/sdp/build_by_excel/2-sheet_module.html#自定义按钮)`💻需要配合自定义开发` 
 
 ##### 展示 & 使用
 1. 切换媒体卡片形态、列表形态
