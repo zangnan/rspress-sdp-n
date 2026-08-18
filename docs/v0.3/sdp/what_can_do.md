@@ -4,58 +4,68 @@
 
 ### 1. 概述
 无编码，仅编写如下图所示的Excel模版文件，并通过敏捷开发平台进行模块构建，即可以完成下列类型页面及模块的搭建，可供`需求/设计`、`开发`人员使用。
-[📗Excel编写说明](/component/build_sys/build_by_excel/1-sheet_menu.html)
+[📗Excel编写说明](/sdp/build_by_excel/1-sheet_table.html)
 * **需求/设计人员**：对接客户需求，迅速产出原型图，减少原型图设计时间。并同步生成部分设计文档，规避繁琐工作。
 * **开发人员**：初始化系统搭建，基础模块搭建，同步完成数据库设计。
 ![](/excel_intro/module_intro_54.png)
 
 ### 2. 模块一览表  & 页面展示
-* `m1.`数据列表+数据采集
-* `m2.`媒体列表+数据采集-m1扩展
-* `m3.`主子表展示及采集-m1扩展
-* `m4.`关联表展示-m1扩展
-* `m5.`树状结构数据展示+表单采集
-* `m6.`树状结构数据+数据列表
+* `m1.`数据列表+采集
+* `m2.`媒体列表+采集
+* `m3.`主子表展示及采集
+* `m4.`关联表展示
+* `m5.`树状数据展示+采集
+* `m6.`树状数据+数据列表
 
-#### m1. 数据列表+数据采集
+#### m1. 数据列表+采集
+
 ![](/excel_intro/module_intro_64.png)
+【图m1. 数据列表 **⤴** 】
+
 ![](/excel_intro/module_intro_48.png)
 【图m1. 数据列表 **⤴** 】
+
 ![](/excel_intro/module_intro_49.png)
 【图m1. 数据采集 **⤴** 】
 
-#### m2. 媒体列表+数据采集-m1扩展
+#### m2. 媒体列表+采集
+
 ![](/excel_intro/module_intro_50.png)
 【图m2. 媒体列表 - 卡片形态 **⤴** 】
+
 ![](/excel_intro/module_intro_51.png)
 【图m2. 媒体列表 - 列表形态 **⤴** 】
 
-#### m3. 主子表展示及采集-m1扩展
+#### m3. 主子表展示及采集
+
 ![](/dataToView/demo07.png)
 【图m3.主子表展示及采集 - 子表 **⤴** 】
 
-#### m4. 关联表展示-m1扩展
+#### m4. 关联表展示
+
 ![](/excel_intro/module_intro_52.png)
 【图m4.关联表展示 - 设置关联 **⤴** 】
 
-#### m5. 树状结构数据展示+表单采集
-![](/dataToView/demo06.png)
-【图m5.树状结构数据展示+表单采集 **⤴** 】
+#### m5. 树状数据展示+采集
 
-#### m6. 树状结构数据+数据列表
+![](/dataToView/demo06.png)
+【图m5.树状数据展示+采集 **⤴** 】
+
+#### m6. 树状数据+数据列表
+
 ![](/excel_intro/module_intro_53.png)
-【图m6.树状结构数据+数据列表 **⤴** 】
+【图m6.树状数据+数据列表 **⤴** 】
 
 ### 3. 生成页面＆功能明细
 
-#### m1. 数据列表+数据采集
+#### m1. 数据列表+采集
 ##### 配置
-1. 配置列表　[📗配置说明](/component/build_sys/build_by_excel/4-sheet_dict.html#列表项) [📗配置列表项](/component/build_sys/build_by_excel/2-sheet_module.html#列表)
-1. 配置筛选　[📗配置说明](/component/build_sys/build_by_excel/4-sheet_dict.html#筛选项)
-1. 配置表单　[📗配置说明](/component/build_sys/build_by_excel/2-sheet_module.html#表单) [📗配置表单项](/component/build_sys/build_by_excel/4-sheet_dict.html#表单项)
-1. 配置工具栏　[📗配置说明](/component/build_sys/build_by_excel/2-sheet_module.html#工具栏)
-1. 配置列表默认操作列　[📗配置说明](/component/build_sys/build_by_excel/2-sheet_module.html#图示-46)
-1. 配置自定义按钮（位于工具栏或列表列），`💻需要配合自定义开发`　[📗配置说明](/component/build_sys/build_by_excel/2-sheet_module.html#自定义按钮)
+1. 配置列表　[📗配置说明](/sdp/build_by_excel/1-sheet_table.html) [📗配置列表项](/sdp/build_by_excel/2-sheet_module.html#列表)
+1. 配置筛选　[📗配置说明](/sdp/build_by_excel/3-sheet_dict.html#筛选项)
+1. 配置表单　[📗配置说明](/sdp/build_by_excel/2-sheet_module.html#表单) [📗配置表单项](/sdp/build_by_excel/3-sheet_dict.html#表单项)
+1. 配置工具栏　[📗配置说明](/sdp/build_by_excel/2-sheet_module.html#工具栏默认按钮)
+1. 配置列表默认操作列　[📗配置说明](/sdp/build_by_excel/2-sheet_module.html#列编辑列删除列详情)
+1. 配置自定义按钮（位于工具栏或列表列），`💻需要配合自定义开发`　[📗配置说明](/sdp/build_by_excel/2-sheet_module.html#自定义按钮)
 ##### 展示 & 使用
 1. 查列表
    * 单表查询
@@ -89,57 +99,57 @@
    * 依据配置设置表单项事件：事件失去焦点、事件得到焦点、事件值改变、事件查询 `💻需要配合自定义开发`
 1. 数据导入
 
-#### m2. 媒体列表+数据采集-m1扩展
+#### m2. 媒体列表+采集
 ##### 配置
-1. 配置媒体列表形态　[📗配置说明](/component/build_sys/build_by_excel/2-sheet_module.html#图示-7)
-1. 配置卡片属性，卡片标题、说明、图片、预览地址可匹配任意字段　[📗配置说明](/component/build_sys/build_by_excel/4-sheet_dict.html#参数8列表项格式化列)
+1. 配置媒体列表形态　[📗配置说明](/sdp/build_by_excel/2-sheet_module.html#列表扩展)
+1. 配置卡片属性，卡片标题、说明、图片、预览地址可匹配任意字段　[📗配置说明](/sdp/build_by_excel/3-sheet_dict.html#参数8列表项格式化列)
 
 ##### 展示 & 使用
 1. 切换媒体卡片形态、列表形态
 1. 预览图片、视音频文件
-1. 上述`m1.`数据列表+数据采集的功能
+1. 上述`m1.`数据列表+采集的功能
 1. 支持自定义卡片布局及渲染 `💻需要配合自定义开发`
 
-#### m3. 主子表展示及采集-m1扩展
+#### m3. 主子表展示及采集
 ##### 应用场景
 如人员管理中对学历、工作经验等一对多数据维护，或发票明细数据，报关单明细数据等
 ##### 配置
-1. 子表配置　[📗配置说明](/component/build_sys/build_by_excel/4-sheet_dict.html#参数8列表项格式化列)
+1. 子表配置　[📗配置说明](/sdp/build_by_excel/3-sheet_dict.html#参数8列表项格式化列)
    * 关联数据及id可匹配任意模块和字段
    * 子列表标题可匹配主表任意字段
 ##### 展示 & 使用
 1. 子表数据查询及采集，子表为`m1`形态并涵盖其所有功能
-1. 上述`m1.`数据列表+数据采集的功能
+1. 上述`m1.`数据列表+采集的功能
 
-#### m4. 关联表展示-m1扩展
+#### m4. 关联表展示
 ##### 配置
-1. 关联表配置数据关系维护　[📗配置说明](/component/build_sys/build_by_excel/4-sheet_dict.html#参数8列表项格式化列)
+1. 关联表配置数据关系维护　[📗配置说明](/sdp/build_by_excel/3-sheet_dict.html#参数8列表项格式化列)
 ##### 展示 & 使用
 1. 关联表数据关系维护
-1. 上述`m1.`数据列表+数据采集的功能
+1. 上述`m1.`数据列表+采集的功能
 
-#### m5. 树状结构数据展示+表单采集
+#### m5. 树状数据展示+采集
 * **使用场景**：如菜单维护、组织机构维护等业务场景。
 ##### 配置
-1. 树配置　[📗配置说明](/component/build_sys/build_by_excel/4-sheet_dict.html#参数8列表项格式化列)
+1. 树配置　[📗配置说明](/sdp/build_by_excel/3-sheet_dict.html#参数8列表项格式化列)
    *  配置数据父子节点，可匹配任意字段
    *  配置树节点标题，可匹配任意字段
 ##### 展示 & 使用
 1. 新建，修改，删除（CRUD）
 
-#### m6. 树状结构数据+数据列表
+#### m6. 树状数据+数据列表
 ##### 配置
 1. 数据关系维护
-   [📗配置说明](/component/build_sys/build_by_excel/1-sheet_menu.html#参数8组件)
-   [📙配置说明](/component/build_sys/customer_dev.html#7-树列表组合系数据类型的采集及展示)
+   [📗配置说明](/sdp/build_by_excel/1-sheet_table.html#参数8组件)
+   [📙配置说明]/sdp/customer_dev.html#7-树列表组合系数据类型的采集及展示)
 ##### 展示 & 使用
 1. 树节点关联数据查询
-1. 右侧为数据列表+数据采集，涵盖其所有功能
+1. 右侧为数据列表+采集，涵盖其所有功能
 
 ### 4. 预制的功能
 
 #### f1. 维度表统计
-[🚀使用说明](/component/build_sys/instruction.html#维度表统计)
+[🚀使用说明](/sdp/instruction.html#维度表统计)
    * 自由设计、保存统计方案：行、列维度字段、统计字段、方案名称
    * 可选聚合方式：合计、最大值、最小值、平均值、计数
    * 灵活分组合计：小计行、总计行、小计列、总计列
@@ -149,7 +159,7 @@
 ![](/excel_intro/module_intro_56.png)
 
 #### f2. 图表统计
-[🚀使用说明](/component/build_sys/instruction.html#图表统计)
+[🚀使用说明](/sdp/instruction.html#图表统计)
 ![](/excel_intro/module_intro_57.png)
 ![](/excel_intro/module_intro_58.png)
 
@@ -171,19 +181,19 @@
 ![](/excel_intro/module_intro_62.png)
 
 #### f6. 生成设计文档
-[🚀使用说明](/component/build_sys/instruction.html#文档生成)
+[🚀使用说明](/sdp/instruction.html#文档生成)
 ![](/excel_intro/module_intro_45.png)
 ![](/excel_intro/module_intro_46.png)
 
 #### f7. 管理帮助文档
-[🚀使用说明](/component/build_sys/instruction.html#帮助文档)
+[🚀使用说明](/sdp/instruction.html#帮助文档)
 ![](/excel_intro/module_intro_42.png)
 ![](/excel_intro/module_intro_43.png)
 ![](/excel_intro/module_intro_44.png)
 
 #### f8. 管理色彩主题及布局
 * 可选择系统预制的色彩主题
-* 可自定义色彩主题并保存为方案 [🚀使用说明](/component/build_sys/instruction.html#皮肤设置)
+* 可自定义色彩主题并保存为方案 [🚀使用说明](/sdp/instruction.html#皮肤设置)
 ![](/excel_intro/module_intro_63.png)
 
 #### f9. AI生成主题

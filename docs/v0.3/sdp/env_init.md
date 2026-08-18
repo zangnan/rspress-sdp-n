@@ -55,7 +55,7 @@
    * **http://localhost:3001/user/login**
    * 默认用户名/密码：admin/ddit@1234
 1. 通过Excel完成采集
-   * 菜单中进入`敏捷开发 - 系统构建`模块，构建业务系统，参照[Excel构建](/component/build_sys/build_by_excel/4-sheet_dict)
+   * 菜单中进入`敏捷开发 - 系统构建`模块，构建业务系统，参照[Excel构建](/sdp/build_by_excel/1-sheet_table.html)
       1. ) 表
       1. ) 模块
       1. ) 字段

@@ -18,7 +18,7 @@ import { Badge } from '@theme';
 媒体管理中的视频预览依赖组件`react-player`，如果是增量更新，需要执行依赖安装`yarn add react-player`。
 
 * **模块构建**
-1. 在`敏捷开发 - 系统构建`模块中导入构建文件[`数据字典_字典导入_媒体管理_vyyyymmdd.x.y.z.xlsx`](/ddit_sdp/docs_map.html)，完成`媒体管理`模块构建。
+1. 在`敏捷开发 - 系统构建`模块中导入构建文件[`数据字典_字典导入_媒体管理_vyyyymmdd.x.y.z.xlsx`](/sdp/docs_map.html)，完成`媒体管理`模块构建。
 1. 刷新页面，可以看到`媒体管理`模块菜单。
 
 * **模块使用**
@@ -30,9 +30,9 @@ import { Badge } from '@theme';
 ### 构建含有媒体类型的字典模块
 可以参照示例构建含有媒体类型的模块，媒体模块通常以宫格卡片形式展现。表单采集时通过侧滑弹窗选择需要的媒体资源。
 * **涉及媒体类型的构建内容：**
-1. [Sheet.模块 - 列表扩展：`card`](/component/build_sys/build_by_excel/2-sheet_module.html#图示-7)
-1. [Sheet.字典构建 - 列表项格式化列： `media:imagepath`、`media:videopath`、`media:title`、`media:description`](/component/build_sys/build_by_excel/4-sheet_dict.html#参数8列表项格式化列)
-1. [Sheet.字典构建 - 表单项类型： `MediaLibrary`](/component/build_sys/build_by_excel/4-sheet_dict.html#参数2表单项类型)
+1. [Sheet.模块 - 列表扩展：`card`](/sdp/build_by_excel/2-sheet_module.html#列表扩展)
+1. [Sheet.字典构建 - 列表项格式化列： `media:imagepath`、`media:videopath`、`media:title`、`media:description`](/sdp/build_by_excel/3-sheet_dict.html#参数8列表项格式化列)
+1. [Sheet.字典构建 - 表单项类型： `MediaLibrary`](/sdp/build_by_excel/3-sheet_dict.html#参数2表单项类型)
 
 *  **示例：含有媒体类型的字典模块使用**
 1. 卡片图片 \
@@ -174,7 +174,7 @@ import { Badge } from '@theme';
 * Sheet.字典构建：如需调用默认模块（默认生成，无需开发），则组件录入`./common/automatic_page_tree`。\
   如需要定制化开发，可参照`系统管理 - 菜单管理`模块。
 * Sheet.模块：完成`列表首选项`、`工具栏增加`、`工具栏删除`、`工具栏编辑`、`表单布局`配置即可，api可按需配置。
-* Sheet.字典构建：参照[列表项格式化列](/component/build_sys/build_by_excel/4-sheet_dict.html#%E5%8F%82%E6%95%B08%E5%88%97%E8%A1%A8%E9%A1%B9%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%88%97)
+* Sheet.字典构建：参照[列表项格式化列](/sdp/build_by_excel/3-sheet_dict.html#%E5%8F%82%E6%95%B08%E5%88%97%E8%A1%A8%E9%A1%B9%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%88%97)
 
 ## 6. 一对多关系数据类型的采集及展示 <Badge text="2025-01-08" type="tip" />
 * 应用场景：如人员管理中对学历、工作经验等一对多数据维护，或发票明细数据，报关单明细数据等。

@@ -5,13 +5,13 @@
 ### DDBaseGrid
 | 参数 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
-| [config](/component/api/basegrid/api_event.html#config) | 基础配置 | object | - |
-| func | 列的自定义渲染、操作列设置、行单/双击事件，参照 [后端分页---复杂示例](/component/api/basegrid/eg_code.html#后端分页---复杂示例) | object | - |
-| actionRef | 列表ref，参照 [后端分页---复杂示例](/component/api/basegrid/eg_code.html#后端分页---复杂示例) | RefObject | - |
-| queryParam | 查询接口携带参数，参照 [后端分页---复杂示例](/component/api/basegrid/eg_code.html#后端分页---复杂示例) | object | - |
-| onRow | 行事件，参照 [后端分页---复杂示例](/component/api/basegrid/eg_code.html#后端分页---复杂示例) | object | - |
-| afterReloadGridData | 数据加载后执行，参照 [后端分页---复杂示例](/component/api/basegrid/eg_code.html#后端分页---复杂示例) | function | - |
-| userDataSource | 直接传入列表数据，参照 [传入数据---前端分页](/component/api/basegrid/eg_code.html#传入数据--前端分页) | function | - |
+| [config](/component/basegrid/api_event.html#config) | 基础配置 | object | - |
+| func | 列的自定义渲染、操作列设置、行单/双击事件，参照 [后端分页---复杂示例](/component/basegrid/eg_code.html#后端分页---复杂示例) | object | - |
+| actionRef | 列表ref，参照 [后端分页---复杂示例](/component/basegrid/eg_code.html#后端分页---复杂示例) | RefObject | - |
+| queryParam | 查询接口携带参数，参照 [后端分页---复杂示例](/component/basegrid/eg_code.html#后端分页---复杂示例) | object | - |
+| onRow | 行事件，参照 [后端分页---复杂示例](/component/basegrid/eg_code.html#后端分页---复杂示例) | object | - |
+| afterReloadGridData | 数据加载后执行，参照 [后端分页---复杂示例](/component/basegrid/eg_code.html#后端分页---复杂示例) | function | - |
+| userDataSource | 直接传入列表数据，参照 [传入数据---前端分页](/component/basegrid/eg_code.html#传入数据--前端分页) | function | - |
 | [Antd Table](https://ant.design/component/table-cn#api) | 支持所有Antd Table属性设置 | - | - |
 
 ### config
@@ -26,7 +26,7 @@
 | grid_row_key | 主键 | string\|array | uuid |
 | grid_show_serial_number | 是否显示序号 | boolean | false |
 | grid_click_checked |  是否开启单击或双击勾选事件，1单击勾选，2双击勾选 | `1`\|`2`\|`-` | - |
-| [grid_columns](/component/api/basegrid/api_event.html#configgrid_columns) | 列表列 | array | - |
+| [grid_columns](/component/basegrid/api_event.html#configgrid_columns) | 列表列 | array | - |
 
 ### config.grid_columns
 | 参数 | 说明 | 类型 | 默认值 |
@@ -43,9 +43,9 @@
 | sum | 是否开启求和 | boolean | false |
 | sum2 | 是否开启后端求和 | boolean | false |
 | children | 分组表头 | grid_columns[] | - |
-| [render](/component/api/basegrid/api_event.html#configgrid_columnsrender) | 列渲染 | objcet | - |
-| [filter](/component/api/basegrid/api_event.html#configgrid_columnsfilter) | 表头筛选 | objcet | - |
-| [codeTable](/component/api/basegrid/api_event.html#configgrid_columnscodetable) | 码表转换 | objcet | - |
+| [render](/component/basegrid/api_event.html#configgrid_columnsrender) | 列渲染 | objcet | - |
+| [filter](/component/basegrid/api_event.html#configgrid_columnsfilter) | 表头筛选 | objcet | - |
+| [codeTable](/component/basegrid/api_event.html#configgrid_columnscodetable) | 码表转换 | objcet | - |
 
 ### config.grid_columns.render
 
@@ -65,8 +65,8 @@ render: { type: 'date', format: 'YYYY-MM-DD HH:mm:ss' }
 
 #### 前端格式化码表
 
-* 也可以利用 [codeTable](/component/api/basegrid/api_event.html#configgrid_columnscodetable) 属性格式化码表
-* 可结合 [格式化图标类](/component/api/basegrid/api_event.html#格式化图标类) 配套使用
+* 也可以利用 [codeTable](/component/basegrid/api_event.html#configgrid_columnscodetable) 属性格式化码表
+* 可结合 [格式化图标类](/component/basegrid/api_event.html#格式化图标类) 配套使用
 
 ```ts
 render: {
@@ -108,7 +108,7 @@ render: {
 #### 自定义格式化
 
 * 需要结合func属性配套使用
-* 参照示例 [后端分页 - 复杂示例](/component/api/basegrid/eg_code.html#后端分页---复杂示例)
+* 参照示例 [后端分页 - 复杂示例](/component/basegrid/eg_code.html#后端分页---复杂示例)
 
 ```ts
 render: { func: 'renderExampleXh4' }
@@ -116,8 +116,8 @@ render: { func: 'renderExampleXh4' }
 
 ### config.grid_columns.codeTable
 
-* 也可以利用 config.grid_columns.render [前端格式化码表](/component/api/basegrid/api_event.html#前端格式化码表) 属性格式化码表
-* 可结合 [格式化图标类](/component/api/basegrid/api_event.html#格式化图标类) 配套使用
+* 也可以利用 config.grid_columns.render [前端格式化码表](/component/basegrid/api_event.html#前端格式化码表) 属性格式化码表
+* 可结合 [格式化图标类](/component/basegrid/api_event.html#格式化图标类) 配套使用
 
 ```ts
 codeTable: ['code_dm_ckts_hgjldw', '01']

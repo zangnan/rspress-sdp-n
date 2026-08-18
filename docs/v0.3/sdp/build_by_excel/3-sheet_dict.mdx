@@ -159,8 +159,8 @@ import { Badge } from '@theme';
 | 参数 | 默认值 | 可选值 | 对应api参数 |
 | --- | --- | --- | --- |
 | 表单项开启 | | `1` | - |
-| 表单项类型 | | [参数2.表单项类型](/component/build_sys/build_by_excel/4-sheet_dict.html#参数2表单项类型) | form_items[].type |
-| 表单项格式化 | | [参数3.表单项格式化](/component/build_sys/build_by_excel/4-sheet_dict.html#参数3表单项格式化) | form_items[].format |
+| 表单项类型 | | [参数2.表单项类型](/sdp/build_by_excel/3-sheet_dict.html#参数2表单项类型) | form_items[].type |
+| 表单项格式化 | | [参数3.表单项格式化](/sdp/build_by_excel/3-sheet_dict.html#参数3表单项格式化) | form_items[].format |
 | 表单项只读 | | `1` | form_items[].readOnly |
 | 表单项类型扩展参数 | | `range` \| string (码表key) | form_items[].range & form_items[].codeTable & form_items[].maxCount & filter_items[].treeTable |
 | 表单项布局 | | `100` \| `66` | form_items[].layout |
@@ -168,7 +168,7 @@ import { Badge } from '@theme';
 | 表单项事件得到焦点 | | string (自定义方法的名称) | form_items[].eventOnFocus |
 | 表单项事件值改变 | | string (自定义方法的名称) | form_items[].eventOnChange |
 | 表单项事件查询 <Badge text="2024-11-19" type="tip" /> | | string (自定义方法的名称) | form_items[].eventOnChange |
-| 表单项验证 | | [参数10.表单项验证](/component/build_sys/build_by_excel/4-sheet_dict.html#参数10表单项验证) | form_items[].rules |
+| 表单项验证 | | [参数10.表单项验证](/sdp/build_by_excel/3-sheet_dict.html#参数10表单项验证) | form_items[].rules |
 | 表单项序列 | | number | - |
 
 - 表单项开启，标识当前字段是否用于表单中。
@@ -212,23 +212,23 @@ import { Badge } from '@theme';
 * `formula`<Badge text="2024-11-26" type="tip" />: 当前项目公式，如填写：`formula:{flp1}+{flp2}`。表示当前表单项目取值来自flp1、flp2字段之和。表单中用到项目需要`大括号`包裹
 
 ##### 表单项验证
-* [必录](/component/api/baseform/api_event.html#基础校验)
-* [数字](/component/api/baseform/api_event.html#基础校验)
-* [数字字母](/component/api/baseform/api_event.html#基础校验)
-* [电话](/component/api/baseform/api_event.html#基础校验)
-* [邮件](/component/api/baseform/api_event.html#基础校验)
-* [身份证](/component/api/baseform/api_event.html#基础校验)
-* [中文](/component/api/baseform/api_event.html#基础校验)
-* [日期](/component/api/baseform/api_event.html#基础校验)
-* [数值范围+](/component/api/baseform/api_event.html#数值校验)
-* [数值范围-](/component/api/baseform/api_event.html#数值校验)
-* [数值范围+-](/component/api/baseform/api_event.html#数值校验)
-* [数值范围+0](/component/api/baseform/api_event.html#数值校验)
-* [数值范围-0](/component/api/baseform/api_event.html#数值校验)
-* [NUMBER(15,5)](/component/api/baseform/api_event.html#数值范围)
-* [VARCHAR2(6)](/component/api/baseform/api_event.html#字符校验)
-* [长度范围2~10](/component/api/baseform/api_event.html#字符校验)
-* [长度=21](/component/api/baseform/api_event.html#字符校验)
+* [必录](/component/baseform/api_event.html#基础校验)
+* [数字](/component/baseform/api_event.html#基础校验)
+* [数字字母](/component/baseform/api_event.html#基础校验)
+* [电话](/component/baseform/api_event.html#基础校验)
+* [邮件](/component/baseform/api_event.html#基础校验)
+* [身份证](/component/baseform/api_event.html#基础校验)
+* [中文](/component/baseform/api_event.html#基础校验)
+* [日期](/component/baseform/api_event.html#基础校验)
+* [数值范围+](/component/baseform/api_event.html#数值校验)
+* [数值范围-](/component/baseform/api_event.html#数值校验)
+* [数值范围+-](/component/baseform/api_event.html#数值校验)
+* [数值范围+0](/component/baseform/api_event.html#数值校验)
+* [数值范围-0](/component/baseform/api_event.html#数值校验)
+* [NUMBER(15,5)](/component/baseform/api_event.html#数值范围)
+* [VARCHAR2(6)](/component/baseform/api_event.html#字符校验)
+* [长度范围2~10](/component/baseform/api_event.html#字符校验)
+* [长度=21](/component/baseform/api_event.html#字符校验)
 * yyyy-MM-dd
 * yyyyMM
 * [string (自定义方法的名称)]
