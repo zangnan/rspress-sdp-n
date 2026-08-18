@@ -4,41 +4,81 @@ import { Badge } from '@theme';
 
 ## f1. 维度表统计
 
+* 自由设计、保存统计方案：行、列维度字段、统计字段、方案名称...
+* 可选聚合方式：合计、最大值、最小值、平均值、计数
+* 灵活分组合计：小计行、总计行、小计列、总计列
+* 展示方式可切换：平铺或树形
+* 统计结果可导出
+
 1. 点击工具栏上`维度表统计`按钮，在展开弹窗中设置统计方案，包括行列维度字段、统计字段及方案名称，弹窗中4列含义如下：
     * rows：行维度统计字段
     * columns：列维度统计字段
     * values：数值统计字段
     * all：当前列表的所有字段
-    ![](/excel_intro/module_intro_30.png)
+
+![](/excel_intro/module_intro_30.png)
+
 1. 方案设置后，点击统计查询按钮，即展开统计列表。
     * 改变聚合方式：每个统计字段有5中统计方式，分别为合计（默认）、最小、最大、平均、计数。
     * 导出统计列表
-    ![](/excel_intro/module_intro_31.png)
+
+![](/excel_intro/module_intro_31.png)
 1. 上述设计方案将自动保存于浏览器中（非数据库保存），后续可直接在工具栏中选择方案查询。
-    ![](/excel_intro/module_intro_32.png)
+
+![](/excel_intro/module_intro_32.png)
 
 ## f2. 图表统计
 
-基于字典生成图表，自由组合字段，生成`饼状图`、`线图`、`柱图`、`面积图`、`多轴多类型图`（多线比较、多柱分组）。
+* 基于字典生成图表，自由组合字段，生成`饼状图`、`线图`、`柱图`、`面积图`、`多轴多类型图`（多线比较、多柱分组）。
+* 自由设计、保存图表统计方案：数据范围、指标维度、图表类别、方案名称...
+
 1. 点击工具栏上`图表统计`按钮，在展开弹窗中设置统计方案，包括数据范围、指标维度、各图表类型下详细设置、方案标题、方案备注。如设置折线图：
-    ![](/excel_intro/module_intro_38.png)
-    ![](/excel_intro/module_intro_41.png)
+
+![](/excel_intro/module_intro_38.png)
+
+![](/excel_intro/module_intro_41.png)
+
 2. 可基于当前表单设置展示单一图表，也可以根据选择的方案展示多个图表。
 3. 点击设置弹窗`图表绘制`或`图表绘制(方案)`按钮，展示图表统计结果。
-    * 基于表单
-    ![](/excel_intro/module_intro_39.png)
-    * 基于方案
-    ![](/excel_intro/module_intro_40.png)
+* 基于表单
+
+![](/excel_intro/module_intro_39.png)
+
+* 基于方案
+
+![](/excel_intro/module_intro_40.png)
 
 ## f3. 列表高级筛选
+
+* 查询方案维护
+* 查询条件可选：and、or
+* 查询条件可多层嵌套组合
+
+![](/excel_intro/module_intro_59.png)
+
+![](/excel_intro/module_intro_60.png)
+
 ## f4. 列表视图设置
+
+* 视图方案维护
+* 设置列顺序、是否左右冻结、是否展示
+
+![](/excel_intro/module_intro_61.png)
+
 ## f5. 列表数据导出
+
+* 前端导出： (1) 可选择导出列；(2) 调整导出顺序；(3) 支持筛选条件导出，勾选数据导出。
+* 后端导出
+
+![](/excel_intro/module_intro_62.png)
 
 ## f6. 生成设计文档
 1. 用于生成基于数据字典生成的模块文档，可选文档范围，及常用Word排版设定，如字体、行距、字号...
 1. 需要生成文档的模块，其路由后缀规则为：`/cfgp/模块key`
-    ![](/excel_intro/module_intro_45.png)
-    ![](/excel_intro/module_intro_46.png)
+
+![](/excel_intro/module_intro_45.png)
+
+![](/excel_intro/module_intro_46.png)
 
 
 ## f7. 管理帮助文档
@@ -46,14 +86,22 @@ import { Badge } from '@theme';
 1. 文档采集模式包括富文本、Markdown、普通长文本。
     * Markdown：目前作为系统内部帮助说明使用，通过匹配菜单路由自动链接至关联文档。
     * 普通长文本：可伴随文档生成模块使用，作为生成文档的一部分。
-    ![](/excel_intro/module_intro_42.png)
-    ![](/excel_intro/module_intro_43.png)
-    ![](/excel_intro/module_intro_44.png)
+
+![](/excel_intro/module_intro_42.png)
+
+![](/excel_intro/module_intro_43.png)
+
+![](/excel_intro/module_intro_44.png)
 
 ## f8. 管理色彩主题及布局
-1. 除系统预制的皮肤外，看自行添加自定义主题，从而匹配客户或三方系统UI要求。
-2. 添加的皮肤可设定为方案。
-    ![](/excel_intro/module_intro_47.png)
+* 可选择系统预制的色彩主题
+* 可自定义色彩主题并保存为方案
+* 除系统预制的皮肤外，看自行添加自定义主题，从而匹配客户或三方系统UI要求。
+* 添加的皮肤可设定为方案。
+
+![](/excel_intro/module_intro_63.png)
+
+![](/excel_intro/module_intro_47.png)
 
 ## f9. AI生成主题 <Badge text="2026-01-12" type="tip" />
     
