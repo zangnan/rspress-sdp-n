@@ -125,11 +125,15 @@
 
 ### m3. 主子表展示+采集
 
+![](/excel_intro/module_intro_28.png)
+【图m3.主子表展示+采集 —— 主表 **⤴** 】
+
 ![](/dataToView/demo07.png)
 【图m3.主子表展示+采集 —— 子表 **⤴** 】
 
-##### 应用场景
-如人员管理中对学历、工作经验等一对多数据维护，或发票明细数据，报关单明细数据等
+* **使用场景**：如人员管理中对学历、工作经验等一对多数据维护，或发票明细数据，报关单明细数据等
+* **参照模板**：导入示例中`示例_员工`
+* **定制化开发**：可参照`系统管理 - 菜单管理`模块
 
 ##### 配置流程
 1. 主表及子表的基础配置参照 [m1. 数据列表+采集](/sdp/what_can_do/what_can_do_01.html#m1-数据列表采集) 配置流程
@@ -141,10 +145,22 @@
 1. 主表及子表数据展示
 1. 主表及子表涵盖`m1.数据列表+采集`的全部功能
 
-### m4. 关联表展示
+### m4. 关联表展示1
 
-![](/excel_intro/module_intro_52.png)
-【图m4.关联表展示 - 设置关联 **⤴** 】
+![](/excel_intro/module_intro_36.png)
+【图m4.主表展示 **⤴** 】
+
+![](/excel_intro/module_intro_34.png)
+【图m4.子表展示 - 设置关联（主表中含有关联表主键） **⤴** 】
+
+![](/excel_intro/module_intro_35.png)
+【图m4.子表展示 - 设置关联（关联关系在第三张关联表中） **⤴** 】
+
+* **使用场景**：配置一对多关系型数据，如配置人员角色
+* **参照模板1**：可参照模板中导入示例`员工`，链接`标签`配置
+* **参照模板2**：可参照模板中导入示例`员工`，链接`荣誉`配置
+* **数据关系1**：主表中含有关联表主键，关联表数据主键通过逗号分割方式存放于主表
+* **数据关系2**：关联关系在第三张关联表中
 
 ##### 配置流程
 1. 主表及子表的基础配置参照 [m1. 数据列表+采集](/sdp/what_can_do/what_can_do_01.html#m1-数据列表采集) 配置流程
@@ -160,20 +176,24 @@
 ![](/excel_intro/module_intro_87.png)
 【图m5.树状数据+采集 **⤴** 】
 
-* **使用场景**：如菜单维护、组织机构维护等业务场景。
+* **使用场景**：如菜单维护、组织机构维护等业务场景
+* **参照模板**：导入示例中`示例_树`、`示例_部门`
+* **定制化开发**：可参照`系统管理 - 菜单管理`模块
 
 ##### 配置流程
 1. [配置菜单](/sdp/build_by_excel/4-sheet_menu.html)
-   * 关系项：[菜单路径 & 组件](/sdp/build_by_excel/4-sheet_menu.html#菜单路径--组件)
+   * 关键项：[菜单路径 & 组件](/sdp/build_by_excel/4-sheet_menu.html#菜单路径--组件)
 1. [配置表](/sdp/build_by_excel/1-sheet_table.html)
-1. [配置列表项（左侧数据）](/sdp/build_by_excel/3-sheet_dict.html#列表项) 
-   * 关系项：[列表项格式化列](/sdp/build_by_excel/3-sheet_dict.html#列表项格式化列)
+1. [配置表单属性](/sdp/build_by_excel/2-sheet_module.html#表单)
+   * `表单布局`
+1. [配置工具栏默认按钮](/sdp/build_by_excel/2-sheet_module.html#工具栏默认按钮) 
+   * `工具栏增加`、`工具栏删除`、`工具栏编辑`
+1. [配置列表项（左侧）](/sdp/build_by_excel/3-sheet_dict.html#列表项) 
+   * 关键项：[列表项格式化列](/sdp/build_by_excel/3-sheet_dict.html#列表项格式化列)
       1. )  配置数据父子节点，可匹配任意字段
       1. )  配置树节点标题，可匹配任意字段
-1. [配置表单属性](/sdp/build_by_excel/2-sheet_module.html#表单)
-1. [配置表单项（右侧数据）](/sdp/build_by_excel/3-sheet_dict.html#表单项)
-1. [配置工具栏默认按钮](/sdp/build_by_excel/2-sheet_module.html#工具栏默认按钮) 
-   * 仅支持`工具栏增加`、`工具栏删除`、`工具栏编辑`
+1. [配置表单项（右侧）](/sdp/build_by_excel/3-sheet_dict.html#表单项)
+
 
 ##### 展示 & 使用
 1. 树结构数据新建，修改，删除（CRUD）
@@ -183,14 +203,15 @@
 ![](/excel_intro/module_intro_53.png)
 【图m6.树状数据+数据列表 **⤴** 】
 
+* **使用场景**：如查询组织机构树下人员信息
+* **参照模板**：导入示例中`部门员工`
+
 ##### 配置流程
 
 1. 左侧树配置参照 [m5. 树状数据+采集](/sdp/what_can_do/what_can_do_01.html#m5-树状数据采集)
 1. 右侧列表配置参照 [m1. 数据列表+采集](/sdp/what_can_do/what_can_do_01.html#m1-数据列表采集)
 1. [配置菜单](/sdp/build_by_excel/4-sheet_menu.html)
-   * 关系项：[菜单路径 & 组件](/sdp/build_by_excel/4-sheet_menu.html#菜单路径--组件)
-
-也可以参照[自定义开发-树列表组合系数据类型的采集及展示](/sdp/customer_dev.html#7-树列表组合系数据类型的采集及展示)
+   * 关键项：[菜单路径 & 组件](/sdp/build_by_excel/4-sheet_menu.html#菜单路径--组件)
 
 ##### 展示 & 使用
 1. 树数据及列表数据间关联展示
@@ -221,4 +242,6 @@
    [🚀使用说明](/sdp/instruction.html#f9-ai生成主题)
 ### f10. AI模块生成
    [🚀使用说明](/sdp/instruction.html#f10-ai模块生成)
+### f11. 核心资产导出
+   [🚀使用说明](/sdp/instruction.html#f11-核心资产导出)
  
