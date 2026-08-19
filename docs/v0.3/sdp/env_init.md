@@ -19,15 +19,12 @@
    <!-- * 安装 `node-v24.14.0-x64.msi` -->
    * 安装 `node-v24.14.0`
    * 查看版本：`node -v`
-1. **pnpm**: 8.10.2+
-   * `npm install -g pnpm`
-   * 查看版本：`pnpm -v`
-1. **yarn**[备选]: 1.22.22+
+1. **yarn**: 1.22.22+
    * `npm install --global yarn`
    * 查看版本：`yarn -v`
-<!-- 1. **tyarn**[备选]: 1.22.22+
-   * `npm install yarn tyarn -g`
-   * 查看版本：`tyarn -v` -->
+<!-- 1. **pnpm**[备选]: 8.10.2+
+   * `npm install -g pnpm`
+   * 查看版本：`pnpm -v` -->
 
 ## 项目搭建
 1. 下载项目代码
@@ -75,33 +72,33 @@
    * 打包后的dist文件夹变更名称为上述根目录名称后部署到服务器中。
 1. 执行
    * 如本地部署，端口为8080，执行下列地址可进行初始化及登录操作。
-   * `http://localhost:8080/ddittoolV0.2/#/ddittoolV0.2/easy_dev/init`
+   * `http://localhost:8080/ddittoolV0.2/#/ddittoolV0.2/easy_dev_dc/init`
    * `http://localhost:8080/ddittoolV0.2/#/ddittoolV0.2/user/login`
 
-## 敏捷开发平台代码说明
-### 代码版本命名规范
+<!-- ## 敏捷开发平台代码说明 -->
+<!-- ### 代码版本命名规范
 代码版本号格式`v.yyyymmdd.x.y.z`。如版本`v.20241022.0.2.1`，对应关联文件命名如下：
 1. 前端代码zip包：`ddit_sdp_code_frontend_v.20241022.0.2.1.zip`
    * 对应package.json中版本号：`0.2.1`
    * 对应前端代码组件最低版本：`1.0.132` （在package.json中，查看节点`"ddittool": "^1.0.132"`）
    * 对应数据字典导入模板名称，`“数据字典_字典导入模板_v20241022.0.2.1.xlsx”`
-1. 后端jar包：`ddit-cloud-dict-deploy-1.0.0-SNAPSHOT_v.20241022.0.2.1.jar`
+1. 后端jar包：`ddit-cloud-dict-deploy-1.0.0-SNAPSHOT_v.20241022.0.2.1.jar` -->
 
-### 前端代码 - 使用人员 - 代码更新流程
+<!-- ### 前端代码 - 使用人员 - 代码更新流程
 1. 下载最新前端代码包。下载地址：[DDIT-SDP](/sdp/docs_map)
-1. 全量覆盖本地代码，代码中涵盖基础组件、静态资源文件、示例mock数据、Excel模板、新增模块引用页面、新增示例引用页面。
+1. 全量覆盖本地代码，代码中涵盖基础组件、静态资源文件、示例mock数据、Excel模板、新增模块引用页面、新增示例引用页面。 -->
 <!-- 1. 更新最新组件包，前端主要代码更新都会在组件包中完成。根目录下执行：
    ```ts
    npm install ddittool --legacy-peer-deps --registry=http://192.168.21.5:4873
    ``` -->
 
-### 前端代码 - 工具开发人员 - 发布流程
+<!-- ### 前端代码 - 工具开发人员 - 发布流程
 1. git拉取最新代码。
-1. 变更package.json中版本号加1，格式 `version": "0.2.X"`，`X`在每次发布时加`1`。
+1. 变更package.json中版本号加1，格式 `version": "0.2.X"`，`X`在每次发布时加`1`。 -->
 <!-- 1. 上传组件包至服务器。
    ```ts
    npm version patch   # 这会将 package.json 中的版本号更新为当前最小版本号的下一个补丁版本
    npm publish         # 然后发布包
    ``` -->
-1. 拷贝代码为基准版本，并在根目录执行`node fs.js`。
-1. 压缩当前代码做为`“敏捷开发平台代码”`基础包下发开发人员使用。命名规范参照`“敏捷开发平台代码 - 命名规范”`。
+<!-- 1. 拷贝代码为基准版本，并在根目录执行`node fs.js`。
+1. 压缩当前代码做为`“敏捷开发平台代码”`基础包下发开发人员使用。命名规范参照`“敏捷开发平台代码 - 命名规范”`。 -->

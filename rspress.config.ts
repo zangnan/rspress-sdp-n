@@ -19,6 +19,7 @@ export default defineConfig({
     // versions: ['v0.1', 'v0.3'],
   },
   themeConfig: {
+    lastUpdated: true,
     footer: { message: 'Copyright © 2024 | Powered by DDIT', },
     socialLinks: [
       { icon: 'github', mode: 'link', content: 'https://github.com/zangnan/rspress-sdp-n' },
