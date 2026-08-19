@@ -9,7 +9,7 @@
   { "type": "file", "name": "qa", "label": "Q&A" },
   { "type": "section-header", "label": "进阶使用" },
   { "type": "file", "name": "instruction", "label": "高级能力" },
-  { "type": "file", "name": "customer_dev", "label": "自定义开发" },
+  { "type": "file", "name": "customer_dev", "label": "开发者进阶" },
   { "type": "section-header", "label": "其他" },
   { "type": "file", "name": "changelog", "label": "更新日志" },
   { "type": "file", "name": "docs_map", "label": "文档地图" }
