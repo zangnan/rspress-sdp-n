@@ -54,6 +54,7 @@
 1. [配置工具栏默认按钮](/sdp/build_by_excel/2-sheet_module.html#工具栏默认按钮)
 1. [配置列表默认操作列](/sdp/build_by_excel/2-sheet_module.html#列编辑列删除列详情)
 1. [配置自定义按钮（位于工具栏或列表列）](/sdp/build_by_excel/2-sheet_module.html#自定义按钮)`💻需要配合自定义开发` 
+
 ##### 展示 & 使用
 1. 查列表
    * 单表查询
@@ -108,7 +109,7 @@
 1. [配置列表属性](/sdp/build_by_excel/2-sheet_module.html#列表)
 1. [**配置列表媒体形态** *](/sdp/build_by_excel/2-sheet_module.html#列表扩展)
 1. [配置列表项](/sdp/build_by_excel/3-sheet_dict.html#列表项)
-1. [**配置卡片属性，卡片标题、说明、图片、预览地址可匹配任意字段** *](/sdp/build_by_excel/3-sheet_dict.html#列宽排序开关超出隐藏格式化列开启标识主键标识隐藏标识序列)
+1. [**配置卡片属性，卡片标题、说明、图片、预览地址可匹配任意字段** *](/sdp/build_by_excel/3-sheet_dict.html#列表项格式化列)
 1. [配置筛选项](/sdp/build_by_excel/3-sheet_dict.html#筛选项)
 1. [配置表单属性](/sdp/build_by_excel/2-sheet_module.html#表单)
 1. [配置表单项](/sdp/build_by_excel/3-sheet_dict.html#表单项)
@@ -129,13 +130,16 @@
 
 ##### 应用场景
 如人员管理中对学历、工作经验等一对多数据维护，或发票明细数据，报关单明细数据等
+
 ##### 配置流程
-1. 子表配置　[📗配置说明](/sdp/build_by_excel/3-sheet_dict.html#列宽排序开关超出隐藏格式化列开启标识主键标识隐藏标识序列)
+1. 主表及子表的基础配置参照 [m1. 数据列表+采集](/sdp/what_can_do/what_can_do_01.html#m1-数据列表采集) 配置流程
+1. [主表及子表关联关系配置](/sdp/build_by_excel/3-sheet_dict.html#列表项格式化列)
    * 关联数据及id可匹配任意模块和字段
    * 子列表标题可匹配主表任意字段
+   
 ##### 展示 & 使用
-1. 子表数据查询及采集，子表为`m1`形态并涵盖其所有功能
-1. 上述`m1.`数据列表+采集的功能
+1. 主表及子表数据展示
+1. 主表及子表涵盖`m1.数据列表+采集`的全部功能
 
 ### m4. 关联表展示
 
@@ -143,25 +147,36 @@
 【图m4.关联表展示 - 设置关联 **⤴** 】
 
 ##### 配置流程
-1. 关联表配置数据关系维护　[📗配置说明](/sdp/build_by_excel/3-sheet_dict.html#列宽排序开关超出隐藏格式化列开启标识主键标识隐藏标识序列)
+1. 主表及子表的基础配置参照 [m1. 数据列表+采集](/sdp/what_can_do/what_can_do_01.html#m1-数据列表采集) 配置流程
+1. [关联表配置](/sdp/build_by_excel/3-sheet_dict.html#列表项格式化列)
+
 ##### 展示 & 使用
-1. 关联表数据关系维护
-1. 上述`m1.`数据列表+采集的功能
+1. 主表数据展示
+1. 关联表数据展示及设置
+1. 主表涵盖`m1.数据列表+采集`的全部功能
 
 ### m5. 树状数据+采集
 
-![](/dataToView/demo06.png)
+![](/excel_intro/module_intro_87.png)
 【图m5.树状数据+采集 **⤴** 】
 
 * **使用场景**：如菜单维护、组织机构维护等业务场景。
+
 ##### 配置流程
-1. 树配置
-   [📗配置说明](/sdp/build_by_excel/4-sheet_menu.html#菜单路径--组件)
-   [📙配置说明](/sdp/build_by_excel/3-sheet_dict.html#列宽排序开关超出隐藏格式化列开启标识主键标识隐藏标识序列)
-   *  配置数据父子节点，可匹配任意字段
-   *  配置树节点标题，可匹配任意字段
+1. [配置菜单](/sdp/build_by_excel/4-sheet_menu.html)
+   * 关系项：[菜单路径 & 组件](/sdp/build_by_excel/4-sheet_menu.html#菜单路径--组件)
+1. [配置表](/sdp/build_by_excel/1-sheet_table.html)
+1. [配置列表项（左侧数据）](/sdp/build_by_excel/3-sheet_dict.html#列表项) 
+   * 关系项：[列表项格式化列](/sdp/build_by_excel/3-sheet_dict.html#列表项格式化列)
+      1. )  配置数据父子节点，可匹配任意字段
+      1. )  配置树节点标题，可匹配任意字段
+1. [配置表单属性](/sdp/build_by_excel/2-sheet_module.html#表单)
+1. [配置表单项（右侧数据）](/sdp/build_by_excel/3-sheet_dict.html#表单项)
+1. [配置工具栏默认按钮](/sdp/build_by_excel/2-sheet_module.html#工具栏默认按钮) 
+   * 仅支持`工具栏增加`、`工具栏删除`、`工具栏编辑`
+
 ##### 展示 & 使用
-1. 新建，修改，删除（CRUD）
+1. 树结构数据新建，修改，删除（CRUD）
 
 ### m6. 树状数据+数据列表
 
@@ -169,12 +184,18 @@
 【图m6.树状数据+数据列表 **⤴** 】
 
 ##### 配置流程
-1. 数据关系维护
-   [📗配置说明](/sdp/build_by_excel/4-sheet_menu.html#菜单路径--组件)
-   [📙配置说明](/sdp/customer_dev.html#7-树列表组合系数据类型的采集及展示)
+
+1. 左侧树配置参照 [m5. 树状数据+采集](/sdp/what_can_do/what_can_do_01.html#m5-树状数据采集)
+1. 右侧列表配置参照 [m1. 数据列表+采集](/sdp/what_can_do/what_can_do_01.html#m1-数据列表采集)
+1. [配置菜单](/sdp/build_by_excel/4-sheet_menu.html)
+   * 关系项：[菜单路径 & 组件](/sdp/build_by_excel/4-sheet_menu.html#菜单路径--组件)
+
+也可以参照[自定义开发-树列表组合系数据类型的采集及展示](/sdp/customer_dev.html#7-树列表组合系数据类型的采集及展示)
+
 ##### 展示 & 使用
-1. 树节点关联数据查询
-1. 右侧为`m1. 数据列表+采集`，涵盖其所有功能
+1. 树数据及列表数据间关联展示
+1. 左侧树涵盖`m5.树状数据+采集`的全部功能
+1. 右侧列表涵盖`m1.数据列表+采集`的全部功能
 
 
 
