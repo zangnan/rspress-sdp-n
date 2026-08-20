@@ -1,0 +1,7 @@
+<MKM version="2.0" imageFileUrl="file:///D:/work/ddit/apache-tomcat-7.0.37/webapps/md/hts_color2.png">
+  <Marks>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="5424154" offsetX="70" offsetY="14" x="17" y="43"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="16731471" offsetX="70" offsetY="14" x="168" y="43"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="16428308" offsetX="69" offsetY="15" x="318" y="42"/>
+  </Marks>
+</MKM>

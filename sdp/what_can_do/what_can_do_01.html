@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="zh">
+  <head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>不编码，能完成哪些页面和功能？ - Sdp</title>
+<script>{;const saved = localStorage.getItem('rspress-theme-appearance');const preferDark = window.matchMedia('(prefers-color-scheme: dark)').matches;const defaultTheme = 'auto';const theme = saved === 'light' || saved === 'dark' || saved === 'auto' ? saved : defaultTheme;const isDark = theme === 'auto' ? preferDark : theme === 'dark';document.documentElement.classList.toggle('dark', isDark);document.documentElement.classList.toggle('rp-dark', isDark);document.documentElement.style.colorScheme = isDark ? 'dark' : 'light';}</script>
+<link href="/rspress-sdp-n/static/css/styles.cb178f2c3e.css" rel="stylesheet">
+<link rel="preload" href="/rspress-sdp-n/static/js/async/route-25dd564e46b2.e708576d20.js" as="script">
+<script defer src="/rspress-sdp-n/static/js/styles.acb9cf80c8.js"></script>
+<script defer src="/rspress-sdp-n/static/js/lib-react.9f85a52699.js"></script>
+<script defer src="/rspress-sdp-n/static/js/lib-router.77e549f06a.js"></script>
+<script defer src="/rspress-sdp-n/static/js/833.23e2c5eafe.js"></script>
+<script defer src="/rspress-sdp-n/static/js/index.f11e856b45.js"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Rspress v2.0.19">
+<link rel="icon" href="/rspress-sdp-n/logo_hts_orange.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="不编码，能完成哪些页面和功能？ - Sdp">
+<meta name="description" content="敏捷开发平台SDP组件及UI规范设计文档，助力设计开发者「更灵活」地搭建出「更美」的产品，让用户「快乐工作」～">
+<meta property="og:description" content="敏捷开发平台SDP组件及UI规范设计文档，助力设计开发者「更灵活」地搭建出「更美」的产品，让用户「快乐工作」～"></head>
+
+  <body>
+    <div id="__rspress_root"><link rel="preload" as="image" href="/rspress-sdp-n/logo_hts_orange_title_light.png"/><link rel="preload" as="image" href="/rspress-sdp-n/logo_hts_orange_title_dark.png"/><link rel="preload" as="image" href="/rspress-sdp-n/excel_intro/module_intro_54.png"/><link rel="preload" as="image" href="/rspress-sdp-n/excel_intro/module_intro_64.png"/><link rel="preload" as="image" href="/rspress-sdp-n/excel_intro/module_intro_48.png"/><link rel="preload" as="image" href="/rspress-sdp-n/excel_intro/module_intro_49.png"/><link rel="preload" as="image" href="/rspress-sdp-n/excel_intro/module_intro_50.png"/><link rel="preload" as="image" href="/rspress-sdp-n/excel_intro/module_intro_51.png"/><link rel="preload" as="image" href="/rspress-sdp-n/excel_intro/module_intro_28.png"/><link rel="preload" as="image" href="/rspress-sdp-n/dataToView/demo07.png"/><link rel="preload" as="image" href="/rspress-sdp-n/excel_intro/module_intro_36.png"/><link rel="preload" as="image" href="/rspress-sdp-n/excel_intro/module_intro_34.png"/><link rel="preload" as="image" href="/rspress-sdp-n/excel_intro/module_intro_35.png"/><link rel="preload" as="image" href="/rspress-sdp-n/excel_intro/module_intro_87.png"/><link rel="preload" as="image" href="/rspress-sdp-n/excel_intro/module_intro_53.png"/><header class="rp-nav"><div class="rp-nav__left"><div class="rp-nav__title"><a href="/rspress-sdp-n/" class="rp-nav__title__link rp-link"><div class="rp-nav__title__logo"><img src="/rspress-sdp-n/logo_hts_orange_title_light.png" alt="logo" id="logo" class="rspress-logo rp-nav__title__logo-image rp-nav__title__logo-image--light"/><img src="/rspress-sdp-n/logo_hts_orange_title_dark.png" alt="logo" id="logo" class="rspress-logo rp-nav__title__logo-image rp-nav__title__logo-image--dark"/></div><span>敏捷开发平台SDP</span></a></div></div><div class="rp-nav__right"><button class="rp-search-button"><div class="rp-search-button__content"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 20 21" class="rp-search-button__icon"><path fill="currentColor" d="M8.333 1.913A6.667 6.667 0 0 1 15 8.58c0 1.54-.525 2.957-1.402 4.085l4.49 4.492a.834.834 0 0 1-1.177 1.178l-4.491-4.49a6.64 6.64 0 0 1-4.087 1.402 6.667 6.667 0 0 1 0-13.334m0 1.667a5 5 0 1 0 0 10 5 5 0 0 0 0-10"></path></svg><span class="rp-search-button__word">搜索</span></div><div class="rp-search-button__hotkey" style="opacity:0"><span></span><span>K</span></div></button><div class="rp-search-button--mobile"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 20 21"><path fill="currentColor" d="M8.333 1.913A6.667 6.667 0 0 1 15 8.58c0 1.54-.525 2.957-1.402 4.085l4.49 4.492a.834.834 0 0 1-1.177 1.178l-4.491-4.49a6.64 6.64 0 0 1-4.087 1.402 6.667 6.667 0 0 1 0-13.334m0 1.667a5 5 0 1 0 0 10 5 5 0 0 0 0-10"></path></svg></div><ul class="rp-nav-menu rp-nav-menu--right"><li class="rp-nav-menu__item rp-nav-menu__item--active"><a href="/rspress-sdp-n/sdp/summary.html" class="rp-nav-menu__item__container rp-link">研发</a></li><li class="rp-nav-menu__item"><a href="/rspress-sdp-n/component/index.html" class="rp-nav-menu__item__container rp-link">组件</a></li><li class="rp-nav-menu__item"><a href="/rspress-sdp-n/ui/sdp.html" class="rp-nav-menu__item__container rp-link">UI</a></li></ul><div class="rp-nav__others"><div class="rp-nav-menu__divider"></div><div class="rp-switch-appearance"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" class="rp-switch-appearance__icon rp-switch-appearance__icon--sun"><path fill="currentColor" d="m7.001 15.848-1.226 1.226a.58.58 0 0 0 0 .818.58.58 0 0 0 .818 0l1.226-1.226a.58.58 0 0 0 0-.818.58.58 0 0 0-.818 0m-.352-8.735a.584.584 0 0 0 .825-.825L6.237 5.051a.584.584 0 0 0-.825.825zM5.011 11.07h-1.75a.584.584 0 0 0 0 1.167h1.75c.324 0 .584-.26.584-.583a.585.585 0 0 0-.584-.584m7.003-5.835c.324 0 .584-.26.584-.584V2.9a.58.58 0 0 0-.584-.584.58.58 0 0 0-.583.583V4.65c0 .323.262.584.583.584m5.616 1.621 1.226-1.225a.58.58 0 0 0 0-.818.58.58 0 0 0-.818 0l-1.226 1.225a.58.58 0 0 0 0 .818.576.576 0 0 0 .818 0m3.138 4.214h-1.75a.58.58 0 0 0-.584.584c0 .324.26.584.583.584h1.751a.584.584 0 1 0 0-1.167m-3.389 5.124a.584.584 0 0 0-.825.825l1.238 1.238a.584.584 0 0 0 .825-.826zm-5.365-9.795a5.256 5.256 0 0 0-5.257 5.258 5.256 5.256 0 0 0 5.257 5.257 5.256 5.256 0 0 0 5.257-5.257 5.256 5.256 0 0 0-5.257-5.258m0 11.675a.58.58 0 0 0-.583.583v1.751a.582.582 0 1 0 1.167 0v-1.75a.584.584 0 0 0-.584-.584"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" viewBox="0 0 19 19" class="rp-switch-appearance__icon rp-switch-appearance__icon--moon"><path fill="currentColor" d="M9.166 0a9.2 9.2 0 0 1 1.857.188.834.834 0 0 1 .042 1.623 4.47 4.47 0 1 0 5.457 5.457l.048-.135a.834.834 0 0 1 1.575.177q.186.902.188 1.856A9.168 9.168 0 1 1 9.166 0"></path></svg></div><div class="rp-social-links"><a href="https://github.com/zangnan/rspress-sdp-n" target="_blank" rel="noopener noreferrer" class="rp-social-links__item"><div class="rp-social-links__icon"><div class="rp-social-links__icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></div></div></a><ul class="rp-hover-group rp-hover-group--hidden rp-hover-group--right"></ul></div></div><button aria-label="mobile hamburger" class="rp-nav-hamburger rp-nav-hamburger__sm"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none" viewBox="0 0 21 21"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" d="M3.645 5.225h13.333M3.645 10.225h13.333M3.645 15.225h13.333"></path></svg></button><button aria-label="mobile hamburger" class="rp-nav-hamburger rp-nav-hamburger__md"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none" viewBox="0 0 21 21"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" d="M3.645 5.225h13.333M3.645 10.225h13.333M3.645 15.225h13.333"></path></svg><ul class="rp-hover-group rp-hover-group--hidden rp-hover-group--right"><div class="rp-nav-menu__others-mobile__container"><div class="rp-nav-hamburger__md__hover-group"><div class="rp-nav-screen-appearance"><div class="rp-nav-screen-appearance__left">主题</div><div class="rp-nav-screen-appearance__right"></div></div><div class="rp-nav-screen-divider"></div><div class="rp-social-links"><a href="https://github.com/zangnan/rspress-sdp-n" target="_blank" rel="noopener noreferrer" class="rp-social-links__item"><div class="rp-social-links__icon"><div class="rp-social-links__icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></div></div></a><ul class="rp-hover-group rp-hover-group--hidden rp-hover-group--right"></ul></div></div></div></ul></button></div></header><div class="rp-doc-layout__menu"><div class="rp-sidebar-menu"><button type="button" class="rp-sidebar-menu__left"><svg width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M4 6h24v2H4zm0 18h24v2H4zm0-12h24v2H4zm0 6h24v2H4z"></path></svg><span>菜单</span></button><button type="button" class="rp-sidebar-menu__right"><span class="rp-sidebar-menu__right__text">目录</span><svg width="14" height="14" class="rp-progress-circle"><circle cx="7" cy="7" r="6" stroke-linecap="round" fill="none" stroke="var(--rp-c-divider-light)" stroke-width="2"></circle><circle cx="7" cy="7" r="6" stroke-linecap="round" fill="none" stroke="var(--rp-c-brand)" stroke-width="2" stroke-dasharray="37.69911184307752" stroke-dashoffset="37.69911184307752" transform="rotate(-90 7 7)" style="transition:stroke-dashoffset 0.3s"></circle></svg><svg width="1em" height="1em" viewBox="0 0 32 32" class="rp-sidebar-menu__right__icon" style="transform:rotate(0deg);transition:transform 0.2s ease-out"><path fill="currentColor" d="M22 16 12 26l-1.4-1.4 8.6-8.6-8.6-8.6L12 6z"></path></svg></button></div></div><div class="rp-doc-layout__container"><aside class="rp-doc-layout__sidebar rp-scrollbar"><a href="/rspress-sdp-n/sdp/summary.html" class="rp-sidebar-item rp-link" style="padding-left:12px" data-depth="0"><div class="rp-sidebar-item__left"><span class="rp-doc">设计概述</span></div><div class="rp-sidebar-item__right"></div></a><div class="rp-sidebar-item rp-sidebar-group" style="padding-left:12px" data-depth="0"><div class="rp-sidebar-item__left"><span class="rp-doc">我能做什么</span></div><div class="rp-sidebar-item__right"><div style="cursor:pointer;transition:transform 0.2s ease-out;transform:rotate(90deg)"><svg width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M22 16 12 26l-1.4-1.4 8.6-8.6-8.6-8.6L12 6z"></path></svg></div></div></div><div style="display:grid;grid-template-rows:1fr;transition:grid-template-rows 0.2s ease-out"><div style="overflow:hidden"><a href="/rspress-sdp-n/sdp/what_can_do/what_can_do_01.html" class="rp-sidebar-item rp-sidebar-item--active rp-sidebar-item--group-item rp-link" style="padding-left:calc(12px * 1 + 12px)" data-depth="1"><div class="rp-sidebar-item__left"><span class="rp-doc">不编码，能完成哪些页面和功能？</span></div><div class="rp-sidebar-item__right"></div></a><a href="/rspress-sdp-n/sdp/what_can_do/what_can_do_03.html" class="rp-sidebar-item rp-sidebar-item--group-item rp-link" style="padding-left:calc(12px * 1 + 12px)" data-depth="1"><div class="rp-sidebar-item__left"><span class="rp-doc">平台功能模块介绍</span></div><div class="rp-sidebar-item__right"></div></a></div></div><div class="rp-sidebar-divider--dashed" style="padding-left:12px"></div><div class="rp-sidebar-section-header"><div class="rp-sidebar-section-header__left"><span>开始</span></div><div class="rp-sidebar-section-header__right"></div></div><a href="/rspress-sdp-n/sdp/env_init.html" class="rp-sidebar-item rp-link" style="padding-left:12px" data-depth="0"><div class="rp-sidebar-item__left"><span class="rp-doc">快速开始</span></div><div class="rp-sidebar-item__right"></div></a><div class="rp-sidebar-item rp-sidebar-group" style="padding-left:12px" data-depth="0"><div class="rp-sidebar-item__left"><span class="rp-doc">Excel构建</span></div><div class="rp-sidebar-item__right"><div style="cursor:pointer;transition:transform 0.2s ease-out;transform:rotate(90deg)"><svg width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M22 16 12 26l-1.4-1.4 8.6-8.6-8.6-8.6L12 6z"></path></svg></div></div></div><div style="display:grid;grid-template-rows:1fr;transition:grid-template-rows 0.2s ease-out"><div style="overflow:hidden"><a href="/rspress-sdp-n/sdp/build_by_excel/1-sheet_table.html" class="rp-sidebar-item rp-sidebar-item--group-item rp-link" style="padding-left:calc(12px * 1 + 12px)" data-depth="1"><div class="rp-sidebar-item__left"><span class="rp-doc">Sheet.表</span></div><div class="rp-sidebar-item__right"></div></a><a href="/rspress-sdp-n/sdp/build_by_excel/2-sheet_module.html" class="rp-sidebar-item rp-sidebar-item--group-item rp-link" style="padding-left:calc(12px * 1 + 12px)" data-depth="1"><div class="rp-sidebar-item__left"><span class="rp-doc">Sheet.模块</span></div><div class="rp-sidebar-item__right"></div></a><a href="/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.html" class="rp-sidebar-item rp-sidebar-item--group-item rp-link" style="padding-left:calc(12px * 1 + 12px)" data-depth="1"><div class="rp-sidebar-item__left"><span class="rp-doc">Sheet.字段</span></div><div class="rp-sidebar-item__right"></div></a><a href="/rspress-sdp-n/sdp/build_by_excel/4-sheet_menu.html" class="rp-sidebar-item rp-sidebar-item--group-item rp-link" style="padding-left:calc(12px * 1 + 12px)" data-depth="1"><div class="rp-sidebar-item__left"><span class="rp-doc">Sheet.菜单</span></div><div class="rp-sidebar-item__right"></div></a><a href="/rspress-sdp-n/sdp/build_by_excel/5-sheet_sql_manage.html" class="rp-sidebar-item rp-sidebar-item--group-item rp-link" style="padding-left:calc(12px * 1 + 12px)" data-depth="1"><div class="rp-sidebar-item__left"><span class="rp-doc">Sheet.自定义SQL</span></div><div class="rp-sidebar-item__right"></div></a><a href="/rspress-sdp-n/sdp/build_by_excel/6-sheet_codetable_manage.html" class="rp-sidebar-item rp-sidebar-item--group-item rp-link" style="padding-left:calc(12px * 1 + 12px)" data-depth="1"><div class="rp-sidebar-item__left"><span class="rp-doc">Sheet.自定义码表</span></div><div class="rp-sidebar-item__right"></div></a><a href="/rspress-sdp-n/sdp/build_by_excel/9-fun_list.html" class="rp-sidebar-item rp-sidebar-item--group-item rp-link" style="padding-left:calc(12px * 1 + 12px)" data-depth="1"><div class="rp-sidebar-item__left"><span class="rp-doc">字典功能清单</span></div><div class="rp-sidebar-item__right"></div></a></div></div><a href="/rspress-sdp-n/sdp/self_check.html" class="rp-sidebar-item rp-link" style="padding-left:12px" data-depth="0"><div class="rp-sidebar-item__left"><span class="rp-doc">前端开发自查</span></div><div class="rp-sidebar-item__right"></div></a><a href="/rspress-sdp-n/sdp/qa.html" class="rp-sidebar-item rp-link" style="padding-left:12px" data-depth="0"><div class="rp-sidebar-item__left"><span class="rp-doc">Q&amp;A</span></div><div class="rp-sidebar-item__right"></div></a><div class="rp-sidebar-section-header"><div class="rp-sidebar-section-header__left"><span>进阶使用</span></div><div class="rp-sidebar-section-header__right"></div></div><a href="/rspress-sdp-n/sdp/instruction.html" class="rp-sidebar-item rp-link" style="padding-left:12px" data-depth="0"><div class="rp-sidebar-item__left"><span class="rp-doc">高级能力</span></div><div class="rp-sidebar-item__right"></div></a><a href="/rspress-sdp-n/sdp/customer_dev.html" class="rp-sidebar-item rp-link" style="padding-left:12px" data-depth="0"><div class="rp-sidebar-item__left"><span class="rp-doc">开发者进阶</span></div><div class="rp-sidebar-item__right"></div></a><div class="rp-sidebar-section-header"><div class="rp-sidebar-section-header__left"><span>其他</span></div><div class="rp-sidebar-section-header__right"></div></div><a href="/rspress-sdp-n/sdp/changelog.html" class="rp-sidebar-item rp-link" style="padding-left:12px" data-depth="0"><div class="rp-sidebar-item__left"><span class="rp-doc">更新日志</span></div><div class="rp-sidebar-item__right"></div></a><a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-sidebar-item rp-link" style="padding-left:12px" data-depth="0"><div class="rp-sidebar-item__left"><span class="rp-doc">文档地图</span></div><div class="rp-sidebar-item__right"></div></a></aside><div class="rp-doc-layout__doc"><main class="rp-doc-layout__doc-container"><div class="rp-doc rspress-doc"><!--$--><h1 class="rp-toc-include" id="不编码能完成哪些页面和功能"><a href="#不编码能完成哪些页面和功能" class="rp-header-anchor rp-link" aria-hidden="true">#</a>不编码，能完成哪些页面和功能？<!-- --> </h1>
+<h2 class="rp-toc-include" id="一-概述"><a href="#一-概述" class="rp-header-anchor rp-link" aria-hidden="true">#</a>一. 概述</h2>
+<p>无需通过编码，仅编写如下图所示的Excel模版文件，并通过敏捷开发平台进行模块构建，即可以完成下列类型页面及模块的搭建，可供<code>需求/设计</code>、<code>开发</code>人员使用。</p>
+<p><a href="/rspress-sdp-n/sdp/build_by_excel/1-sheet_table.html" class="rp-link">📗Excel编写说明</a></p>
+<p><strong>已支持的配置页面</strong></p>
+<ul>
+<li><a href="/rspress-sdp-n/sdp/what_can_do/what_can_do_01.html#m1-%E6%95%B0%E6%8D%AE%E5%88%97%E8%A1%A8%E9%87%87%E9%9B%86" class="rp-link">m1.数据列表+采集</a></li>
+<li><a href="/rspress-sdp-n/sdp/what_can_do/what_can_do_01.html#m2-%E5%AA%92%E4%BD%93%E5%88%97%E8%A1%A8%E9%87%87%E9%9B%86" class="rp-link">m2.媒体列表+采集</a></li>
+<li><a href="/rspress-sdp-n/sdp/what_can_do/what_can_do_01.html#m3-%E4%B8%BB%E5%AD%90%E8%A1%A8%E5%B1%95%E7%A4%BA%E9%87%87%E9%9B%86" class="rp-link">m3.主子表展示+采集</a></li>
+<li><a href="/rspress-sdp-n/sdp/what_can_do/what_can_do_01.html#m4-%E5%85%B3%E8%81%94%E8%A1%A8%E5%B1%95%E7%A4%BA" class="rp-link">m4.关联表展示</a></li>
+<li><a href="/rspress-sdp-n/sdp/what_can_do/what_can_do_01.html#m5-%E6%A0%91%E7%8A%B6%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86" class="rp-link">m5.树状数据+采集</a></li>
+<li><a href="/rspress-sdp-n/sdp/what_can_do/what_can_do_01.html#m6-%E6%A0%91%E7%8A%B6%E6%95%B0%E6%8D%AE%E6%95%B0%E6%8D%AE%E5%88%97%E8%A1%A8" class="rp-link">m6.树状数据+数据列表</a></li>
+</ul>
+<p><img src="/rspress-sdp-n/excel_intro/module_intro_54.png" alt=""/></p>
+<p><strong>从数据库层面考虑，当完成上述配置，已经具备了基于数据表及数据间关系，处理数据的基础能力</strong></p>
+<ul>
+<li>数据库的单表维护
+<ol>
+<li>普通表 <a href="/rspress-sdp-n/sdp/what_can_do/what_can_do_01.html#m1-%E6%95%B0%E6%8D%AE%E5%88%97%E8%A1%A8%E9%87%87%E9%9B%86" class="rp-link">（m1.数据列表+采集）</a></li>
+<li>树状表 <a href="/rspress-sdp-n/sdp/what_can_do/what_can_do_01.html#m5-%E6%A0%91%E7%8A%B6%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86" class="rp-link">（m5.树状数据+采集）</a></li>
+</ol>
+</li>
+<li>数据库的主子表维护
+<ol>
+<li>子表含有主表主键，如主表&quot;人员基本信息表&quot;、子表&quot;人员工作履历表&quot; <a href="/rspress-sdp-n/sdp/what_can_do/what_can_do_01.html#m3-%E4%B8%BB%E5%AD%90%E8%A1%A8%E5%B1%95%E7%A4%BA%E9%87%87%E9%9B%86" class="rp-link">（m3.主子表展示+采集）</a></li>
+</ol>
+</li>
+<li>数据库的一对一、一对多关系表，所有含有外键关系的表都符合这种情况，如&quot;人员表&quot;、&quot;角色表&quot;。可细化为两种：
+<ol>
+<li>主表中含有关联表主键 <a href="/rspress-sdp-n/sdp/what_can_do/what_can_do_01.html#m4-%E5%85%B3%E8%81%94%E8%A1%A8%E5%B1%95%E7%A4%BA" class="rp-link">（m4.关联表展示）</a></li>
+<li>关联关系在第三张关联表中 <a href="/rspress-sdp-n/sdp/what_can_do/what_can_do_01.html#m4-%E5%85%B3%E8%81%94%E8%A1%A8%E5%B1%95%E7%A4%BA" class="rp-link">（m4.关联表展示）</a></li>
+</ol>
+</li>
+</ul>
+<p><strong>谁可以用</strong></p>
+<ul>
+<li><strong>需求/设计人员</strong>：对接客户需求，迅速产出原型图，减少原型图设计时间。并同步生成部分设计文档，规避繁琐工作。</li>
+<li><strong>开发人员</strong>：初始化系统搭建，基础模块搭建，同步完成数据库设计。</li>
+</ul>
+<h2 class="rp-toc-include" id="二-模块页面展示--功能明细"><a href="#二-模块页面展示--功能明细" class="rp-header-anchor rp-link" aria-hidden="true">#</a>二. 模块页面展示 &amp; 功能明细</h2>
+<h3 class="rp-toc-include" id="m1-数据列表采集"><a href="#m1-数据列表采集" class="rp-header-anchor rp-link" aria-hidden="true">#</a>m1. 数据列表+采集</h3>
+<p><img src="/rspress-sdp-n/excel_intro/module_intro_64.png" alt=""/>
+【图m1. 数据列表 <strong>⤴</strong> 】</p>
+<h5 class="rp-toc-include" id="配置流程"><a href="#配置流程" class="rp-header-anchor rp-link" aria-hidden="true">#</a>配置流程</h5>
+<ol>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/4-sheet_menu.html" class="rp-link">配置菜单</a></li>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/1-sheet_table.html" class="rp-link">配置表</a></li>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/2-sheet_module.html#%E5%88%97%E8%A1%A8" class="rp-link">配置列表属性</a></li>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.html#%E5%88%97%E8%A1%A8%E9%A1%B9" class="rp-link">配置列表项</a></li>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.html#%E7%AD%9B%E9%80%89%E9%A1%B9" class="rp-link">配置筛选项</a></li>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/2-sheet_module.html#%E8%A1%A8%E5%8D%95" class="rp-link">配置表单属性</a></li>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.html#%E8%A1%A8%E5%8D%95%E9%A1%B9" class="rp-link">配置表单项</a></li>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/2-sheet_module.html#%E5%B7%A5%E5%85%B7%E6%A0%8F%E9%BB%98%E8%AE%A4%E6%8C%89%E9%92%AE" class="rp-link">配置工具栏默认按钮</a></li>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/2-sheet_module.html#%E5%88%97%E7%BC%96%E8%BE%91%E5%88%97%E5%88%A0%E9%99%A4%E5%88%97%E8%AF%A6%E6%83%85" class="rp-link">配置列表默认操作列</a></li>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/2-sheet_module.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%89%E9%92%AE" class="rp-link">配置自定义按钮（位于工具栏或列表列）</a><code>💻需要配合自定义开发</code></li>
+</ol>
+<h5 class="rp-toc-include" id="展示--使用"><a href="#展示--使用" class="rp-header-anchor rp-link" aria-hidden="true">#</a>展示 &amp; 使用</h5>
+<ol>
+<li>查列表
+<ul>
+<li>单表查询</li>
+<li>多表关联查询</li>
+<li>自定义SQL/视图查询</li>
+<li>码表转换</li>
+<li>格式化数据：根据字段类别如日期、数值等设置不同展示方式</li>
+<li>展示统计项：合计、最大值、最小值、平均值</li>
+<li>按照<code>预制接口</code>查询列表数据，也可以配置<code>自定义接口</code>，<code>💻需要配合自定义开发</code></li>
+<li>按需展示列表配置项内容：列表序号、边框、列表首选项（Radio、Checkbox或无）</li>
+<li>按需展示列表列配置项内容，如：开启标识、主键标识、对齐方式、列宽、固定列、隐藏标识、超出隐藏、排序开关、序列、列表项合并列头</li>
+<li>按需展示筛选列，如：类型、类型扩展参数、序列、名称、位置、占位符、布局</li>
+<li>按需展示列表默认操作列</li>
+<li>展示列表自定义操作列 <code>💻需要配合自定义开发</code></li>
+</ul>
+</li>
+<li>查详情
+<ul>
+<li>单表查询</li>
+<li>多表关联查询</li>
+</ul>
+</li>
+<li>工具栏
+<ul>
+<li>按需展示工具栏默认按钮</li>
+<li>展示自定义按钮 <code>💻需要配合自定义开发</code></li>
+</ul>
+</li>
+<li>数据维护 - 删除
+<ul>
+<li>支持单一主键及联合主键数据删除</li>
+</ul>
+</li>
+<li>数据维护 - 新建，修改 （表单编辑）
+<ul>
+<li>常规录入控件支持：Input、 InputNumber、 Select、 DatePicker、 Radio、 Checkbox、 TextArea、 GroupTitle、 TreeSelect、 Upload、 UploadVideo、 UploadAudio、 UploadPicture、 RichTextEditor</li>
+<li>常规类型校验：必录、数字、数字字母 、电话 、邮件 、身份证 、中文 、日期 、数值范围+ 、数值范围- 、数值范围+- 、数值范围+0 、数值范围-0 、NUMBER(15,5) 、VARCHAR2(6) 、长度范围2~10 、长度=21 、yyyy-MM-dd 、yyyyMM 、<code>[string (自定义方法的名称)]</code> <code>💻需要配合自定义开发</code></li>
+<li>依据配置的码表展示Select、Radio、Checkbox、TreeSelect内容</li>
+<li>依据配置的格式化内容展示数据：如根据字段类别日期、数值...设置不同展示方式</li>
+<li>依据配置自动计算表单项公式</li>
+<li>依据配置展示表单布局宽度</li>
+<li>依据配置展示表单项：开启、只读、类型扩展参数、布局、项序列</li>
+<li>依据配置设置表单项事件：事件失去焦点、事件得到焦点、事件值改变、事件查询 <code>💻需要配合自定义开发</code></li>
+</ul>
+</li>
+<li>数据导入</li>
+</ol>
+<p><img src="/rspress-sdp-n/excel_intro/module_intro_48.png" alt=""/>
+【图m1. 数据列表 <strong>⤴</strong> 】</p>
+<p><img src="/rspress-sdp-n/excel_intro/module_intro_49.png" alt=""/>
+【图m1. 数据采集 <strong>⤴</strong> 】</p>
+<h3 class="rp-toc-include" id="m2-媒体列表采集"><a href="#m2-媒体列表采集" class="rp-header-anchor rp-link" aria-hidden="true">#</a>m2. 媒体列表+采集</h3>
+<p><img src="/rspress-sdp-n/excel_intro/module_intro_50.png" alt=""/>
+【图m2. 媒体列表 - 卡片形态 <strong>⤴</strong> 】</p>
+<p><img src="/rspress-sdp-n/excel_intro/module_intro_51.png" alt=""/>
+【图m2. 媒体列表 - 列表形态 <strong>⤴</strong> 】</p>
+<h5 class="rp-toc-include" id="配置流程-1"><a href="#配置流程-1" class="rp-header-anchor rp-link" aria-hidden="true">#</a>配置流程</h5>
+<ol>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/4-sheet_menu.html" class="rp-link">配置菜单</a></li>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/1-sheet_table.html" class="rp-link">配置表</a></li>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/2-sheet_module.html#%E5%88%97%E8%A1%A8" class="rp-link">配置列表属性</a></li>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/2-sheet_module.html#%E5%88%97%E8%A1%A8%E6%89%A9%E5%B1%95" class="rp-link"><strong>配置列表媒体形态</strong> *</a></li>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.html#%E5%88%97%E8%A1%A8%E9%A1%B9" class="rp-link">配置列表项</a></li>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.html#%E5%88%97%E8%A1%A8%E9%A1%B9%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%88%97" class="rp-link"><strong>配置卡片属性，卡片标题、说明、图片、预览地址可匹配任意字段</strong> *</a></li>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.html#%E7%AD%9B%E9%80%89%E9%A1%B9" class="rp-link">配置筛选项</a></li>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/2-sheet_module.html#%E8%A1%A8%E5%8D%95" class="rp-link">配置表单属性</a></li>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.html#%E8%A1%A8%E5%8D%95%E9%A1%B9" class="rp-link">配置表单项</a></li>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/2-sheet_module.html#%E5%B7%A5%E5%85%B7%E6%A0%8F%E9%BB%98%E8%AE%A4%E6%8C%89%E9%92%AE" class="rp-link">配置工具栏默认按钮</a></li>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/2-sheet_module.html#%E5%88%97%E7%BC%96%E8%BE%91%E5%88%97%E5%88%A0%E9%99%A4%E5%88%97%E8%AF%A6%E6%83%85" class="rp-link">配置列表默认操作列</a></li>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/2-sheet_module.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%89%E9%92%AE" class="rp-link">配置自定义按钮（位于工具栏或列表列）</a><code>💻需要配合自定义开发</code></li>
+</ol>
+<h5 class="rp-toc-include" id="展示--使用-1"><a href="#展示--使用-1" class="rp-header-anchor rp-link" aria-hidden="true">#</a>展示 &amp; 使用</h5>
+<ol>
+<li>切换媒体卡片形态、列表形态</li>
+<li>预览图片、视音频文件</li>
+<li>上述<code>m1.</code>数据列表+采集的功能</li>
+<li>支持自定义卡片布局及渲染 <code>💻需要配合自定义开发</code></li>
+</ol>
+<h3 class="rp-toc-include" id="m3-主子表展示采集"><a href="#m3-主子表展示采集" class="rp-header-anchor rp-link" aria-hidden="true">#</a>m3. 主子表展示+采集</h3>
+<p><img src="/rspress-sdp-n/excel_intro/module_intro_28.png" alt=""/>
+【图m3.主子表展示+采集 —— 主表 <strong>⤴</strong> 】</p>
+<p><img src="/rspress-sdp-n/dataToView/demo07.png" alt=""/>
+【图m3.主子表展示+采集 —— 子表 <strong>⤴</strong> 】</p>
+<ul>
+<li><strong>使用场景</strong>：如人员管理中对学历、工作经验等一对多数据维护，或发票明细数据，报关单明细数据等</li>
+<li><strong>参照模板</strong>：导入示例中<code>示例_员工</code></li>
+<li><strong>定制化开发</strong>：可参照<code>系统管理 - 菜单管理</code>模块</li>
+</ul>
+<h5 class="rp-toc-include" id="配置流程-2"><a href="#配置流程-2" class="rp-header-anchor rp-link" aria-hidden="true">#</a>配置流程</h5>
+<ol>
+<li>主表及子表的基础配置参照 <a href="/rspress-sdp-n/sdp/what_can_do/what_can_do_01.html#m1-%E6%95%B0%E6%8D%AE%E5%88%97%E8%A1%A8%E9%87%87%E9%9B%86" class="rp-link">m1. 数据列表+采集</a> 配置流程</li>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.html#%E5%88%97%E8%A1%A8%E9%A1%B9%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%88%97" class="rp-link">主表及子表关联关系配置</a>
+<ul>
+<li>关联数据及id可匹配任意模块和字段</li>
+<li>子列表标题可匹配主表任意字段</li>
+</ul>
+</li>
+</ol>
+<h5 class="rp-toc-include" id="展示--使用-2"><a href="#展示--使用-2" class="rp-header-anchor rp-link" aria-hidden="true">#</a>展示 &amp; 使用</h5>
+<ol>
+<li>主表及子表数据展示</li>
+<li>主表及子表涵盖<code>m1.数据列表+采集</code>的全部功能</li>
+</ol>
+<h3 class="rp-toc-include" id="m4-关联表展示1"><a href="#m4-关联表展示1" class="rp-header-anchor rp-link" aria-hidden="true">#</a>m4. 关联表展示1</h3>
+<p><img src="/rspress-sdp-n/excel_intro/module_intro_36.png" alt=""/>
+【图m4.主表展示 <strong>⤴</strong> 】</p>
+<p><img src="/rspress-sdp-n/excel_intro/module_intro_34.png" alt=""/>
+【图m4.子表展示 - 设置关联（主表中含有关联表主键） <strong>⤴</strong> 】</p>
+<p><img src="/rspress-sdp-n/excel_intro/module_intro_35.png" alt=""/>
+【图m4.子表展示 - 设置关联（关联关系在第三张关联表中） <strong>⤴</strong> 】</p>
+<ul>
+<li><strong>使用场景</strong>：配置一对多关系型数据，如配置人员角色</li>
+<li><strong>参照模板1</strong>：可参照模板中导入示例<code>员工</code>，链接<code>标签</code>配置</li>
+<li><strong>参照模板2</strong>：可参照模板中导入示例<code>员工</code>，链接<code>荣誉</code>配置</li>
+<li><strong>数据关系1</strong>：主表中含有关联表主键，关联表数据主键通过逗号分割方式存放于主表</li>
+<li><strong>数据关系2</strong>：关联关系在第三张关联表中</li>
+</ul>
+<h5 class="rp-toc-include" id="配置流程-3"><a href="#配置流程-3" class="rp-header-anchor rp-link" aria-hidden="true">#</a>配置流程</h5>
+<ol>
+<li>主表及子表的基础配置参照 <a href="/rspress-sdp-n/sdp/what_can_do/what_can_do_01.html#m1-%E6%95%B0%E6%8D%AE%E5%88%97%E8%A1%A8%E9%87%87%E9%9B%86" class="rp-link">m1. 数据列表+采集</a> 配置流程</li>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.html#%E5%88%97%E8%A1%A8%E9%A1%B9%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%88%97" class="rp-link">关联表配置</a></li>
+</ol>
+<h5 class="rp-toc-include" id="展示--使用-3"><a href="#展示--使用-3" class="rp-header-anchor rp-link" aria-hidden="true">#</a>展示 &amp; 使用</h5>
+<ol>
+<li>主表数据展示</li>
+<li>关联表数据展示及设置</li>
+<li>主表涵盖<code>m1.数据列表+采集</code>的全部功能</li>
+</ol>
+<h3 class="rp-toc-include" id="m5-树状数据采集"><a href="#m5-树状数据采集" class="rp-header-anchor rp-link" aria-hidden="true">#</a>m5. 树状数据+采集</h3>
+<p><img src="/rspress-sdp-n/excel_intro/module_intro_87.png" alt=""/>
+【图m5.树状数据+采集 <strong>⤴</strong> 】</p>
+<ul>
+<li><strong>使用场景</strong>：如菜单维护、组织机构维护等业务场景</li>
+<li><strong>参照模板</strong>：导入示例中<code>示例_树</code>、<code>示例_部门</code></li>
+<li><strong>定制化开发</strong>：可参照<code>系统管理 - 菜单管理</code>模块</li>
+</ul>
+<h5 class="rp-toc-include" id="配置流程-4"><a href="#配置流程-4" class="rp-header-anchor rp-link" aria-hidden="true">#</a>配置流程</h5>
+<ol>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/4-sheet_menu.html" class="rp-link">配置菜单</a>
+<ul>
+<li>关键项：<a href="/rspress-sdp-n/sdp/build_by_excel/4-sheet_menu.html#%E8%8F%9C%E5%8D%95%E8%B7%AF%E5%BE%84--%E7%BB%84%E4%BB%B6" class="rp-link">菜单路径 &amp; 组件</a></li>
+</ul>
+</li>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/1-sheet_table.html" class="rp-link">配置表</a></li>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/2-sheet_module.html#%E8%A1%A8%E5%8D%95" class="rp-link">配置表单属性</a>
+<ul>
+<li><code>表单布局</code></li>
+</ul>
+</li>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/2-sheet_module.html#%E5%B7%A5%E5%85%B7%E6%A0%8F%E9%BB%98%E8%AE%A4%E6%8C%89%E9%92%AE" class="rp-link">配置工具栏默认按钮</a>
+<ul>
+<li><code>工具栏增加</code>、<code>工具栏删除</code>、<code>工具栏编辑</code></li>
+</ul>
+</li>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.html#%E5%88%97%E8%A1%A8%E9%A1%B9" class="rp-link">配置列表项（左侧）</a>
+<ul>
+<li>关键项：<a href="/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.html#%E5%88%97%E8%A1%A8%E9%A1%B9%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%88%97" class="rp-link">列表项格式化列</a>
+<ol>
+<li>)  配置数据父子节点，可匹配任意字段</li>
+<li>)  配置树节点标题，可匹配任意字段</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.html#%E8%A1%A8%E5%8D%95%E9%A1%B9" class="rp-link">配置表单项（右侧）</a></li>
+</ol>
+<h5 class="rp-toc-include" id="展示--使用-4"><a href="#展示--使用-4" class="rp-header-anchor rp-link" aria-hidden="true">#</a>展示 &amp; 使用</h5>
+<ol>
+<li>树结构数据新建，修改，删除（CRUD）</li>
+</ol>
+<h3 class="rp-toc-include" id="m6-树状数据数据列表"><a href="#m6-树状数据数据列表" class="rp-header-anchor rp-link" aria-hidden="true">#</a>m6. 树状数据+数据列表</h3>
+<p><img src="/rspress-sdp-n/excel_intro/module_intro_53.png" alt=""/>
+【图m6.树状数据+数据列表 <strong>⤴</strong> 】</p>
+<ul>
+<li><strong>使用场景</strong>：如查询组织机构树下人员信息</li>
+<li><strong>参照模板</strong>：导入示例中<code>部门员工</code></li>
+</ul>
+<h5 class="rp-toc-include" id="配置流程-5"><a href="#配置流程-5" class="rp-header-anchor rp-link" aria-hidden="true">#</a>配置流程</h5>
+<ol>
+<li>左侧树配置参照 <a href="/rspress-sdp-n/sdp/what_can_do/what_can_do_01.html#m5-%E6%A0%91%E7%8A%B6%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86" class="rp-link">m5. 树状数据+采集</a></li>
+<li>右侧列表配置参照 <a href="/rspress-sdp-n/sdp/what_can_do/what_can_do_01.html#m1-%E6%95%B0%E6%8D%AE%E5%88%97%E8%A1%A8%E9%87%87%E9%9B%86" class="rp-link">m1. 数据列表+采集</a></li>
+<li><a href="/rspress-sdp-n/sdp/build_by_excel/4-sheet_menu.html" class="rp-link">配置菜单</a>
+<ul>
+<li>关键项：<a href="/rspress-sdp-n/sdp/build_by_excel/4-sheet_menu.html#%E8%8F%9C%E5%8D%95%E8%B7%AF%E5%BE%84--%E7%BB%84%E4%BB%B6" class="rp-link">菜单路径 &amp; 组件</a></li>
+</ul>
+</li>
+</ol>
+<h5 class="rp-toc-include" id="展示--使用-5"><a href="#展示--使用-5" class="rp-header-anchor rp-link" aria-hidden="true">#</a>展示 &amp; 使用</h5>
+<ol>
+<li>树数据及列表数据间关联展示</li>
+<li>左侧树涵盖<code>m5.树状数据+采集</code>的全部功能</li>
+<li>右侧列表涵盖<code>m1.数据列表+采集</code>的全部功能</li>
+</ol>
+<h2 class="rp-toc-include" id="三-高阶能力"><a href="#三-高阶能力" class="rp-header-anchor rp-link" aria-hidden="true">#</a>三. 高阶能力</h2>
+<h3 class="rp-toc-include" id="f1-维度表统计"><a href="#f1-维度表统计" class="rp-header-anchor rp-link" aria-hidden="true">#</a>f1. 维度表统计</h3>
+<p><a href="/rspress-sdp-n/sdp/instruction.html#f1-%E7%BB%B4%E5%BA%A6%E8%A1%A8%E7%BB%9F%E8%AE%A1" class="rp-link">🚀使用说明</a></p>
+<h3 class="rp-toc-include" id="f2-图表统计"><a href="#f2-图表统计" class="rp-header-anchor rp-link" aria-hidden="true">#</a>f2. 图表统计</h3>
+<p><a href="/rspress-sdp-n/sdp/instruction.html#f2-%E5%9B%BE%E8%A1%A8%E7%BB%9F%E8%AE%A1" class="rp-link">🚀使用说明</a></p>
+<h3 class="rp-toc-include" id="f3-列表高级筛选"><a href="#f3-列表高级筛选" class="rp-header-anchor rp-link" aria-hidden="true">#</a>f3. 列表高级筛选</h3>
+<p><a href="/rspress-sdp-n/sdp/instruction.html#f3-%E5%88%97%E8%A1%A8%E9%AB%98%E7%BA%A7%E7%AD%9B%E9%80%89" class="rp-link">🚀使用说明</a></p>
+<h3 class="rp-toc-include" id="f4-列表视图设置"><a href="#f4-列表视图设置" class="rp-header-anchor rp-link" aria-hidden="true">#</a>f4. 列表视图设置</h3>
+<p><a href="/rspress-sdp-n/sdp/instruction.html#f4-%E5%88%97%E8%A1%A8%E8%A7%86%E5%9B%BE%E8%AE%BE%E7%BD%AE" class="rp-link">🚀使用说明</a></p>
+<h3 class="rp-toc-include" id="f5-列表数据导出"><a href="#f5-列表数据导出" class="rp-header-anchor rp-link" aria-hidden="true">#</a>f5. 列表数据导出</h3>
+<p><a href="/rspress-sdp-n/sdp/instruction.html#f5-%E5%88%97%E8%A1%A8%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%87%BA" class="rp-link">🚀使用说明</a></p>
+<h3 class="rp-toc-include" id="f6-生成设计文档"><a href="#f6-生成设计文档" class="rp-header-anchor rp-link" aria-hidden="true">#</a>f6. 生成设计文档</h3>
+<p><a href="/rspress-sdp-n/sdp/instruction.html#f6-%E7%94%9F%E6%88%90%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3" class="rp-link">🚀使用说明</a></p>
+<h3 class="rp-toc-include" id="f7-管理帮助文档"><a href="#f7-管理帮助文档" class="rp-header-anchor rp-link" aria-hidden="true">#</a>f7. 管理帮助文档</h3>
+<p><a href="/rspress-sdp-n/sdp/instruction.html#f7-%E7%AE%A1%E7%90%86%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3" class="rp-link">🚀使用说明</a></p>
+<h3 class="rp-toc-include" id="f8-管理色彩主题及布局"><a href="#f8-管理色彩主题及布局" class="rp-header-anchor rp-link" aria-hidden="true">#</a>f8. 管理色彩主题及布局</h3>
+<p><a href="/rspress-sdp-n/sdp/instruction.html#f8-%E7%AE%A1%E7%90%86%E8%89%B2%E5%BD%A9%E4%B8%BB%E9%A2%98%E5%8F%8A%E5%B8%83%E5%B1%80" class="rp-link">🚀使用说明</a></p>
+<h3 class="rp-toc-include" id="f9-ai生成主题"><a href="#f9-ai生成主题" class="rp-header-anchor rp-link" aria-hidden="true">#</a>f9. AI生成主题</h3>
+<p><a href="/rspress-sdp-n/sdp/instruction.html#f9-ai%E7%94%9F%E6%88%90%E4%B8%BB%E9%A2%98" class="rp-link">🚀使用说明</a></p>
+<h3 class="rp-toc-include" id="f10-ai模块生成"><a href="#f10-ai模块生成" class="rp-header-anchor rp-link" aria-hidden="true">#</a>f10. AI模块生成</h3>
+<p><a href="/rspress-sdp-n/sdp/instruction.html#f10-ai%E6%A8%A1%E5%9D%97%E7%94%9F%E6%88%90" class="rp-link">🚀使用说明</a></p>
+<h3 class="rp-toc-include" id="f11-核心资产导出"><a href="#f11-核心资产导出" class="rp-header-anchor rp-link" aria-hidden="true">#</a>f11. 核心资产导出</h3>
+<p><a href="/rspress-sdp-n/sdp/instruction.html#f11-%E6%A0%B8%E5%BF%83%E8%B5%84%E4%BA%A7%E5%AF%BC%E5%87%BA" class="rp-link">🚀使用说明</a></p><!--/$--></div><footer class="rp-doc-footer"><div class="rp-doc-footer__edit"><div class="rp-last-updated"><p>最后更新于<!-- -->: <span>2026/8/19 15:07:26</span></p></div></div><div class="rp-doc-footer__divider"></div><div class="rp-prev-next-page"><a href="/rspress-sdp-n/sdp/summary.html" class="rp-prev-next-page__item rp-prev-next-page__prev rp-link"><span class="rp-prev-next-page__item__desc">上一页</span><span class="rp-prev-next-page__item__title"><svg width="1em" height="1em" viewBox="0 0 32 32" class="rp-prev-next-page__icon rp-prev-next-page__rotate_180"><path fill="currentColor" d="M22 16 12 26l-1.4-1.4 8.6-8.6-8.6-8.6L12 6z"></path></svg><span>设计概述</span></span></a><a href="/rspress-sdp-n/sdp/what_can_do/what_can_do_03.html" class="rp-prev-next-page__item rp-prev-next-page__next rp-link"><span class="rp-prev-next-page__item__desc">下一页</span><span class="rp-prev-next-page__item__title"><span>平台功能模块介绍</span><svg width="1em" height="1em" viewBox="0 0 32 32" class="rp-prev-next-page__icon"><path fill="currentColor" d="M22 16 12 26l-1.4-1.4 8.6-8.6-8.6-8.6L12 6z"></path></svg></span></a></div></footer></main></div><aside class="rp-doc-layout__outline rp-scrollbar"><div class="rp-outline"><div class="rp-outline__title">目录<svg width="14" height="14" class="rp-progress-circle"><circle cx="7" cy="7" r="6" stroke-linecap="round" fill="none" stroke="var(--rp-c-divider-light)" stroke-width="2"></circle><circle cx="7" cy="7" r="6" stroke-linecap="round" fill="none" stroke="var(--rp-c-brand)" stroke-width="2" stroke-dasharray="37.69911184307752" stroke-dashoffset="37.69911184307752" transform="rotate(-90 7 7)" style="transition:stroke-dashoffset 0.3s"></circle></svg></div><nav class="rp-outline__toc rp-scrollbar"><a href="#一-概述" class="rp-toc-item rp-link" title="一. 概述" style="padding-left:0" data-depth="0"><span class="rp-toc-item__text rp-doc">一. 概述</span></a><a href="#二-模块页面展示--功能明细" class="rp-toc-item rp-link" title="二. 模块页面展示 &amp; 功能明细" style="padding-left:0" data-depth="0"><span class="rp-toc-item__text rp-doc">二. 模块页面展示 &amp; 功能明细</span></a><a href="#m1-数据列表采集" class="rp-toc-item rp-link" title="m1. 数据列表+采集" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">m1. 数据列表+采集</span></a><a href="#m2-媒体列表采集" class="rp-toc-item rp-link" title="m2. 媒体列表+采集" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">m2. 媒体列表+采集</span></a><a href="#m3-主子表展示采集" class="rp-toc-item rp-link" title="m3. 主子表展示+采集" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">m3. 主子表展示+采集</span></a><a href="#m4-关联表展示1" class="rp-toc-item rp-link" title="m4. 关联表展示1" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">m4. 关联表展示1</span></a><a href="#m5-树状数据采集" class="rp-toc-item rp-link" title="m5. 树状数据+采集" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">m5. 树状数据+采集</span></a><a href="#m6-树状数据数据列表" class="rp-toc-item rp-link" title="m6. 树状数据+数据列表" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">m6. 树状数据+数据列表</span></a><a href="#三-高阶能力" class="rp-toc-item rp-link" title="三. 高阶能力" style="padding-left:0" data-depth="0"><span class="rp-toc-item__text rp-doc">三. 高阶能力</span></a><a href="#f1-维度表统计" class="rp-toc-item rp-link" title="f1. 维度表统计" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">f1. 维度表统计</span></a><a href="#f2-图表统计" class="rp-toc-item rp-link" title="f2. 图表统计" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">f2. 图表统计</span></a><a href="#f3-列表高级筛选" class="rp-toc-item rp-link" title="f3. 列表高级筛选" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">f3. 列表高级筛选</span></a><a href="#f4-列表视图设置" class="rp-toc-item rp-link" title="f4. 列表视图设置" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">f4. 列表视图设置</span></a><a href="#f5-列表数据导出" class="rp-toc-item rp-link" title="f5. 列表数据导出" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">f5. 列表数据导出</span></a><a href="#f6-生成设计文档" class="rp-toc-item rp-link" title="f6. 生成设计文档" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">f6. 生成设计文档</span></a><a href="#f7-管理帮助文档" class="rp-toc-item rp-link" title="f7. 管理帮助文档" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">f7. 管理帮助文档</span></a><a href="#f8-管理色彩主题及布局" class="rp-toc-item rp-link" title="f8. 管理色彩主题及布局" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">f8. 管理色彩主题及布局</span></a><a href="#f9-ai生成主题" class="rp-toc-item rp-link" title="f9. AI生成主题" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">f9. AI生成主题</span></a><a href="#f10-ai模块生成" class="rp-toc-item rp-link" title="f10. AI模块生成" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">f10. AI模块生成</span></a><a href="#f11-核心资产导出" class="rp-toc-item rp-link" title="f11. 核心资产导出" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">f11. 核心资产导出</span></a></nav><div class="rp-outline__divider"></div><div class="rp-outline__bottom"></div></div></aside></div></div>
+    <div id="__rspress_modal_container"></div>
+  </body>
+</html>

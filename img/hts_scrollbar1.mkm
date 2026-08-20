@@ -1,0 +1,10 @@
+<MKM version="2.0" imageFileUrl="file:///D:/work/ddit/code/dumi.saas.2303.21/docs/static/img/hts_scrollbar1.png">
+  <Marks>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="13553358" offsetX="55" offsetY="17" x="411" y="289"/>
+    <ColorMark defaultDirection="5" colorSystem="hex" direction="5" color="16711680" targetColor="13553358" offsetX="73" offsetY="18" x="904" y="355"/>
+    <ColorMark defaultDirection="5" colorSystem="hex" direction="5" color="16711680" targetColor="15066597" offsetX="73" offsetY="33" x="903" y="124"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="15066597" offsetX="63" offsetY="18" x="544" y="289"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="13554132" offsetX="79" offsetY="28" x="197" y="306"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="11777720" offsetX="137" offsetY="34" x="197" y="88"/>
+  </Marks>
+</MKM>

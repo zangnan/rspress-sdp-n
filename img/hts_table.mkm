@@ -1,0 +1,21 @@
+<MKM version="2.0" imageFileUrl="file:///D:/work/ddit/code/dumi.saas.2303.21/docs/static/img/hts_table.png">
+  <Marks>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="14671839" offsetX="126" offsetY="10" x="684" y="38"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="548015" offsetX="33" offsetY="30" x="779" y="158"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="16119285" offsetX="55" offsetY="13" x="761" y="116"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="13948116" offsetX="56" offsetY="24" x="521" y="336"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="12566463" offsetX="98" offsetY="67" x="639" y="328"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="15069177" offsetX="31" offsetY="21" x="784" y="144"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="14408667" offsetX="39" offsetY="9" x="777" y="123"/>
+    <LengthMark direction="3" color="16711680" length="33" x="414" y="20"/>
+    <LengthMark direction="3" color="16711680" length="35" x="394" y="53"/>
+    <TextMark defaultDirection="10" direction="10" color="16711680" x="133" y="174" textMaxWidth="127" offsetX="87" offsetY="66" text="表格左右内间距 padding-left: 8px  padding-right: 8px"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="15592941" offsetX="30" offsetY="8" x="780" y="36"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="12566463" offsetX="68" offsetY="49" x="349" y="330"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="1609983" offsetX="74" offsetY="36" x="520" y="328"/>
+    <TextMark defaultDirection="9" direction="9" color="16711680" x="639" y="328" textMaxWidth="100" offsetX="82" offsetY="46" text="鼠标划过"/>
+    <TextMark defaultDirection="6" direction="6" color="16711680" x="795" y="480" textMaxWidth="256" offsetX="150" offsetY="32" text="inset -10px 0 8px -8px rgba(0,0,0,.15)"/>
+    <TextMark defaultDirection="6" direction="6" color="16711680" x="795" y="480" textMaxWidth="100" offsetX="161" offsetY="48" text="阴影"/>
+    <LengthMark direction="3" color="16711680" length="165" x="196" y="616"/>
+  </Marks>
+</MKM>

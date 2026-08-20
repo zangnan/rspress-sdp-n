@@ -1,0 +1,7 @@
+<MKM version="2.0" imageFileUrl="file:///D:/work/ddit/apache-tomcat-7.0.37/webapps/md/hts_btn_disable.png">
+  <Marks>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="16316664" offsetX="48" offsetY="26" x="24" y="39"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="13619151" offsetX="48" offsetY="14" x="132" y="35"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="15132390" offsetX="51" offsetY="21" x="129" y="44"/>
+  </Marks>
+</MKM>

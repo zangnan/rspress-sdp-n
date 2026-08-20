@@ -1,0 +1,7 @@
+<MKM version="2.0" imageFileUrl="file:///D:/work/ddit/code/dumi.saas.2303.21/public/img/hts_color1.png">
+  <Marks>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="683729" offsetX="67" offsetY="17" x="20" y="41"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="548015" offsetX="66" offsetY="18" x="171" y="40"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="15134970" offsetX="72" offsetY="10" x="317" y="45"/>
+  </Marks>
+</MKM>

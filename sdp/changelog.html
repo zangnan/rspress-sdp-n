@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="zh">
+  <head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>修订记录 - Sdp</title>
+<script>{;const saved = localStorage.getItem('rspress-theme-appearance');const preferDark = window.matchMedia('(prefers-color-scheme: dark)').matches;const defaultTheme = 'auto';const theme = saved === 'light' || saved === 'dark' || saved === 'auto' ? saved : defaultTheme;const isDark = theme === 'auto' ? preferDark : theme === 'dark';document.documentElement.classList.toggle('dark', isDark);document.documentElement.classList.toggle('rp-dark', isDark);document.documentElement.style.colorScheme = isDark ? 'dark' : 'light';}</script>
+<link href="/rspress-sdp-n/static/css/styles.cb178f2c3e.css" rel="stylesheet">
+<link rel="preload" href="/rspress-sdp-n/static/js/async/route-6d21accdcfa3.6f22c83cc8.js" as="script">
+<script defer src="/rspress-sdp-n/static/js/styles.acb9cf80c8.js"></script>
+<script defer src="/rspress-sdp-n/static/js/lib-react.9f85a52699.js"></script>
+<script defer src="/rspress-sdp-n/static/js/lib-router.77e549f06a.js"></script>
+<script defer src="/rspress-sdp-n/static/js/833.23e2c5eafe.js"></script>
+<script defer src="/rspress-sdp-n/static/js/index.f11e856b45.js"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Rspress v2.0.19">
+<link rel="icon" href="/rspress-sdp-n/logo_hts_orange.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="修订记录 - Sdp">
+<meta name="description" content="敏捷开发平台SDP组件及UI规范设计文档，助力设计开发者「更灵活」地搭建出「更美」的产品，让用户「快乐工作」～">
+<meta property="og:description" content="敏捷开发平台SDP组件及UI规范设计文档，助力设计开发者「更灵活」地搭建出「更美」的产品，让用户「快乐工作」～"></head>
+
+  <body>
+    <div id="__rspress_root"><link rel="preload" as="image" href="/rspress-sdp-n/logo_hts_orange_title_light.png"/><link rel="preload" as="image" href="/rspress-sdp-n/logo_hts_orange_title_dark.png"/><header class="rp-nav"><div class="rp-nav__left"><div class="rp-nav__title"><a href="/rspress-sdp-n/" class="rp-nav__title__link rp-link"><div class="rp-nav__title__logo"><img src="/rspress-sdp-n/logo_hts_orange_title_light.png" alt="logo" id="logo" class="rspress-logo rp-nav__title__logo-image rp-nav__title__logo-image--light"/><img src="/rspress-sdp-n/logo_hts_orange_title_dark.png" alt="logo" id="logo" class="rspress-logo rp-nav__title__logo-image rp-nav__title__logo-image--dark"/></div><span>敏捷开发平台SDP</span></a></div></div><div class="rp-nav__right"><button class="rp-search-button"><div class="rp-search-button__content"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 20 21" class="rp-search-button__icon"><path fill="currentColor" d="M8.333 1.913A6.667 6.667 0 0 1 15 8.58c0 1.54-.525 2.957-1.402 4.085l4.49 4.492a.834.834 0 0 1-1.177 1.178l-4.491-4.49a6.64 6.64 0 0 1-4.087 1.402 6.667 6.667 0 0 1 0-13.334m0 1.667a5 5 0 1 0 0 10 5 5 0 0 0 0-10"></path></svg><span class="rp-search-button__word">搜索</span></div><div class="rp-search-button__hotkey" style="opacity:0"><span></span><span>K</span></div></button><div class="rp-search-button--mobile"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 20 21"><path fill="currentColor" d="M8.333 1.913A6.667 6.667 0 0 1 15 8.58c0 1.54-.525 2.957-1.402 4.085l4.49 4.492a.834.834 0 0 1-1.177 1.178l-4.491-4.49a6.64 6.64 0 0 1-4.087 1.402 6.667 6.667 0 0 1 0-13.334m0 1.667a5 5 0 1 0 0 10 5 5 0 0 0 0-10"></path></svg></div><ul class="rp-nav-menu rp-nav-menu--right"><li class="rp-nav-menu__item rp-nav-menu__item--active"><a href="/rspress-sdp-n/sdp/summary.html" class="rp-nav-menu__item__container rp-link">研发</a></li><li class="rp-nav-menu__item"><a href="/rspress-sdp-n/component/index.html" class="rp-nav-menu__item__container rp-link">组件</a></li><li class="rp-nav-menu__item"><a href="/rspress-sdp-n/ui/sdp.html" class="rp-nav-menu__item__container rp-link">UI</a></li></ul><div class="rp-nav__others"><div class="rp-nav-menu__divider"></div><div class="rp-switch-appearance"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" class="rp-switch-appearance__icon rp-switch-appearance__icon--sun"><path fill="currentColor" d="m7.001 15.848-1.226 1.226a.58.58 0 0 0 0 .818.58.58 0 0 0 .818 0l1.226-1.226a.58.58 0 0 0 0-.818.58.58 0 0 0-.818 0m-.352-8.735a.584.584 0 0 0 .825-.825L6.237 5.051a.584.584 0 0 0-.825.825zM5.011 11.07h-1.75a.584.584 0 0 0 0 1.167h1.75c.324 0 .584-.26.584-.583a.585.585 0 0 0-.584-.584m7.003-5.835c.324 0 .584-.26.584-.584V2.9a.58.58 0 0 0-.584-.584.58.58 0 0 0-.583.583V4.65c0 .323.262.584.583.584m5.616 1.621 1.226-1.225a.58.58 0 0 0 0-.818.58.58 0 0 0-.818 0l-1.226 1.225a.58.58 0 0 0 0 .818.576.576 0 0 0 .818 0m3.138 4.214h-1.75a.58.58 0 0 0-.584.584c0 .324.26.584.583.584h1.751a.584.584 0 1 0 0-1.167m-3.389 5.124a.584.584 0 0 0-.825.825l1.238 1.238a.584.584 0 0 0 .825-.826zm-5.365-9.795a5.256 5.256 0 0 0-5.257 5.258 5.256 5.256 0 0 0 5.257 5.257 5.256 5.256 0 0 0 5.257-5.257 5.256 5.256 0 0 0-5.257-5.258m0 11.675a.58.58 0 0 0-.583.583v1.751a.582.582 0 1 0 1.167 0v-1.75a.584.584 0 0 0-.584-.584"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" viewBox="0 0 19 19" class="rp-switch-appearance__icon rp-switch-appearance__icon--moon"><path fill="currentColor" d="M9.166 0a9.2 9.2 0 0 1 1.857.188.834.834 0 0 1 .042 1.623 4.47 4.47 0 1 0 5.457 5.457l.048-.135a.834.834 0 0 1 1.575.177q.186.902.188 1.856A9.168 9.168 0 1 1 9.166 0"></path></svg></div><div class="rp-social-links"><a href="https://github.com/zangnan/rspress-sdp-n" target="_blank" rel="noopener noreferrer" class="rp-social-links__item"><div class="rp-social-links__icon"><div class="rp-social-links__icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></div></div></a><ul class="rp-hover-group rp-hover-group--hidden rp-hover-group--right"></ul></div></div><button aria-label="mobile hamburger" class="rp-nav-hamburger rp-nav-hamburger__sm"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none" viewBox="0 0 21 21"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" d="M3.645 5.225h13.333M3.645 10.225h13.333M3.645 15.225h13.333"></path></svg></button><button aria-label="mobile hamburger" class="rp-nav-hamburger rp-nav-hamburger__md"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none" viewBox="0 0 21 21"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" d="M3.645 5.225h13.333M3.645 10.225h13.333M3.645 15.225h13.333"></path></svg><ul class="rp-hover-group rp-hover-group--hidden rp-hover-group--right"><div class="rp-nav-menu__others-mobile__container"><div class="rp-nav-hamburger__md__hover-group"><div class="rp-nav-screen-appearance"><div class="rp-nav-screen-appearance__left">主题</div><div class="rp-nav-screen-appearance__right"></div></div><div class="rp-nav-screen-divider"></div><div class="rp-social-links"><a href="https://github.com/zangnan/rspress-sdp-n" target="_blank" rel="noopener noreferrer" class="rp-social-links__item"><div class="rp-social-links__icon"><div class="rp-social-links__icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></div></div></a><ul class="rp-hover-group rp-hover-group--hidden rp-hover-group--right"></ul></div></div></div></ul></button></div></header><div class="rp-doc-layout__menu"><div class="rp-sidebar-menu"><button type="button" class="rp-sidebar-menu__left"><svg width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M4 6h24v2H4zm0 18h24v2H4zm0-12h24v2H4zm0 6h24v2H4z"></path></svg><span>菜单</span></button><button type="button" class="rp-sidebar-menu__right"><span class="rp-sidebar-menu__right__text">目录</span><svg width="14" height="14" class="rp-progress-circle"><circle cx="7" cy="7" r="6" stroke-linecap="round" fill="none" stroke="var(--rp-c-divider-light)" stroke-width="2"></circle><circle cx="7" cy="7" r="6" stroke-linecap="round" fill="none" stroke="var(--rp-c-brand)" stroke-width="2" stroke-dasharray="37.69911184307752" stroke-dashoffset="37.69911184307752" transform="rotate(-90 7 7)" style="transition:stroke-dashoffset 0.3s"></circle></svg><svg width="1em" height="1em" viewBox="0 0 32 32" class="rp-sidebar-menu__right__icon" style="transform:rotate(0deg);transition:transform 0.2s ease-out"><path fill="currentColor" d="M22 16 12 26l-1.4-1.4 8.6-8.6-8.6-8.6L12 6z"></path></svg></button></div></div><div class="rp-doc-layout__container"><aside class="rp-doc-layout__sidebar rp-scrollbar"><a href="/rspress-sdp-n/sdp/summary.html" class="rp-sidebar-item rp-link" style="padding-left:12px" data-depth="0"><div class="rp-sidebar-item__left"><span class="rp-doc">设计概述</span></div><div class="rp-sidebar-item__right"></div></a><div class="rp-sidebar-item rp-sidebar-group" style="padding-left:12px" data-depth="0"><div class="rp-sidebar-item__left"><span class="rp-doc">我能做什么</span></div><div class="rp-sidebar-item__right"><div style="cursor:pointer;transition:transform 0.2s ease-out;transform:rotate(90deg)"><svg width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M22 16 12 26l-1.4-1.4 8.6-8.6-8.6-8.6L12 6z"></path></svg></div></div></div><div style="display:grid;grid-template-rows:1fr;transition:grid-template-rows 0.2s ease-out"><div style="overflow:hidden"><a href="/rspress-sdp-n/sdp/what_can_do/what_can_do_01.html" class="rp-sidebar-item rp-sidebar-item--group-item rp-link" style="padding-left:calc(12px * 1 + 12px)" data-depth="1"><div class="rp-sidebar-item__left"><span class="rp-doc">不编码，能完成哪些页面和功能？</span></div><div class="rp-sidebar-item__right"></div></a><a href="/rspress-sdp-n/sdp/what_can_do/what_can_do_03.html" class="rp-sidebar-item rp-sidebar-item--group-item rp-link" style="padding-left:calc(12px * 1 + 12px)" data-depth="1"><div class="rp-sidebar-item__left"><span class="rp-doc">平台功能模块介绍</span></div><div class="rp-sidebar-item__right"></div></a></div></div><div class="rp-sidebar-divider--dashed" style="padding-left:12px"></div><div class="rp-sidebar-section-header"><div class="rp-sidebar-section-header__left"><span>开始</span></div><div class="rp-sidebar-section-header__right"></div></div><a href="/rspress-sdp-n/sdp/env_init.html" class="rp-sidebar-item rp-link" style="padding-left:12px" data-depth="0"><div class="rp-sidebar-item__left"><span class="rp-doc">快速开始</span></div><div class="rp-sidebar-item__right"></div></a><div class="rp-sidebar-item rp-sidebar-group" style="padding-left:12px" data-depth="0"><div class="rp-sidebar-item__left"><span class="rp-doc">Excel构建</span></div><div class="rp-sidebar-item__right"><div style="cursor:pointer;transition:transform 0.2s ease-out;transform:rotate(90deg)"><svg width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M22 16 12 26l-1.4-1.4 8.6-8.6-8.6-8.6L12 6z"></path></svg></div></div></div><div style="display:grid;grid-template-rows:1fr;transition:grid-template-rows 0.2s ease-out"><div style="overflow:hidden"><a href="/rspress-sdp-n/sdp/build_by_excel/1-sheet_table.html" class="rp-sidebar-item rp-sidebar-item--group-item rp-link" style="padding-left:calc(12px * 1 + 12px)" data-depth="1"><div class="rp-sidebar-item__left"><span class="rp-doc">Sheet.表</span></div><div class="rp-sidebar-item__right"></div></a><a href="/rspress-sdp-n/sdp/build_by_excel/2-sheet_module.html" class="rp-sidebar-item rp-sidebar-item--group-item rp-link" style="padding-left:calc(12px * 1 + 12px)" data-depth="1"><div class="rp-sidebar-item__left"><span class="rp-doc">Sheet.模块</span></div><div class="rp-sidebar-item__right"></div></a><a href="/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.html" class="rp-sidebar-item rp-sidebar-item--group-item rp-link" style="padding-left:calc(12px * 1 + 12px)" data-depth="1"><div class="rp-sidebar-item__left"><span class="rp-doc">Sheet.字段</span></div><div class="rp-sidebar-item__right"></div></a><a href="/rspress-sdp-n/sdp/build_by_excel/4-sheet_menu.html" class="rp-sidebar-item rp-sidebar-item--group-item rp-link" style="padding-left:calc(12px * 1 + 12px)" data-depth="1"><div class="rp-sidebar-item__left"><span class="rp-doc">Sheet.菜单</span></div><div class="rp-sidebar-item__right"></div></a><a href="/rspress-sdp-n/sdp/build_by_excel/5-sheet_sql_manage.html" class="rp-sidebar-item rp-sidebar-item--group-item rp-link" style="padding-left:calc(12px * 1 + 12px)" data-depth="1"><div class="rp-sidebar-item__left"><span class="rp-doc">Sheet.自定义SQL</span></div><div class="rp-sidebar-item__right"></div></a><a href="/rspress-sdp-n/sdp/build_by_excel/6-sheet_codetable_manage.html" class="rp-sidebar-item rp-sidebar-item--group-item rp-link" style="padding-left:calc(12px * 1 + 12px)" data-depth="1"><div class="rp-sidebar-item__left"><span class="rp-doc">Sheet.自定义码表</span></div><div class="rp-sidebar-item__right"></div></a><a href="/rspress-sdp-n/sdp/build_by_excel/9-fun_list.html" class="rp-sidebar-item rp-sidebar-item--group-item rp-link" style="padding-left:calc(12px * 1 + 12px)" data-depth="1"><div class="rp-sidebar-item__left"><span class="rp-doc">字典功能清单</span></div><div class="rp-sidebar-item__right"></div></a></div></div><a href="/rspress-sdp-n/sdp/self_check.html" class="rp-sidebar-item rp-link" style="padding-left:12px" data-depth="0"><div class="rp-sidebar-item__left"><span class="rp-doc">前端开发自查</span></div><div class="rp-sidebar-item__right"></div></a><a href="/rspress-sdp-n/sdp/qa.html" class="rp-sidebar-item rp-link" style="padding-left:12px" data-depth="0"><div class="rp-sidebar-item__left"><span class="rp-doc">Q&amp;A</span></div><div class="rp-sidebar-item__right"></div></a><div class="rp-sidebar-section-header"><div class="rp-sidebar-section-header__left"><span>进阶使用</span></div><div class="rp-sidebar-section-header__right"></div></div><a href="/rspress-sdp-n/sdp/instruction.html" class="rp-sidebar-item rp-link" style="padding-left:12px" data-depth="0"><div class="rp-sidebar-item__left"><span class="rp-doc">高级能力</span></div><div class="rp-sidebar-item__right"></div></a><a href="/rspress-sdp-n/sdp/customer_dev.html" class="rp-sidebar-item rp-link" style="padding-left:12px" data-depth="0"><div class="rp-sidebar-item__left"><span class="rp-doc">开发者进阶</span></div><div class="rp-sidebar-item__right"></div></a><div class="rp-sidebar-section-header"><div class="rp-sidebar-section-header__left"><span>其他</span></div><div class="rp-sidebar-section-header__right"></div></div><a href="/rspress-sdp-n/sdp/changelog.html" class="rp-sidebar-item rp-sidebar-item--active rp-link" style="padding-left:12px" data-depth="0"><div class="rp-sidebar-item__left"><span class="rp-doc">更新日志</span></div><div class="rp-sidebar-item__right"></div></a><a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-sidebar-item rp-link" style="padding-left:12px" data-depth="0"><div class="rp-sidebar-item__left"><span class="rp-doc">文档地图</span></div><div class="rp-sidebar-item__right"></div></a></aside><div class="rp-doc-layout__doc"><main class="rp-doc-layout__doc-container"><div class="rp-doc rspress-doc"><!--$--><h1 class="rp-toc-include" id="修订记录"><a href="#修订记录" class="rp-header-anchor rp-link" aria-hidden="true">#</a>修订记录<!-- --> </h1>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<h2 class="rp-toc-include" id="2026-04-16"><a href="#2026-04-16" class="rp-header-anchor rp-link" aria-hidden="true">#</a>2026-04-16</h2>
+<ul>
+<li>🔥 新增 <code>AutomaticPageVTable</code>组件，用于将 DDBaseGridVtable 纳入字典管理</li>
+<li>🔥 新增 <a href="http://192.168.21.5:7777/ddit_sdp/intro/" target="_blank" rel="noopener noreferrer" class="rp-link">视频介绍页</a></li>
+<li><strong><code>变更</code></strong> 前端代码，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>ddit_sdp_code_frontend_v.20260416.1.1.2.zip</code></a>。</li>
+<li><strong><code>新增</code></strong> 模块API日志分析</li>
+<li><strong><code>新增</code></strong> 模块应用日志分析</li>
+</ul>
+<h2 class="rp-toc-include" id="2026-03-13"><a href="#2026-03-13" class="rp-header-anchor rp-link" aria-hidden="true">#</a>2026-03-13</h2>
+<ul>
+<li>🔥 新增 <code>DDBaseGridVtable</code>组件及示例，用于处理大数据量、高性能要求的表格场景。</li>
+<li><strong><code>变更</code></strong> 前端代码，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>ddit_sdp_code_frontend_v.20260313.1.1.1.zip</code></a>。</li>
+<li><strong><code>变更</code></strong> antd版本<code>6.3.1+</code>，umijs版本<code>4.6.29+</code>。</li>
+<li><strong><code>变更</code></strong> 调整node版本<code>24.14.0(LTS)+</code>。</li>
+<li><strong><code>新增</code></strong> 包管理工具增加对<code>pnpm</code>支持，推荐采用pnpm进行管理。</li>
+<li><strong><code>新增</code></strong> 主页，后续可按需调整。</li>
+<li>🐞 修复清空缓存后首次进入系统登录经常出现白页的问题。</li>
+<li>🐞 修复表单组件中由于拖拽组件引起的&#x27;Cannot have two HTML5 backends at the same time&#x27;的问题。</li>
+<li>🐞 修复浏览器大量警告&#x27;Warning:Each child in an arrayoriteratorshouldhave a unique&quot;key&quot;prop&#x27;的问题。</li>
+<li>🐞 修复接连访问两个由automatic_page组件编码的页面时，列表标题下方出现多行空格问题。</li>
+</ul>
+<h2 class="rp-toc-include" id="2026-01-12"><a href="#2026-01-12" class="rp-header-anchor rp-link" aria-hidden="true">#</a>2026-01-12</h2>
+<ul>
+<li>🔥 新增AI 主题设置。</li>
+<li>🔥 新增工具文档，涵盖文字处理、日期处理、本地存储、会话存储、数组处理、树形结构、Word 文档、图表工具、弹窗工具集、码表处理等...<code>http://xxx.xxx.xxx.xxx/UtilDoc</code>。</li>
+<li><strong><code>变更</code></strong> 前端代码，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>ddit_sdp_code_frontend_v.20260112.1.1.0.zip</code></a>，后续所有基础组件将放置在代码包中。</li>
+<li><strong><code>变更</code></strong> antd版本<code>6.0.0+</code>，umijs版本<code>4.6.4+</code>，ant-design/x版本<code>2.0.0+</code>。</li>
+<li><strong><code>变更</code></strong> node版本<code>25.2.1+</code>。</li>
+</ul>
+<h2 class="rp-toc-include" id="2025-12-04"><a href="#2025-12-04" class="rp-header-anchor rp-link" aria-hidden="true">#</a>2025-12-04</h2>
+<ul>
+<li><strong><code>变更</code></strong> 前端代码，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>ddit_sdp_code_frontend_v.20251204.1.0.4.zip</code></a>。</li>
+<li><strong><code>新增</code></strong> 三方系统接入页。<code>/user/transition?encodedData=xxx</code></li>
+</ul>
+<h2 class="rp-toc-include" id="2025-11-28"><a href="#2025-11-28" class="rp-header-anchor rp-link" aria-hidden="true">#</a>2025-11-28</h2>
+<ul>
+<li><strong><code>变更</code></strong> 前端代码，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>ddit_sdp_code_frontend_v.20251128.1.0.3.zip</code></a>。</li>
+<li><strong><code>新增</code></strong> 文档生成管理，新增<code>数据字典接口</code>生成。</li>
+<li><strong><code>新增</code></strong> 数据字典，列表格式化增加<code>switch</code>配置，用于是否等类型数据（1、0；Y、N...）快捷编辑。</li>
+<li><strong><code>新增</code></strong> 数据字典，列表格式化增加<code>timeEasyRead</code>配置，将毫秒数转为xx毫秒、xx秒或xx分。</li>
+<li><strong><code>新增</code></strong> 数据字典，列表格式化增加<code>tagColor</code>配置。</li>
+<li><strong><code>新增</code></strong> 列表视图展示，工具栏视图设置按钮增加视图筛选及重置。配置module_key页面将同步开启视图方案，并可存储视图方案。选中方案后，再次进入该页面会采用最后选择的视图方案。</li>
+</ul>
+<h2 class="rp-toc-include" id="2025-09-23"><a href="#2025-09-23" class="rp-header-anchor rp-link" aria-hidden="true">#</a>2025-09-23</h2>
+<ul>
+<li>🔥 新增 模块 <a href="/rspress-sdp-n/sdp/instruction.html#%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3" class="rp-link">帮助文档管理</a>。</li>
+<li>🔥 新增 模块 <a href="/rspress-sdp-n/sdp/instruction.html#%E6%96%87%E6%A1%A3%E7%94%9F%E6%88%90" class="rp-link">文档生成管理</a>。</li>
+<li>🔥 新增 模块 <a href="/rspress-sdp-n/sdp/instruction.html#%E7%9A%AE%E8%82%A4%E8%AE%BE%E7%BD%AE" class="rp-link">皮肤设置</a>。</li>
+<li><strong><code>变更</code></strong> 前端代码，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>ddit_sdp_code_frontend_v.20250923.1.0.2.zip</code></a>。</li>
+<li><strong><code>新增</code></strong> 基础单元表单事件新增<a href="/rspress-sdp-n/component/unit/api_event.html#afterformsavesuccess" class="rp-link"><code>afterFormSaveSuccess</code></a>，表单保存成功后回调，如更新码表。</li>
+<li><strong><code>新增</code></strong> 基础单元表单事件新增<a href="/rspress-sdp-n/component/unit/api_event.html#afterformdeletesuccess" class="rp-link"><code>afterFormDeleteSuccess</code></a>，表单删除成功后回调，如更新码表。</li>
+<li><strong><code>新增</code></strong> 基础单元列表事件新增<a href="/rspress-sdp-n/component/unit/api_event.html#statistics" class="rp-link"><code>statistics</code></a>，合计自定义渲染，如格式化合计结果。</li>
+<li><strong><code>新增</code></strong> 基础单元工具栏配置新增<a href="/rspress-sdp-n/component/unit/api_event.html#configtoolbar_default" class="rp-link"><code>delete_by_condition</code></a>，筛选删除配置。</li>
+<li><strong><code>新增</code></strong> 基础单元事件新增<a href="/rspress-sdp-n/component/unit/api_event.html#issontableedit" class="rp-link"><code>isSonTableEdit</code></a>配置。</li>
+<li><strong><code>新增</code></strong> 基础单元视图设置按钮后增加已保存视图快捷筛选。</li>
+<li><strong><code>新增</code></strong> 表单组件新增<a href="/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.html#%E5%8F%82%E6%95%B02%E8%A1%A8%E5%8D%95%E9%A1%B9%E7%B1%BB%E5%9E%8B" class="rp-link"><code>MarkdownEditor</code></a>类型。</li>
+<li><strong><code>新增</code></strong> 表单组件新增<a href="/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.html#%E5%8F%82%E6%95%B02%E8%A1%A8%E5%8D%95%E9%A1%B9%E7%B1%BB%E5%9E%8B" class="rp-link"><code>Cascader</code></a>类型。</li>
+<li><strong><code>新增</code></strong> 列表组件新增渲染<a href="/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.html#%E5%8F%82%E6%95%B08%E5%88%97%E8%A1%A8%E9%A1%B9%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%88%97" class="rp-link"><code>MarkdownEditor</code></a>类型。</li>
+<li><strong><code>新增</code></strong> 列表组件新增渲染<a href="/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.html#%E5%8F%82%E6%95%B08%E5%88%97%E8%A1%A8%E9%A1%B9%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%88%97" class="rp-link"><code>RichText</code></a>数据弹窗展示示例。</li>
+<li><strong><code>变更</code></strong> 详情组件变更，采用更适合仅查看而非编辑的布局风格。</li>
+<li><strong><code>新增</code></strong> 主题设置新增<code>列表默认显示条数</code>。</li>
+<li><strong><code>变更</code></strong> 侧滑列表的筛选，由默认3列变为默认2列，适配小屏幕下的布局。</li>
+<li><strong><code>新增</code></strong> 敏捷开发 - Excel采集模块，增加模块/字典过滤及编辑项类别过滤。</li>
+<li><strong><code>新增</code></strong> 基础单元树事件新增<a href="/rspress-sdp-n/component/unit_tree/api_event.html" class="rp-link"><code>treeOnSelect</code></a>，表单保存成功后回调，如选择节点后，变更某项表单值。</li>
+<li><strong><code>新增</code></strong> 基础单元树新增<a href="/rspress-sdp-n/component/unit_tree/api_event.html" class="rp-link"><code>order</code></a>，用于指定排序字段。</li>
+<li><strong><code>新增</code></strong> 字典构建sheet页，新增<a href="/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.html#%E5%85%B6%E4%BB%96" class="rp-link"><code>扩展信息</code></a>配置，用于配置列表列头、筛选、表单采集时的tooltip。</li>
+<li><strong><code>新增</code></strong> 默认操作列编辑只读属性的自定义渲染<a href="/rspress-sdp-n/component/unit/api_event.html#seteditdisabled_modulekey" class="rp-link"><code>setEditDisabled_模块key</code></a>。</li>
+<li><strong><code>新增</code></strong> 默认操作列删除只读属性的自定义渲染<a href="/rspress-sdp-n/component/unit/api_event.html#setdeletedisabled_modulekey" class="rp-link"><code>setDeleteDisabled_模块key</code></a>。</li>
+</ul>
+<h2 class="rp-toc-include" id="2025-07-04"><a href="#2025-07-04" class="rp-header-anchor rp-link" aria-hidden="true">#</a>2025-07-04</h2>
+<ul>
+<li>🔥 新增 根据字典视图，自定义设置图表，参照<a href="/rspress-sdp-n/sdp/instruction.html#%E5%9B%BE%E8%A1%A8%E7%BB%9F%E8%AE%A1" class="rp-link">树列表组合系数据类型的采集及展示</a>。</li>
+<li><strong><code>变更</code></strong> @ant-design/charts版本<code>2.3.0+</code>。</li>
+</ul>
+<h2 class="rp-toc-include" id="2025-05-29"><a href="#2025-05-29" class="rp-header-anchor rp-link" aria-hidden="true">#</a>2025-05-29</h2>
+<ul>
+<li><strong><code>变更</code></strong> 前端代码，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>ddit_sdp_code_frontend_v.20250529.1.0.1.zip</code></a>。</li>
+<li><strong><code>变更</code></strong> antd版本<code>5.4.0+</code>，umijs版本<code>4.4.11+</code>。</li>
+<li><strong><code>变更</code></strong> node版本<code>22.9.0+</code>。</li>
+<li><strong><code>新增</code></strong> 字典视图，树列表组合字典配置，参照[树列表组合系数据类型的采集及展示]/sdp/customer_dev.html#7-树列表组合系数据类型的采集及展示)。</li>
+<li><strong><code>新增</code></strong> 字典视图，两种关联表数据适配视图，参照[关联表数据采集及展示一]/sdp/customer_dev.html#8-关联表数据采集及展示一)，[关联表数据采集及展示二]/sdp/customer_dev.html#9-关联表数据采集及展示二)。</li>
+<li><strong><code>新增</code></strong> 数据字典，列表格式化增加<code>color</code>配置，用于颜色标签渲染。</li>
+<li><strong><code>新增</code></strong> 数据字典，表单及筛选中增加树组件数据配置。</li>
+<li><strong><code>新增</code></strong> 维度表方案、个人筛选方案配置入库。</li>
+<li><strong><code>新增</code></strong> 系统配置如标题、图标、copyright等加入配置文件中。</li>
+<li><strong><code>新增</code></strong> 敏捷开发-模块管理中，新增功能<code>增加模拟数据</code>。</li>
+</ul>
+<h2 class="rp-toc-include" id="2025-05-01"><a href="#2025-05-01" class="rp-header-anchor rp-link" aria-hidden="true">#</a>2025-05-01</h2>
+<ul>
+<li><strong><code>变更</code></strong> 前端代码，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>ddit_sdp_code_frontend_v.20250501.1.0.0.zip</code></a></li>
+<li><strong><code>新增</code></strong> 敏捷开发 - 物理表管理，加入对非字典管理的物理表查询及字典数据视图导出。</li>
+<li><strong><code>新增</code></strong> 系统管理 - 组织机构管理。</li>
+<li><strong><code>新增</code></strong> 系统管理 - 系统日志管理。</li>
+<li><strong><code>新增</code></strong> 数据字典，<code>自定义码表</code>sheet页增加<code>父节点codeValue数据库字段名称</code>，用于支持表单中的树组件。</li>
+<li><strong><code>新增</code></strong> 数据字典，列表格式化增加<code>json</code>配置，用于json数据弹窗展示。</li>
+<li><strong><code>新增</code></strong> 数据字典，列表格式化增加<code>copy</code>配置，用于展示copy图标，并实现快速复制。</li>
+</ul>
+<!-- -->
+<h2 class="rp-toc-include" id="2025-02-13"><a href="#2025-02-13" class="rp-header-anchor rp-link" aria-hidden="true">#</a>2025-02-13</h2>
+<ul>
+<li><strong><code>变更</code></strong> 前端代码，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>ddit_sdp_code_frontend_v.20250213.0.2.12.zip</code></a></li>
+<li><strong><code>新增</code></strong> pdf导出配置。</li>
+</ul>
+<h2 class="rp-toc-include" id="2025-02-12"><a href="#2025-02-12" class="rp-header-anchor rp-link" aria-hidden="true">#</a>2025-02-12</h2>
+<ul>
+<li><strong><code>变更</code></strong> 前端代码，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>ddit_sdp_code_frontend_v.20250212.0.2.11.zip</code></a></li>
+<li><strong><code>新增</code></strong> <code>敏捷开发-Excel采集</code>功能，仿Excel进行网页端数据整理。</li>
+</ul>
+<h2 class="rp-toc-include" id="2025-01-24"><a href="#2025-01-24" class="rp-header-anchor rp-link" aria-hidden="true">#</a>2025-01-24</h2>
+<ul>
+<li><strong><code>变更</code></strong> 前端代码，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>ddit_sdp_code_frontend_v.20250124.0.2.10.zip</code></a></li>
+<li><strong><code>新增</code></strong> <a href="/rspress-sdp-n/sdp/instruction.html#%E7%BB%B4%E5%BA%A6%E8%A1%A8%E7%BB%9F%E8%AE%A1" class="rp-link"><code>维度表统计功能。</code></a></li>
+</ul>
+<h2 class="rp-toc-include" id="2025-01-08"><a href="#2025-01-08" class="rp-header-anchor rp-link" aria-hidden="true">#</a>2025-01-08</h2>
+<ul>
+<li><strong><code>变更</code></strong> 前端代码，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>ddit_sdp_code_frontend_v.20250108.0.2.9.zip</code></a></li>
+<li><strong><code>变更</code></strong> 数据字典模板，新增一对多关系数据类型的采集及展示，参照[一对多关系数据类型的采集及展示]/sdp/customer_dev.html#6-一对多关系数据类型的采集及展示)。</li>
+</ul>
+<h2 class="rp-toc-include" id="2024-12-20"><a href="#2024-12-20" class="rp-header-anchor rp-link" aria-hidden="true">#</a>2024-12-20</h2>
+<ul>
+<li><strong><code>变更</code></strong> 前端代码，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>ddit_sdp_code_frontend_v.20241220.0.2.8.zip</code></a></li>
+<li><strong><code>新增</code></strong> 系统构建时，可选前端预校验。校验内容包括：
+<ol>
+<li>所有Sheet固定录入内容校验、数值类型校验、数字或字母类型校验、必录校验。</li>
+<li>【模块.sheet】【字典构建.sheet】【表管理.sheet】，<code>数据字典</code>字段关系校验。</li>
+<li>【菜单构建.sheet】：采用预制页面直接展示时，<code>组件</code>字段、<code>菜单路径</code>字段格式校验。</li>
+<li>【字典构建.sheet】：数值类型字段与页面录入框类型是否匹配校验。</li>
+</ol>
+</li>
+</ul>
+<h2 class="rp-toc-include" id="2024-12-12"><a href="#2024-12-12" class="rp-header-anchor rp-link" aria-hidden="true">#</a>2024-12-12</h2>
+<ul>
+<li><strong><code>新增</code></strong> [<code>树形结构数据视图构建说明。</code>]/sdp/customer_dev.html#4-敏捷开发导出使用说明)</li>
+<li><strong><code>新增</code></strong> <a href="/rspress-sdp-n/sdp/build_by_excel/4-sheet_menu.html" class="rp-link"><code>Sheet.菜单构建内容补充 2024-12-12 内容。</code></a></li>
+<li><strong><code>新增</code></strong> <a href="/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.html" class="rp-link"><code>Sheet.字典构建内容补充 2024-12-12 内容。</code></a></li>
+<li><strong><code>变更</code></strong> 前端代码，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>ddit_sdp_code_frontend_v.20241212.0.2.7.zip</code></a></li>
+<li><strong><code>变更</code></strong> 数据字典模板，新增树示例。</li>
+</ul>
+<h2 class="rp-toc-include" id="2024-12-04"><a href="#2024-12-04" class="rp-header-anchor rp-link" aria-hidden="true">#</a>2024-12-04</h2>
+<ul>
+<li><strong><code>新增</code></strong> [<code>敏捷开发导出使用说明。</code>]/sdp/customer_dev.html#4-敏捷开发导出使用说明)</li>
+<li><strong><code>新增</code></strong> <a href="/rspress-sdp-n/sdp/build_by_excel/6-sheet_codetable_manage.html" class="rp-link"><code>Excel构建文件，新增自定义码表配置页面。</code></a></li>
+<li><strong><code>变更</code></strong> 前端代码，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>ddit_sdp_code_frontend_v.20241204.0.2.6.zip</code></a></li>
+<li><strong><code>变更</code></strong> 后端代码，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>ddit-cloud-dict-deploy-1.0.0-SNAPSHOT_v.20241204.0.2.6.jar</code></a></li>
+<li><strong><code>变更</code></strong> 数据字典模板，后续模板将放置在前端代码包中进行管理。</li>
+</ul>
+<h2 class="rp-toc-include" id="2024-11-26"><a href="#2024-11-26" class="rp-header-anchor rp-link" aria-hidden="true">#</a>2024-11-26</h2>
+<ul>
+<li><strong><code>新增</code></strong> [<code>资源权限开发使用说明。</code>]/sdp/customer_dev.html#资源权限开发)</li>
+<li><strong><code>新增</code></strong> <a href="/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.html#%E5%8F%82%E6%95%B05%E8%A1%A8%E5%8D%95%E9%A1%B9%E7%B1%BB%E5%9E%8B%E6%89%A9%E5%B1%95%E5%8F%82%E6%95%B0" class="rp-link"><code>表单公式配置。</code></a></li>
+<li><strong><code>新增</code></strong> <a href="/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.html" class="rp-link"><code>Sheet.字典构建内容补充 2024-11-26 内容。</code></a></li>
+<li><strong><code>变更</code></strong> 前端代码，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>ddit_sdp_code_frontend_v.20241126.0.2.5.zip</code></a></li>
+<li><strong><code>变更</code></strong> 后端代码，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>ddit-cloud-dict-deploy-1.0.0-SNAPSHOT_v.20241126.0.2.5.jar</code></a></li>
+<li><strong><code>新增</code></strong> 数据字典_分词管理，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>数据字典_分词管理_v20241126.0.2.5.xlsx</code></a></li>
+<li><strong><code>变更</code></strong> 数据字典模板，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>数据字典_字典导入模板_v20241126.0.2.5.xlsx</code></a>
+<ol>
+<li>Sheet.菜单构建增加<code>前端组件ID</code>列。</li>
+</ol>
+</li>
+</ul>
+<h2 class="rp-toc-include" id="2024-11-19"><a href="#2024-11-19" class="rp-header-anchor rp-link" aria-hidden="true">#</a>2024-11-19</h2>
+<ul>
+<li><strong><code>新增</code></strong> [<code>媒体管理模块及媒体类型字典使用。</code>]/sdp/customer_dev.html#媒体类字典开发)</li>
+<li><strong><code>新增</code></strong> <a href="/rspress-sdp-n/sdp/qa.html" class="rp-link"><code>Q&amp;A内容补充 2024-11-19 内容。</code></a></li>
+<li><strong><code>新增</code></strong> <a href="/rspress-sdp-n/sdp/build_by_excel/2-sheet_module.html" class="rp-link"><code>Sheet.模块内容补充 2024-11-19 内容。</code></a></li>
+<li><strong><code>新增</code></strong> <a href="/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.html" class="rp-link"><code>Sheet.字典构建内容补充 2024-11-19 内容。</code></a></li>
+<li><strong><code>变更</code></strong> 数据字典模板，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>数据字典_字典导入模板_v20241119.0.2.4.xlsx</code></a>
+<ol>
+<li>Sheet.字典构建增加<code>表单项事件查询</code>列。</li>
+</ol>
+</li>
+<li><strong><code>新增</code></strong> <a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>数据字典_媒体管理_v20241119.0.2.4.xlsx</code></a></li>
+<li><strong><code>变更</code></strong> 前端代码，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>ddit_sdp_code_frontend_v.20241119.0.2.4.zip</code></a></li>
+<li><strong><code>变更</code></strong> 后端代码，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>ddit-cloud-dict-deploy-1.0.0-SNAPSHOT_v.20241119.0.2.4.jar</code></a></li>
+</ul>
+<h2 class="rp-toc-include" id="2024-11-07"><a href="#2024-11-07" class="rp-header-anchor rp-link" aria-hidden="true">#</a>2024-11-07</h2>
+<ul>
+<li><strong><code>变更</code></strong> 数据字典模板，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>数据字典_字典导入模板_v20241107.0.2.3.xlsx</code></a></li>
+<li><strong><code>变更</code></strong> 前端代码，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>ddit_sdp_code_frontend_v.20241107.0.2.3.zip</code></a></li>
+<li><strong><code>变更</code></strong> 后端代码，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>ddit-cloud-dict-deploy-1.0.0-SNAPSHOT_v.20241107.0.2.3.jar</code></a></li>
+</ul>
+<h2 class="rp-toc-include" id="2024-10-31"><a href="#2024-10-31" class="rp-header-anchor rp-link" aria-hidden="true">#</a>2024-10-31</h2>
+<ul>
+<li>
+<p><strong><code>变更</code></strong> 数据字典模板，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>数据字典_字典导入模板_v20241031.0.2.2.xlsx</code></a></p>
+<ol>
+<li>模板增加表单提交方式。</li>
+</ol>
+</li>
+<li>
+<p><strong><code>变更</code></strong> 前端代码，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>ddit_sdp_code_frontend_v.20241031.0.2.2.zip</code></a></p>
+<ol>
+<li>一键/自定义初始化增加<code>系统管理模块</code>相关内容。</li>
+<li>支持同时导入多模板构建，增加模板导入提示。</li>
+<li>增加<code>react-player</code>依赖包，如增量更新，根目录下安装依赖 <code>yarn add react-player</code></li>
+</ol>
+</li>
+<li>
+<p><strong><code>变更</code></strong> 后端代码，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>ddit-cloud-dict-deploy-1.0.0-SNAPSHOT_v.20241031.0.2.2.jar</code></a></p>
+</li>
+</ul>
+<h2 class="rp-toc-include" id="2024-10-22"><a href="#2024-10-22" class="rp-header-anchor rp-link" aria-hidden="true">#</a>2024-10-22</h2>
+<ul>
+<li><strong><code>变更</code></strong> [敏捷开发平台代码说明](/sdp/env_init.html</li>
+<li><strong><code>变更</code></strong> 数据字典模板，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>数据字典_字典导入模板_v20241022.0.2.1.xlsx</code></a></li>
+<li><strong><code>变更</code></strong> 前端代码，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>ddit_sdp_code_frontend_v.20241022.0.2.1.zip</code></a></li>
+<li><strong><code>变更</code></strong> 后端代码，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>ddit-cloud-dict-deploy-1.0.0-SNAPSHOT_v.20241022.0.2.1</code></a></li>
+</ul>
+<h2 class="rp-toc-include" id="2024-10-15"><a href="#2024-10-15" class="rp-header-anchor rp-link" aria-hidden="true">#</a>2024-10-15</h2>
+<ul>
+<li><strong><code>变更</code></strong> 数据字典模板，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>数据字典_字典导入模板_v20241015.01</code></a>，
+<ol>
+<li>当前版本变更内容标黄展示。</li>
+<li>增加业务码表配置。</li>
+<li>增加业务表共通字段配置。</li>
+</ol>
+</li>
+<li><strong><code>变更</code></strong> 前端代码，最新版本为：<a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-link"><code>ddit_sdp_code_frontend_v.20241015.01.zip</code></a>
+<ol>
+<li>需覆盖原代码，并在根目录下执行组件库更新操作。执行 <code>npm install ddittool --legacy-peer-deps --registry=http://192.168.21.5:4873</code></li>
+</ol>
+</li>
+</ul><!--/$--></div><footer class="rp-doc-footer"><div class="rp-doc-footer__edit"><div class="rp-last-updated"><p>最后更新于<!-- -->: <span>2026/8/18 11:45:40</span></p></div></div><div class="rp-doc-footer__divider"></div><div class="rp-prev-next-page"><a href="/rspress-sdp-n/sdp/customer_dev.html" class="rp-prev-next-page__item rp-prev-next-page__prev rp-link"><span class="rp-prev-next-page__item__desc">上一页</span><span class="rp-prev-next-page__item__title"><svg width="1em" height="1em" viewBox="0 0 32 32" class="rp-prev-next-page__icon rp-prev-next-page__rotate_180"><path fill="currentColor" d="M22 16 12 26l-1.4-1.4 8.6-8.6-8.6-8.6L12 6z"></path></svg><span>开发者进阶</span></span></a><a href="/rspress-sdp-n/sdp/docs_map.html" class="rp-prev-next-page__item rp-prev-next-page__next rp-link"><span class="rp-prev-next-page__item__desc">下一页</span><span class="rp-prev-next-page__item__title"><span>文档地图</span><svg width="1em" height="1em" viewBox="0 0 32 32" class="rp-prev-next-page__icon"><path fill="currentColor" d="M22 16 12 26l-1.4-1.4 8.6-8.6-8.6-8.6L12 6z"></path></svg></span></a></div></footer></main></div><aside class="rp-doc-layout__outline rp-scrollbar"><div class="rp-outline"><div class="rp-outline__title">目录<svg width="14" height="14" class="rp-progress-circle"><circle cx="7" cy="7" r="6" stroke-linecap="round" fill="none" stroke="var(--rp-c-divider-light)" stroke-width="2"></circle><circle cx="7" cy="7" r="6" stroke-linecap="round" fill="none" stroke="var(--rp-c-brand)" stroke-width="2" stroke-dasharray="37.69911184307752" stroke-dashoffset="37.69911184307752" transform="rotate(-90 7 7)" style="transition:stroke-dashoffset 0.3s"></circle></svg></div><nav class="rp-outline__toc rp-scrollbar"><a href="#2026-04-16" class="rp-toc-item rp-link" title="2026-04-16" style="padding-left:0" data-depth="0"><span class="rp-toc-item__text rp-doc">2026-04-16</span></a><a href="#2026-03-13" class="rp-toc-item rp-link" title="2026-03-13" style="padding-left:0" data-depth="0"><span class="rp-toc-item__text rp-doc">2026-03-13</span></a><a href="#2026-01-12" class="rp-toc-item rp-link" title="2026-01-12" style="padding-left:0" data-depth="0"><span class="rp-toc-item__text rp-doc">2026-01-12</span></a><a href="#2025-12-04" class="rp-toc-item rp-link" title="2025-12-04" style="padding-left:0" data-depth="0"><span class="rp-toc-item__text rp-doc">2025-12-04</span></a><a href="#2025-11-28" class="rp-toc-item rp-link" title="2025-11-28" style="padding-left:0" data-depth="0"><span class="rp-toc-item__text rp-doc">2025-11-28</span></a><a href="#2025-09-23" class="rp-toc-item rp-link" title="2025-09-23" style="padding-left:0" data-depth="0"><span class="rp-toc-item__text rp-doc">2025-09-23</span></a><a href="#2025-07-04" class="rp-toc-item rp-link" title="2025-07-04" style="padding-left:0" data-depth="0"><span class="rp-toc-item__text rp-doc">2025-07-04</span></a><a href="#2025-05-29" class="rp-toc-item rp-link" title="2025-05-29" style="padding-left:0" data-depth="0"><span class="rp-toc-item__text rp-doc">2025-05-29</span></a><a href="#2025-05-01" class="rp-toc-item rp-link" title="2025-05-01" style="padding-left:0" data-depth="0"><span class="rp-toc-item__text rp-doc">2025-05-01</span></a><a href="#2025-02-13" class="rp-toc-item rp-link" title="2025-02-13" style="padding-left:0" data-depth="0"><span class="rp-toc-item__text rp-doc">2025-02-13</span></a><a href="#2025-02-12" class="rp-toc-item rp-link" title="2025-02-12" style="padding-left:0" data-depth="0"><span class="rp-toc-item__text rp-doc">2025-02-12</span></a><a href="#2025-01-24" class="rp-toc-item rp-link" title="2025-01-24" style="padding-left:0" data-depth="0"><span class="rp-toc-item__text rp-doc">2025-01-24</span></a><a href="#2025-01-08" class="rp-toc-item rp-link" title="2025-01-08" style="padding-left:0" data-depth="0"><span class="rp-toc-item__text rp-doc">2025-01-08</span></a><a href="#2024-12-20" class="rp-toc-item rp-link" title="2024-12-20" style="padding-left:0" data-depth="0"><span class="rp-toc-item__text rp-doc">2024-12-20</span></a><a href="#2024-12-12" class="rp-toc-item rp-link" title="2024-12-12" style="padding-left:0" data-depth="0"><span class="rp-toc-item__text rp-doc">2024-12-12</span></a><a href="#2024-12-04" class="rp-toc-item rp-link" title="2024-12-04" style="padding-left:0" data-depth="0"><span class="rp-toc-item__text rp-doc">2024-12-04</span></a><a href="#2024-11-26" class="rp-toc-item rp-link" title="2024-11-26" style="padding-left:0" data-depth="0"><span class="rp-toc-item__text rp-doc">2024-11-26</span></a><a href="#2024-11-19" class="rp-toc-item rp-link" title="2024-11-19" style="padding-left:0" data-depth="0"><span class="rp-toc-item__text rp-doc">2024-11-19</span></a><a href="#2024-11-07" class="rp-toc-item rp-link" title="2024-11-07" style="padding-left:0" data-depth="0"><span class="rp-toc-item__text rp-doc">2024-11-07</span></a><a href="#2024-10-31" class="rp-toc-item rp-link" title="2024-10-31" style="padding-left:0" data-depth="0"><span class="rp-toc-item__text rp-doc">2024-10-31</span></a><a href="#2024-10-22" class="rp-toc-item rp-link" title="2024-10-22" style="padding-left:0" data-depth="0"><span class="rp-toc-item__text rp-doc">2024-10-22</span></a><a href="#2024-10-15" class="rp-toc-item rp-link" title="2024-10-15" style="padding-left:0" data-depth="0"><span class="rp-toc-item__text rp-doc">2024-10-15</span></a></nav><div class="rp-outline__divider"></div><div class="rp-outline__bottom"></div></div></aside></div></div>
+    <div id="__rspress_modal_container"></div>
+  </body>
+</html>

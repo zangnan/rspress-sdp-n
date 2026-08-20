@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="zh">
+  <head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>开发文档 - Sdp</title>
+<script>{;const saved = localStorage.getItem('rspress-theme-appearance');const preferDark = window.matchMedia('(prefers-color-scheme: dark)').matches;const defaultTheme = 'auto';const theme = saved === 'light' || saved === 'dark' || saved === 'auto' ? saved : defaultTheme;const isDark = theme === 'auto' ? preferDark : theme === 'dark';document.documentElement.classList.toggle('dark', isDark);document.documentElement.classList.toggle('rp-dark', isDark);document.documentElement.style.colorScheme = isDark ? 'dark' : 'light';}</script>
+<link href="/rspress-sdp-n/static/css/styles.cb178f2c3e.css" rel="stylesheet">
+<link rel="preload" href="/rspress-sdp-n/static/js/async/route-c8939521e8ad.0fed3635c5.js" as="script">
+<script defer src="/rspress-sdp-n/static/js/styles.acb9cf80c8.js"></script>
+<script defer src="/rspress-sdp-n/static/js/lib-react.9f85a52699.js"></script>
+<script defer src="/rspress-sdp-n/static/js/lib-router.77e549f06a.js"></script>
+<script defer src="/rspress-sdp-n/static/js/833.23e2c5eafe.js"></script>
+<script defer src="/rspress-sdp-n/static/js/index.f11e856b45.js"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Rspress v2.0.19">
+<link rel="icon" href="/rspress-sdp-n/logo_hts_orange.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="开发文档 - Sdp">
+<meta name="description" content="敏捷开发平台SDP组件及UI规范设计文档，助力设计开发者「更灵活」地搭建出「更美」的产品，让用户「快乐工作」～">
+<meta property="og:description" content="敏捷开发平台SDP组件及UI规范设计文档，助力设计开发者「更灵活」地搭建出「更美」的产品，让用户「快乐工作」～"></head>
+
+  <body>
+    <div id="__rspress_root"><link rel="preload" as="image" href="/rspress-sdp-n/logo_hts_orange_title_light.png"/><link rel="preload" as="image" href="/rspress-sdp-n/logo_hts_orange_title_dark.png"/><link rel="preload" as="image" href="/rspress-sdp-n/img/hts_layout_MarkMan.png"/><link rel="preload" as="image" href="/rspress-sdp-n/img/hts_color3_MarkMan.png"/><link rel="preload" as="image" href="/rspress-sdp-n/img/hts_color5_MarkMan.png"/><link rel="preload" as="image" href="/rspress-sdp-n/img/hts_color1_MarkMan.png"/><link rel="preload" as="image" href="/rspress-sdp-n/img/hts_color2_MarkMan.png"/><link rel="preload" as="image" href="/rspress-sdp-n/img/hts_color4_MarkMan.png"/><link rel="preload" as="image" href="/rspress-sdp-n/img/hts_btn_normal_MarkMan.png"/><link rel="preload" as="image" href="/rspress-sdp-n/img/hts_btn_hover_MarkMan.png"/><link rel="preload" as="image" href="/rspress-sdp-n/img/hts_btn_disable_MarkMan.png"/><link rel="preload" as="image" href="/rspress-sdp-n/img/hts_btn_toolbar_right_MarkMan.png"/><link rel="preload" as="image" href="/rspress-sdp-n/img/hts_link_MarkMan.png"/><link rel="preload" as="image" href="/rspress-sdp-n/img/hts_input_MarkMan.png"/><link rel="preload" as="image" href="/rspress-sdp-n/img/hts_table_MarkMan.png"/><link rel="preload" as="image" href="/rspress-sdp-n/img/hts_pagination_MarkMan.png"/><link rel="preload" as="image" href="/rspress-sdp-n/img/hts_tab_MarkMan.png"/><link rel="preload" as="image" href="/rspress-sdp-n/img/hts_modal_MarkMan.png"/><link rel="preload" as="image" href="/rspress-sdp-n/img/hts_masker_MarkMan.png"/><link rel="preload" as="image" href="/rspress-sdp-n/img/hts_alert_MarkMan.png"/><link rel="preload" as="image" href="/rspress-sdp-n/img/hts_loading0_MarkMan.png"/><link rel="preload" as="image" href="/rspress-sdp-n/img/hts_loading1.png"/><link rel="preload" as="image" href="/rspress-sdp-n/img/hts_loading2.png"/><link rel="preload" as="image" href="/rspress-sdp-n/img/hts_loading3.png"/><link rel="preload" as="image" href="/rspress-sdp-n/img/hts_scrollbar1_MarkMan.png"/><link rel="preload" as="image" href="/rspress-sdp-n/img/hts_scrollbar2_MarkMan.png"/><link rel="preload" as="image" href="/rspress-sdp-n/img/hts_filter_MarkMan.png"/><link rel="preload" as="image" href="/rspress-sdp-n/img/hts_toolbar_MarkMan.png"/><link rel="preload" as="image" href="/rspress-sdp-n/img/hts_form_MarkMan.png"/><link rel="preload" as="image" href="/rspress-sdp-n/img/hts_workspace_MarkMan.png"/><link rel="preload" as="image" href="/rspress-sdp-n/img/hts_table_setting.png"/><link rel="preload" as="image" href="/rspress-sdp-n/img/hts_import.png"/><header class="rp-nav"><div class="rp-nav__left"><div class="rp-nav__title"><a href="/rspress-sdp-n/" class="rp-nav__title__link rp-link"><div class="rp-nav__title__logo"><img src="/rspress-sdp-n/logo_hts_orange_title_light.png" alt="logo" id="logo" class="rspress-logo rp-nav__title__logo-image rp-nav__title__logo-image--light"/><img src="/rspress-sdp-n/logo_hts_orange_title_dark.png" alt="logo" id="logo" class="rspress-logo rp-nav__title__logo-image rp-nav__title__logo-image--dark"/></div><span>敏捷开发平台SDP</span></a></div></div><div class="rp-nav__right"><button class="rp-search-button"><div class="rp-search-button__content"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 20 21" class="rp-search-button__icon"><path fill="currentColor" d="M8.333 1.913A6.667 6.667 0 0 1 15 8.58c0 1.54-.525 2.957-1.402 4.085l4.49 4.492a.834.834 0 0 1-1.177 1.178l-4.491-4.49a6.64 6.64 0 0 1-4.087 1.402 6.667 6.667 0 0 1 0-13.334m0 1.667a5 5 0 1 0 0 10 5 5 0 0 0 0-10"></path></svg><span class="rp-search-button__word">搜索</span></div><div class="rp-search-button__hotkey" style="opacity:0"><span></span><span>K</span></div></button><div class="rp-search-button--mobile"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 20 21"><path fill="currentColor" d="M8.333 1.913A6.667 6.667 0 0 1 15 8.58c0 1.54-.525 2.957-1.402 4.085l4.49 4.492a.834.834 0 0 1-1.177 1.178l-4.491-4.49a6.64 6.64 0 0 1-4.087 1.402 6.667 6.667 0 0 1 0-13.334m0 1.667a5 5 0 1 0 0 10 5 5 0 0 0 0-10"></path></svg></div><ul class="rp-nav-menu rp-nav-menu--right"><li class="rp-nav-menu__item"><a href="/rspress-sdp-n/sdp/summary.html" class="rp-nav-menu__item__container rp-link">研发</a></li><li class="rp-nav-menu__item"><a href="/rspress-sdp-n/component/index.html" class="rp-nav-menu__item__container rp-link">组件</a></li><li class="rp-nav-menu__item rp-nav-menu__item--active"><a href="/rspress-sdp-n/ui/sdp.html" class="rp-nav-menu__item__container rp-link">UI</a></li></ul><div class="rp-nav__others"><div class="rp-nav-menu__divider"></div><div class="rp-switch-appearance"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" class="rp-switch-appearance__icon rp-switch-appearance__icon--sun"><path fill="currentColor" d="m7.001 15.848-1.226 1.226a.58.58 0 0 0 0 .818.58.58 0 0 0 .818 0l1.226-1.226a.58.58 0 0 0 0-.818.58.58 0 0 0-.818 0m-.352-8.735a.584.584 0 0 0 .825-.825L6.237 5.051a.584.584 0 0 0-.825.825zM5.011 11.07h-1.75a.584.584 0 0 0 0 1.167h1.75c.324 0 .584-.26.584-.583a.585.585 0 0 0-.584-.584m7.003-5.835c.324 0 .584-.26.584-.584V2.9a.58.58 0 0 0-.584-.584.58.58 0 0 0-.583.583V4.65c0 .323.262.584.583.584m5.616 1.621 1.226-1.225a.58.58 0 0 0 0-.818.58.58 0 0 0-.818 0l-1.226 1.225a.58.58 0 0 0 0 .818.576.576 0 0 0 .818 0m3.138 4.214h-1.75a.58.58 0 0 0-.584.584c0 .324.26.584.583.584h1.751a.584.584 0 1 0 0-1.167m-3.389 5.124a.584.584 0 0 0-.825.825l1.238 1.238a.584.584 0 0 0 .825-.826zm-5.365-9.795a5.256 5.256 0 0 0-5.257 5.258 5.256 5.256 0 0 0 5.257 5.257 5.256 5.256 0 0 0 5.257-5.257 5.256 5.256 0 0 0-5.257-5.258m0 11.675a.58.58 0 0 0-.583.583v1.751a.582.582 0 1 0 1.167 0v-1.75a.584.584 0 0 0-.584-.584"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" viewBox="0 0 19 19" class="rp-switch-appearance__icon rp-switch-appearance__icon--moon"><path fill="currentColor" d="M9.166 0a9.2 9.2 0 0 1 1.857.188.834.834 0 0 1 .042 1.623 4.47 4.47 0 1 0 5.457 5.457l.048-.135a.834.834 0 0 1 1.575.177q.186.902.188 1.856A9.168 9.168 0 1 1 9.166 0"></path></svg></div><div class="rp-social-links"><a href="https://github.com/zangnan/rspress-sdp-n" target="_blank" rel="noopener noreferrer" class="rp-social-links__item"><div class="rp-social-links__icon"><div class="rp-social-links__icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></div></div></a><ul class="rp-hover-group rp-hover-group--hidden rp-hover-group--right"></ul></div></div><button aria-label="mobile hamburger" class="rp-nav-hamburger rp-nav-hamburger__sm"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none" viewBox="0 0 21 21"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" d="M3.645 5.225h13.333M3.645 10.225h13.333M3.645 15.225h13.333"></path></svg></button><button aria-label="mobile hamburger" class="rp-nav-hamburger rp-nav-hamburger__md"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none" viewBox="0 0 21 21"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" d="M3.645 5.225h13.333M3.645 10.225h13.333M3.645 15.225h13.333"></path></svg><ul class="rp-hover-group rp-hover-group--hidden rp-hover-group--right"><div class="rp-nav-menu__others-mobile__container"><div class="rp-nav-hamburger__md__hover-group"><div class="rp-nav-screen-appearance"><div class="rp-nav-screen-appearance__left">主题</div><div class="rp-nav-screen-appearance__right"></div></div><div class="rp-nav-screen-divider"></div><div class="rp-social-links"><a href="https://github.com/zangnan/rspress-sdp-n" target="_blank" rel="noopener noreferrer" class="rp-social-links__item"><div class="rp-social-links__icon"><div class="rp-social-links__icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></div></div></a><ul class="rp-hover-group rp-hover-group--hidden rp-hover-group--right"></ul></div></div></div></ul></button></div></header><div class="rp-doc-layout__menu"><div class="rp-sidebar-menu"><button type="button" class="rp-sidebar-menu__left"><svg width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M4 6h24v2H4zm0 18h24v2H4zm0-12h24v2H4zm0 6h24v2H4z"></path></svg><span>菜单</span></button><button type="button" class="rp-sidebar-menu__right"><span class="rp-sidebar-menu__right__text">目录</span><svg width="14" height="14" class="rp-progress-circle"><circle cx="7" cy="7" r="6" stroke-linecap="round" fill="none" stroke="var(--rp-c-divider-light)" stroke-width="2"></circle><circle cx="7" cy="7" r="6" stroke-linecap="round" fill="none" stroke="var(--rp-c-brand)" stroke-width="2" stroke-dasharray="37.69911184307752" stroke-dashoffset="37.69911184307752" transform="rotate(-90 7 7)" style="transition:stroke-dashoffset 0.3s"></circle></svg><svg width="1em" height="1em" viewBox="0 0 32 32" class="rp-sidebar-menu__right__icon" style="transform:rotate(0deg);transition:transform 0.2s ease-out"><path fill="currentColor" d="M22 16 12 26l-1.4-1.4 8.6-8.6-8.6-8.6L12 6z"></path></svg></button></div></div><div class="rp-doc-layout__container"><aside class="rp-doc-layout__sidebar rp-scrollbar"><a href="/rspress-sdp-n/ui/sdp.html" class="rp-sidebar-item rp-link" style="padding-left:12px" data-depth="0"><div class="rp-sidebar-item__left"><span class="rp-doc">敏捷开发平台</span></div><div class="rp-sidebar-item__right"></div></a><a href="/rspress-sdp-n/ui/hts.html" class="rp-sidebar-item rp-sidebar-item--active rp-link" style="padding-left:12px" data-depth="0"><div class="rp-sidebar-item__left"><span class="rp-doc">SAAS</span></div><div class="rp-sidebar-item__right"></div></a><a href="/rspress-sdp-n/ui/ckts.html" class="rp-sidebar-item rp-link" style="padding-left:12px" data-depth="0"><div class="rp-sidebar-item__left"><span class="rp-doc">出口退税金三</span></div><div class="rp-sidebar-item__right"></div></a></aside><div class="rp-doc-layout__doc"><main class="rp-doc-layout__doc-container"><div class="rp-doc rspress-doc"><!--$--><h1 class="rp-toc-include" id="开发文档"><a href="#开发文档" class="rp-header-anchor rp-link" aria-hidden="true">#</a>开发文档<!-- --> </h1>
+<h2 class="rp-toc-include" id="基础组件"><a href="#基础组件" class="rp-header-anchor rp-link" aria-hidden="true">#</a>基础组件</h2>
+<h3 class="rp-toc-include" id="布局"><a href="#布局" class="rp-header-anchor rp-link" aria-hidden="true">#</a>布局</h3>
+<p><img src="/rspress-sdp-n/img/hts_layout_MarkMan.png" alt="image"/></p>
+<h3 class="rp-toc-include" id="文字"><a href="#文字" class="rp-header-anchor rp-link" aria-hidden="true">#</a>文字</h3>
+<h4 class="rp-toc-include" id="开发说明"><a href="#开发说明" class="rp-header-anchor rp-link" aria-hidden="true">#</a>开发说明</h4>
+<ol>
+<li>默认字号均为14px。</li>
+<li>颜色#32363a。</li>
+<li>字体：-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Noto Sans&quot;,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,&quot;Noto Color Emoji&quot;。</li>
+</ol>
+<h3 class="rp-toc-include" id="色彩"><a href="#色彩" class="rp-header-anchor rp-link" aria-hidden="true">#</a>色彩</h3>
+<h4 class="rp-toc-include" id="标准色"><a href="#标准色" class="rp-header-anchor rp-link" aria-hidden="true">#</a>标准色</h4>
+<p><img src="/rspress-sdp-n/img/hts_color3_MarkMan.png" alt="image"/>
+<img src="/rspress-sdp-n/img/hts_color5_MarkMan.png" alt="image"/>
+<img src="/rspress-sdp-n/img/hts_color1_MarkMan.png" alt="image"/>
+<img src="/rspress-sdp-n/img/hts_color2_MarkMan.png" alt="image"/></p>
+<ul>
+<li>#32363A：默认文本颜色。</li>
+<li>#999999：录入框边框、placeholder、Checkbox、Radio、弹窗关闭图标文本色。</li>
+<li>#BBBBBB：普通按钮边框、只读属性文本颜色。</li>
+<li>#CFCFCF：屏蔽按钮或链接文本色。</li>
+<li>#DBDBDB：列表边线色。</li>
+<li>#E6E6E6：屏蔽按钮边框色。</li>
+<li>#EDEDED：列表列头背景色。</li>
+<li>#F5F5F5：列表划过背景色、屏蔽状态录入框背景色。</li>
+<li>#F8F8F8：屏蔽按钮背景色。</li>
+<li>#0A6ED1：主按钮背景色、链接文本色、录入框图标色、Radio及Checkbox选中、Tab标签选中色。</li>
+<li>#085CAF：主按钮hover背景、链接按钮文本色、链接按钮hover边框色、链钮hover文本色、图标按钮文本色。</li>
+<li>#E6F0FA：列表选中背景色。</li>
+<li>#52C41A：成功类圆点图标背景色。</li>
+<li>#FF4D4F：失败类圆点图标背景色。</li>
+<li>#FAAD14：警告类圆点图标背景色、表单必录项目标识文本色。</li>
+</ul>
+<h4 class="rp-toc-include" id="辅助色"><a href="#辅助色" class="rp-header-anchor rp-link" aria-hidden="true">#</a>辅助色</h4>
+<p><img src="/rspress-sdp-n/img/hts_color4_MarkMan.png" alt="image"/></p>
+<ul>
+<li>#EAEAEA：业务区域背景色、弹窗页头页脚边线色。</li>
+<li>#F7F7F7：基础页面列表区域背景色。</li>
+<li>#F1F4F7：表单标题区域背景色。</li>
+<li>#FA6E00：区域间需显著区别的分割线。</li>
+</ul>
+<h3 class="rp-toc-include" id="按钮"><a href="#按钮" class="rp-header-anchor rp-link" aria-hidden="true">#</a>按钮</h3>
+<h5 class="rp-toc-include" id="normal"><a href="#normal" class="rp-header-anchor rp-link" aria-hidden="true">#</a>Normal</h5>
+<p><img src="/rspress-sdp-n/img/hts_btn_normal_MarkMan.png" alt="image"/></p>
+<h5 class="rp-toc-include" id="hover"><a href="#hover" class="rp-header-anchor rp-link" aria-hidden="true">#</a>Hover</h5>
+<p><img src="/rspress-sdp-n/img/hts_btn_hover_MarkMan.png" alt="image"/></p>
+<h5 class="rp-toc-include" id="disable"><a href="#disable" class="rp-header-anchor rp-link" aria-hidden="true">#</a>Disable</h5>
+<p><img src="/rspress-sdp-n/img/hts_btn_disable_MarkMan.png" alt="image"/></p>
+<h5 class="rp-toc-include" id="其他"><a href="#其他" class="rp-header-anchor rp-link" aria-hidden="true">#</a>其他</h5>
+<p><img src="/rspress-sdp-n/img/hts_btn_toolbar_right_MarkMan.png" alt="image"/></p>
+<h3 class="rp-toc-include" id="链接"><a href="#链接" class="rp-header-anchor rp-link" aria-hidden="true">#</a>链接</h3>
+<p><img src="/rspress-sdp-n/img/hts_link_MarkMan.png" alt="image"/></p>
+<h3 class="rp-toc-include" id="编辑组件"><a href="#编辑组件" class="rp-header-anchor rp-link" aria-hidden="true">#</a>编辑组件</h3>
+<p><img src="/rspress-sdp-n/img/hts_input_MarkMan.png" alt="image"/></p>
+<h3 class="rp-toc-include" id="列表"><a href="#列表" class="rp-header-anchor rp-link" aria-hidden="true">#</a>列表</h3>
+<p><img src="/rspress-sdp-n/img/hts_table_MarkMan.png" alt="image"/></p>
+<h4 class="rp-toc-include" id="开发说明-1"><a href="#开发说明-1" class="rp-header-anchor rp-link" aria-hidden="true">#</a>开发说明</h4>
+<ol>
+<li>对齐方式：数字居右，操作列（含开关）居中，其他居左。特例：‘’数字/数字‘’格式居右。</li>
+<li>数字：千分位展示，金额2位小数，汇率5位、税率2位小数、数量4位。</li>
+<li>列宽：固定字数或可以确定字数的列（如码表、日期）按照其最多字数设置。</li>
+<li>列宽：除特殊要求，显示内容不允许折行，超出设定单元格或表格x轴宽度，显示省略符。</li>
+<li>列宽：能够确定字数的列，需要显示完整，内容不要折行。</li>
+<li>列宽：测试1280分辨率，列不能折行。</li>
+<li>列宽：如果数据列较少，至少有一列列宽宽度是自适应，即不设置宽度，防止列宽等比放大。</li>
+<li>列表中单位，写到工具栏左侧，标题所在区域。</li>
+<li>Mock数据完整，且真实数据，不要出现111、222、aaa、bbb。</li>
+<li>关于表头折行，原则上表头不允许折行，如果表头过长，字数超过10个字，可考虑适当位置换行，换行除需考虑语义与断句。</li>
+</ol>
+<h4 class="rp-toc-include" id="常见列表字段列宽"><a href="#常见列表字段列宽" class="rp-header-anchor rp-link" aria-hidden="true">#</a>常见列表字段列宽</h4>
+<ul>
+<li><strong>格式：0,0.00</strong>
+列宽：140px
+示例：同比占比、单价、金额、总价、保费、退税到账额、退税额、计税金额、美元离岸价、成交总价、人民币离岸价、成交金额、运费金额、保费金额、杂费金额、申报价格、收款金额(本币)、收款金额(原币)、征税率、退税率</li>
+<li><strong>格式：0,0.0000</strong>
+列宽：140px
+示例：数量、申报数量、法定数量、第二数量、剩余数量、出口数量、成交数量、法定单位数量、第二单位数、成交剩余数量</li>
+<li><strong>格式：0,0.00000</strong>
+列宽：100px
+示例：汇率、征税率、退税率</li>
+<li><strong>格式：0,0</strong>
+列宽：100px
+示例：条数</li>
+<li><strong>格式：yyyy-MM-DD</strong>
+列宽：120px</li>
+<li><strong>格式：yyyy-MM-DD hh:mm</strong>
+列宽：140px</li>
+<li><strong>格式：yyyy-MM-DD hh:mm:ss</strong>
+列宽：150px</li>
+<li><strong>格式：名称类</strong>
+列宽：180px
+示例：海关商品名称、商品名称、生产销售单位名称、企业商品名称、备注、供应商名称、对方账户名称、银行名称、银行分行、用途、纳税人名称、对方开户行名</li>
+</ul>
+<h3 class="rp-toc-include" id="分页符"><a href="#分页符" class="rp-header-anchor rp-link" aria-hidden="true">#</a>分页符</h3>
+<p><img src="/rspress-sdp-n/img/hts_pagination_MarkMan.png" alt="image"/></p>
+<h3 class="rp-toc-include" id="tab标签页"><a href="#tab标签页" class="rp-header-anchor rp-link" aria-hidden="true">#</a>Tab标签页</h3>
+<p><img src="/rspress-sdp-n/img/hts_tab_MarkMan.png" alt="image"/></p>
+<h3 class="rp-toc-include" id="弹窗"><a href="#弹窗" class="rp-header-anchor rp-link" aria-hidden="true">#</a>弹窗</h3>
+<p><img src="/rspress-sdp-n/img/hts_modal_MarkMan.png" alt="image"/></p>
+<h4 class="rp-toc-include" id="开发说明-2"><a href="#开发说明-2" class="rp-header-anchor rp-link" aria-hidden="true">#</a>开发说明</h4>
+<ol>
+<li>弹窗可选宽度：480px|720px|960px|1200px|max</li>
+<li>弹窗高度根据内容进行设置，但不得高于浏览器高度。</li>
+</ol>
+<h3 class="rp-toc-include" id="蒙版"><a href="#蒙版" class="rp-header-anchor rp-link" aria-hidden="true">#</a>蒙版</h3>
+<p><img src="/rspress-sdp-n/img/hts_masker_MarkMan.png" alt="image"/></p>
+<h3 class="rp-toc-include" id="消息提示"><a href="#消息提示" class="rp-header-anchor rp-link" aria-hidden="true">#</a>消息提示</h3>
+<p><img src="/rspress-sdp-n/img/hts_alert_MarkMan.png" alt="image"/></p>
+<h4 class="rp-toc-include" id="开发说明-3"><a href="#开发说明-3" class="rp-header-anchor rp-link" aria-hidden="true">#</a>开发说明</h4>
+<ol>
+<li>前端的提升统一用info类型， 蓝色图标。</li>
+<li>后端返回成功success类型，绿色图标。</li>
+<li>后端返回异常，error类型，红色图标。</li>
+<li>后端返回提示信息，info类型， 蓝色图标。</li>
+<li>暂不使用warning类型的展示。</li>
+</ol>
+<h3 class="rp-toc-include" id="加载中"><a href="#加载中" class="rp-header-anchor rp-link" aria-hidden="true">#</a>加载中</h3>
+<p><img src="/rspress-sdp-n/img/hts_loading0_MarkMan.png" alt="image"/>
+<img src="/rspress-sdp-n/img/hts_loading1.png" alt="image"/>
+<img src="/rspress-sdp-n/img/hts_loading2.png" alt="image"/>
+<img src="/rspress-sdp-n/img/hts_loading3.png" alt="image"/></p>
+<h4 class="rp-toc-include" id="开发说明-4"><a href="#开发说明-4" class="rp-header-anchor rp-link" aria-hidden="true">#</a>开发说明</h4>
+<ol>
+<li>根据业务需求添加蒙版。</li>
+</ol>
+<h3 class="rp-toc-include" id="滚动条"><a href="#滚动条" class="rp-header-anchor rp-link" aria-hidden="true">#</a>滚动条</h3>
+<h5 class="rp-toc-include" id="默认样式"><a href="#默认样式" class="rp-header-anchor rp-link" aria-hidden="true">#</a>默认样式</h5>
+<p><img src="/rspress-sdp-n/img/hts_scrollbar1_MarkMan.png" alt="image"/></p>
+<h5 class="rp-toc-include" id="鼠标划过样式"><a href="#鼠标划过样式" class="rp-header-anchor rp-link" aria-hidden="true">#</a>鼠标划过样式</h5>
+<p><img src="/rspress-sdp-n/img/hts_scrollbar2_MarkMan.png" alt="image"/></p>
+<h4 class="rp-toc-include" id="开发说明-5"><a href="#开发说明-5" class="rp-header-anchor rp-link" aria-hidden="true">#</a>开发说明</h4>
+<ol>
+<li>左侧菜单栏滚动条样式与其他滚动条不一致。</li>
+</ol>
+<h2 class="rp-toc-include" id="封装组件"><a href="#封装组件" class="rp-header-anchor rp-link" aria-hidden="true">#</a>封装组件</h2>
+<h3 class="rp-toc-include" id="筛选区"><a href="#筛选区" class="rp-header-anchor rp-link" aria-hidden="true">#</a>筛选区</h3>
+<p><img src="/rspress-sdp-n/img/hts_filter_MarkMan.png" alt="image"/></p>
+<h4 class="rp-toc-include" id="开发说明-6"><a href="#开发说明-6" class="rp-header-anchor rp-link" aria-hidden="true">#</a>开发说明</h4>
+<ol>
+<li>两个及以下筛选条件的，放到工具栏所在行。</li>
+<li>列头筛选，如果只有两种状态，则用radio类型，且增加全部；两种以上状态，且10个以内，采用Checkbox；其他或特殊码表筛选，按需求说明开发。</li>
+<li>列排序、列筛选：严格按照需求文档，如果和上述规范冲突，及时与需求协商调整。</li>
+<li>列表上方的快捷筛选，在最后一个查询录入框中保留查询按钮。</li>
+<li>栅格布局说明：
+1200px以上分辨率时，默认显示3列布局。
+992px至1200间分辨率时，显示2列布局。
+小于992px分辨率时，显示1列布局。</li>
+</ol>
+<h3 class="rp-toc-include" id="工具栏"><a href="#工具栏" class="rp-header-anchor rp-link" aria-hidden="true">#</a>工具栏</h3>
+<p><img src="/rspress-sdp-n/img/hts_toolbar_MarkMan.png" alt="image"/></p>
+<h4 class="rp-toc-include" id="开发说明-7"><a href="#开发说明-7" class="rp-header-anchor rp-link" aria-hidden="true">#</a>开发说明</h4>
+<ol>
+<li>右侧除图标按钮外的其他按钮数量如果小于5个，则依次将设置下的通用按钮（导入、导出、刷新、全屏）移到外侧，直到外侧按钮数量为5个。</li>
+</ol>
+<h3 class="rp-toc-include" id="普通表单"><a href="#普通表单" class="rp-header-anchor rp-link" aria-hidden="true">#</a>普通表单</h3>
+<p><img src="/rspress-sdp-n/img/hts_form_MarkMan.png" alt="image"/></p>
+<h4 class="rp-toc-include" id="开发说明-8"><a href="#开发说明-8" class="rp-header-anchor rp-link" aria-hidden="true">#</a>开发说明</h4>
+<ol>
+<li>栅格布局说明：
+1200px以上分辨率时，默认显示3列布局。
+992px至1200间分辨率时，显示2列布局。
+小于992px分辨率时，显示1列布局。</li>
+</ol>
+<h3 class="rp-toc-include" id="工作台主页"><a href="#工作台主页" class="rp-header-anchor rp-link" aria-hidden="true">#</a>工作台/主页</h3>
+<p><img src="/rspress-sdp-n/img/hts_workspace_MarkMan.png" alt="image"/></p>
+<h4 class="rp-toc-include" id="开发说明-9"><a href="#开发说明-9" class="rp-header-anchor rp-link" aria-hidden="true">#</a>开发说明</h4>
+<ol>
+<li>工作台尺寸：无左侧菜单时，最大宽度1300px。</li>
+</ol>
+<h2 class="rp-toc-include" id="通用页面布局"><a href="#通用页面布局" class="rp-header-anchor rp-link" aria-hidden="true">#</a>通用页面布局</h2>
+<h3 class="rp-toc-include" id="设置"><a href="#设置" class="rp-header-anchor rp-link" aria-hidden="true">#</a>设置</h3>
+<p><img src="/rspress-sdp-n/img/hts_table_setting.png" alt="image"/></p>
+<h3 class="rp-toc-include" id="导入"><a href="#导入" class="rp-header-anchor rp-link" aria-hidden="true">#</a>导入</h3>
+<p><img src="/rspress-sdp-n/img/hts_import.png" alt="image"/></p><!--/$--></div><footer class="rp-doc-footer"><div class="rp-doc-footer__edit"><div class="rp-last-updated"><p>最后更新于<!-- -->: <span>2026/8/14 16:42:21</span></p></div></div><div class="rp-doc-footer__divider"></div><div class="rp-prev-next-page"><a href="/rspress-sdp-n/ui/sdp.html" class="rp-prev-next-page__item rp-prev-next-page__prev rp-link"><span class="rp-prev-next-page__item__desc">上一页</span><span class="rp-prev-next-page__item__title"><svg width="1em" height="1em" viewBox="0 0 32 32" class="rp-prev-next-page__icon rp-prev-next-page__rotate_180"><path fill="currentColor" d="M22 16 12 26l-1.4-1.4 8.6-8.6-8.6-8.6L12 6z"></path></svg><span>敏捷开发平台</span></span></a><a href="/rspress-sdp-n/ui/ckts.html" class="rp-prev-next-page__item rp-prev-next-page__next rp-link"><span class="rp-prev-next-page__item__desc">下一页</span><span class="rp-prev-next-page__item__title"><span>出口退税金三</span><svg width="1em" height="1em" viewBox="0 0 32 32" class="rp-prev-next-page__icon"><path fill="currentColor" d="M22 16 12 26l-1.4-1.4 8.6-8.6-8.6-8.6L12 6z"></path></svg></span></a></div></footer></main></div><aside class="rp-doc-layout__outline rp-scrollbar"><div class="rp-outline"><div class="rp-outline__title">目录<svg width="14" height="14" class="rp-progress-circle"><circle cx="7" cy="7" r="6" stroke-linecap="round" fill="none" stroke="var(--rp-c-divider-light)" stroke-width="2"></circle><circle cx="7" cy="7" r="6" stroke-linecap="round" fill="none" stroke="var(--rp-c-brand)" stroke-width="2" stroke-dasharray="37.69911184307752" stroke-dashoffset="37.69911184307752" transform="rotate(-90 7 7)" style="transition:stroke-dashoffset 0.3s"></circle></svg></div><nav class="rp-outline__toc rp-scrollbar"><a href="#基础组件" class="rp-toc-item rp-link" title="基础组件" style="padding-left:0" data-depth="0"><span class="rp-toc-item__text rp-doc">基础组件</span></a><a href="#布局" class="rp-toc-item rp-link" title="布局" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">布局</span></a><a href="#文字" class="rp-toc-item rp-link" title="文字" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">文字</span></a><a href="#开发说明" class="rp-toc-item rp-link" title="开发说明" style="padding-left:24px" data-depth="2"><span class="rp-toc-item__text rp-doc">开发说明</span></a><a href="#色彩" class="rp-toc-item rp-link" title="色彩" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">色彩</span></a><a href="#标准色" class="rp-toc-item rp-link" title="标准色" style="padding-left:24px" data-depth="2"><span class="rp-toc-item__text rp-doc">标准色</span></a><a href="#辅助色" class="rp-toc-item rp-link" title="辅助色" style="padding-left:24px" data-depth="2"><span class="rp-toc-item__text rp-doc">辅助色</span></a><a href="#按钮" class="rp-toc-item rp-link" title="按钮" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">按钮</span></a><a href="#链接" class="rp-toc-item rp-link" title="链接" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">链接</span></a><a href="#编辑组件" class="rp-toc-item rp-link" title="编辑组件" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">编辑组件</span></a><a href="#列表" class="rp-toc-item rp-link" title="列表" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">列表</span></a><a href="#开发说明-1" class="rp-toc-item rp-link" title="开发说明" style="padding-left:24px" data-depth="2"><span class="rp-toc-item__text rp-doc">开发说明</span></a><a href="#常见列表字段列宽" class="rp-toc-item rp-link" title="常见列表字段列宽" style="padding-left:24px" data-depth="2"><span class="rp-toc-item__text rp-doc">常见列表字段列宽</span></a><a href="#分页符" class="rp-toc-item rp-link" title="分页符" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">分页符</span></a><a href="#tab标签页" class="rp-toc-item rp-link" title="Tab标签页" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">Tab标签页</span></a><a href="#弹窗" class="rp-toc-item rp-link" title="弹窗" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">弹窗</span></a><a href="#开发说明-2" class="rp-toc-item rp-link" title="开发说明" style="padding-left:24px" data-depth="2"><span class="rp-toc-item__text rp-doc">开发说明</span></a><a href="#蒙版" class="rp-toc-item rp-link" title="蒙版" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">蒙版</span></a><a href="#消息提示" class="rp-toc-item rp-link" title="消息提示" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">消息提示</span></a><a href="#开发说明-3" class="rp-toc-item rp-link" title="开发说明" style="padding-left:24px" data-depth="2"><span class="rp-toc-item__text rp-doc">开发说明</span></a><a href="#加载中" class="rp-toc-item rp-link" title="加载中" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">加载中</span></a><a href="#开发说明-4" class="rp-toc-item rp-link" title="开发说明" style="padding-left:24px" data-depth="2"><span class="rp-toc-item__text rp-doc">开发说明</span></a><a href="#滚动条" class="rp-toc-item rp-link" title="滚动条" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">滚动条</span></a><a href="#开发说明-5" class="rp-toc-item rp-link" title="开发说明" style="padding-left:24px" data-depth="2"><span class="rp-toc-item__text rp-doc">开发说明</span></a><a href="#封装组件" class="rp-toc-item rp-link" title="封装组件" style="padding-left:0" data-depth="0"><span class="rp-toc-item__text rp-doc">封装组件</span></a><a href="#筛选区" class="rp-toc-item rp-link" title="筛选区" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">筛选区</span></a><a href="#开发说明-6" class="rp-toc-item rp-link" title="开发说明" style="padding-left:24px" data-depth="2"><span class="rp-toc-item__text rp-doc">开发说明</span></a><a href="#工具栏" class="rp-toc-item rp-link" title="工具栏" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">工具栏</span></a><a href="#开发说明-7" class="rp-toc-item rp-link" title="开发说明" style="padding-left:24px" data-depth="2"><span class="rp-toc-item__text rp-doc">开发说明</span></a><a href="#普通表单" class="rp-toc-item rp-link" title="普通表单" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">普通表单</span></a><a href="#开发说明-8" class="rp-toc-item rp-link" title="开发说明" style="padding-left:24px" data-depth="2"><span class="rp-toc-item__text rp-doc">开发说明</span></a><a href="#工作台主页" class="rp-toc-item rp-link" title="工作台/主页" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">工作台/主页</span></a><a href="#开发说明-9" class="rp-toc-item rp-link" title="开发说明" style="padding-left:24px" data-depth="2"><span class="rp-toc-item__text rp-doc">开发说明</span></a><a href="#通用页面布局" class="rp-toc-item rp-link" title="通用页面布局" style="padding-left:0" data-depth="0"><span class="rp-toc-item__text rp-doc">通用页面布局</span></a><a href="#设置" class="rp-toc-item rp-link" title="设置" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">设置</span></a><a href="#导入" class="rp-toc-item rp-link" title="导入" style="padding-left:12px" data-depth="1"><span class="rp-toc-item__text rp-doc">导入</span></a></nav><div class="rp-outline__divider"></div><div class="rp-outline__bottom"></div></div></aside></div></div>
+    <div id="__rspress_modal_container"></div>
+  </body>
+</html>

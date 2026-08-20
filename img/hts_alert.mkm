@@ -1,0 +1,13 @@
+<MKM version="2.0" imageFileUrl="file:///D:/work/ddit/apache-tomcat-7.0.37/webapps/md/hts_alert.png">
+  <Marks>
+    <LengthMark direction="3" color="16711680" length="10" x="149" y="13"/>
+    <LengthMark direction="12" color="16711680" length="16" x="14" y="33"/>
+    <LengthMark direction="12" color="16711680" length="16" x="181" y="32"/>
+    <LengthMark direction="3" color="16711680" length="10" x="149" y="45"/>
+    <LengthMark direction="12" color="16711680" length="8" x="46" y="19"/>
+    <LengthMark direction="12" color="16711680" length="14" x="31" y="71"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="5424154" offsetX="28" offsetY="6" x="38" y="39"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="16731471" offsetX="28" offsetY="6" x="38" y="97"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="683729" offsetX="25" offsetY="12" x="41" y="150"/>
+  </Marks>
+</MKM>

@@ -1,0 +1,12 @@
+<MKM version="2.0" imageFileUrl="file:///D:/work/ddit/apache-tomcat-7.0.37/webapps/md/hts_pagination.png">
+  <Marks>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="3290682" offsetX="49" offsetY="30" x="56" y="30"/>
+    <TextMark defaultDirection="10" direction="10" color="16711680" x="14" y="28" textMaxWidth="107" offsetX="75" offsetY="55" text="字号 &#xD;font-size:14px"/>
+    <TextMark defaultDirection="10" direction="10" color="16711680" x="300" y="30" textMaxWidth="132" offsetX="71" offsetY="71" text="表格左右内间距 padding-left: 6px  padding-right: 6px"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="12303291" offsetX="38" offsetY="17" x="332" y="39"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="683729" offsetX="39" offsetY="31" x="219" y="29"/>
+    <LengthMark direction="3" color="16711680" length="30" x="506" y="10"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="12303291" offsetX="76" offsetY="56" x="182" y="21"/>
+    <TextMark defaultDirection="10" direction="10" color="16711680" x="533" y="30" textMaxWidth="145" offsetX="29" offsetY="29" text="表格左右内间距 padding-left: 10px  padding-right: 10px"/>
+  </Marks>
+</MKM>

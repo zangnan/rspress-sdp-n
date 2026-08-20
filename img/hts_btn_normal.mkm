@@ -1,0 +1,12 @@
+<MKM version="2.0" imageFileUrl="file:///D:/work/ddit/apache-tomcat-7.0.37/webapps/md/hts_btn_normal.png">
+  <Marks>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="683729" offsetX="37" offsetY="27" x="24" y="40"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="3290682" offsetX="73" offsetY="49" x="128" y="35"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="12303291" offsetX="84" offsetY="59" x="117" y="44"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="545952" offsetX="67" offsetY="23" x="194" y="35"/>
+    <LengthMark direction="12" color="16711680" length="10" x="76" y="41"/>
+    <LengthMark direction="12" color="16711680" length="15" x="13" y="20"/>
+    <LengthMark direction="3" color="16711680" length="15" x="69" y="13"/>
+    <LengthMark direction="3" color="16711680" length="30" x="155" y="15"/>
+  </Marks>
+</MKM>

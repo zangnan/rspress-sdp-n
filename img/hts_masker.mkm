@@ -1,0 +1,5 @@
+<MKM version="2.0" imageFileUrl="file:///D:/work/ddit/apache-tomcat-7.0.37/webapps/md/hts_masker.png">
+  <Marks>
+    <TextMark defaultDirection="5" direction="5" color="255" x="472" y="93" textMaxWidth="183" offsetX="84" offsetY="22" text="蒙版背景色：rgba(0,0,0,.45)"/>
+  </Marks>
+</MKM>

@@ -1,0 +1,20 @@
+<MKM version="2.0" imageFileUrl="file:///D:/work/ddit/apache-tomcat-7.0.37/webapps/md/hts_modal.png">
+  <Marks>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="15395562" offsetX="56" offsetY="7" x="145" y="60"/>
+    <ColorMark defaultDirection="6" colorSystem="hex" direction="6" color="16711680" targetColor="10066329" offsetX="41" offsetY="38" x="482" y="42"/>
+    <ColorMark defaultDirection="6" colorSystem="hex" direction="6" color="16711680" targetColor="3290682" offsetX="44" offsetY="27" x="482" y="277"/>
+    <LengthMark direction="3" color="16711680" length="36" x="316" y="25"/>
+    <LengthMark direction="3" color="16711680" length="51" x="311" y="157"/>
+    <LengthMark direction="12" color="16711680" length="20" x="30" y="43"/>
+    <TextMark defaultDirection="10" direction="10" color="16711680" x="40" y="59" textMaxWidth="134" offsetX="46" offsetY="35" text="标题左侧内边距20px"/>
+    <TextMark defaultDirection="6" direction="6" color="16711680" x="503" y="55" textMaxWidth="136" offsetX="43" offsetY="43" text="标题右侧内边距20px"/>
+    <LengthMark direction="12" color="16711680" length="20" x="490" y="42"/>
+    <LengthMark direction="12" color="16711680" length="20" x="490" y="180"/>
+    <LengthMark direction="3" color="16711680" length="10" x="462" y="157"/>
+    <LengthMark direction="3" color="16711680" length="10" x="463" y="198"/>
+    <TextMark defaultDirection="9" direction="5" color="16711680" x="445" y="155" textMaxWidth="236" offsetX="25" offsetY="10" text="页脚区域内边距: 10px 20px"/>
+    <TextMark defaultDirection="9" direction="9" color="16711680" x="134" y="45" textMaxWidth="100" offsetX="57" offsetY="10" text="字号14px"/>
+    <TextMark defaultDirection="9" direction="5" color="16711680" x="475" y="43" textMaxWidth="111" offsetX="25" offsetY="10" text="字号14px"/>
+    <TextMark defaultDirection="6" direction="6" color="16711680" x="474" y="276" textMaxWidth="100" offsetX="41" offsetY="9" text="鼠标划过颜色"/>
+  </Marks>
+</MKM>
