@@ -2,7 +2,7 @@
 pageType: home
 
 hero:
-  name: 开发文档
+  name: 敏捷开发平台SDP
   text: 组件及UI规范设计文档
   tagline: 助力设计开发者「更灵活」地搭建出「更美」的产品，让用户「快乐工作」～
   actions:

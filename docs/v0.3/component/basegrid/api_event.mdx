@@ -1,4 +1,18 @@
+import { Prompt } from '@rspress/core/theme';
+
 # 事件 & API
+
+<Prompt
+  title="一键创建 Sheet.模块"
+  description="复制这段 Prompt 发送给你的 AI Agent，将他作为开发基础列表模块的开发指南。"
+  prompt={`按照基础列表事件 & API文档 http://localhost:3000/frontdocv2/component/basegrid/api_event.html
+创建一个基础列表模块。
+
+1. 引入并使用 DDBaseGrid 组件，通过 config 配置 api_grid_query 等基础属性。
+2. 在 config.grid_columns 中定义列表列，设置 title、dataIndex、width 等基础字段。
+3. 按数据类型为列配置 render，支持数值、日期、码表、图标等格式化方式。
+4. 按需配置列的 filter、codeTable 及 func、actionRef、queryParam、onRow 等扩展能力。`}
+/>
 
 ## API
 

@@ -29,9 +29,9 @@
 ## 项目搭建
 1. 下载项目代码
 1. 项目依赖安装
-   * 项目安装目录下执行 `pnpm install` 或 `yarn`
+   * 项目安装目录下执行 `yarn` 或 `pnpm install`
    ```bash
-      pnpm install
+      yarn
    ```
    <!-- * 项目安装目录下执行
    ```bash

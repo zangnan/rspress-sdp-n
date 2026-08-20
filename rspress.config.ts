@@ -7,12 +7,12 @@ export default defineConfig({
   title: 'Sdp',
   base: '/frontdocv2/',
   icon: '/logo_hts_orange.png',
-  // description: '开发文档站点描述',
+  description: '敏捷开发平台SDP组件及UI规范设计文档，助力设计开发者「更灵活」地搭建出「更美」的产品，让用户「快乐工作」～',
   logo: {
     light: '/logo_hts_orange_title_light.png',
     dark: '/logo_hts_orange_title_dark.png',
   },
-  logoText: '开发文档',
+  logoText: '敏捷开发平台SDP',
   multiVersion: {
     default: 'v0.3',
     versions: ['v0.3'],
