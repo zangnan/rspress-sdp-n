@@ -1,0 +1,94 @@
+import { PackageManagerTabs, Steps, SourceCode } from '@rspress/core/theme';
+
+# 快速开始
+
+## 开发准备
+
+### 主要技术栈
+**React + UmiJS + antd**
+
+### 参考网站
++ [UMIJS](https://umijs.org)
++ [Ant Design](https://ant-design.antgroup.com)
++ [ProComponents](https://procomponents.ant.design)
++ [Ant Design Pro](https://pro.ant.design)
++ [ES6核心内容上](https://segmentfault.com/a/1190000004365693)
++ [ES6核心内容下](https://segmentfault.com/a/1190000004368132)
++ [ES6入门教程](https://es6.ruanyifeng.com)
+
+## 开发环境搭建
+1. **nodejs**: 24.14.0+
+   * 安装 `node-v24.14.0`
+   * 查看版本：`node -v`
+1. **yarn**: 1.22.22+
+   * `npm install --global yarn`
+   * 查看版本：`yarn -v`
+
+## 项目搭建
+
+<Steps>
+
+### 下载代码并安装依赖
+   <SourceCode href="https://github.com/" /> 
+
+* 项目安装目录下执行 `yarn` 或 `npm install` 或 `pnpm install`
+   
+<PackageManagerTabs
+  command={{
+    yarn: 'yarn',
+    npm: 'npm install',
+    pnpm: 'pnpm install',
+  }}
+/>
+
+### 配置文件调整
+   * `config.ts`为项目的配置文件，开发模式中如果需要调整，则在`config.dev.ts`增加对应配置。
+   * `API_URL_BASE_NODE`：后端接口根目录地址
+
+### 启动项目 **npm start**
+
+### 系统初始化
+
+   * **http://localhost:3001/easy_dev_dc/init**
+   * 一键初始化系统基础构建：创建系统默认表及导入系统默认表初始数据。
+      1. ) 初始化基本表结构
+      1. ) 初始化系统基本信息
+   * 自定义初始化：下载模板，按需调整表结构及数据，依次完成初始化。
+
+### 登录
+   * **http://localhost:3001/user/login**
+   * 默认用户名/密码：admin/ddit@1234
+
+### 通过Excel完成采集
+   * 菜单中进入`敏捷开发 - 系统构建`模块，构建业务系统，参照[Excel构建](/sdp/build_by_excel/1-sheet_table.html)
+      1. ) 表
+      1. ) 模块
+      1. ) 字段
+      1. ) 菜单
+      1. ) 自定义SQL
+      1. ) 自定义码表
+</Steps>
+
+
+## 项目发布
+
+<Steps>
+
+### 配置文件调整
+   * 调整根目录，`config.ts`文件中，变更`ddittoolV0.2`为所发布的根目录。
+   ```ts
+   let proBase = process.env.NODE_ENV === 'production' ? 'ddittoolV0.2' : '';
+   ```
+
+### 打包
+   * 项目安装目录下执行 `npm run build`
+
+### 部署至服务器
+   * 打包后的dist文件夹变更名称为上述根目录名称后部署到服务器中。
+
+### 执行
+   * 如本地部署，端口为8080，执行下列地址可进行初始化及登录操作。
+   * `http://localhost:8080/ddittoolV0.2/#/ddittoolV0.2/easy_dev_dc/init`
+   * `http://localhost:8080/ddittoolV0.2/#/ddittoolV0.2/user/login`
+
+</Steps>
