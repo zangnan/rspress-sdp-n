@@ -1,4 +1,5 @@
 [
+  { "type": "file", "name": "sdp", "label": "敏捷开发平台" },
   { "type": "file", "name": "hts", "label": "SAAS" },
   { "type": "file", "name": "ckts", "label": "出口退税金三" }
 ]
