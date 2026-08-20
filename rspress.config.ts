@@ -1,6 +1,8 @@
 import * as path from 'node:path';
 import { defineConfig } from '@rspress/core';
+import readingTime from 'rspress-plugin-reading-time';
 import ghPages from 'rspress-plugin-gh-pages';
+import pdfGenerator from 'rspress-plugin-pdf-generator'
 
 export default defineConfig({
   root: path.join(__dirname, 'docs'),
@@ -13,6 +15,7 @@ export default defineConfig({
     light: '/logo_hts_orange_title_light.png',
     dark: '/logo_hts_orange_title_dark.png',
   },
+  // logo: 'https://mdn.alipayobjects.com/huamei_qa8qxu/afts/img/A*A-lcQbVTpjwAAAAAAAAAAAAADmJ7AQ/original',
   logoText: '敏捷开发平台SDP',
   multiVersion: {
     default: 'v0.3',
@@ -27,12 +30,18 @@ export default defineConfig({
     ],
   },
   plugins: [
-    ghPages({
-      // 本机 HTTPS 出口被拦截,改用 SSH 协议
-      repo: 'git@github.com:zangnan/rspress-sdp-n.git',
-      branch: 'gh-pages',
-      // 部署到 <user>.github.io/<repo> 必须显式声明 siteBase
-      siteBase: '/rspress-sdp-n/',
+    readingTime({
+      defaultLocale: 'zh-CN',
     }),
+    // ghPages({
+    //   repo: 'git@github.com:zangnan/rspress-sdp-n.git',
+    //   branch: 'gh-pages',
+    //   siteBase: '/rspress-sdp-n/',
+    // }),
+    // pdfGenerator({
+    //   mode: 'multiple', // single multiple
+    //   outputDir: 'pdf',
+    //   fileName: 'site.pdf',
+    // }),
   ],
 });
