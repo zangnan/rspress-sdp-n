@@ -1,10 +1,11 @@
 [
+  { "type": "section-header", "label": "介绍" },
   { "type": "file", "name": "summary", "label": "设计概述" },
-  { "type": "dir", "name": "what_can_do", "label": "我能做什么" },
+  { "type": "dir", "name": "what_can_do", "label": "我能做什么", "collapsible": false },
   { "type": "divider", "dashed": true },
   { "type": "section-header", "label": "开始" },
   { "type": "file", "name": "env_init", "label": "快速开始" },
-  { "type": "dir", "name": "build_by_excel", "label": "Excel构建", "collapsible": true, "collapsed": false },
+  { "type": "dir", "name": "build_by_excel", "label": "Excel构建", "collapsible": true, "collapsed": true },
   { "type": "file", "name": "self_check", "label": "前端开发自查" },
   { "type": "file", "name": "qa", "label": "Q&A" },
   { "type": "section-header", "label": "进阶使用" },
