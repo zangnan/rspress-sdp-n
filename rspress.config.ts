@@ -24,7 +24,7 @@ export default defineConfig({
   },
   themeConfig: {
     lastUpdated: true,
-    footer: { message: 'Copyright © 2024 | Powered by DDIT', },
+    footer: { message: '© 2026 zn. All Rights Reserved.', },
     socialLinks: [
       { icon: 'github', mode: 'link', content: 'https://github.com/zangnan/rspress-sdp-n' },
     ],
