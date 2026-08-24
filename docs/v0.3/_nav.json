@@ -1,5 +1,5 @@
 [
   { "text": "研发", "link": "/sdp/summary", "activeMatch": "/sdp/" },
   { "text": "组件", "link": "/component/index", "activeMatch": "/component/" },
-  { "text": "UI", "link": "/ui/sdp", "activeMatch": "/ui/" }
+  { "text": "UI", "link": "/ui/index", "activeMatch": "/ui/" }
 ]

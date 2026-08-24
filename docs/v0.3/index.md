@@ -40,7 +40,7 @@ features:
     icon: 🖼️
     link: /sdp/what_can_do/what_can_do_01.html#m2-媒体列表采集
   - title: 企业级 React + UmiJS + antd
-    details: 基于国内最广的后台技术栈，二次开发可无缝对接既有代码与组件，招人最容易。
+    details: 基于前沿前后端技术栈，二次开发可无缝对接既有代码与组件。
     icon: ⚛️
     link: /sdp/env_init.html
 ---
