@@ -33,11 +33,11 @@ export default defineConfig({
     readingTime({
       defaultLocale: 'zh-CN',
     }),
-    // ghPages({
-    //   repo: 'git@github.com:zangnan/rspress-sdp-n.git',
-    //   branch: 'gh-pages',
-    //   siteBase: '/rspress-sdp-n/',
-    // }),
+    ghPages({
+      repo: 'git@github.com:zangnan/rspress-sdp-n.git',
+      branch: 'gh-pages',
+      siteBase: '/rspress-sdp-n/',
+    }),
     // pdfGenerator({
     //   mode: 'multiple', // single multiple
     //   outputDir: 'pdf',
