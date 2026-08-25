@@ -8,6 +8,12 @@
 <!-- 表单提交方式，node版本未实现1选项 -->
 <!-- 完善工具文档 -->
 
+## 2026-08-25
+- 🔥 新增 模块`AI模块生成`。
+- **`新增`** 文档`UI - 敏捷开发平台`。
+- **`变更`** 在线文档变技术栈升级到`Repress2.0+`。
+- **`变更`** 文档，重构文档[`设计概述`](/sdp/summary.html)、[`我能做什么`](/sdp/what_can_do/what_can_do_01.html)、[`快速开始`](/sdp/env_init.html)、[`高级能力`](/sdp/instruction.html)、[`开发者进阶`](/sdp/customer_dev.html)、[`首页`](/)。
+
 ## 2026-04-16
 - 🔥 新增 `AutomaticPageVTable`组件，用于将 DDBaseGridVtable 纳入字典管理
 - 🔥 新增 [视频介绍页](http://192.168.21.5:7777/ddit_sdp/intro/)

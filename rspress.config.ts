@@ -18,8 +18,8 @@ export default defineConfig({
   // logo: 'https://mdn.alipayobjects.com/huamei_qa8qxu/afts/img/A*A-lcQbVTpjwAAAAAAAAAAAAADmJ7AQ/original',
   logoText: '敏捷开发平台SDP',
   multiVersion: {
-    default: 'v0.3',
-    versions: ['v0.3'],
+    default: 'v0.31',
+    versions: ['v0.31'],
     // versions: ['v0.1', 'v0.3'],
   },
   themeConfig: {
