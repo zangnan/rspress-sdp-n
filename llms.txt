@@ -15,7 +15,7 @@
 - [Sheet.自定义SQL](/rspress-sdp-n/sdp/build_by_excel/5-sheet_sql_manage.md)
 - [Sheet.自定义码表](/rspress-sdp-n/sdp/build_by_excel/6-sheet_codetable_manage.md)
 - [字典功能清单](/rspress-sdp-n/sdp/build_by_excel/9-fun_list.md)
-- [](/rspress-sdp-n/sdp/self_check.md)
+- [前端开发自查](/rspress-sdp-n/sdp/self_check.md)
 - [Q&A](/rspress-sdp-n/sdp/qa.md)
 - [高级能力](/rspress-sdp-n/sdp/instruction.md)
 - [开发者进阶](/rspress-sdp-n/sdp/customer_dev.md)
