@@ -1,0 +1,189 @@
+import { Prompt } from '@rspress/core/theme';
+
+# 事件 & API
+
+<Prompt
+  title="一键创建 Sheet.模块"
+  description="复制这段 Prompt 发送给你的 AI Agent，将他作为开发基础列表模块的开发指南。"
+  prompt={`按照基础列表事件 & API文档 http://localhost:3000/frontdocv2/component/basegrid/api_event.html
+创建一个基础列表模块。
+
+1. 引入并使用 DDBaseGrid 组件，通过 config 配置 api_grid_query 等基础属性。
+2. 在 config.grid_columns 中定义列表列，设置 title、dataIndex、width 等基础字段。
+3. 按数据类型为列配置 render，支持数值、日期、码表、图标等格式化方式。
+4. 按需配置列的 filter、codeTable 及 func、actionRef、queryParam、onRow 等扩展能力。`}
+/>
+
+## API
+
+### DDBaseGrid
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| [config](/rspress-sdp-n/component/basegrid/api_event.md#config) | 基础配置 | object | - |
+| func | 列的自定义渲染、操作列设置、行单/双击事件，参照 [后端分页---复杂示例](/rspress-sdp-n/component/basegrid/eg_code.md#后端分页---复杂示例) | object | - |
+| actionRef | 列表ref，参照 [后端分页---复杂示例](/rspress-sdp-n/component/basegrid/eg_code.md#后端分页---复杂示例) | RefObject | - |
+| queryParam | 查询接口携带参数，参照 [后端分页---复杂示例](/rspress-sdp-n/component/basegrid/eg_code.md#后端分页---复杂示例) | object | - |
+| onRow | 行事件，参照 [后端分页---复杂示例](/rspress-sdp-n/component/basegrid/eg_code.md#后端分页---复杂示例) | object | - |
+| afterReloadGridData | 数据加载后执行，参照 [后端分页---复杂示例](/rspress-sdp-n/component/basegrid/eg_code.md#后端分页---复杂示例) | function | - |
+| userDataSource | 直接传入列表数据，参照 [传入数据---前端分页](/rspress-sdp-n/component/basegrid/eg_code.md#传入数据--前端分页) | function | - |
+| [Antd Table](https://ant.design/component/table-cn#api) | 支持所有Antd Table属性设置 | - | - |
+
+### config
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| api\_grid\_query | 列表查询api | string | - |
+| grid\_sticky\_affix | 列表锁定高度 | number | - |
+| grid\_scroll\_y | y轴滚动条，默认null | number | - |
+| grid\_scroll\_x | x轴滚动条，默认700px | number | 700 |
+| grid\_border | 是否显示序号 | boolean | true |
+| grid\_handle\_width | 自定义操作列宽度 | number | - |
+| grid\_row\_key | 主键 | string|array | uuid |
+| grid\_show\_serial\_number | 是否显示序号 | boolean | false |
+| grid\_click\_checked |  是否开启单击或双击勾选事件，1单击勾选，2双击勾选 | `1`|`2`|`-` | - |
+| [grid\_columns](/rspress-sdp-n/component/basegrid/api_event.md#configgrid_columns) | 列表列 | array | - |
+
+### config.grid\_columns
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| title | 列头显示文字 | string | - |
+| dataIndex | 数据key | string | - |
+| width | 列宽度 | number | - |
+| fixed | 列是否固定 | `left`|`right` | - |
+| titleTooltip | 列头说明文字 | string | - |
+| align | 列对齐方式 | `left`|`right`|`center` | `left` |
+| ellipsis | 超过宽度自动省略 | boolean | false |
+| hidden | 隐藏列 | boolean | false |
+| sorter | 排序 | boolean | false |
+| sum | 是否开启求和 | boolean | false |
+| sum2 | 是否开启后端求和 | boolean | false |
+| children | 分组表头 | grid\_columns\[] | - |
+| [render](/rspress-sdp-n/component/basegrid/api_event.md#configgrid_columnsrender) | 列渲染 | objcet | - |
+| [filter](/rspress-sdp-n/component/basegrid/api_event.md#configgrid_columnsfilter) | 表头筛选 | objcet | - |
+| [codeTable](/rspress-sdp-n/component/basegrid/api_event.md#configgrid_columnscodetable) | 码表转换 | objcet | - |
+
+### config.grid\_columns.render
+
+#### 格式化数值
+
+```ts
+render: { type: 'number', format: '0,0.0000' }
+render: { type: 'number', format: '0,0.00' }
+```
+
+#### 格式化时间
+
+```ts
+render: { type: 'date', format: 'YYYY-MM-DD' }
+render: { type: 'date', format: 'YYYY-MM-DD HH:mm:ss' }
+```
+
+#### 前端格式化码表
+
+* 也可以利用 [codeTable](/rspress-sdp-n/component/basegrid/api_event.md#configgrid_columnscodetable) 属性格式化码表
+* 可结合 [格式化图标类](/rspress-sdp-n/component/basegrid/api_event.md#格式化图标类) 配套使用
+
+```ts
+render: {
+  map: [
+    { value: 'Y', text: '检查通过' },
+    { value: 'N', text: '检查未通过' },
+    { value: '', text: '未检查' },
+  ]
+}
+```
+
+#### 格式化图标类
+
+```ts
+// color可选: default|success|processing|error|warning
+render: {
+  // Tag
+  tag: [
+    { value: '0139', color: 'default' },
+    { value: '0130', color: 'error' },
+    { value: '', color: 'processing' },
+  ],
+  // 图标
+  icon: [
+    { value: '0139', icon: 'CheckOutlined', color: 'default' },
+    { value: '0130', icon: 'CoffeeOutlined', color: 'error' },
+    { value: '', icon: 'RobotOutlined', color: 'processing' },
+  ],
+  // 状态点
+  circle: [
+    { value: '0139', color: 'default' },
+    { value: '0130', color: 'error' },
+    { value: '', color: 'processing' },
+  ]
+}
+
+```
+
+#### 自定义格式化
+
+* 需要结合func属性配套使用
+* 参照示例 [后端分页 - 复杂示例](/rspress-sdp-n/component/basegrid/eg_code.md#后端分页---复杂示例)
+
+```ts
+render: { func: 'renderExampleXh4' }
+```
+
+### config.grid\_columns.codeTable
+
+* 也可以利用 config.grid\_columns.render [前端格式化码表](/rspress-sdp-n/component/basegrid/api_event.md#前端格式化码表) 属性格式化码表
+* 可结合 [格式化图标类](/rspress-sdp-n/component/basegrid/api_event.md#格式化图标类) 配套使用
+
+```ts
+codeTable: ['code_dm_ckts_hgjldw', '01']
+```
+
+### config.grid\_columns.filter
+
+#### 多选
+
+```ts
+// 基于码表取值
+filter: {
+  type: 'Select',
+  codeTable: ['code_dm_ckts_hgjgfs', '01'],
+  showCode: true,
+}
+// 基于前端取值
+filter: {
+  type: 'Select',
+  list: [
+    { text: '已结关', value: 'yjg' },
+    { text: '未结关', value: 'wjg' },
+  ],
+}
+```
+
+#### 单选
+
+```ts
+// 基于码表取值
+filter: {
+  type: 'Radio',
+  codeTable: ['code_dm_ckts_hgzfjsfs', '01'],
+},
+// 基于前端取值
+filter: {
+  type: 'Radio',
+  list: [
+    { text: '全部', value: 'qb' },
+    { text: '通过', value: 'tg' },
+    { text: '驳回', value: 'bh' },
+  ],
+},
+```
+
+#### 录入框
+
+```ts
+filter: {
+  type: 'Input',
+}
+```

@@ -1,0 +1,226 @@
+import { PackageManagerTabs, Steps, SourceCode } from '@rspress/core/theme';
+
+# 从 0 到运行 —— SDP 上手指南
+
+> 这页是"小白第一篇"。读完能做完 4 件事：环境装好、项目跑起来、做出第一个模块、打包发布。预计 30 分钟搞定。
+
+## 1. 你需要准备什么
+
+### 1.1 主要技术栈(简单说为什么)
+
+| 技术 | 干嘛的 | 为什么选它 |
+| --- | --- | --- |
+| **React** | UI 框架 | 主流，生态最大，招人容易 |
+| **UmiJS** | 应用框架 | 约定式路由、内置构建、企业级实践标配 |
+| **antd** | 组件库 | 国内用最广，后台模板最丰富 |
+
+> 💡 你**不需要精通**这三种技术。SDP 把它们封装好，你只跟平台打交道 —— 90% 的场景下，只用 Excel + 平台 UI。
+
+### 1.2 参考网站
+
+如果你想深入学这几个框架，这里有几个常用入口：
+
+* [UMIJS](https://umijs.org/)
+* [Ant Design](https://ant-design.antgroup.com)
+* [ProComponents](https://pro-components.antdigital.dev/)
+* [Ant Design Pro](https://preview.pro.ant.design/welcome/)
+* [ES6 核心内容上](https://segmentfault.com/a/1190000004365693)
+* [ES6 核心内容下](https://segmentfault.com/a/1190000004368132)
+* [ES6 入门教程](https://es6.ruanyifeng.com)
+
+### 1.3 工具清单
+
+| 工具 | 最低版本 |
+| --- | --- |
+| **nodejs** | 24.14.0+ |
+| **包管理器** | yarn 1.22.22+ / npm / pnpm 任选 |
+
+**安装步骤：**
+
+* **nodejs**：去 [nodejs.org](https://nodejs.org) 下载 24.14.0+ 安装包，装完打开终端验证 `node -v`
+* **yarn**：`npm install --global yarn`，验证 `yarn -v`
+
+***
+
+## 2. 三步把项目跑起来
+
+<Steps>
+  ### 步骤 1：下载代码并装依赖
+
+  <SourceCode href="https://github.com/" />
+
+  * 项目安装目录下执行装依赖命令
+
+  <PackageManagerTabs
+    command={{
+  yarn: 'yarn',
+  npm: 'npm install',
+  pnpm: 'pnpm install',
+}}
+  />
+
+  > 💡 如果装依赖卡住,通常是网络问题,试试切换镜像源:
+  > `yarn config set registry https://registry.npmmirror.com`
+
+  ### 步骤 2：启动项目
+
+  启动命令：
+
+  <PackageManagerTabs
+    command={{
+  yarn: 'yarn start',
+  npm: 'npm start',
+  pnpm: 'pnpm start',
+}}
+  />
+
+  启动成功后,浏览器会自动打开 `http://localhost:3001/`。
+
+  **你应该看到**：平台登录页。如果白屏 / 报错,看 [附录：常见报错](#附录常见报错)。
+
+  ### 步骤 3：系统初始化
+
+  打开初始化页：`http://localhost:3001/easy_dev_dc/init`
+
+  第一次启动,平台会引导你建表 + 导入默认数据。两种方式二选一:
+
+  * **一键初始化**:点一下,平台自动建好基础表结构、导入系统默认数据、生成系统管理模块。**大多数场景用这个就够了**。
+  * **自定义初始化**:下载模板,按需调整表结构及数据后再依次初始化。**适合定制化场景**(比如客户有自己的字典要预装)。
+
+  ### 步骤 4:登录
+
+  打开登录页：`http://localhost:3001/user/login`
+
+  * 用户名：`admin`
+  * 密码：`ddit@1234`
+
+  > ⚠️ **登录后第一时间改密码**(系统管理 → 用户管理)。
+</Steps>
+
+> 🎉 看到左侧菜单 → 说明平台已经跑起来了。
+
+***
+
+## 3. 做出第一个模块(10 分钟)
+
+登录后,左边的菜单是你现在能用的所有功能。**做出第一个模块**就 4 步：
+
+### 步骤 1：下载数据字典模板
+
+进入 `敏捷开发 - 系统构建` 模块,点击"下载模板",拿到一份 6 Sheet 的 Excel：
+
+* **菜单构建** —— 模块挂在哪个菜单下
+* **模块** —— 列表 / 表单 / 工具栏怎么布局
+* **表管理** —— 数据库表
+* **字典构建** —— 字段定义、列表项、表单项、筛选项
+* **业务码表** —— 字典
+* **自定义 SQL** —— 复杂查询
+
+> 字段含义详解见 [Excel 构建说明 - 1.表构建](/rspress-sdp-n/sdp/build_by_excel/1-sheet_table.md)。
+
+### 步骤 2：填 Excel
+
+最少要填 4 个 Sheet(其他 Sheet 留空也行)：
+
+1. **表管理**：表名、字段、数据类型、是否必填
+2. **字典构建**：每个字段的中文名、列表里要不要显示、表单里用什么控件
+3. **模块**：列表宽度、表单布局、工具栏按钮
+4. **菜单构建**：菜单路径
+
+### 步骤 3：上传并构建
+
+回到 `系统构建` 模块,上传填好的 Excel,点"构建"。平台会：
+
+* 在数据库建表
+* 注册菜单
+* 生成可运行的模块页面
+
+### 步骤 4：看看效果
+
+刷新页面,左边的菜单会多出你刚建的入口。点进去,看到的就是完整可用的 m1 数据列表 + 采集页面。
+
+> 想看 6 类模块各长什么样,见 [我能做什么 - 基础模块](/rspress-sdp-n/sdp/what_can_do/what_can_do_01.md)。
+
+***
+
+## 4. 配置文件中你会用到的几行
+
+你打开项目,会看到 `config.ts`(基础) / `config.dev.ts`(开发) / `config.prod.ts`(生产)三个配置。
+
+最常见的几行：
+
+* **`API_URL_BASE_NODE`**：后端接口根地址
+  * 开发：指向本地后端(默认 `http://localhost:8080`)
+  * 生产：指向线上后端
+* **`title`** / **`logo`**：站点标题、Logo 图
+* **`base`**：站点 base 路径(部署到子路径时改这里)
+
+> 修改后**需要重启** `yarn start` 才生效。
+
+***
+
+## 5. 发布到生产环境
+
+<Steps>
+  ### 步骤 1：改根目录配置
+
+  `config.ts` 中,变更部署的根目录名：
+
+  ```ts
+  let proBase = process.env.NODE_ENV === 'production' ? 'ddittoolV0.2' : '';
+  ```
+
+  > 把 `'ddittoolV0.2'` 换成你**实际部署的子目录名**(例如 `/your-app/`)。这是平台默认配置,部署时按需修改。
+
+  ### 步骤 2：打包
+
+  <PackageManagerTabs
+    command={{
+  yarn: 'yarn build',
+  npm: 'npm run build',
+  pnpm: 'pnpm build',
+}}
+  />
+
+  打包产物在项目根目录的 `dist/` 文件夹。
+
+  ### 步骤 3：部署到服务器
+
+  把 `dist/` 整个目录上传到服务器,放到**配置的根目录名**对应的位置。
+
+  > ⚠️ 注意：`dist/` 的**文件夹名**也要改成根目录名(比如 `dist/` → `your-app/`)，否则前端路由会找不到。
+
+  ### 步骤 4：访问
+
+  部署完成后，访问地址形如：
+
+  * `http://your-server/<根目录名>/#/easy_dev_dc/init`
+  * `http://your-server/<根目录名>/#/user/login`
+
+  如本地部署，端口为 8080：
+
+  * `http://localhost:8080/<根目录名>/#/<根目录名>/easy_dev_dc/init`
+  * `http://localhost:8080/<根目录名>/#/<根目录名>/user/login`
+</Steps>
+
+***
+
+## 附录:常见报错
+
+| 现象 | 原因 | 解决 |
+| --- | --- | --- |
+| `node -v` 报错 | nodejs 没装 / 版本不对 | 重装 24.14.0+，参考 [nodejs.org](https://nodejs.org) |
+| `yarn install` 卡住 | 网络问题 | 切换镜像源:`yarn config set registry https://registry.npmmirror.com` |
+| `npm start` 报端口占用 | 3001 被占 | 找出占用进程杀掉，或在 `config.ts` 改端口 |
+| 初始化页 404 | 没装好或没初始化 | 重新执行步骤 2(启动)+ 步骤 3(初始化) |
+| 登录后白屏 | 后端没起来 | 检查后端服务是否在 8080 端口运行 |
+
+***
+
+## 下一步
+
+* 看 6 类基础模块怎么配 → [我能做什么 - 基础模块](/rspress-sdp-n/sdp/what_can_do/what_can_do_01.md)
+* 弄懂 Excel 每一列什么意思 → [Excel 构建说明](/rspress-sdp-n/sdp/build_by_excel/1-sheet_table.md)
+* 看平台菜单全景 → [菜单全景](/rspress-sdp-n/sdp/what_can_do/what_can_do_03.md)
+* 给模块加自定义代码 / 事件 → [开发者进阶](/rspress-sdp-n/sdp/customer_dev.md)
+* 看 11 类高阶能力怎么用 → [高级能力](/rspress-sdp-n/sdp/instruction.md)

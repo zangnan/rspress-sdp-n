@@ -1,0 +1,49 @@
+# Sdp
+
+> 敏捷开发平台SDP组件及UI规范设计文档，助力设计开发者「更灵活」地搭建出「更美」的产品，让用户「快乐工作」～
+
+## 研发
+
+- [SDP 是什么？—— 一句话先说清楚](/rspress-sdp-n/sdp/summary.md): 你把表的结构、字段、菜单写进一张 Excel，平台就帮你把"列表 + 新建/编辑表单 + 筛选 + 排序 + 导出 + 统计 + 图表"这一整套后台模块生成出来。 剩下的时间，你只需要写真正属于业务的那 20%。
+- [不写代码，你能做出哪些模块?](/rspress-sdp-n/sdp/what_can_do/what_can_do_01.md): SDP 已经为你预制了 6 种最常见的后台模块模板。你只需要在 Excel 里“告诉”平台表结构和菜单，平台就生成对应模块。
+- [菜单全景 —— 你会用到的所有功能都在这](/rspress-sdp-n/sdp/what_can_do/what_can_do_03.md): SDP 是“自己造自己”的平台 —— 下面这些菜单，既是它能给你的能力，也展示了它能做出什么样的系统。
+- [从 0 到运行 —— SDP 上手指南](/rspress-sdp-n/sdp/env_init.md): 这页是"小白第一篇"。读完能做完 4 件事：环境装好、项目跑起来、做出第一个模块、打包发布。预计 30 分钟搞定。
+- [Sheet.表](/rspress-sdp-n/sdp/build_by_excel/1-sheet_table.md)
+- [Sheet.模块](/rspress-sdp-n/sdp/build_by_excel/2-sheet_module.md)
+- [Sheet.字段](/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.md)
+- [Sheet.菜单](/rspress-sdp-n/sdp/build_by_excel/4-sheet_menu.md)
+- [Sheet.自定义SQL](/rspress-sdp-n/sdp/build_by_excel/5-sheet_sql_manage.md)
+- [Sheet.自定义码表](/rspress-sdp-n/sdp/build_by_excel/6-sheet_codetable_manage.md)
+- [字典功能清单](/rspress-sdp-n/sdp/build_by_excel/9-fun_list.md)
+- [](/rspress-sdp-n/sdp/self_check.md)
+- [Q&A](/rspress-sdp-n/sdp/qa.md)
+- [高级能力](/rspress-sdp-n/sdp/instruction.md)
+- [开发者进阶](/rspress-sdp-n/sdp/customer_dev.md)
+- [修订记录](/rspress-sdp-n/sdp/changelog.md)
+- [资料](/rspress-sdp-n/sdp/docs_map.md)
+- [API Overview](/rspress-sdp-n/sdp/index.md)
+- [](/rspress-sdp-n/sdp/page_view_dev.md)
+
+## 组件
+
+- [组件总览](/rspress-sdp-n/component/index.md)
+- [事件 & API](/rspress-sdp-n/component/basegrid/api_event.md): <Prompt title="一键创建 Sheet.模块" description="复制这段 Prompt 发送给你的 AI Agent，将他作为开发基础列表模块的开发指南。" prompt={`按照基础列表事件 & API文档 http://localhost:3000/frontdocv2/component/basegrid/api_event.html 创建一个基础列表模块。 引入并使用 DDBaseGrid 组件，通过 config 配置 api_grid_query 等基础属性。在 config.grid_columns 中定义列表列，设置 title、dataIndex、width 等基础字段。按数据类型为列配置 render，支持数值、日期、码表、图标等格式化方式。按需配置列的 filter、codeTable 及 func、actionRef、queryParam、onRow 等扩展能力。`} />
+- [代码演示](/rspress-sdp-n/component/basegrid/eg_code.md)
+- [事件 & API](/rspress-sdp-n/component/baseform/api_event.md)
+- [代码演示](/rspress-sdp-n/component/baseform/eg_code.md)
+- [事件 & API](/rspress-sdp-n/component/unit/api_event.md)
+- [代码演示](/rspress-sdp-n/component/unit/eg_code.md)
+- [事件 & API](/rspress-sdp-n/component/unit_tree/api_event.md): 文档完善中...
+- [代码演示](/rspress-sdp-n/component/unit_tree/eg_code.md): 文档完善中...
+- [](/rspress-sdp-n/component/util.md)
+
+## UI
+
+- [UI 总览](/rspress-sdp-n/ui/index.md)
+- [敏捷开发平台](/rspress-sdp-n/ui/sdp.md)
+- [开发文档](/rspress-sdp-n/ui/hts.md)
+- [出口退税](/rspress-sdp-n/ui/ckts.md)
+
+## 后端
+
+- [后端总览](/rspress-sdp-n/backend/index.md): SDP 后端是一个独立的 Egg.js 工程仓库，为前端 SDP 提供接口、数据存储、权限与运行日志。它不是前端项目的子模块，而是另一个仓库（下文简称"后端工程"），通过 HTTP 接口与前端协作。 如果你只关心"怎么把前端跑起来"，看 快速开始 就够了 —— 本页是给需要理解、改动、扩展后端的人看的。

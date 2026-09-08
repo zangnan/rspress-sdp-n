@@ -1,0 +1,100 @@
+import { Badge } from '@theme';
+
+# Q\&A
+
+## Excel构建
+
+### sheet页之间数据是如何串联
+
+1. **菜单构建sheet**
+   * 串联元素：`模块key`
+   * 菜单路径单元格中含有模块key标识，如: **/dynamicbs1/cfgp/test\_app\_mts\_tsjh**，**test\_app\_mts\_tsjh**为模块key。
+2. **模块sheet**
+   * 串联元素：`模块key` -> `数据字典`
+   * 匹配的模块key单元格同行，查找数据字典单元格，如：模块key **test\_app\_mts\_tsjh** 同行数据字典为**s\_tsjh**。
+3. **表管理sheet**
+   * 串联元素：`数据字典`
+   * 找到匹配数据字典，如：**s\_tsjh**，同行逻辑表类型单元格标识当前是否需要创建数据库实体表。
+4. **字典构建sheet**
+   * 串联元素：`数据字典`
+   * 找到匹配数据字典，已整行分组隔断的方式展现，如：**字典\_进货明细 s\_tsjh**，在下一个分组前数据即为当前数据字典字段元素。
+     * sdfsdf
+     * sdfsdf :libra:
+5. **业务码表sheet**
+   * 串联元素：`码表类别`
+   * 码表在配置中一般用于列表中码值格式化中文、表单采集中下拉组件赋值、筛选中下拉组件赋值。
+   * 字典构建sheet页中，列表项格式化列、筛选项类型扩展参数、表单项类型扩展参数可以设置码表类别\
+     格式：**code\_dm\_码表类别**，如：**code\_dm\_ckts\_cktmspzlx**\
+     **ckts\_cktmspzlx**即为业务码表sheet页中配置的码表元素。
+
+### 点击新建无反应
+
+1. Sheet.字典构建`表单项开启`是否配置为1，需保证至少一项开启，新建及编辑弹窗才可以打开。
+
+### 演示页面无法打开
+
+1. 是否开启了本地客户端vpn。
+2. 演示网段ip是否联通。访问192.168.21.5时。当前wifi可以直接连上，网线需要开通访问权限。
+
+### 配置页面无法打开
+
+1. Sheet.菜单构建未加入`cfgp`标识导致页面打不开。参照[Sheet.菜单构建 - 参数2.菜单路径](/rspress-sdp-n/sdp/build_by_excel/4-sheet_menu.md#菜单路径--组件)
+
+### 系统构建异常
+
+1. Sheet.字典构建，表单项类型为Title时，`主表字段`填入了内容导致异常。
+2. 字典构建中表单项类型未配置导致的页面空白，后续计划会增加排查机制。
+3. Excel模板中删除了固有的sheet页面导致异常。
+
+## 编码
+
+### 改变后端接口地址
+
+* **config\config.dev.ts**文件中，**API\_URL\_BASE**为接口地址前缀，为空代表使用本地mock数据。
+
+:::info Tip
+`config.dev.ts`文件仅在开发模式下生效。生产build模式采用`config.ts`文件中的配置。
+:::
+
+### 切换本地菜单和数据库菜单
+
+* **config\config.dev.ts**文件中，**LOCAL\_MENU**为是否采用本地菜单标识，设置true则采用本地静态菜单，否则为数据库动态获取菜单。
+
+### 业务模块及对应文件夹建立规则
+
+* 系统级文件夹直接建立在**src\pages**文件夹下，如”内部管理系统“，则建立**src\pages\nbglxt**文件夹。
+* 每个业余单元模块按照菜单层级建立子文件夹，如菜单“财务管理 - 流水信息查询”，则建立**src\pages\nbglxt\cwgl\lsxxgl**文件夹。
+* 一般每个业务文件夹含有**index.tsx**、**f.tsx**两个文件，如页面数据存放至代码中，则会有**config.tsx**文件。
+
+```javascript
+  ├── src                              # 项目代码目录
+    ├── pages                          # 业务文件夹
+      ├── nbglxt                       # 内部管理系统
+        ├── cwgl                       # 财务管理
+          ├── lsxxcx                   # 流水信息查询
+            ├── index.tsx              # 入口页
+            ├── f.tsx                  # 自定义事件处理
+            ├── config.tsx             # 静态配置文件，按需编写
+```
+
+### 自定义弹窗开发
+
+* 参照示例**src\pages\example\json\_page\unit\_from\_api\index.tsx**
+* 导入自定义组件时，首字母为大写格式。
+
+```ts {1,4}
+import Modal1 from './Modal1';
+// import Modal1 from './Modal1'; // 错误格式
+const TestForm: React.FC<unknown> = () => {
+  return <Modal1 />;
+  // return <modal1 />; // 错误格式
+};
+```
+
+### 使用DDBaseForm开发
+
+* 切换select内容、变更标签、变动赋值，参照示例**src\pages\example\form\form03\index.tsx**、**src\pages\example\form\form03\modal1.tsx**、**src\pages\example\form\form03\f.tsx**
+
+### 如何使列表某一列自适应 <Badge text="2024-11-19" type="tip" />
+
+* `Sheet.字典构建 - 列表项列宽`项置为空。

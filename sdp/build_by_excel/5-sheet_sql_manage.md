@@ -1,0 +1,19 @@
+import { Badge } from '@theme';
+
+# Sheet.自定义SQL
+
+## 填写示例
+
+![](/excel_intro/module_intro_70.png)
+
+* 当列表页面需要采用自定义的查询语句查询数据时使用，配合`模块`sheet中`Api列表查询`字段，如填写：`customer:sql01`
+
+## 填写说明
+
+* 参数取值说明
+
+| 参数 | 说明 |
+| --- | --- |
+| 自定义唯一标志 | |
+| SQL描述 | |
+| SQL代码 | |

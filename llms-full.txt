@@ -1,0 +1,5850 @@
+---
+url: /rspress-sdp-n/sdp/summary.md
+---
+
+# SDP 是什么？—— 一句话先说清楚
+
+你把表的结构、字段、菜单写进一张 Excel，平台就帮你把"列表 + 新建/编辑表单 + 筛选 + 排序 + 导出 + 统计 + 图表"这一整套后台模块生成出来。
+
+剩下的时间，你只需要写真正属于业务的那 20%。
+
+***
+
+## 1. 这是什么 & 给谁用
+
+SDP（敏捷开发平台）解决的是一件很具体的事：**让“重复的 CRUD 模板代码”消失**。
+
+一个中小型的普通 MIS 系统，真正的业务逻辑往往不到 20%，剩下 80% 是：
+
+* 一遍又一遍地搭列表页：筛选、排序、分页、导出
+* 一遍又一遍地搭表单页：各种输入控件、校验、只读控制
+* 一遍又一遍地搭工具栏：新增、编辑、删除、批量操作
+* 一遍又一遍地搭统计：维度表、图表、视图设置
+
+SDP 把这 80% 的工作**抽到了 Excel 配置里**，开发者只需要关注真正属于业务的代码。
+
+**它适合谁?**
+
+* **需求 / 设计人员**：在 Excel 里把表结构想清楚，就能产出一个**可运行的原型模块**，而不是只能画几张图
+* **前端开发者**：不用再从零搭表格、表单、筛选这些“长得都差不多”的页面
+* **后端开发者**：表结构即接口，数据字典即权限，字段定义即校验规则
+* **小团队 / 中小企业**：不用专门养一支前端，业务就能跑起来
+
+> **一句话总结**：把"配置"还给业务，把"代码"留给真正重要的地方。
+
+***
+
+## 2. 一图看能力全景
+
+![](/dataToView/intro.png)
+
+平台的能力可以分三层来看：
+
+### 🧱 基础模块(无需编码)
+
+平台预制了 6 类最常见的前后台模块形态，点开 [我能做什么 - 基础模块](/rspress-sdp-n/sdp/what_can_do/what_can_do_01.md) 看详情：
+
+* **m1. 数据列表 + 采集**：最常见的“一张表 + 一个表单”
+* **m2. 媒体列表 + 采集**：图片、视频、音频的卡片 / 列表展示
+* **m3. 主子表展示 + 采集**：一个主表带多个子表（如人员 + 工作履历）
+* **m4. 关联表展示**：一对多关系（人员 ↔ 角色）
+* **m5. 树状数据 + 采集**：菜单维护、组织机构等
+* **m6. 树状数据 + 数据列表**：左侧树，右侧列表
+
+### ⚡ 高阶能力(开箱即用)
+
+基础模块之上，平台自带 11 种增强能力，详见 [高级能力 - 使用说明](/rspress-sdp-n/sdp/instruction.md)：
+
+* **f1. 维度表统计**
+* **f2. 图表统计**
+* **f3. 列表高级筛选**
+* **f4. 列表视图设置**
+* **f5. 列表数据导出**
+* **f6. 生成设计文档**
+* **f7. 管理帮助文档**
+* **f8. 管理色彩主题及布局**
+* **f9. AI 生成主题**
+* **f10. AI 模块生成**
+* **f11. 核心资产导出**
+
+### 🏗 平台功能模块
+
+平台自身也是用 SDP 搭起来的。完整的菜单全景见 [平台功能模块介绍](/rspress-sdp-n/sdp/what_can_do/what_can_do_03.md)：
+
+* **系统初始化** / **系统管理** / **敏捷开发管理** / **统计分析** / **媒体管理**
+
+***
+
+## 3. 一个动作，两个产出 —— SDP 真正的杀手锏
+
+如果只让你记住一件事，记住这条：**SDP 不只是“开发快”，而是“系统 + 文档 + 客户认知” 三件事一起搞定**。
+
+下面这两点，是我们见过所有用过 SDP 的团队反应最大、感受最明显的。
+
+### 3.1 系统能跑，Word 文档也同时出
+
+你花一份时间写 Excel，平台同时给你**两样东西**：
+
+* ✅ **一个能跑的系统**
+* ✅ **一份对应的 Word 文档**（设计文档 / PRD / 模块说明）
+
+它们**绑在一起出**，因为都从**同一个 Excel 数据源**生成。
+
+为什么要强调这件事?—— 大多数团队都有这个痛：
+
+* 系统改到 v3 了，设计文档还是 v1 的
+* 字段加了一堆，旧文档没人同步，新同事看不懂
+* 客户问“这个字段什么意思”，翻遍代码也找不到
+* 每次系统上线，文档得有人**单独再写一遍**
+
+SDP 让文档跟系统**永远对得上** —— 因为你不用"写两遍"。你只写了 Excel，**平台把系统跑出来、把文档也生成出来**，改 Excel 一次，两边同步更新。
+
+> 💡 这一块对应的是上面的 [f6. 生成设计文档](/rspress-sdp-n/sdp/summary.md#-高阶能力开箱即用) ，只是它**默认就开着**，不是可选功能。
+
+### 3.2 需求会上就能 demo 给客户
+
+跟客户谈需求的会，以前是这样的：
+
+* 客户说需求
+* 你回去画原型、写文档
+* 几天后给客户看 demo
+* 客户说“这不是我要的”
+* 你回去改
+* 几天后再 demo
+
+**几轮下来，合同还没签，版本已经到 v3 了，客户也开始不耐烦。**
+
+用 SDP，会是这样：
+
+1. 客户说完需求，你现场把字段写在 Excel 里（10 分钟）
+2. 上传到平台 → 系统当场能跑
+3. 给客户演示，客户当场提意见：“这个字段不要，加那个”
+4. 你现场改 Excel，5 分钟后再次 demo
+5. **同一个会上**，PRD 在 Excel 里，系统在浏览器里 —— **客户一边签字一边看效果**
+
+> 客户离开会议室的时候，**看到的就是最终系统**，而不是"之后会做的"。需求变更成本从“几天”降到“几分钟”。
+
+### 3.3 前后对比
+
+| | 传统开发 | 用 SDP |
+| --- | --- | --- |
+| 一份产出要做几遍 | 系统 + 文档 + 接口 + 测试 各做一遍 | 一遍 Excel，自动产出 |
+| 文档跟系统对得上吗 | 经常对不上，需要专人维护 | 永远对得上，从同一数据源生成 |
+| 客户首次看 demo 要等 | 几天到几周 | 当场(5-10 分钟) |
+| 改一次需求的成本 | 重做一版 demo + 改一版文档 | 改一下 Excel，两边同步 |
+| 上线时文档质量 | 看团队自觉，经常缺失 | 文档是系统的一部分，**必有** |
+
+> 🎯 **合起来看**：SDP 跟普通开发平台最大的区别不是“快”，而是“**系统和文档永远在一起**”+“**客户在需求会上就见到成品**”。这两件事，单做任何一个都不算稀奇，**两个都做到**，才是 SDP 真正的杀手锏。
+
+***
+
+## 4. 三步开始用
+
+如果你想立刻把平台跑起来，跟着 [快速开始](/rspress-sdp-n/sdp/env_init.md) 走一遍就够了，大概 30 分钟内能搞定。
+
+### 第一步：装环境
+
+* **nodejs**：24.14.0 或更高版本
+* **包管理器**：yarn / npm / pnpm 任选一个，我们推荐 yarn
+
+### 第二步：跑起来
+
+```bash
+git clone <你的项目地址>
+cd <项目目录>
+yarn          # 或 pnpm install / npm install
+npm start     # 或 pnpm start
+```
+
+浏览器打开 `http：//localhost：3001/`，按提示完成一键初始化，默认账号：
+
+* 用户名：`admin`
+* 密码：`ddit@1234`
+
+### 第三步：做第一个模块
+
+1. 下载Excel模板(在 `敏捷开发 - 系统构建` 模块)
+2. 在 Excel 中填好 4 个 Sheet：**表 → 字段 → 模块 → 菜单**
+3. 上传 Excel，平台自动构建出可运行的模块
+4. 在左侧菜单点击进入你刚建的页面
+
+详细配置流程见 [Excel 构建说明 - 1.表构建](/rspress-sdp-n/sdp/build_by_excel/1-sheet_table.md)。
+
+***
+
+## 5. 你的第一个模块能长什么样
+
+拿最常见的 **m1. 数据列表 + 采集** 举例。你只需要在 Excel 里写清楚：
+
+* **表**：表名、主键、字段名、数据类型、是否必填
+* **字段**：每个字段的中文名、列表里要不要显示、表单里要不要采集、用什么控件
+* **模块**：列表宽度、表单布局、工具栏按钮
+* **菜单**：菜单路径、组件
+
+平台就自动生成这样一个完整页面：
+
+* ✅ **列表**：筛选、排序、分页、列设置、勾选导出、码表转换、统计行
+* ✅ **新建 / 编辑表单**：15+ 种输入控件(Input、Select、DatePicker、Upload、RichTextEditor ……)、20+ 种校验规则(必填、长度、范围、正则、自定义方法)
+* ✅ **默认操作列**：编辑、删除、详情
+* ✅ **工具栏**：新增、批量删除、导入、导出，以及**维度表统计**、**图表统计**、**视图设置**等高阶能力按钮
+* ✅ **列表视图**：可保存列顺序、冻结列、隐藏列，下次自动恢复
+
+👉 完整功能清单见 [我能做什么 - m1 数据列表](/rspress-sdp-n/sdp/what_can_do/what_can_do_01.md#m1-数据列表采集)
+
+> **预期**：从打开 Excel 到能跑通第一个模块，熟练的话 5 分钟内能完成。
+
+***
+
+## 6. 几个常见的"踩坑提醒"
+
+这是我们看过太多团队踩过之后总结的，建议你在动手前先看一遍：
+
+1. **不要先想 UI，先想数据模型**。表结构 + 字段定下来之后，UI 是顺带产出的。把字段定义写好，后续维护成本会下降一个量级。
+
+2. **媒体类型资源请直接用平台提供的 媒体管理**。视频预览、图片预览都是现成的，不要自己造轮子。详见 [开发者进阶 - 媒体类字典开发](/rspress-sdp-n/sdp/customer_dev.md)。
+
+3. **重要数据更新建议走"导出 → 修改 → 导入"路径**，而不是直接在 Excel 里改完再重新导入整个文件。这样出问题可以回滚。
+
+4. **构建前打开"前端预校验"**。可以提前发现字段不匹配、菜单路径错误等问题，详见 [修订记录 2024-12-20](/rspress-sdp-n/sdp/changelog.md#2024-12-20)。
+
+***
+
+## 7. 进阶路径(给想深入的同学)
+
+当你跑通了第一个模块，接下来可能需要：
+
+| 你想做的事 | 看这里 |
+| --- | --- |
+| 给模块加自定义按钮 / 列表事件 / 表单生命周期 | [开发者进阶 - 字典自定义开发](/rspress-sdp-n/sdp/customer_dev.md) |
+| 配置媒体类型字段(图片、视频、音频) | [开发者进阶 - 媒体类字典开发](/rspress-sdp-n/sdp/customer_dev.md) |
+| 弄懂 Excel 4 个 Sheet 的每一列是什么意思 | [Excel 构建说明](/rspress-sdp-n/sdp/build_by_excel/1-sheet_table.md) |
+| 看 6 类基础模块怎么配 | [我能做什么 - 基础模块](/rspress-sdp-n/sdp/what_can_do/what_can_do_01.md) |
+| 看 11 类高阶能力怎么用 | [高级能力](/rspress-sdp-n/sdp/instruction.md) |
+| 看平台自身有哪些模块 | [平台功能模块介绍](/rspress-sdp-n/sdp/what_can_do/what_can_do_03.md) |
+
+***
+
+## 8. 版本与变更
+
+平台一直在更新，最近的几次重要变更：
+
+* **2026-04-16** · 新增 `AutomaticPageVTable` 组件，API 日志分析、应用日志分析([详情](/rspress-sdp-n/sdp/changelog.md#2026-04-16))
+* **2026-03-13** · 新增 `DDBaseGridVtable` 组件，用于大数据量、高性能表格场景([详情](/rspress-sdp-n/sdp/changelog.md#2026-03-13))
+* **2026-01-12** · 新增 AI 主题设置、工具文档([详情](/rspress-sdp-n/sdp/changelog.md#2026-01-12))
+* **2025-09-23** · 新增帮助文档管理、文档生成管理、皮肤设置([详情](/rspress-sdp-n/sdp/changelog.md#2025-09-23))
+* **2025-05-29** · 字典视图支持树列表组合、一对多关联表配置([详情](/rspress-sdp-n/sdp/changelog.md#2025-05-29))
+
+> 完整修订记录见 [修订记录](/rspress-sdp-n/sdp/changelog.md)。
+
+***
+
+## 9. 想要更多帮助
+
+* **遇到问题先看**：[常见问题 Q\&A](/rspress-sdp-n/sdp/qa.md)
+* **二次开发后后自评**：[自评清单](/rspress-sdp-n/sdp/self_check.md)
+
+
+
+---
+url: /rspress-sdp-n/sdp/what_can_do/what_can_do_01.md
+---
+
+# 不写代码，你能做出哪些模块?
+
+SDP 已经为你预制了 6 种最常见的后台模块模板。你只需要在 Excel 里“告诉”平台表结构和菜单，平台就生成对应模块。
+
+![](/excel_intro/module_intro_54.png)
+
+***
+
+## 6 种模块快速选型表
+
+打开文档前先回答一个问题：**我的页面和数据长什么样?**
+
+| 你的场景 | 用 | 关键能力 |
+| --- | --- | --- |
+| 单表 + 新建/编辑(员工档案、商品管理) | [m1](#m1-数据列表采集) | 最常用、覆盖 80% 业务 |
+| 图片 / 视频 / 音频展示(素材库、相册) | [m2](#m2-媒体列表采集) | 在 m1 基础上换卡片渲染 |
+| 一张主表带多张子表(订单 + 商品明细) | [m3](#m3-主子表展示采集) | 主表 + 子表嵌套编辑 |
+| 一对多关联(用户 + 角色、商品 + 标签) | [m4](#m4-关联表展示1) | 主表带关联表设置 |
+| 树状数据(菜单维护、组织机构) | [m5](#m5-树状数据采集) | 左侧树 + 表单 |
+| 左侧树 + 右侧列表(部门下员工) | [m6](#m6-树状数据数据列表) | m5 + m1 组合 |
+
+> 💡 选错了也别担心 —— m2 / m3 / m4 / m6 都是在 m1 的基础上多配几项，理解了 m1 其他都顺。
+
+***
+
+## 一. 概述
+
+无需通过编码，仅编写 Excel 模版文件，并通过敏捷开发平台进行模块构建，即可完成下列类型的页面和模块搭建。可供需求 / 设计、开发人员使用。
+
+* **Excel 编写说明**：[→](/rspress-sdp-n/sdp/build_by_excel/1-sheet_table.md)
+* **数据库层面**：完成下面 6 种配置，就已具备"基于数据表及其关系"处理数据的基础能力
+  * **单表维护**：普通表(m1)、树状表(m5)
+  * **主子表维护**：如主表"人员基本信息表"、子表"人员工作履历表"(m3)
+  * **一对一、一对多关系**：主表中含关联表主键(m4)、关联关系在第三张表中(m4)
+
+**谁可以用?**
+
+* **需求 / 设计人员**：对接客户需求，迅速产出原型图，减少原型图设计时间，并同步生成部分设计文档
+* **开发人员**：初始化系统搭建，基础模块搭建，同步完成数据库设计
+
+***
+
+## 二. 6 种模块详解
+
+### m1. 数据列表 + 采集 {#m1-数据列表采集}
+
+#### 这是什么 / 用在哪
+
+* 一张表 + 一个表单 = 后台里 80% 的页面
+* 典型场景：员工档案、商品管理、订单列表、客户管理
+
+#### 配置流程
+
+**基础三件套(必选)**
+
+1. [配置菜单](/rspress-sdp-n/sdp/build_by_excel/4-sheet_menu.md)
+2. [配置表](/rspress-sdp-n/sdp/build_by_excel/1-sheet_table.md)
+3. [配置模块(列表 / 表单 / 工具栏属性)](/rspress-sdp-n/sdp/build_by_excel/2-sheet_module.md)
+
+**列表(可选)**
+
+1. [配置列表项](/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.md#列表项)
+2. [配置筛选项](/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.md#筛选项)
+3. [配置列表默认操作列(编辑 / 删除 / 详情)](/rspress-sdp-n/sdp/build_by_excel/2-sheet_module.md#列编辑列删除列详情)
+
+**表单(可选)**
+
+1. [配置表单项](/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.md#表单项)
+
+**自定义(可选，需要写代码)**
+
+1. [配置自定义按钮(工具栏或列表列)](/rspress-sdp-n/sdp/build_by_excel/2-sheet_module.md#自定义按钮)`💻需要配合自定义开发`
+
+#### 展示 & 使用
+
+**查列表**
+
+* 单表查询、多表关联查询、自定义 SQL / 视图查询
+* 码表转换：列表中把"1"显示成"男"、"女"
+* 格式化数据：日期、数值等不同展示方式
+* 统计项：合计、最大值、最小值、平均值
+* 接口来源：可使用预制接口，也可配置自定义接口 `💻需要配合自定义开发`
+* 展示列表默认操作、及自定义操作列 `💻需要配合自定义开发`
+* 列表展示项：序号、边框、首选项(Radio / Checkbox / 无)、列宽、固定列、隐藏、排序、合并列头、开启标识、主键标识、对齐方式、序列
+* 展示筛选列，如：类型、类型扩展参数、序列、名称、位置、占位符、布局
+
+**查详情**
+
+* 单表查询、多表关联查询
+
+**工具栏**
+
+* 默认按钮：新增、编辑、删除、批量、导入、导出
+* 自定义按钮 `💻需要配合自定义开发`
+
+**数据维护**
+
+* 删除：支持单一主键 + 联合主键
+* 新建 / 修改(表单)：
+  * **输入控件**(15+)：Input、InputNumber、Select、DatePicker、Radio、Checkbox、TextArea、GroupTitle、TreeSelect、Upload、UploadVideo、UploadAudio、UploadPicture、RichTextEditor、MarkdownEditor
+  * **校验规则**(20+)：必录、数字、字母、电话、邮件、身份证、中文、日期、数值范围 /- /+- /+0 /-0、NUMBER(15，5)、VARCHAR2(6)、长度 2~10、长度=21、yyyy-MM-dd、yyyyMM、`[string](自定义方法名)` `💻需要配合自定义开发`
+  * **码表驱动**：Select / Radio / Checkbox / TreeSelect 自动取码表
+  * **格式化**：根据字段类别展示
+  * **公式**：表单项自动计算
+  * **布局**：按配置宽度展示
+  * **只读 / 隐藏 / 序列 / 扩展参数**：按字段配置
+  * **事件**：失焦、聚焦、值改变、查询 `💻需要配合自定义开发`
+
+**数据导入**
+
+* 通过 Excel 批量导入数据
+
+#### 截图
+
+![](/excel_intro/module_intro_64.png)
+【图m1. 数据列表】
+
+![](/excel_intro/module_intro_48.png)
+【图m1. 数据采集】
+
+![](/excel_intro/module_intro_49.png)
+【图m1. 数据采集】
+
+***
+
+### m2. 媒体列表 + 采集 {#m2-媒体列表采集}
+
+#### 这是什么 / 用在哪
+
+* 在 m1 的基础上，把列表渲染换成"图片卡片"或"列表"，适合素材 / 视频 / 音频
+* 典型场景：媒体库、相册、素材中心、视频管理
+
+#### 与 m1 的差异
+
+* 多了"列表扩展 = card"配置
+* 多了"列表项格式化列 = media：\*"配置(图片 / 视频 / 标题 / 描述)
+* 多了"表单 = MediaLibrary"控件
+
+#### 配置流程
+
+**基础三件套(必选)** —— 与 m1 相同
+
+1. [配置菜单](/rspress-sdp-n/sdp/build_by_excel/4-sheet_menu.md)
+2. [配置表](/rspress-sdp-n/sdp/build_by_excel/1-sheet_table.md)
+3. [配置模块列表属性](/rspress-sdp-n/sdp/build_by_excel/2-sheet_module.md#列表)
+
+**媒体特有(必选)**
+
+1. [配置列表媒体形态](/rspress-sdp-n/sdp/build_by_excel/2-sheet_module.md#列表扩展)`★关键项`
+2. [配置列表项，媒体格式化列(图片 / 视频 / 标题 / 说明 / 预览地址可匹配任意字段)](/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.md#列表项格式化列)`★关键项`
+
+**筛选 / 表单 / 工具栏** —— 与 m1 相同
+
+#### 展示 & 使用
+
+* 切换媒体卡片形态、列表形态
+* 预览图片、视音频文件
+* 涵盖 [m1 的全部功能](#m1-数据列表采集)
+* 支持自定义卡片布局及渲染 `💻需要配合自定义开发`
+
+#### 截图
+
+![](/excel_intro/module_intro_50.png)
+【图m2. 媒体列表 - 卡片形态】
+
+![](/excel_intro/module_intro_51.png)
+【图m2. 媒体列表 - 列表形态】
+
+***
+
+### m3. 主子表展示 + 采集 {#m3-主子表展示采集}
+
+#### 这是什么 / 用在哪
+
+* 一个主表带多张子表，子表的数据跟着主表走
+* 典型场景：
+  * 人员 + 工作履历 / 学历 / 家庭成员
+  * 订单 + 商品明细
+  * 报关单 + 申报明细
+
+#### 配置流程
+
+**主表 / 子表基础配置** —— 参照 [m1](#m1-数据列表采集)
+
+**关键项：主表子表关联关系**
+
+1. [主表及子表关联关系配置](/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.md#列表项格式化列)
+   * 关联数据及 ID 可匹配任意模块和字段
+   * 子列表标题可匹配主表任意字段
+
+#### 展示 & 使用
+
+* 主表、子表数据展示
+* 主表、子表涵盖 [m1 的全部功能](#m1-数据列表采集)
+
+#### 参考实现
+
+* **模板**：导入示例中 `示例_员工`
+* **定制开发**：可参照 `系统管理 - 菜单管理` 模块
+
+#### 截图
+
+![](/excel_intro/module_intro_28.png)
+【图m3. 主子表展示 —— 主表】
+
+![](/dataToView/demo07.png)
+【图m3. 主子表展示 —— 子表】
+
+***
+
+### m4. 关联表展示 {#m4-关联表展示1}
+
+#### 这是什么 / 用在哪
+
+* 一对多关系：主表与关联表的数据关联展示
+* 典型场景：用户 + 角色、商品 + 标签、人员 + 荣誉
+
+#### 两种关系模型
+
+| 模型 | 描述 | 典型场景 |
+| --- | --- | --- |
+| 模型 A | 主表中含有关联表主键（逗号分隔） | 用户 + 标签 |
+| 模型 B | 关联关系在第三张关联表中 | 角色 + 权限 |
+
+#### 配置流程
+
+**主表 / 关联表基础配置** —— 参照 [m1](#m1-数据列表采集)
+
+**关键项：关联表配置**
+
+1. [关联表配置](/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.md#列表项格式化列)
+
+#### 展示 & 使用
+
+* 主表数据展示
+* 关联表数据展示及设置
+* 主表涵盖 [m1 的全部功能](#m1-数据列表采集)
+
+#### 参考实现
+
+* **模型 A**：导入示例 `员工`，链接 `标签` 配置
+* **模型 B**：导入示例 `员工`，链接 `荣誉` 配置
+
+#### 截图
+
+![](/excel_intro/module_intro_36.png)
+【图m4. 主表展示】
+
+![](/excel_intro/module_intro_34.png)
+【图m4. 子表展示 - 主表中含关联表主键】
+
+![](/excel_intro/module_intro_35.png)
+【图m4. 子表展示 - 关联关系在第三张关联表中】
+
+***
+
+### m5. 树状数据 + 采集 {#m5-树状数据采集}
+
+#### 这是什么 / 用在哪
+
+* 数据有"父子层级"，节点可以无限嵌套
+* 典型场景：
+  * 菜单维护
+  * 组织机构维护
+  * 字典分类、商品分类
+
+#### 配置流程
+
+**基础**
+
+1. [配置菜单](/rspress-sdp-n/sdp/build_by_excel/4-sheet_menu.md)
+   * 关键项：[菜单路径 & 组件](/rspress-sdp-n/sdp/build_by_excel/4-sheet_menu.md#菜单路径--组件)`★关键项`
+2. [配置表](/rspress-sdp-n/sdp/build_by_excel/1-sheet_table.md)
+3. [配置模块表单属性](/rspress-sdp-n/sdp/build_by_excel/2-sheet_module.md#表单)
+   * 关键项：表单布局
+
+**工具栏**
+
+1. [配置工具栏默认按钮(增加 / 删除 / 编辑)](/rspress-sdp-n/sdp/build_by_excel/2-sheet_module.md#工具栏默认按钮)
+
+**列表 / 表单**
+
+1. [配置列表项(左侧)](/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.md#列表项)
+   * 关键项：[列表项格式化列](/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.md#列表项格式化列)
+     * 配置数据父子节点，可匹配任意字段`★关键项`
+     * 配置树节点标题，可匹配任意字段`★关键项`
+2. [配置表单项(右侧)](/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.md#表单项)
+
+#### 展示 & 使用
+
+* 树结构数据的新建、修改、删除(CRUD)
+
+#### 参考实现
+
+* **模板**：导入示例 `示例_树`、`示例_部门`
+* **定制开发**：可参照 `系统管理 - 菜单管理` 模块
+
+#### 截图
+
+![](/excel_intro/module_intro_87.png)
+【图m5. 树状数据 + 采集】
+
+***
+
+### m6. 树状数据 + 数据列表 {#m6-树状数据数据列表}
+
+#### 这是什么 / 用在哪
+
+* 左侧树 + 右侧列表的组合形态
+* 典型场景：部门下员工、分类下商品、菜单下权限
+
+#### 配置流程 = 左侧 m5 + 右侧 m1
+
+1. **左侧树** —— 参照 [m5](#m5-树状数据采集)
+2. **右侧列表** —— 参照 [m1](#m1-数据列表采集)
+3. [配置菜单](/rspress-sdp-n/sdp/build_by_excel/4-sheet_menu.md)
+   * 关键项：[菜单路径 & 组件](/rspress-sdp-n/sdp/build_by_excel/4-sheet_menu.md#菜单路径--组件)`★关键项`
+
+#### 展示 & 使用
+
+* 树数据与列表数据间的关联展示
+* 左侧树涵盖 [m5 的全部功能](#m5-树状数据采集)
+* 右侧列表涵盖 [m1 的全部功能](#m1-数据列表采集)
+
+#### 参考实现
+
+* **模板**：导入示例 `部门员工`
+
+#### 截图
+
+![](/excel_intro/module_intro_53.png)
+【图m6. 树状数据 + 数据列表】
+
+***
+
+## 三. 高阶能力(f1-f11)——给模块加 buff
+
+6 种基础模块搭起来后，平台还内置 11 种增强能力，直接配一下就能用。
+
+| 能力 | 解决什么问题 | 详情 |
+| --- | --- | --- |
+| **f1. 维度表统计** | 像 Excel 透视表，做销售汇总、库存统计 | [→](/rspress-sdp-n/sdp/instruction.md#f1-维度表统计) |
+| **f2. 图表统计** | 把数据变成饼图、柱图、折线图 | [→](/rspress-sdp-n/sdp/instruction.md#f2-图表统计) |
+| **f3. 列表高级筛选** | 多条件嵌套查询(AND / OR) | [→](/rspress-sdp-n/sdp/instruction.md#f3-列表高级筛选) |
+| **f4. 列表视图设置** | 保存列顺序、冻结列、隐藏列 | [→](/rspress-sdp-n/sdp/instruction.md#f4-列表视图设置) |
+| **f5. 列表数据导出** | 前端导出 / 后端导出，支持筛选 + 勾选导出 | [→](/rspress-sdp-n/sdp/instruction.md#f5-列表数据导出) |
+| **f6. 生成设计文档** | 自动生成模块 Word 文档 | [→](/rspress-sdp-n/sdp/instruction.md#f6-生成设计文档) |
+| **f7. 管理帮助文档** | 模块挂帮助说明 / 输出至 Word | [→](/rspress-sdp-n/sdp/instruction.md#f7-管理帮助文档) |
+| **f8. 色彩主题及布局** | 客户化外观 / 自定义主题 | [→](/rspress-sdp-n/sdp/instruction.md#f8-管理色彩主题及布局) |
+| **f9. AI 生成主题** | 用 AI 生成主题方案 | [→](/rspress-sdp-n/sdp/instruction.md#f9-ai生成主题) |
+| **f10. AI 模块生成** | 用 AI 生成 Excel 模板 | [→](/rspress-sdp-n/sdp/instruction.md#f10-ai模块生成) |
+| **f11. 核心资产导出** | 物理表 / 模块 / 数据字典导出 | [→](/rspress-sdp-n/sdp/instruction.md#f11-核心资产导出) |
+
+***
+
+## 四. 几个常见的踩坑提醒
+
+1. **不要先选 m 几，先想清楚数据关系**
+   * 单表 → m1;有父子 → m5;有主子 → m3;有一对多 → m4
+2. **m2 不是"另一种列表"，而是 m1 的"列表扩展"**
+   * 核心还是 m1，只是把列表渲染换成卡片，字段、按钮、校验都一样
+3. **m3 / m4 / m6 都是 m1 的组合**
+   * 理解了 m1，其他都只是"多配几张表 / 几个关联字段"
+4. **配置时按"基础 → 列表 → 表单 → 自定义"顺序来**
+   * 不要跳着配，容易漏字段
+
+***
+
+## 五. 下一步
+
+* 跑通第一个模块 → [快速开始](/rspress-sdp-n/sdp/env_init.md)
+* 看 11 类高阶能力怎么用 → [高级能力](/rspress-sdp-n/sdp/instruction.md)
+* 给模块加自定义按钮 / 事件 → [开发者进阶](/rspress-sdp-n/sdp/customer_dev.md)
+* 看平台自身有哪些模块 → [平台功能模块介绍](/rspress-sdp-n/sdp/what_can_do/what_can_do_03.md)
+
+
+
+---
+url: /rspress-sdp-n/sdp/what_can_do/what_can_do_03.md
+---
+
+# 菜单全景 —— 你会用到的所有功能都在这
+
+SDP 是“自己造自己”的平台 —— 下面这些菜单，既是它能给你的能力，也展示了它能做出什么样的系统。
+
+***
+
+## 按角色看，先选你关心的那一组
+
+平台菜单一共 5 大块、几十  个子模块，但**不同角色关心的完全不一样**。先选你属于哪一类：
+
+| 你是谁 | 你会重点用 |
+| --- | --- |
+| 🛠 **平台的管理员** | [系统初始化](#1-系统初始化--第一次启动时用) → [系统管理](#2-系统管理--平台自身的配置中心) (用户 / 角色 / 菜单 / 参数) |
+| 🧑‍💻 **二次开发者** | [敏捷开发管理](#3-敏捷开发管理--sdp-的发动机) (全部) + 物理表 / 字段 / 模块 / 字典管理 |
+| 👤 **日常使用者** | 业务模块(用 m1-m6 搭出来的页面) + [媒体管理](#5-媒体管理) + [统计分析](#4-统计分析) |
+| 🔍 **上线后的运维** | [审计日志](#24-审计日志上线后必看) + [统计分析](#4-统计分析) |
+
+***
+
+## 1. 系统初始化 —— 第一次启动时用
+
+平台装好后，第一次登录要做的事。
+
+* **一键初始化**：点一下按钮，平台自动建好基础表结构、导入系统默认数据、生成系统管理模块。**大多数场景用这个就够了**。
+* **自定义初始化**：下载模板，按需调整表结构及数据后再依次初始化。**适合定制化场景**(比如客户有自己的字典要预装)。
+
+详细步骤见 [快速开始](/rspress-sdp-n/sdp/env_init.md)。
+
+***
+
+## 2. 系统管理 —— 平台自身的"配置中心"
+
+平台自身要怎么用，都从这里配置。**一上来 13 个菜单看着多，但按"谁会用到"分一下，就清楚多了**。
+
+### 2.1 用户与权限(管理员)
+
+> 关心的问题是：**谁能登录、能做什么**。
+
+* **用户管理**：增删改查用户、配角色
+* **角色管理**：配置角色、菜单权限、按钮权限(预制按钮和自定义按钮都支持按钮级权限)
+* **组织机构管理**：树状组织架构(配合角色用于数据权限)
+
+### 2.2 菜单与外观(管理员 / 客户化负责人)
+
+> 关心的问题是：**菜单怎么摆、外观怎么配**。
+
+* **菜单管理**：维护菜单树、绑定资源权限
+* **参数管理**：配置系统参数(标题、版权、开关等)
+* **用户设置**：个人偏好(主题色、列表密度等)
+* **皮肤设置**：选择系统预制主题
+* **AI 生成主题**：用 AI 生成主题方案(对应 [f9. AI 生成主题](/rspress-sdp-n/sdp/instruction.md#f9-ai生成主题))
+
+### 2.3 数据字典(二次开发者)
+
+> 关心的问题是：**下拉框、字典、单选项怎么配**。
+
+* **码表管理**：维护预制码表(如性别、状态、学历)
+* **自定义码表管理**：把任意物理表的任意字段映射为码表，或通过自定义 SQL 配置码表
+* **自定义 SQL 管理**：维护复杂查询 / 视图，供列表查询、表单选项使用
+
+### 2.4 审计日志
+
+> 关心的问题是：**谁动了什么、哪里出错了**。
+
+* **接口日志管理**：记录接口调用情况，排查问题用
+* **系统日志管理**：记录系统日志，异常与关键操作追踪
+
+***
+
+## 3. 敏捷开发管理 —— SDP 的"发动机"
+
+> 这一节是 SDP 的**核心**。前面 [我能做什么 - 基础模块](/rspress-sdp-n/sdp/what_can_do/what_can_do_01.md) 讲的 6 类模块(m1-m6)，**都要通过这里的能力搭出来**。
+
+### 3.1 构建与生成
+
+> "从 Excel 到运行系统"的入口。
+
+* **系统构建**：上传 Excel → 一键生成模块。SDP 的"主入口"功能，所有 m1-m6 模块都从这里来
+  * Excel 模板涵盖 6 个 Sheet：菜单构建、模块、表管理、字典构建、业务码表、自定义 SQL
+* **Excel 采集**：网页端像 Excel 一样做数据整理，适合"数据已经散落在 Excel 表格里、想批量入库"的场景
+* **AI 模块生成**：用 AI 自动生成 Excel 模板(对应 [f10. AI 模块生成](/rspress-sdp-n/sdp/instruction.md#f10-ai模块生成))
+
+### 3.2 资产管理
+
+> "模块配置背后的数据"都在这里。
+
+* **物理表管理**：管理数据库表；可基于物理表导出默认数据字典模板
+* **表字段管理**：管理字段定义(物理表层面)
+* **模块管理**：管理模块整体配置(列表 / 表单 / 工具栏 / 操作列)；可对模块关联的数据字典、物理表进行线上管理和导出
+* **模块字段管理**：管理模块中的字段(列表项 / 表单项 / 筛选项)
+
+### 3.3 文档与帮助
+
+> 配合 [summary 第 3.1 节"系统能跑，Word 文档也同时出"](/rspress-sdp-n/sdp/summary.md#31-系统能跑word-文档也同时出) 用。
+
+* **文档生成管理**：把字典生成 Word 文档(对应 [f6. 生成设计文档](/rspress-sdp-n/sdp/instruction.md#f6-生成设计文档))
+* **帮助文档管理**：挂载模块帮助说明(对应 [f7. 管理帮助文档](/rspress-sdp-n/sdp/instruction.md#f7-管理帮助文档))
+
+***
+
+## 4. 统计分析
+
+上线后，这两个模块帮你**看清系统在跑什么、跑得怎么样**。
+
+* **API 日志分析**：看接口调用情况 —— 响应时间、错误率、调用频次
+* **应用日志分析**：看系统日志 —— 异常、关键操作
+
+***
+
+## 5. 媒体管理
+
+媒体类资源的统一管理入口。
+
+* **媒体管理**：媒体类型的文件采集(支持多文件上传)
+* 列表页面可切换"**宫格 / 列表**"两种展示形态
+* 图片、视频类型文件可直接预览，其他类型以图标区分
+
+> 想看 m2 媒体模块怎么配，见 [我能做什么 - m2 媒体列表](/rspress-sdp-n/sdp/what_can_do/what_can_do_01.md#m2-媒体列表采集)。
+>
+> 想看含媒体字段的模块怎么搭，见 [开发者进阶 - 媒体类字典开发](/rspress-sdp-n/sdp/customer_dev.md)。
+
+***
+
+## 6. 你接下来该看什么?
+
+按"你现在关心的事"对号入座：
+
+| 你现在 | 看这里 |
+| --- | --- |
+| 刚装好平台，想跑起来 | [快速开始](/rspress-sdp-n/sdp/env_init.md) |
+| 想搭第一个模块 | [Excel 构建说明 - 1.表构建](/rspress-sdp-n/sdp/build_by_excel/1-sheet_table.md) |
+| 看 6 类基础模块怎么配 | [我能做什么 - 基础模块](/rspress-sdp-n/sdp/what_can_do/what_can_do_01.md) |
+| 给模块加自定义代码 / 事件 | [开发者进阶](/rspress-sdp-n/sdp/customer_dev.md) |
+| 看 11 类高阶能力怎么用 | [高级能力](/rspress-sdp-n/sdp/instruction.md) |
+| 看 SDP 是什么、为什么用它 | [设计概述](/rspress-sdp-n/sdp/summary.md) |
+
+
+
+---
+url: /rspress-sdp-n/sdp/env_init.md
+---
+
+import { PackageManagerTabs, Steps, SourceCode } from '@rspress/core/theme';
+
+# 从 0 到运行 —— SDP 上手指南
+
+> 这页是"小白第一篇"。读完能做完 4 件事：环境装好、项目跑起来、做出第一个模块、打包发布。预计 30 分钟搞定。
+
+## 1. 你需要准备什么
+
+### 1.1 主要技术栈(简单说为什么)
+
+| 技术 | 干嘛的 | 为什么选它 |
+| --- | --- | --- |
+| **React** | UI 框架 | 主流，生态最大，招人容易 |
+| **UmiJS** | 应用框架 | 约定式路由、内置构建、企业级实践标配 |
+| **antd** | 组件库 | 国内用最广，后台模板最丰富 |
+
+> 💡 你**不需要精通**这三种技术。SDP 把它们封装好，你只跟平台打交道 —— 90% 的场景下，只用 Excel + 平台 UI。
+
+### 1.2 参考网站
+
+如果你想深入学这几个框架，这里有几个常用入口：
+
+* [UMIJS](https://umijs.org/)
+* [Ant Design](https://ant-design.antgroup.com)
+* [ProComponents](https://pro-components.antdigital.dev/)
+* [Ant Design Pro](https://preview.pro.ant.design/welcome/)
+* [ES6 核心内容上](https://segmentfault.com/a/1190000004365693)
+* [ES6 核心内容下](https://segmentfault.com/a/1190000004368132)
+* [ES6 入门教程](https://es6.ruanyifeng.com)
+
+### 1.3 工具清单
+
+| 工具 | 最低版本 |
+| --- | --- |
+| **nodejs** | 24.14.0+ |
+| **包管理器** | yarn 1.22.22+ / npm / pnpm 任选 |
+
+**安装步骤：**
+
+* **nodejs**：去 [nodejs.org](https://nodejs.org) 下载 24.14.0+ 安装包，装完打开终端验证 `node -v`
+* **yarn**：`npm install --global yarn`，验证 `yarn -v`
+
+***
+
+## 2. 三步把项目跑起来
+
+<Steps>
+  ### 步骤 1：下载代码并装依赖
+
+  <SourceCode href="https://github.com/" />
+
+  * 项目安装目录下执行装依赖命令
+
+  <PackageManagerTabs
+    command={{
+  yarn: 'yarn',
+  npm: 'npm install',
+  pnpm: 'pnpm install',
+}}
+  />
+
+  > 💡 如果装依赖卡住,通常是网络问题,试试切换镜像源:
+  > `yarn config set registry https://registry.npmmirror.com`
+
+  ### 步骤 2：启动项目
+
+  启动命令：
+
+  <PackageManagerTabs
+    command={{
+  yarn: 'yarn start',
+  npm: 'npm start',
+  pnpm: 'pnpm start',
+}}
+  />
+
+  启动成功后,浏览器会自动打开 `http://localhost:3001/`。
+
+  **你应该看到**：平台登录页。如果白屏 / 报错,看 [附录：常见报错](#附录常见报错)。
+
+  ### 步骤 3：系统初始化
+
+  打开初始化页：`http://localhost:3001/easy_dev_dc/init`
+
+  第一次启动,平台会引导你建表 + 导入默认数据。两种方式二选一:
+
+  * **一键初始化**:点一下,平台自动建好基础表结构、导入系统默认数据、生成系统管理模块。**大多数场景用这个就够了**。
+  * **自定义初始化**:下载模板,按需调整表结构及数据后再依次初始化。**适合定制化场景**(比如客户有自己的字典要预装)。
+
+  ### 步骤 4:登录
+
+  打开登录页：`http://localhost:3001/user/login`
+
+  * 用户名：`admin`
+  * 密码：`ddit@1234`
+
+  > ⚠️ **登录后第一时间改密码**(系统管理 → 用户管理)。
+</Steps>
+
+> 🎉 看到左侧菜单 → 说明平台已经跑起来了。
+
+***
+
+## 3. 做出第一个模块(10 分钟)
+
+登录后,左边的菜单是你现在能用的所有功能。**做出第一个模块**就 4 步：
+
+### 步骤 1：下载数据字典模板
+
+进入 `敏捷开发 - 系统构建` 模块,点击"下载模板",拿到一份 6 Sheet 的 Excel：
+
+* **菜单构建** —— 模块挂在哪个菜单下
+* **模块** —— 列表 / 表单 / 工具栏怎么布局
+* **表管理** —— 数据库表
+* **字典构建** —— 字段定义、列表项、表单项、筛选项
+* **业务码表** —— 字典
+* **自定义 SQL** —— 复杂查询
+
+> 字段含义详解见 [Excel 构建说明 - 1.表构建](/rspress-sdp-n/sdp/build_by_excel/1-sheet_table.md)。
+
+### 步骤 2：填 Excel
+
+最少要填 4 个 Sheet(其他 Sheet 留空也行)：
+
+1. **表管理**：表名、字段、数据类型、是否必填
+2. **字典构建**：每个字段的中文名、列表里要不要显示、表单里用什么控件
+3. **模块**：列表宽度、表单布局、工具栏按钮
+4. **菜单构建**：菜单路径
+
+### 步骤 3：上传并构建
+
+回到 `系统构建` 模块,上传填好的 Excel,点"构建"。平台会：
+
+* 在数据库建表
+* 注册菜单
+* 生成可运行的模块页面
+
+### 步骤 4：看看效果
+
+刷新页面,左边的菜单会多出你刚建的入口。点进去,看到的就是完整可用的 m1 数据列表 + 采集页面。
+
+> 想看 6 类模块各长什么样,见 [我能做什么 - 基础模块](/rspress-sdp-n/sdp/what_can_do/what_can_do_01.md)。
+
+***
+
+## 4. 配置文件中你会用到的几行
+
+你打开项目,会看到 `config.ts`(基础) / `config.dev.ts`(开发) / `config.prod.ts`(生产)三个配置。
+
+最常见的几行：
+
+* **`API_URL_BASE_NODE`**：后端接口根地址
+  * 开发：指向本地后端(默认 `http://localhost:8080`)
+  * 生产：指向线上后端
+* **`title`** / **`logo`**：站点标题、Logo 图
+* **`base`**：站点 base 路径(部署到子路径时改这里)
+
+> 修改后**需要重启** `yarn start` 才生效。
+
+***
+
+## 5. 发布到生产环境
+
+<Steps>
+  ### 步骤 1：改根目录配置
+
+  `config.ts` 中,变更部署的根目录名：
+
+  ```ts
+  let proBase = process.env.NODE_ENV === 'production' ? 'ddittoolV0.2' : '';
+  ```
+
+  > 把 `'ddittoolV0.2'` 换成你**实际部署的子目录名**(例如 `/your-app/`)。这是平台默认配置,部署时按需修改。
+
+  ### 步骤 2：打包
+
+  <PackageManagerTabs
+    command={{
+  yarn: 'yarn build',
+  npm: 'npm run build',
+  pnpm: 'pnpm build',
+}}
+  />
+
+  打包产物在项目根目录的 `dist/` 文件夹。
+
+  ### 步骤 3：部署到服务器
+
+  把 `dist/` 整个目录上传到服务器,放到**配置的根目录名**对应的位置。
+
+  > ⚠️ 注意：`dist/` 的**文件夹名**也要改成根目录名(比如 `dist/` → `your-app/`)，否则前端路由会找不到。
+
+  ### 步骤 4：访问
+
+  部署完成后，访问地址形如：
+
+  * `http://your-server/<根目录名>/#/easy_dev_dc/init`
+  * `http://your-server/<根目录名>/#/user/login`
+
+  如本地部署，端口为 8080：
+
+  * `http://localhost:8080/<根目录名>/#/<根目录名>/easy_dev_dc/init`
+  * `http://localhost:8080/<根目录名>/#/<根目录名>/user/login`
+</Steps>
+
+***
+
+## 附录:常见报错
+
+| 现象 | 原因 | 解决 |
+| --- | --- | --- |
+| `node -v` 报错 | nodejs 没装 / 版本不对 | 重装 24.14.0+，参考 [nodejs.org](https://nodejs.org) |
+| `yarn install` 卡住 | 网络问题 | 切换镜像源:`yarn config set registry https://registry.npmmirror.com` |
+| `npm start` 报端口占用 | 3001 被占 | 找出占用进程杀掉，或在 `config.ts` 改端口 |
+| 初始化页 404 | 没装好或没初始化 | 重新执行步骤 2(启动)+ 步骤 3(初始化) |
+| 登录后白屏 | 后端没起来 | 检查后端服务是否在 8080 端口运行 |
+
+***
+
+## 下一步
+
+* 看 6 类基础模块怎么配 → [我能做什么 - 基础模块](/rspress-sdp-n/sdp/what_can_do/what_can_do_01.md)
+* 弄懂 Excel 每一列什么意思 → [Excel 构建说明](/rspress-sdp-n/sdp/build_by_excel/1-sheet_table.md)
+* 看平台菜单全景 → [菜单全景](/rspress-sdp-n/sdp/what_can_do/what_can_do_03.md)
+* 给模块加自定义代码 / 事件 → [开发者进阶](/rspress-sdp-n/sdp/customer_dev.md)
+* 看 11 类高阶能力怎么用 → [高级能力](/rspress-sdp-n/sdp/instruction.md)
+
+
+
+---
+url: /rspress-sdp-n/sdp/build_by_excel/1-sheet_table.md
+---
+
+import { Badge } from '@theme';
+
+# Sheet.表
+
+## 填写示例
+
+![](/excel_intro/module_intro_12.png)
+
+## 填写说明
+
+* 参数取值说明
+
+| 参数 | 可选值 | 说明 |
+| --- | --- | --- |
+| 表分组标题 | | 表名称，格式：`表中文名 表英文名` |
+| 字段 | |  数据库建表标识，字段英文名 |
+| 字段中文名 | |  数据库建表标识，字段中文名 |
+| [数据类型](/rspress-sdp-n/sdp/build_by_excel/1-sheet_table.md#数据类型示例) | | 数据库建表标识，数据类型 |
+| 键 | `p_key` | 数据库建表标识，键标识 |
+| 默认值 | | 数据库建表标识，默认值标识 |
+| 非空 | `Y` | 数据库建表标识，非空标识 |
+| 备注 | | |
+
+### 数据类型示例
+
+* varchar(32)
+* datetime
+* decimal(8,0)
+* char(2)
+* decimal(18,2)
+* long
+
+
+
+---
+url: /rspress-sdp-n/sdp/build_by_excel/2-sheet_module.md
+---
+
+import { Badge } from '@theme';
+
+# Sheet.模块
+
+## 填写示例
+
+![](/excel_intro/module_intro_81.png)
+
+![](/excel_intro/module_intro_82.png)
+
+![](/excel_intro/module_intro_83.png)
+
+![](/excel_intro/module_intro_84.png)
+
+![](/excel_intro/module_intro_85.png)
+
+## 填写说明
+
+### 模块
+
+* 参数取值说明
+
+| 参数 | 对应api参数 | 说明 |
+| --- | --- | --- |
+| 模块key | unit\_key | 模块唯一标识 |
+| 模块名称 | grid\_title & form\_title | |
+
+### 列表
+
+#### 序号、边框、首选项
+
+![](/excel_intro/module_intro_02.png)
+
+* 参数取值说明
+
+| 参数 | 默认值 | 可选值 | 对应api参数 |
+| --- | --- | --- | --- |
+| 列表序号 | | `1` | grid\_show\_serial\_number |
+| 列表边框 | | `1` | grid\_border |
+| 列表首选项 | `checkbox` | `checkbox` | `radio` | `null` | grid\_selection\_type |
+
+#### 列编辑、列删除、列详情
+
+![](/excel_intro/module_intro_03.png)
+
+* 参数取值说明
+
+| 参数 | 默认值 | 可选值 | 对应api参数 |
+| --- | --- | --- | --- |
+| 列表列编辑 | | `1` | grid\_handle\_columns\_default.edit |
+| 列表列删除 | | `1` | grid\_handle\_columns\_default.delete |
+| 列表列详情 | | `1` | grid\_handle\_columns\_default.detail |
+
+#### 列表扩展 <Badge text="2024-11-19" type="tip" />
+
+![](/excel_intro/module_intro_20.png)
+
+* 参数取值说明
+
+| 参数 | 默认值 | 可选值 | 对应api参数 |
+| --- | --- | --- | --- |
+| 7.列表扩展 <Badge text="2024-11-19" type="tip" /> | | `card` | grid\_type |
+
+### 工具栏默认按钮
+
+![](/excel_intro/module_intro_01.png)
+
+* 参数取值说明
+
+| 参数 | 默认值 | 可选值 | 对应api参数 |
+| --- | --- | --- | --- |
+| 工具栏增加 | | `1` | toolbar\_default.add |
+| 工具栏删除 | | `1` | toolbar\_default.delete |
+| 工具栏编辑 | | `1` | toolbar\_default.edit |
+| 工具栏导入 | | `1` | toolbar\_default.upload |
+| 工具栏导出 | | `1` | `2`| `pdf` | toolbar\_default.download & toolbar\_default.download\_config & toolbar\_default.download\_pdf |
+| 工具栏设置 | | `1` | toolbar\_default.setting |
+| 工具栏全屏 | | `1` | toolbar\_default.full |
+| 工具栏刷新 | | `1` | toolbar\_default.reload |
+| 工具栏筛选 | | `1` | toolbar\_default.advanced\_filter |
+
+* 参数5.工具栏导出，
+  如果设置为包含`2`，则为后端导出数据。如：填写`1,pdf`表示开启Excel前端导出数据和PDF导出。
+  <Badge text="2025-2-13" type="tip" />
+
+### 后端Api
+
+* 参数取值说明
+
+| 参数 | 默认值 | 可选值 | 对应api参数 |
+| --- | --- | --- | --- |
+| Api保存表单 | | | api\_form\_edit |
+| Api查询表单 | | | api\_form\_query |
+| Api删除 | | | api\_form\_delete |
+| Api查询列表 | | | api\_grid\_query |
+| Api导出 | | | api\_excel\_export |
+| Api导入 | | | api\_excel\_import |
+| Api模板下载 | | | api\_excel\_template |
+
+### 表单
+
+![](/excel_intro/module_intro_05.png)
+
+![](/excel_intro/module_intro_06.png)
+
+* 参数取值说明
+
+| 参数 | 默认值 | 可选值 | 对应api参数 |
+| --- | --- | --- | --- |
+| 表单布局 | `horizontal` | `horizontal` | `vertical` | `2` | `3` | `4` | form\_layout\_type |
+| 表单宽度 | `960` | `480` | `720` | `960` | `1200` | `max` | form\_width |
+| 表单提交方式 <Badge text="2024-10-31" type="tip" /> | | `1` | form\_submit\_type |
+
+* 参数3.表单提交方式：如果设置为`1`，则采用`FormData`格式提交数据至后端。
+
+### 自定义按钮
+
+![](/excel_intro/module_intro_04.png)
+
+* 参数取值说明
+
+| 参数 | 默认值 | 可选值 | 对应api参数 |
+| --- | --- | --- | --- |
+| 自定义按钮工具栏 | | | customer\_toobar |
+| 列表列自定义按钮 | | | handle\_columns |
+
+
+
+---
+url: /rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.md
+---
+
+import { Badge } from '@theme';
+
+# Sheet.字段
+
+## 填写示例
+
+详见填写说明
+
+## 填写说明
+
+### 字段
+
+#### 模块分组标题、数据字典、字段名称、字段中文名、关联字段表达式、字段初始排序
+
+![](/excel_intro/module_intro_86.png)
+
+* 参数取值说明
+
+| 参数 | 可选值 | 对应api参数 | 说明 |
+| --- | --- | --- | --- |
+| 模块分组标题 | | | 表名称，格式：`模块中文名 模块英文名` |
+| 数据字典 | | | 字段所属表 |
+| 字段名称 | | grid\_columns\[].dataIndex & \*\_items\[].name | 字段名，用于列表及表单展示中的基于数据库主表的字段，格式：表名.字段名 |
+| 字段中文名 | | grid\_columns\[].title & \*\_items\[].label | 用于页面展示：列表列标题，表单项名称，筛选项名称 |
+| 关联字段表达式 | | | 用于描述表间关系，如`left join ...` |
+| 字段初始排序 | | | 如`asc,10`、`desc,20`|
+
+* 数据字典取自`表sheet页`分组中的英文表名。
+* 字段名称取自`表sheet页``字段`。
+* 关联字段表达式，用于描述表间关系，如`left join eg_mts_tssb on eg_mts_tsjh.ssq = eg_mts_tssb.ssq`、`left join eg_mts_tssb`
+* 字段初始排序：如`asc,10`、`desc,20`，标识当前字段用于列表展示时的初始排序及排序顺位。
+
+### 列表项
+
+#### 对齐方式、固定列、合并列头
+
+![](/excel_intro/module_intro_07.png)
+
+* 参数取值说明
+
+| 参数 | 默认值 | 可选值 | 对应api参数 |
+| --- | --- | --- | --- |
+| 列表项对齐方式 | `L` | `L` | `R` | `C` | grid\_columns\[].align |
+| 列表项固定列 | | `L` | `R` | grid\_columns\[].fixed |
+| 列表项合并列头 | | number | grid\_columns\[].children |
+
+#### 列宽、排序开关、超出隐藏、格式化列、开启标识、主键标识、隐藏标识、序列
+
+![](/excel_intro/module_intro_08.png)
+
+* 参数取值说明
+
+| 参数 | 默认值 | 可选值 | 对应api参数 |
+| --- | --- | --- | --- |
+| 列表项列宽 | | number |  grid\_columns\[].width |
+| 列表项排序开关 | | `1` | `mul` | grid\_columns\[].sorter |
+| 列表项超出隐藏 | | `1` | grid\_columns\[].ellipsis |
+| 列表项格式化列 | | `YYYY-MM-DD HH:mm:ss` | `0,0.00` | string (自定义方法的名称) | grid\_columns\[].render |
+| 列表项开启标识 | | `1` | - |
+| 列表项主键标识 | | `1` | - |
+| 列表项隐藏标识 | | `1` | grid\_columns\[].hidden |
+| 列表项序列 | | number | - |
+
+* 列表项开启标识，标识当前字段是否用于列表中。
+* 列表项主键标识，标识当前字段为列表主键。如果需要对当前行数据进行操作，如单选、多选、编辑当前行数据，则必须开启。
+* 列表项隐藏标识，一般用于配置列表主键时开启，开启后当前字段不显示在页面中。
+* 列表项排序开关，如填写`mul`，表示开启多列排序
+* 列表项序列，    如配置列表项序列数值，则列表列展示顺序通过配置的数值由小到大排列。
+
+##### 列表项格式化列
+
+* 日期格式示例：**YYYY-MM-DD HH:mm:ss**
+* 数值格式示例：**0,0.00**
+* 自定义格式化：**formatXXX** (自定义方法的名称)
+* 卡片格式化  <Badge text="2024-11-19" type="tip" /> \
+  卡片图片地址：`media:imagepath` \
+  卡片视频地址：`media:videopath` \
+  卡片标题：`media:title` \
+  卡片描述：`media:description` \\
+
+![](/excel_intro/module_intro_21.png)
+
+* 树格式化  <Badge text="2024-12-12" type="tip" /> \
+  树结构数据id：`tree:key` \
+  树结构数据名称：`tree:title` \
+  树结构数据父级id：`tree:parent_key`
+* 一对多关系数据  <Badge text="2025-01-06" type="tip" /> \
+  格式：`leaf:模块名&子列表显示标题字段`，如：`leaf:eg_m_staff_education&staff_name`
+* json数据弹窗展示示例：`json` <Badge text="2025-01-01" type="tip" />
+* copy图标展示及快速复制示例：`copy` <Badge text="2025-01-01" type="tip" />
+* color颜色标签渲染示例：`color` <Badge text="2025-05-29" type="tip" />
+* RichText数据弹窗展示示例：`RichText` <Badge text="2025-09-23" type="tip" />
+* Markdown数据弹窗展示示例：`MarkdownEditor` <Badge text="2025-09-23" type="tip" />
+* 一对多关系数据1  <Badge text="2025-05-29" type="tip" /> \
+  格式：`rel:关联模块名&关联模块名称字段`，如：`rel:eg_m_tag&tag_name`
+* 一对多关系数据2  <Badge text="2025-05-29" type="tip" /> \
+  格式：`rel:关联模块名&关联模块名称字段&关联表模块名`，如：`rel2:eg_m_honor&honor_name&eg_m_staff_honor_ref`
+* switch  <Badge text="2025-11-28" type="tip" /> \
+  格式：`switch:开启值,关闭值`，如：`switch:1,0`。同步调用表单的编辑接口进行数据处理。
+* timeEasyRead  <Badge text="2025-11-28" type="tip" /> \
+  格式：`timeEasyRead`。将毫秒数转为xx毫秒、xx秒或xx分。
+* timeEasyRead  <Badge text="2025-11-28" type="tip" /> \
+  格式：`tagColor`，将数据用Tag包装，需配合自定义开发，如：
+  ```ts
+  customerIconMapping.response_code_tag_color = [
+    {code: '200', color: myUtil.theme.getColor({type: 'success'})},
+    {code: 'ELSE', color: myUtil.theme.getColor({type: 'error'})},
+  ]
+  ```
+
+#### 统计
+
+![](/excel_intro/module_intro_13.png)
+
+* 参数取值说明
+
+| 参数 | 默认值 | 可选值 | 对应api参数 |
+| --- | --- | --- | --- |
+| 列表项统计 | | `1` | `min` | `max` | `avg` | `sum` | grid\_columns\[].min2/max2/avg2/sum2 |
+
+* 列表项统计，用于对数值字段的统计，按需配置最大、最小、合计、平均，如填写1，则表示统计全部4项信息。
+
+### 筛选项
+
+#### 类型、类型扩展参数、名称、位置、占位符
+
+![](/excel_intro/module_intro_09.png)
+
+#### 序列、布局
+
+![](/excel_intro/module_intro_10.png)
+
+* 筛选项序列，如配置筛选项序列数值，则筛选列展示顺序通过配置的数值由小到大排列。
+
+* 参数取值说明
+
+| 参数 | 默认值 | 可选值 | 对应api参数 |
+| --- | --- | --- | --- |
+| 筛选项类型 | | `input` | `select` | `date` | `radio` | `checkbox` | `treeSelect` <Badge text="2025-05-29" type="tip" /> | filter\_items\[].type |
+| 筛选项类型扩展参数 | | `range` | string (码表key) | filter\_items\[].range & filter\_items\[].codeTable & filter\_items\[].treeTable |
+| 筛选项序列 | | number | - |
+| 筛选项名称 | | string | filter\_items\[].label |
+| 筛选项位置 | | `工具栏` | `列表头` | grid\_columns\[].filter & filter\_items & grid\_filter\_quick |
+| 筛选项占位符 | | string | filter\_items\[].placeholder |
+| 筛选项布局 | | `100` | `66` | filter\_items\[].layout |
+
+* 筛选项位置，如配置为`列表头`，则需要同步配置`筛选项类型`为`Radio`(单选radio形式）或`Select`(多选select形式）,同时配置`筛选项类型扩展参数`，增加对应码表。
+
+<Badge text="2024-10-17" type="tip" />
+
+### 表单项
+
+#### 表单项开启、类型、格式化、只读、类型扩展参数、布局、事件失去焦点、事件得到焦点、事件值改变、事件查询、验证、序列
+
+![](/excel_intro/module_intro_11.png)
+
+* 参数取值说明
+
+| 参数 | 默认值 | 可选值 | 对应api参数 |
+| --- | --- | --- | --- |
+| 表单项开启 | | `1` | - |
+| 表单项类型 | | [参数2.表单项类型](/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.md#参数2表单项类型) | form\_items\[].type |
+| 表单项格式化 | | [参数3.表单项格式化](/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.md#参数3表单项格式化) | form\_items\[].format |
+| 表单项只读 | | `1` | form\_items\[].readOnly |
+| 表单项类型扩展参数 | | `range` | string (码表key) | form\_items\[].range & form\_items\[].codeTable & form\_items\[].maxCount & filter\_items\[].treeTable |
+| 表单项布局 | | `100` | `66` | form\_items\[].layout |
+| 表单项事件失去焦点 | | string (自定义方法的名称) | form\_items\[].eventOnBlur |
+| 表单项事件得到焦点 | | string (自定义方法的名称) | form\_items\[].eventOnFocus |
+| 表单项事件值改变 | | string (自定义方法的名称) | form\_items\[].eventOnChange |
+| 表单项事件查询 <Badge text="2024-11-19" type="tip" /> | | string (自定义方法的名称) | form\_items\[].eventOnChange |
+| 表单项验证 | | [参数10.表单项验证](/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.md#参数10表单项验证) | form\_items\[].rules |
+| 表单项序列 | | number | - |
+
+* 表单项开启，标识当前字段是否用于表单中。
+* 表单项事件失去焦点，表单项onblur事件，仅表示方法名称，后续需要自行开发对应方法。
+* 表单项事件得到焦点，表单项onfocus事件，仅表示方法名称，后续需要自行开发对应方法。
+* 表单项事件值改变，表单项onchange事件，仅表示方法名称，后续需要自行开发对应方法。
+* 表单项事件查询，表单项onsearch事件，仅表示方法名称，后续需要自行开发对应方法。<Badge text="2024-11-19" type="tip" />
+* 表单项序列，如配置表单项序列数值，则表单项展示顺序通过配置的数值由小到大排列。
+
+##### 表单项类型
+
+* Input
+* InputNumber
+* Select
+* DatePicker
+* Radio
+* Checkbox
+* TextArea
+* GroupTitle
+* TreeSelect <Badge text="2025-05-29" type="tip" />
+* Upload
+* UploadVideo
+* UploadAudio
+* UploadPicture
+* RichTextEditor
+* Cascader <Badge text="2025-09-23" type="tip" />
+* MarkdownEditor <Badge text="2025-09-23" type="tip" />
+* MediaLibrary <Badge text="2024-11-19" type="tip" /> \
+  当配置`MediaLibrary`类型时，点击表单项中放大镜，弹出如下媒体选择窗体。
+
+![](/excel_intro/module_intro_22.png)
+
+##### 表单项格式化
+
+* 日期格式 **YYYY-MM-DD HH:mm:ss**
+* 数值格式 **0,0.00**
+* 自定义方法，string类型，后续需要自行开发对应方法
+
+##### 表单项类型扩展参数
+
+* `maxCount`：Upload、UploadVideo、UploadAudio、UploadPicture类型时，可配置如：`maxCount=3`，标识最大上传数量为3
+* `multiple`：Select类型时，可配置，标识多选类型
+* `showTime` <Badge text="2024-11-19" type="tip" />：日历组件中展示时间，通常需要与表单项格式化同步使用，如设置`YYYY-MM-DD HH:mm:ss`
+* `formula`<Badge text="2024-11-26" type="tip" />: 当前项目公式，如填写：`formula:{flp1}+{flp2}`。表示当前表单项目取值来自flp1、flp2字段之和。表单中用到项目需要`大括号`包裹
+
+##### 表单项验证
+
+* [必录](/rspress-sdp-n/component/baseform/api_event.md#基础校验)
+* [数字](/rspress-sdp-n/component/baseform/api_event.md#基础校验)
+* [数字字母](/rspress-sdp-n/component/baseform/api_event.md#基础校验)
+* [电话](/rspress-sdp-n/component/baseform/api_event.md#基础校验)
+* [邮件](/rspress-sdp-n/component/baseform/api_event.md#基础校验)
+* [身份证](/rspress-sdp-n/component/baseform/api_event.md#基础校验)
+* [中文](/rspress-sdp-n/component/baseform/api_event.md#基础校验)
+* [日期](/rspress-sdp-n/component/baseform/api_event.md#基础校验)
+* [数值范围+](/rspress-sdp-n/component/baseform/api_event.md#数值校验)
+* [数值范围-](/rspress-sdp-n/component/baseform/api_event.md#数值校验)
+* [数值范围+-](/rspress-sdp-n/component/baseform/api_event.md#数值校验)
+* [数值范围+0](/rspress-sdp-n/component/baseform/api_event.md#数值校验)
+* [数值范围-0](/rspress-sdp-n/component/baseform/api_event.md#数值校验)
+* [NUMBER(15,5)](/rspress-sdp-n/component/baseform/api_event.md#数值范围)
+* [VARCHAR2(6)](/rspress-sdp-n/component/baseform/api_event.md#字符校验)
+* [长度范围2~10](/rspress-sdp-n/component/baseform/api_event.md#字符校验)
+* [长度=21](/rspress-sdp-n/component/baseform/api_event.md#字符校验)
+* yyyy-MM-dd
+* yyyyMM
+* \[string (自定义方法的名称)]
+
+### 其他
+
+#### 扩展信息
+
+* 参数取值说明
+
+| 参数 | 默认值 | 可选值 | 对应api参数 |
+| --- | --- | --- | --- |
+| 扩展信息 | - | - | - |
+
+* 扩展信息，当前可用于配置列表列头、筛选、表单采集时的tooltip。
+  如：`tooltipForm:表单提示&&&tooltipGrid:列表提示&&&tooltipFilter:筛选提示`
+
+
+
+---
+url: /rspress-sdp-n/sdp/build_by_excel/4-sheet_menu.md
+---
+
+import { Badge } from '@theme';
+
+# Sheet.菜单
+
+## 填写示例
+
+![](/excel_intro/module_intro_16.png)
+
+![](/excel_intro/module_intro_17.png)
+
+![](/excel_intro/module_intro_18.png)
+
+## 填写说明
+
+* 参数取值说明
+
+| 参数 | 可选值 | 说明 |
+| --- | --- | --- |
+| 菜单id | | |
+| 父级菜单id | | |
+| [前端资源代码](/rspress-sdp-n/sdp/build_by_excel/4-sheet_menu.md#参数3前端资源代码) <Badge text="2024-11-26" type="tip" /> | | |
+| 菜单名称 | | |
+| [菜单路径](/rspress-sdp-n/sdp/build_by_excel/4-sheet_menu.md#菜单路径--组件) | | 浏览器展现路径 |
+| 高亮节点路径 | | 打开隐藏菜单页面时，菜单所处的高亮节点 |
+| 菜单图标 | | |
+| 隐藏 | `0` | `1` | 菜单是否隐藏 |
+| 路径重定向 | | |
+| [组件](/rspress-sdp-n/sdp/build_by_excel/4-sheet_menu.md#菜单路径--组件) | | |
+| 有效标记 | `0` | `1` | |
+| 默认全屏 | `0` | `1` | 开启后，仅显示引用组件，不显示页头，菜单 |
+| 菜单类型 | `1` | `9` | 1-菜单，9-按钮 |
+| 菜单序列 | | |
+| 角色 | | 当前菜单的可用角色 |
+
+### 前端资源代码
+
+* 参照[`资源权限开发使用说明。`](/rspress-sdp-n/sdp/customer_dev.md#3-资源权限开发)
+
+### 菜单路径 & 组件
+
+* 通过配置生成的页面可以直接通过组件调用，但仅适合不需要额外开发的页面。
+  1. 数据列表页面：`./common/automatic_page`
+     * 格式：`.../cfgp/列表模块标识`
+     * 示例：`/dynamicbs1/cfgp/eg_m_mts_tsjh`
+     * 对应组件: `./common/automatic_page`
+  2. 树状结构页面：`./common/automatic_page_tree`
+     * 格式：`.../cfgp/树模块表示`
+     * 示例：`/dynamicbs1/cfgp/eg_m_tree`
+     * 对应组件: `./common/automatic_page_tree`
+  3. 树状结构数据+数据列表页面：`./common/automatic_page_tree_grid`
+     * 格式：`.../cfgp/模块表示/树模块表示/列表模块标识`
+     * 示例：`/dynamicbs1/cfgp/eg_m_org_staff/eg_m_org/eg_m_staff`
+     * 对应组件: `./common/automatic_page_tree_grid`
+* 菜单路径格式为`/a/b/c/..../cfgp/key1/key2/key3`
+* `cfgp`为模块配置页面标识，不可改变。
+* `key`作为模块标识，串联模块sheet页标识。
+* 下级节点路径与上级节点路径起始部分必须一致。如：下级路径`/aa/bb/cc`，则上级路径`/aa/bb`
+
+
+
+---
+url: /rspress-sdp-n/sdp/build_by_excel/5-sheet_sql_manage.md
+---
+
+import { Badge } from '@theme';
+
+# Sheet.自定义SQL
+
+## 填写示例
+
+![](/excel_intro/module_intro_70.png)
+
+* 当列表页面需要采用自定义的查询语句查询数据时使用，配合`模块`sheet中`Api列表查询`字段，如填写：`customer:sql01`
+
+## 填写说明
+
+* 参数取值说明
+
+| 参数 | 说明 |
+| --- | --- |
+| 自定义唯一标志 | |
+| SQL描述 | |
+| SQL代码 | |
+
+
+
+---
+url: /rspress-sdp-n/sdp/build_by_excel/6-sheet_codetable_manage.md
+---
+
+import { Badge } from '@theme';
+
+# Sheet.自定义码表
+
+## 填写示例
+
+![](/excel_intro/module_intro_26.png)
+
+![](/excel_intro/module_intro_25.png)
+
+* 上述示例第1行：取`eg_org`表的`org_name`、`org_id`、`pid`字段作为码表字段，匹配前端格式为`name`、`code`、 `pid`字段，码表标识为`code_dm_def_003`。
+* 上述示例第2行：取`dict_name`表的`dict_name`、`dict_desc`字段作为码表字段，匹配前端格式为`name`、`code`字段，码表标识为`code_dm_def_table`。
+* 上述示例第3行：自定义sql作为码表字段来源，码表标识为`code_dm_def_004`。
+
+## 填写说明
+
+* 参数取值说明
+
+| 参数 | 说明 |
+| --- | --- |
+| 码表KEY | |
+| 码表数据库表 | |
+| 码表类别 | |
+| codeName数据库字段名称 | |
+| codeValue数据库字段名称 | |
+| codeName前端名称 | |
+| codeValue前端名称 | |
+| 父节点codeValue数据库字段名称  <Badge text="2025-01-01" type="tip" /> | |
+| 自定义SQL | |
+| 码表名称 | |
+
+
+
+---
+url: /rspress-sdp-n/sdp/build_by_excel/9-fun_list.md
+---
+
+import { Badge } from '@theme';
+
+# 字典功能清单
+
+![](/dataToView/dictList.png)
+
+
+
+---
+url: /rspress-sdp-n/sdp/self_check.md
+---
+
+## 页面展示
+
+### 列表
+
+* 对齐方式：数字居右，操作列（含开关）居中，其他居左。特例：‘’数字/数字‘’格式居右。
+* 数字：千分位展示，金额2位小数，汇率5位、税率2位小数、数量4位。
+* 列宽：固定字数或可以确定字数的列（如码表、日期）按照其最多字数设置。
+* 列宽：除特殊要求，显示内容不允许折行，超出设定单元格或表格x轴宽度，显示省略符。
+* 列宽：能够确定字数的列，需要显示完整，内容不要折行。
+* 列宽：测试1280分辨率，列不能折行。
+* 列宽：如果数据列较少，至少有一列列宽宽度是自适应，即不设置宽度，防止列宽等比放大。
+* 列表中单位，写到表头。
+* Mock数据完整，且真实数据，不要出现111、222、aaa、bbb。
+* 排序：需要有默认排序规则。
+
+### 筛选条件
+
+* 两个及以下筛选条件的，放到工具栏所在行。
+* 列头筛选，如果只有两种状态，则用radio类型，且增加全部；两种以上状态，且10个以内，采用Checkbox；其他或特殊码表筛选，按需求说明开发。
+* 列排序、列筛选：严格按照需求文档，如果和上述规范冲突，及时与需求协商调整。
+
+### 其他
+
+* 除列表外其他业务数据，如表单，mock数据需要完整且真实有效。
+* 弹窗标题与开启按钮应对应。
+* 提示信息标点符号，末尾统一采用句号。
+* 滚动条，不能同时有列表内滚动条与浏览器滚动条。
+* 测试1280px分辨率。
+* 工具栏按钮顺序按照需要开发。
+* 弹窗按钮问题，取消default按钮左，确定primary按钮右。
+
+
+
+---
+url: /rspress-sdp-n/sdp/qa.md
+---
+
+import { Badge } from '@theme';
+
+# Q\&A
+
+## Excel构建
+
+### sheet页之间数据是如何串联
+
+1. **菜单构建sheet**
+   * 串联元素：`模块key`
+   * 菜单路径单元格中含有模块key标识，如: **/dynamicbs1/cfgp/test\_app\_mts\_tsjh**，**test\_app\_mts\_tsjh**为模块key。
+2. **模块sheet**
+   * 串联元素：`模块key` -> `数据字典`
+   * 匹配的模块key单元格同行，查找数据字典单元格，如：模块key **test\_app\_mts\_tsjh** 同行数据字典为**s\_tsjh**。
+3. **表管理sheet**
+   * 串联元素：`数据字典`
+   * 找到匹配数据字典，如：**s\_tsjh**，同行逻辑表类型单元格标识当前是否需要创建数据库实体表。
+4. **字典构建sheet**
+   * 串联元素：`数据字典`
+   * 找到匹配数据字典，已整行分组隔断的方式展现，如：**字典\_进货明细 s\_tsjh**，在下一个分组前数据即为当前数据字典字段元素。
+     * sdfsdf
+     * sdfsdf :libra:
+5. **业务码表sheet**
+   * 串联元素：`码表类别`
+   * 码表在配置中一般用于列表中码值格式化中文、表单采集中下拉组件赋值、筛选中下拉组件赋值。
+   * 字典构建sheet页中，列表项格式化列、筛选项类型扩展参数、表单项类型扩展参数可以设置码表类别\
+     格式：**code\_dm\_码表类别**，如：**code\_dm\_ckts\_cktmspzlx**\
+     **ckts\_cktmspzlx**即为业务码表sheet页中配置的码表元素。
+
+### 点击新建无反应
+
+1. Sheet.字典构建`表单项开启`是否配置为1，需保证至少一项开启，新建及编辑弹窗才可以打开。
+
+### 演示页面无法打开
+
+1. 是否开启了本地客户端vpn。
+2. 演示网段ip是否联通。访问192.168.21.5时。当前wifi可以直接连上，网线需要开通访问权限。
+
+### 配置页面无法打开
+
+1. Sheet.菜单构建未加入`cfgp`标识导致页面打不开。参照[Sheet.菜单构建 - 参数2.菜单路径](/rspress-sdp-n/sdp/build_by_excel/4-sheet_menu.md#菜单路径--组件)
+
+### 系统构建异常
+
+1. Sheet.字典构建，表单项类型为Title时，`主表字段`填入了内容导致异常。
+2. 字典构建中表单项类型未配置导致的页面空白，后续计划会增加排查机制。
+3. Excel模板中删除了固有的sheet页面导致异常。
+
+## 编码
+
+### 改变后端接口地址
+
+* **config\config.dev.ts**文件中，**API\_URL\_BASE**为接口地址前缀，为空代表使用本地mock数据。
+
+:::info Tip
+`config.dev.ts`文件仅在开发模式下生效。生产build模式采用`config.ts`文件中的配置。
+:::
+
+### 切换本地菜单和数据库菜单
+
+* **config\config.dev.ts**文件中，**LOCAL\_MENU**为是否采用本地菜单标识，设置true则采用本地静态菜单，否则为数据库动态获取菜单。
+
+### 业务模块及对应文件夹建立规则
+
+* 系统级文件夹直接建立在**src\pages**文件夹下，如”内部管理系统“，则建立**src\pages\nbglxt**文件夹。
+* 每个业余单元模块按照菜单层级建立子文件夹，如菜单“财务管理 - 流水信息查询”，则建立**src\pages\nbglxt\cwgl\lsxxgl**文件夹。
+* 一般每个业务文件夹含有**index.tsx**、**f.tsx**两个文件，如页面数据存放至代码中，则会有**config.tsx**文件。
+
+```javascript
+  ├── src                              # 项目代码目录
+    ├── pages                          # 业务文件夹
+      ├── nbglxt                       # 内部管理系统
+        ├── cwgl                       # 财务管理
+          ├── lsxxcx                   # 流水信息查询
+            ├── index.tsx              # 入口页
+            ├── f.tsx                  # 自定义事件处理
+            ├── config.tsx             # 静态配置文件，按需编写
+```
+
+### 自定义弹窗开发
+
+* 参照示例**src\pages\example\json\_page\unit\_from\_api\index.tsx**
+* 导入自定义组件时，首字母为大写格式。
+
+```ts {1,4}
+import Modal1 from './Modal1';
+// import Modal1 from './Modal1'; // 错误格式
+const TestForm: React.FC<unknown> = () => {
+  return <Modal1 />;
+  // return <modal1 />; // 错误格式
+};
+```
+
+### 使用DDBaseForm开发
+
+* 切换select内容、变更标签、变动赋值，参照示例**src\pages\example\form\form03\index.tsx**、**src\pages\example\form\form03\modal1.tsx**、**src\pages\example\form\form03\f.tsx**
+
+### 如何使列表某一列自适应 <Badge text="2024-11-19" type="tip" />
+
+* `Sheet.字典构建 - 列表项列宽`项置为空。
+
+
+
+---
+url: /rspress-sdp-n/sdp/instruction.md
+---
+
+import { Badge } from '@theme';
+
+# 高级能力
+
+## f1. 维度表统计
+
+* 自由设计、保存统计方案：行、列维度字段、统计字段、方案名称...
+* 可选聚合方式：合计、最大值、最小值、平均值、计数
+* 灵活分组合计：小计行、总计行、小计列、总计列
+* 展示方式可切换：平铺或树形
+* 统计结果可导出
+
+1. 点击工具栏上`维度表统计`按钮，在展开弹窗中设置统计方案，包括行列维度字段、统计字段及方案名称，弹窗中4列含义如下：
+   * rows：行维度统计字段
+   * columns：列维度统计字段
+   * values：数值统计字段
+   * all：当前列表的所有字段
+
+![](/excel_intro/module_intro_30.png)
+
+1. 方案设置后，点击统计查询按钮，即展开统计列表。
+   * 改变聚合方式：每个统计字段有5中统计方式，分别为合计（默认）、最小、最大、平均、计数。
+   * 导出统计列表
+
+![](/excel_intro/module_intro_31.png)
+
+1. 上述设计方案将自动保存于浏览器中（非数据库保存），后续可直接在工具栏中选择方案查询。
+
+![](/excel_intro/module_intro_32.png)
+
+## f2. 图表统计
+
+* 基于字典生成图表，自由组合字段，生成`饼状图`、`线图`、`柱图`、`面积图`、`多轴多类型图`（多线比较、多柱分组）。
+* 自由设计、保存图表统计方案：数据范围、指标维度、图表类别、方案名称...
+
+1. 点击工具栏上`图表统计`按钮，在展开弹窗中设置统计方案，包括数据范围、指标维度、各图表类型下详细设置、方案标题、方案备注。如设置折线图：
+
+![](/excel_intro/module_intro_38.png)
+
+![](/excel_intro/module_intro_41.png)
+
+2. 可基于当前表单设置展示单一图表，也可以根据选择的方案展示多个图表。
+3. 点击设置弹窗`图表绘制`或`图表绘制(方案)`按钮，展示图表统计结果。
+
+* 基于表单
+
+![](/excel_intro/module_intro_39.png)
+
+* 基于方案
+
+![](/excel_intro/module_intro_40.png)
+
+## f3. 列表高级筛选
+
+* 查询方案维护
+* 查询条件可选：and、or
+* 查询条件可多层嵌套组合
+
+![](/excel_intro/module_intro_59.png)
+
+![](/excel_intro/module_intro_60.png)
+
+## f4. 列表视图设置
+
+* 视图方案维护
+* 设置列顺序、是否左右冻结、是否展示
+
+![](/excel_intro/module_intro_61.png)
+
+## f5. 列表数据导出
+
+* 前端导出： (1) 可选择导出列；(2) 调整导出顺序；(3) 支持筛选条件导出，勾选数据导出。
+* 后端导出
+
+![](/excel_intro/module_intro_62.png)
+
+## f6. 生成设计文档
+
+1. 用于生成基于数据字典生成的模块文档，可选文档范围，及常用Word排版设定，如字体、行距、字号...
+2. 需要生成文档的模块，其路由后缀规则为：`/cfgp/模块key`
+
+![](/excel_intro/module_intro_45.png)
+
+![](/excel_intro/module_intro_46.png)
+
+## f7. 管理帮助文档
+
+1. 用于维护系统的帮助文档，可以挂载到菜单作为菜单模块的帮助说明，也可作为文档生成内容输出至Word文件。
+2. 文档采集模式包括富文本、Markdown、普通长文本。
+   * Markdown：目前作为系统内部帮助说明使用，通过匹配菜单路由自动链接至关联文档。
+   * 普通长文本：可伴随文档生成模块使用，作为生成文档的一部分。
+
+![](/excel_intro/module_intro_42.png)
+
+![](/excel_intro/module_intro_43.png)
+
+![](/excel_intro/module_intro_44.png)
+
+## f8. 管理色彩主题及布局
+
+* 可选择系统预制的色彩主题
+* 可自定义色彩主题并保存为方案
+* 除系统预制的皮肤外，看自行添加自定义主题，从而匹配客户或三方系统UI要求。
+* 添加的皮肤可设定为方案。
+
+![](/excel_intro/module_intro_63.png)
+
+![](/excel_intro/module_intro_47.png)
+
+## f9. AI生成主题
+
+![](/excel_intro/module_intro_90.png)
+
+![](/excel_intro/module_intro_91.png)
+
+## f10. AI模块生成 <Badge text="2026-07-15" type="tip" />
+
+![](/excel_intro/module_intro_92.png)
+
+![](/excel_intro/module_intro_93.png)
+
+## f11. 核心资产导出
+
+### 基于物理表导出数据视图模板
+
+* **使用场景**
+  1. 仅构建物理表，在依据物理表导出基础可用模板，用于二次构建。
+  2. 旨在简化配置，通过最少操作快速生成可用模块。
+  3. 生成模板仅针对单表操作。
+* **构建说明**
+  1. `Sheet.字典构建`仅录入数据库相关内容：主表字段、字段中文名、数据类型、键、默认值、非空。
+  2. `Sheet.表管理`中录入对应物理表属性：物理表名称、物理表含义、数据字典、数据字典含义、逻辑名、逻辑表类型。
+  3. 通过系统`敏捷开发 - 系统构建`模块构建上述Excel文件。
+  4. 通过系统`敏捷开发 - 物理表管理`模块导出对应数据视图模板。可按需选择：
+     * 行内导出
+     * 勾选导出
+     * 筛选导出
+  5. 导出数据视图模板可直接用于导入或调整后导入。
+* **导出模板说明**
+  1. Sheet.菜单构建：仅生成为一级菜单和路径。菜单层级、名称、及路径中的模块标识为预制key，可自行调整。
+  2. Sheet.模块：补全模块内容，包括列表、表单属性，工具类按钮、列表列按钮。模块key、模块名称、数据字典为预制，可自行调整。
+  3. Sheet.表管理：生成的逻辑表类型为`虚拟表`，数据字典、数据字典含义、逻辑名为预制，可自行调整。物理表名称、物理表含义为模板来源内容，不可调整。
+  4. Sheet.字典构建：
+     * 字典名称、字段描述为预制，可自行调整。
+     * 列表项开启标识：除主键外将全部开启。
+     * 列表项主键标识、列表项隐藏标识：依据物理表主键自动开启。
+     * 列表项对齐方式：依据物理表数值类型自动开启居右。
+     * 列表项隐藏标识：依据物理表主键自动开启。
+     * 列表项格式化列：依据物理表数值或日期类型自动开启数值或日期格式化。
+     * 表单项开启：全部开启。
+     * 表单项类型：依据物理表数值或日期类型匹配表单类型。
+     * 表单项格式化：依据物理表数值类型自动开启数值格式化。
+     * 表单项验证：依据物理表数值类型自动开启范围、必录校验。
+     * 筛选项类型：默认开启第一个非主键字段为筛选字段。
+
+### 基于模块导出数据视图
+
+* **使用场景**
+  1. 基于已导入的模块导出，在依据导出文件调整，用于二次调整构建。
+  2. 旨在保证用最新、最准确数据作为模板。
+* **构建说明**
+  1. 通过系统`敏捷开发 - 模块管理`模块导出对应数据视图模板。可按需选择：
+     * 行内导出
+     * 勾选导出
+     * 筛选导出
+* **导出模板说明**
+  1. Sheet.菜单构建：全量
+  2. Sheet.模块：依据选择模块
+  3. Sheet.表管理：依据选择模块
+  4. Sheet.字典构建：依据选择模块
+  5. Sheet.业务码表：全量
+  6. Sheet.业务表共通字段：全量，可按需要自行删除
+  7. Sheet.自定义SQL：全量
+  8. Sheet.自定义码表：全量
+
+### 导出字典
+
+* 单一维度数据导出，入口：`敏捷开发 - 字段管理`，导出按钮
+
+### 导出数据字典表
+
+* 单一维度数据导出，入口：`敏捷开发 - 表管理`，导出按钮
+
+### 导出模块
+
+* 单一维度数据导出，入口：`敏捷开发 - 模块管理`，导出按钮
+
+### 导出物理表
+
+* 单一维度数据导出，入口：`敏捷开发 - 物理表管理`，导出按钮
+
+
+
+---
+url: /rspress-sdp-n/sdp/customer_dev.md
+---
+
+# 开发者进阶
+
+## 字典自定义开发
+
+### 1. 添加自定义按钮
+
+* 配置工具栏自定义按钮，并开发其业务逻辑，多用于针对查询列表的一条或多条数据进行处理。`customer_toobar`
+* 配置列表列自定义按钮，并开发其业务逻辑，多用于针对查询列表的当前行数据进行处理。`handle_columns`
+
+### 2. 对列表自定义开发
+
+* 按照当前行数据设置操作列是否可用。`handle_columns disabled`
+* 对列表单元格进行个性化渲染展示。`columnsRender`
+* 自定义列表行单击事件。`gridOnRowClick#`
+* 自定义列表行双击击事件。`gridOnRowDoubleClick`
+* 列表首选项改变时执行自定义方法，即选择Chexcbox、Radion回调。`rowSelection`
+* 列表数据删除前执行自定义方法，如需要验证删除数据的合理性。`beforeDelete`
+* 列表数据删除失败后调用自定义方法，如弹窗显示特殊格式异常信息及应对方案。`afterDeletionFailure`
+* 列表数据加载后调用自定义方法，如获取加载后的第一行数据等。`afterReload`
+
+### 3. 对表单生命周期自定义开发
+
+* 打开新建弹窗前调用自定义方法，如填充表单值、设置某项只读。`initAddForm`
+* 打开编辑弹窗前调用自定义方法，如提前填充表单值、设置某项只读。`initEditForm`
+* 表单提交前调用自定义方法，如设置私有化的表单校验或其他业务处理。`formBeforeSubmit`
+* 表单保存成功后回调，如更新码表。`afterFormSaveSuccess`
+* 表单删除成功后回调，如更新码表。`afterFormDeleteSuccess`
+
+### 4. 对表单采集项自定义开发
+
+* 除如长度，类型，大小等常规表单校验项外，自定义表单项校验方法。`validator`
+* 添加自定义表单项事件OnChange、OnBlur、OnFocus。`eventOnChange、OnBlur、OnFocus`
+
+### 5. 对媒体列表自定义开发
+
+* 默认卡片展示无法满足需求是，自定义开发卡片展现页面。
+
+### 6. 默认接口扩展
+
+* 数据的增删查改、导入、导出接口可采用默认，也可自定义接口。
+
+## 其他
+
+### 1. 添加自定义开发内容
+
+##### 建立页面
+
+示例：
+
+1. \src\pages\example\json\_page\unit\_from\_api\index.tsx
+2. \src\pages\example\json\_page\unit\_from\_api\f.tsx
+
+##### 建立菜单并绑定页面
+
+示例：
+
+1. \config\routes\routes.example.ts
+
+### 2. 媒体类字典开发 <Badge text="2024-11-19" type="tip" />
+
+#### 媒体管理模块构建与使用
+
+媒体管理中的视频预览依赖组件`react-player`，如果是增量更新，需要执行依赖安装`yarn add react-player`。
+
+* **模块构建**
+
+1. 在`敏捷开发 - 系统构建`模块中导入构建文件[`数据字典_字典导入_媒体管理_vyyyymmdd.x.y.z.xlsx`](/rspress-sdp-n/sdp/docs_map.md)，完成`媒体管理`模块构建。
+2. 刷新页面，可以看到`媒体管理`模块菜单。
+
+* **模块使用**
+
+1. 通过`新建`按钮完成媒体类型的文件采集（支持多文件上传），可以设置媒体名称、备注等附属信息，如果附属信息字段无法满足业务需求，可自行修改`数据字典_字典导入_媒体管理_vyyyymmdd.x.y.z.xlsx`构建文件，添加业务需要字段后在进行采集。
+2. 采集的文件将以宫格卡片的形式展示在列表中，视频、音频、图片类型文件支持预览，其他类型文件不支持，仅以图标进行区分展示。
+3. 列表页面可切换显示宫格、列表两种状态。
+4. 图片、视频类型文件可以直接预览。
+
+#### 构建含有媒体类型的字典模块
+
+可以参照示例构建含有媒体类型的模块，媒体模块通常以宫格卡片形式展现。表单采集时通过侧滑弹窗选择需要的媒体资源。
+
+* **涉及媒体类型的构建内容：**
+
+1. [Sheet.模块 - 列表扩展：`card`](/rspress-sdp-n/sdp/build_by_excel/2-sheet_module.md#列表扩展)
+2. [Sheet.字典构建 - 列表项格式化列： `media:imagepath`、`media:videopath`、`media:title`、`media:description`](/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.md#参数8列表项格式化列)
+3. [Sheet.字典构建 - 表单项类型： `MediaLibrary`](/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.md#参数2表单项类型)
+
+* **示例：含有媒体类型的字典模块使用**
+
+1. 卡片图片 \
+   参照`前端媒体示例 - 卡片图片`菜单，支持任意字典字段设定为图片地址、标题、描述。
+2. 卡片视频 \
+   参照`前端媒体示例 - 卡片视频`菜单，支持任意字典字段设定为图片地址、标题、描述。
+3. 卡片自定义 \
+   参照`前端媒体示例 - 卡片自定义`菜单，支持自行编码卡片内容。
+
+### 3. 资源权限开发 <Badge text="2024-11-26" type="tip" />
+
+#### 使用方式
+
+##### 字典模块
+
+**通过Excel构建系统时使用**
+
+![](/excel_intro/module_intro_23.png)
+
+![](/excel_intro/module_intro_24.png)
+
+* 默认按钮配置 \
+  构建Excel文件，`Sheet.菜单构建`中： \
+  (1)`菜单名称`栏填写按钮名称，位于需要添加按钮的菜单下一层级。 \
+  (2)`前端组件ID`栏中填写`权限按钮ID`，格式：`模块key_按钮英文标识`，按钮英文标识不可更改，为系统预制。  \
+   如模块key是test\_app\_mts\_tssb，则配置如下： \
+   工具栏新建：`test_app_mts_tssb_toolbar_add` \
+   工具栏编辑：`test_app_mts_tssb_toolbar_edit` \
+   工具栏删除：`test_app_mts_tssb_toolbar_delete` \
+   工具栏导出：`test_app_mts_tssb_toolbar_download` \
+   工具栏导入：`test_app_mts_tssb_toolbar_upload` \
+   列表栏编辑：`test_app_mts_tssb_grid_col_edit` \
+   列表栏删除：`test_app_mts_tssb_grid_col_delete`
+* 自定义按钮配置 \
+  构建Excel文件，`Sheet.菜单构建`中： \
+  (1)`菜单名称`栏填写按钮名称，位于需要添加按钮的菜单下一层级。 \
+  (2)`前端组件ID`栏中填写`权限按钮ID`，且需要满足： \
+   ID全局唯一，不可重复。 \
+   与`Sheet.模块`中，`自定义按钮工具栏`或`列表列自定义按钮`栏中填写的ID一致。 \
+   如`Sheet.模块`中，`自定义按钮工具栏`中的一个按钮填写为`开票&doKp&kp_001`，则`前端组件ID`填写`kp_001`。
+
+##### 非字典模块
+
+**通过模块`系统管理 - 菜单管理`建立菜单**
+\* 按钮配置 \
+菜单编辑页面，分类选择`按钮`，同时录入`菜单/资源代码（权限按钮ID）`，规则同上述自定义按钮配置。
+\* 页面开发 \
+参考资料： https://umijs.org/docs/max/access#access-1 \
+按钮权限开发一般会使用`Access`、`useAccess`组件，如按钮编码常用格式：
+
+```html
+<Access accessible={...}>
+  <Button size="small" type="link">编辑</Button>
+</Access>
+```
+
+#### 实现方式
+
+1. 系统加载时，获取所有`权限按钮ID数组`（通过Excel字典构建或菜单管理中添加维护）。
+2. 用户登录时，获取有使用权限的`用户权限按钮ID数组`。
+3. 进入含有`权限按钮`页面时，依次判断每个`权限按钮`：
+   * 是否开启资源权限判断（配置文件中是否开启资源权限判断标识）：`OPEN_RESOURCE_AUTHORITY` \
+     IF false：有权限 \
+     IF true: 后续流程
+     ```ts
+     OPEN_RESOURCE_AUTHORITY: true, // 是否开启资源权限判断
+     ```
+   * 判断`权限按钮ID`是否在`权限按钮ID数组` \
+     IF 不存在：有权限 \
+     IF 存在：后续流程
+   * 用户使用权限判断，`权限按钮ID`是否在`用户权限按钮ID数组` \
+     IF 存在：有权限 \
+     IF 不存在：无权限
+
+
+
+---
+url: /rspress-sdp-n/sdp/changelog.md
+---
+
+# 修订记录
+
+<!-- 是否开启快捷键 -->
+
+<!-- 列表列自定义按钮：提交审批&C_ACT_BPM&C_ACT_BPM
+批量编辑 -->
+
+<!-- customer:sql_tsjh_tssb -->
+
+<!-- 工具栏导出配置，node版本未实现2、pdf选项 -->
+
+<!-- 表单提交方式，node版本未实现1选项 -->
+
+<!-- 完善工具文档 -->
+
+## 2026-08-25
+
+* 🔥 新增 模块`AI模块生成`。
+* **`新增`** 文档`UI - 敏捷开发平台`。
+* **`变更`** 在线文档变技术栈升级到`Repress2.0+`。
+* **`变更`** 文档，重构文档[`设计概述`](/rspress-sdp-n/sdp/summary.md)、[`我能做什么`](/rspress-sdp-n/sdp/what_can_do/what_can_do_01.md)、[`快速开始`](/rspress-sdp-n/sdp/env_init.md)、[`高级能力`](/rspress-sdp-n/sdp/instruction.md)、[`开发者进阶`](/rspress-sdp-n/sdp/customer_dev.md)、[`首页`](/rspress-sdp-n/index.md)。
+
+## 2026-04-16
+
+* 🔥 新增 `AutomaticPageVTable`组件，用于将 DDBaseGridVtable 纳入字典管理
+* 🔥 新增 [视频介绍页](http://192.168.21.5:7777/ddit_sdp/intro/)
+* **`变更`** 前端代码，最新版本为：[`ddit_sdp_code_frontend_v.20260416.1.1.2.zip`](/rspress-sdp-n/sdp/docs_map.md)。
+* **`新增`** 模块API日志分析
+* **`新增`** 模块应用日志分析
+
+## 2026-03-13
+
+* 🔥 新增 `DDBaseGridVtable`组件及示例，用于处理大数据量、高性能要求的表格场景。
+* **`变更`** 前端代码，最新版本为：[`ddit_sdp_code_frontend_v.20260313.1.1.1.zip`](/rspress-sdp-n/sdp/docs_map.md)。
+* **`变更`** antd版本`6.3.1+`，umijs版本`4.6.29+`。
+* **`变更`** 调整node版本`24.14.0(LTS)+`。
+* **`新增`** 包管理工具增加对`pnpm`支持，推荐采用pnpm进行管理。
+* **`新增`** 主页，后续可按需调整。
+* 🐞 修复清空缓存后首次进入系统登录经常出现白页的问题。
+* 🐞 修复表单组件中由于拖拽组件引起的'Cannot have two HTML5 backends at the same time'的问题。
+* 🐞 修复浏览器大量警告'Warning:Each child in an arrayoriteratorshouldhave a unique"key"prop'的问题。
+* 🐞 修复接连访问两个由automatic\_page组件编码的页面时，列表标题下方出现多行空格问题。
+
+## 2026-01-12
+
+* 🔥 新增AI 主题设置。
+* 🔥 新增工具文档，涵盖文字处理、日期处理、本地存储、会话存储、数组处理、树形结构、Word 文档、图表工具、弹窗工具集、码表处理等...`http://xxx.xxx.xxx.xxx/UtilDoc`。
+* **`变更`** 前端代码，最新版本为：[`ddit_sdp_code_frontend_v.20260112.1.1.0.zip`](/rspress-sdp-n/sdp/docs_map.md)，后续所有基础组件将放置在代码包中。
+* **`变更`** antd版本`6.0.0+`，umijs版本`4.6.4+`，ant-design/x版本`2.0.0+`。
+* **`变更`** node版本`25.2.1+`。
+
+## 2025-12-04
+
+* **`变更`** 前端代码，最新版本为：[`ddit_sdp_code_frontend_v.20251204.1.0.4.zip`](/rspress-sdp-n/sdp/docs_map.md)。
+* **`新增`** 三方系统接入页。`/user/transition?encodedData=xxx`
+
+## 2025-11-28
+
+* **`变更`** 前端代码，最新版本为：[`ddit_sdp_code_frontend_v.20251128.1.0.3.zip`](/rspress-sdp-n/sdp/docs_map.md)。
+* **`新增`** 文档生成管理，新增`数据字典接口`生成。
+* **`新增`** 数据字典，列表格式化增加`switch`配置，用于是否等类型数据（1、0；Y、N...）快捷编辑。
+* **`新增`** 数据字典，列表格式化增加`timeEasyRead`配置，将毫秒数转为xx毫秒、xx秒或xx分。
+* **`新增`** 数据字典，列表格式化增加`tagColor`配置。
+* **`新增`** 列表视图展示，工具栏视图设置按钮增加视图筛选及重置。配置module\_key页面将同步开启视图方案，并可存储视图方案。选中方案后，再次进入该页面会采用最后选择的视图方案。
+
+## 2025-09-23
+
+* 🔥 新增 模块 [帮助文档管理](/rspress-sdp-n/sdp/instruction.md#帮助文档)。
+* 🔥 新增 模块 [文档生成管理](/rspress-sdp-n/sdp/instruction.md#文档生成)。
+* 🔥 新增 模块 [皮肤设置](/rspress-sdp-n/sdp/instruction.md#皮肤设置)。
+* **`变更`** 前端代码，最新版本为：[`ddit_sdp_code_frontend_v.20250923.1.0.2.zip`](/rspress-sdp-n/sdp/docs_map.md)。
+* **`新增`** 基础单元表单事件新增[`afterFormSaveSuccess`](/rspress-sdp-n/component/unit/api_event.md#afterformsavesuccess)，表单保存成功后回调，如更新码表。
+* **`新增`** 基础单元表单事件新增[`afterFormDeleteSuccess`](/rspress-sdp-n/component/unit/api_event.md#afterformdeletesuccess)，表单删除成功后回调，如更新码表。
+* **`新增`** 基础单元列表事件新增[`statistics`](/rspress-sdp-n/component/unit/api_event.md#statistics)，合计自定义渲染，如格式化合计结果。
+* **`新增`** 基础单元工具栏配置新增[`delete_by_condition`](/rspress-sdp-n/component/unit/api_event.md#configtoolbar_default)，筛选删除配置。
+* **`新增`** 基础单元事件新增[`isSonTableEdit`](/rspress-sdp-n/component/unit/api_event.md#issontableedit)配置。
+* **`新增`** 基础单元视图设置按钮后增加已保存视图快捷筛选。
+* **`新增`** 表单组件新增[`MarkdownEditor`](/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.md#参数2表单项类型)类型。
+* **`新增`** 表单组件新增[`Cascader`](/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.md#参数2表单项类型)类型。
+* **`新增`** 列表组件新增渲染[`MarkdownEditor`](/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.md#参数8列表项格式化列)类型。
+* **`新增`** 列表组件新增渲染[`RichText`](/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.md#参数8列表项格式化列)数据弹窗展示示例。
+* **`变更`** 详情组件变更，采用更适合仅查看而非编辑的布局风格。
+* **`新增`** 主题设置新增`列表默认显示条数`。
+* **`变更`** 侧滑列表的筛选，由默认3列变为默认2列，适配小屏幕下的布局。
+* **`新增`** 敏捷开发 - Excel采集模块，增加模块/字典过滤及编辑项类别过滤。
+* **`新增`** 基础单元树事件新增[`treeOnSelect`](/rspress-sdp-n/component/unit_tree/api_event.md)，表单保存成功后回调，如选择节点后，变更某项表单值。
+* **`新增`** 基础单元树新增[`order`](/rspress-sdp-n/component/unit_tree/api_event.md)，用于指定排序字段。
+* **`新增`** 字典构建sheet页，新增[`扩展信息`](/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.md#其他)配置，用于配置列表列头、筛选、表单采集时的tooltip。
+* **`新增`** 默认操作列编辑只读属性的自定义渲染[`setEditDisabled_模块key`](/rspress-sdp-n/component/unit/api_event.md#seteditdisabled_modulekey)。
+* **`新增`** 默认操作列删除只读属性的自定义渲染[`setDeleteDisabled_模块key`](/rspress-sdp-n/component/unit/api_event.md#setdeletedisabled_modulekey)。
+
+## 2025-07-04
+
+* 🔥 新增 根据字典视图，自定义设置图表，参照[树列表组合系数据类型的采集及展示](/rspress-sdp-n/sdp/instruction.md#图表统计)。
+* **`变更`** @ant-design/charts版本`2.3.0+`。
+
+## 2025-05-29
+
+* **`变更`** 前端代码，最新版本为：[`ddit_sdp_code_frontend_v.20250529.1.0.1.zip`](/rspress-sdp-n/sdp/docs_map.md)。
+* **`变更`** antd版本`5.4.0+`，umijs版本`4.4.11+`。
+* **`变更`** node版本`22.9.0+`。
+* **`新增`** 字典视图，树列表组合字典配置，参照\[树列表组合系数据类型的采集及展示]/sdp/customer\_dev.html#7-树列表组合系数据类型的采集及展示)。
+* **`新增`** 字典视图，两种关联表数据适配视图，参照\[关联表数据采集及展示一]/sdp/customer\_dev.html#8-关联表数据采集及展示一)，\[关联表数据采集及展示二]/sdp/customer\_dev.html#9-关联表数据采集及展示二)。
+* **`新增`** 数据字典，列表格式化增加`color`配置，用于颜色标签渲染。
+* **`新增`** 数据字典，表单及筛选中增加树组件数据配置。
+* **`新增`** 维度表方案、个人筛选方案配置入库。
+* **`新增`** 系统配置如标题、图标、copyright等加入配置文件中。
+* **`新增`** 敏捷开发-模块管理中，新增功能`增加模拟数据`。
+
+## 2025-05-01
+
+* **`变更`** 前端代码，最新版本为：[`ddit_sdp_code_frontend_v.20250501.1.0.0.zip`](/rspress-sdp-n/sdp/docs_map.md)
+* **`新增`** 敏捷开发 - 物理表管理，加入对非字典管理的物理表查询及字典数据视图导出。
+* **`新增`** 系统管理 - 组织机构管理。
+* **`新增`** 系统管理 - 系统日志管理。
+* **`新增`** 数据字典，`自定义码表`sheet页增加`父节点codeValue数据库字段名称`，用于支持表单中的树组件。
+* **`新增`** 数据字典，列表格式化增加`json`配置，用于json数据弹窗展示。
+* **`新增`** 数据字典，列表格式化增加`copy`配置，用于展示copy图标，并实现快速复制。
+
+<!-- - **`变更`** 文档[`设计概述`](/component/process.html)。
+- **`新增`** 文档[`应用场景 - 我是设计者`](/component/app_scenarios/desinger.html)。
+- **`新增`** 文档[`应用场景 - 我是开发者`](/component/app_scenarios/developer.html)。 -->
+
+## 2025-02-13
+
+* **`变更`** 前端代码，最新版本为：[`ddit_sdp_code_frontend_v.20250213.0.2.12.zip`](/rspress-sdp-n/sdp/docs_map.md)
+* **`新增`** pdf导出配置。
+
+## 2025-02-12
+
+* **`变更`** 前端代码，最新版本为：[`ddit_sdp_code_frontend_v.20250212.0.2.11.zip`](/rspress-sdp-n/sdp/docs_map.md)
+* **`新增`** `敏捷开发-Excel采集`功能，仿Excel进行网页端数据整理。
+
+## 2025-01-24
+
+* **`变更`** 前端代码，最新版本为：[`ddit_sdp_code_frontend_v.20250124.0.2.10.zip`](/rspress-sdp-n/sdp/docs_map.md)
+* **`新增`** [`维度表统计功能。`](/rspress-sdp-n/sdp/instruction.md#维度表统计)
+
+## 2025-01-08
+
+* **`变更`** 前端代码，最新版本为：[`ddit_sdp_code_frontend_v.20250108.0.2.9.zip`](/rspress-sdp-n/sdp/docs_map.md)
+* **`变更`** 数据字典模板，新增一对多关系数据类型的采集及展示，参照\[一对多关系数据类型的采集及展示]/sdp/customer\_dev.html#6-一对多关系数据类型的采集及展示)。
+
+## 2024-12-20
+
+* **`变更`** 前端代码，最新版本为：[`ddit_sdp_code_frontend_v.20241220.0.2.8.zip`](/rspress-sdp-n/sdp/docs_map.md)
+* **`新增`** 系统构建时，可选前端预校验。校验内容包括：
+  1. 所有Sheet固定录入内容校验、数值类型校验、数字或字母类型校验、必录校验。
+  2. 【模块.sheet】【字典构建.sheet】【表管理.sheet】，`数据字典`字段关系校验。
+  3. 【菜单构建.sheet】：采用预制页面直接展示时，`组件`字段、`菜单路径`字段格式校验。
+  4. 【字典构建.sheet】：数值类型字段与页面录入框类型是否匹配校验。
+
+## 2024-12-12
+
+* **`新增`** \[`树形结构数据视图构建说明。`]/sdp/customer\_dev.html#4-敏捷开发导出使用说明)
+* **`新增`** [`Sheet.菜单构建内容补充 2024-12-12 内容。`](/rspress-sdp-n/sdp/build_by_excel/4-sheet_menu.md)
+* **`新增`** [`Sheet.字典构建内容补充 2024-12-12 内容。`](/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.md)
+* **`变更`** 前端代码，最新版本为：[`ddit_sdp_code_frontend_v.20241212.0.2.7.zip`](/rspress-sdp-n/sdp/docs_map.md)
+* **`变更`** 数据字典模板，新增树示例。
+
+## 2024-12-04
+
+* **`新增`** \[`敏捷开发导出使用说明。`]/sdp/customer\_dev.html#4-敏捷开发导出使用说明)
+* **`新增`** [`Excel构建文件，新增自定义码表配置页面。`](/rspress-sdp-n/sdp/build_by_excel/6-sheet_codetable_manage.md)
+* **`变更`** 前端代码，最新版本为：[`ddit_sdp_code_frontend_v.20241204.0.2.6.zip`](/rspress-sdp-n/sdp/docs_map.md)
+* **`变更`** 后端代码，最新版本为：[`ddit-cloud-dict-deploy-1.0.0-SNAPSHOT_v.20241204.0.2.6.jar`](/rspress-sdp-n/sdp/docs_map.md)
+* **`变更`** 数据字典模板，后续模板将放置在前端代码包中进行管理。
+
+## 2024-11-26
+
+* **`新增`** \[`资源权限开发使用说明。`]/sdp/customer\_dev.html#资源权限开发)
+* **`新增`** [`表单公式配置。`](/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.md#参数5表单项类型扩展参数)
+* **`新增`** [`Sheet.字典构建内容补充 2024-11-26 内容。`](/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.md)
+* **`变更`** 前端代码，最新版本为：[`ddit_sdp_code_frontend_v.20241126.0.2.5.zip`](/rspress-sdp-n/sdp/docs_map.md)
+* **`变更`** 后端代码，最新版本为：[`ddit-cloud-dict-deploy-1.0.0-SNAPSHOT_v.20241126.0.2.5.jar`](/rspress-sdp-n/sdp/docs_map.md)
+* **`新增`** 数据字典\_分词管理，最新版本为：[`数据字典_分词管理_v20241126.0.2.5.xlsx`](/rspress-sdp-n/sdp/docs_map.md)
+* **`变更`** 数据字典模板，最新版本为：[`数据字典_字典导入模板_v20241126.0.2.5.xlsx`](/rspress-sdp-n/sdp/docs_map.md)
+  1. Sheet.菜单构建增加`前端组件ID`列。
+
+## 2024-11-19
+
+* **`新增`** \[`媒体管理模块及媒体类型字典使用。`]/sdp/customer\_dev.html#媒体类字典开发)
+* **`新增`** [`Q&A内容补充 2024-11-19 内容。`](/rspress-sdp-n/sdp/qa.md)
+* **`新增`** [`Sheet.模块内容补充 2024-11-19 内容。`](/rspress-sdp-n/sdp/build_by_excel/2-sheet_module.md)
+* **`新增`** [`Sheet.字典构建内容补充 2024-11-19 内容。`](/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.md)
+* **`变更`** 数据字典模板，最新版本为：[`数据字典_字典导入模板_v20241119.0.2.4.xlsx`](/rspress-sdp-n/sdp/docs_map.md)
+  1. Sheet.字典构建增加`表单项事件查询`列。
+* **`新增`** [`数据字典_媒体管理_v20241119.0.2.4.xlsx`](/rspress-sdp-n/sdp/docs_map.md)
+* **`变更`** 前端代码，最新版本为：[`ddit_sdp_code_frontend_v.20241119.0.2.4.zip`](/rspress-sdp-n/sdp/docs_map.md)
+* **`变更`** 后端代码，最新版本为：[`ddit-cloud-dict-deploy-1.0.0-SNAPSHOT_v.20241119.0.2.4.jar`](/rspress-sdp-n/sdp/docs_map.md)
+
+## 2024-11-07
+
+* **`变更`** 数据字典模板，最新版本为：[`数据字典_字典导入模板_v20241107.0.2.3.xlsx`](/rspress-sdp-n/sdp/docs_map.md)
+* **`变更`** 前端代码，最新版本为：[`ddit_sdp_code_frontend_v.20241107.0.2.3.zip`](/rspress-sdp-n/sdp/docs_map.md)
+* **`变更`** 后端代码，最新版本为：[`ddit-cloud-dict-deploy-1.0.0-SNAPSHOT_v.20241107.0.2.3.jar`](/rspress-sdp-n/sdp/docs_map.md)
+
+## 2024-10-31
+
+* **`变更`** 数据字典模板，最新版本为：[`数据字典_字典导入模板_v20241031.0.2.2.xlsx`](/rspress-sdp-n/sdp/docs_map.md)
+  1. 模板增加表单提交方式。
+
+* **`变更`** 前端代码，最新版本为：[`ddit_sdp_code_frontend_v.20241031.0.2.2.zip`](/rspress-sdp-n/sdp/docs_map.md)
+  1. 一键/自定义初始化增加`系统管理模块`相关内容。
+  2. 支持同时导入多模板构建，增加模板导入提示。
+  3. 增加`react-player`依赖包，如增量更新，根目录下安装依赖 `yarn add react-player`
+
+* **`变更`** 后端代码，最新版本为：[`ddit-cloud-dict-deploy-1.0.0-SNAPSHOT_v.20241031.0.2.2.jar`](/rspress-sdp-n/sdp/docs_map.md)
+
+## 2024-10-22
+
+* **`变更`** \[敏捷开发平台代码说明]\(/sdp/env\_init.html
+* **`变更`** 数据字典模板，最新版本为：[`数据字典_字典导入模板_v20241022.0.2.1.xlsx`](/rspress-sdp-n/sdp/docs_map.md)
+* **`变更`** 前端代码，最新版本为：[`ddit_sdp_code_frontend_v.20241022.0.2.1.zip`](/rspress-sdp-n/sdp/docs_map.md)
+* **`变更`** 后端代码，最新版本为：[`ddit-cloud-dict-deploy-1.0.0-SNAPSHOT_v.20241022.0.2.1`](/rspress-sdp-n/sdp/docs_map.md)
+
+## 2024-10-15
+
+* **`变更`** 数据字典模板，最新版本为：[`数据字典_字典导入模板_v20241015.01`](/rspress-sdp-n/sdp/docs_map.md)，
+  1. 当前版本变更内容标黄展示。
+  2. 增加业务码表配置。
+  3. 增加业务表共通字段配置。
+* **`变更`** 前端代码，最新版本为：[`ddit_sdp_code_frontend_v.20241015.01.zip`](/rspress-sdp-n/sdp/docs_map.md)
+  1. 需覆盖原代码，并在根目录下执行组件库更新操作。执行 `npm install ddittool --legacy-peer-deps --registry=http://192.168.21.5:4873`
+
+
+
+---
+url: /rspress-sdp-n/sdp/docs_map.md
+---
+
+# 资料
+
+## 文档
+
+* 数据字典文件：可在前端代码包中获取，路径`\public\import_template\v0.2node`，或登录系统，在模块`敏捷开发 - 系统构建`中下载。
+* [前端系统搭建](/rspress-sdp-n/sdp/env_init.md)
+* [Excel构建](/rspress-sdp-n/sdp/build_by_excel/1-sheet_table.md)
+
+## 前端代码
+
+## 后端代码
+
+## 开发相关
+
+## 历史文件
+
+
+
+---
+url: /rspress-sdp-n/sdp/index.md
+---
+
+这是 API 的概览页面。
+
+
+
+---
+url: /rspress-sdp-n/sdp/page_view_dev.md
+---
+
+## Json配置数据
+
+![](/dataToView/intro_json.png)
+
+## Json配置数据生成方式完成度
+
+### 全局配置项 config
+
+| 参数 | 参数说明 | Json编码 | Excel & 批处理 | Excel & 导入 | 页面配置 |
+| --- | --- | --- | --- | --- | --- |
+| unit\_key | 业务单元key，对应后端接口 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| page\_id | 页面id | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/wrong.png) |
+| layout\_type | 页面类型 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| form\_title | 表单：标题 | ![](/right.png) | ![](/wrong.png) | ![](/right.png) | ![](/right.png) |
+| form\_width | 表单：宽度 | ![](/right.png) | ![](/wrong.png) | ![](/right.png) | ![](/right.png) |
+| form\_layout\_type | 表单：布局 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| form\_save\_check | 表单：编辑是否执行后端校验 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| grid\_show\_serial\_number | 列表：是否显示序号 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| grid\_title | 列表：标题 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| grid\_click\_checked | 列表：开启单击或双击勾选 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| grid\_sticky\_affix | 列表：列表锁定高度 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| grid\_scroll\_y | 列表：y轴滚动条 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| grid\_scroll\_x | 列表：x轴滚动条 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| grid\_selection\_type | 列表：首选项类别 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| grid\_border | 列表：边框 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| grid\_handle\_width | 列表：自定义操作列宽度 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| grid\_row\_key | 列表：主键 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/right.png) |
+| delete\_key | 列表：删除参数键 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/right.png) |
+| toolbar\_show\_grid\_checked\_num | 工具栏：是否显示数据条数及选中数 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/right.png) |
+| toolbar\_open | 工具栏：是否开启 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/right.png) |
+| toobar\_affix | 工具栏：锁定高度 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| api\_grid\_query | api：列表查询 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| api\_form\_query | api：表单查询 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| api\_form\_edit | api：表单更新 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| api\_form\_delete | api：表单删除 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| api\_excel\_export | api：导入 | ![](/right.png) | ![](/wrong.png) | ![](/right.png) | ![](/right.png) |
+| api\_excel\_import | api：导出 | ![](/right.png) | ![](/wrong.png) | ![](/right.png) | ![](/right.png) |
+| api\_excel\_template | api：模板下载 | ![](/right.png) | ![](/wrong.png) | ![](/right.png) | ![](/right.png) |
+| api\_form\_check | api：表单校验 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+
+### 选中字段统计 config.grid\_sum\_field
+
+| 参数 | 参数说明 | Json编码 | Excel & 批处理 | Excel & 导入 | 页面配置 |
+| --- | --- | --- | --- | --- | --- |
+| label | 显示名称 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| field | 对应列表字段 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| unit | 单位 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| format | 格式化 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+
+### 默认工具栏 config.toolbar\_default
+
+| 参数 | 参数说明 | Json编码 | Excel & 批处理 | Excel & 导入 | 页面配置 |
+| --- | --- | --- | --- | --- | --- |
+| add | 是否显示增加按钮 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| edit | 是否显示修改按钮 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| delete | 是否显示删除按钮 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| setting | 是否显示设置按钮 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| full | 是否显示全屏按钮 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| download | 是否显示导出按钮 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| upload | 是否显示导入按钮 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| reload | 是否显示刷新按钮 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+
+### 默认操作列 config.grid\_handle\_columns\_default
+
+| 参数 | 参数说明 | Json编码 | Excel & 批处理 | Excel & 导入 | 页面配置 |
+| --- | --- | --- | --- | --- | --- |
+| edit | 是否显示编辑链接 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| delete | 是否显示删除链接 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| detail | 是否显示详情链接 | ![](/right.png) | ![](/wrong.png) | ![](/right.png) | ![](/right.png) |
+
+### 自定义工具栏config.costomer\_toobar
+
+| 参数 | 参数说明 | Json编码 | Excel & 批处理 | Excel & 导入 | 页面配置 |
+| --- | --- | --- | --- | --- | --- |
+| name | 按钮名称 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| key | 按钮键值 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| func | 按钮方法 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| disabled | 是否可用 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| type | 按钮类型 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| list | 下拉按钮 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+
+### 自定义列表操作列 config.handle\_columns
+
+| 参数 | 参数说明 | Json编码 | Excel & 批处理 | Excel & 导入 | 页面配置 |
+| --- | --- | --- | --- | --- | --- |
+| name | 链接名称 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| key | 链接键值 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| func | 链接方法 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| disabled | 是否可用 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+
+### 列表列 config.grid\_columns
+
+| 参数 | 参数说明 | Json编码 | Excel & 批处理 | Excel & 导入 | 页面配置 |
+| --- | --- | --- | --- | --- | --- |
+| title | 列头显示文字 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| dataIndex | 数据key | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| width | 列宽度 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| fixed | 列是否固定 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| titleTooltip | 列头说明文字 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/right.png) |
+| align | 列对齐方式 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| ellipsis | 超过宽度自动省略 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| hidden | 隐藏列 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| sorter | 排序 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| sum | 是否开启求和 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| sum2 | 是否开启后端求和 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| children | 分组表头 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/wrong.png) |
+| render | 列渲染 | ![](/right.png) | ![](/harf.png) | ![](/harf.png) | ![](/harf.png) |
+| filter | 表头筛选 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| codeTable | 码表转换 | ![](/right.png) | ![](/harf.png) | ![](/harf.png) | ![](/harf.png) |
+
+### 表单项 config.form\_items
+
+| 参数 | 参数说明 | Json编码 | Excel & 批处理 | Excel & 导入 | 页面配置 |
+| --- | --- | --- | --- | --- | --- |
+| label | 标签的文本 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| name | 字段名 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/right.png) |
+| tooltip | 配置提示信息 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| type | 录入项类别 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| codeTable | 码表转换 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| treeTable | 码表转换 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| list | 设置Select、TreeSelect选项 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| showSearch | 是否支持搜索框，用于Selete及TreeSelect | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| mode | 设置 Select 的模式为多选或标签 | ![](/right.png) | ![](/harf.png) | ![](/harf.png) | ![](/harf.png) |
+| labelInValue | 是否把每个选项的 label 包装到 value 中 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| isSelectLeaf | TreeSelect 只能选择叶子节点 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| rules | 校验规则，设置字段的校验逻辑 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/harf.png) |
+| readOnly | 是否只读 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/wrong.png) |
+| eventOnChange | 内容变化时的回调 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| eventOnBlur | 失去焦点时回调 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| eventOnFocus | 获得焦点时回调 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| enterFocus | 按下回车的回调 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| format | 格式化日期、数值 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/wrong.png) |
+| layout | 表单项布局 | ![](/right.png) | ![](/wrong.png) | ![](/right.png) | ![](/right.png) |
+| showType | Select组件显示方式 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| range | 日期或文本是否是范围控件 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| placeholder | 文本框的占位符 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| defaultValue | 默认值 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| gridIsInitSearch | 列表：是否开启默认查询 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/right.png) |
+
+### 筛选项 config.filter\_items
+
+| 参数 | 参数说明 | Json编码 | Excel & 批处理 | Excel & 导入 | 页面配置 |
+| --- | --- | --- | --- | --- | --- |
+| label | 标签的文本 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| name | 字段名 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| type | 录入项类别 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| tooltip | 配置提示信息 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/right.png) |
+| codeTable | 码表转换 | ![](/right.png) | ![](/right.png) | ![](/right.png) | ![](/right.png) |
+| treeTable | 码表转换 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| list | 设置Select、TreeSelect选项 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| layout | 表单项布局 | ![](/right.png) | ![](/wrong.png) | ![](/right.png) | ![](/right.png) |
+| showType | Select组件显示方式 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| isSelectLeaf | TreeSelect 只能选择叶子节点 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| showSearch | 是否支持搜索框，用于Selete及TreeSelect | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| labelInValue | 是否把每个选项的 label 包装到 value 中 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| placeholder | 文本框的占位符 | ![](/right.png) | ![](/wrong.png) | ![](/right.png) | ![](/right.png) |
+
+### 筛选项工具栏区域 config.grid\_filter\_quick
+
+| 参数 | 参数说明 | Json编码 | Excel & 批处理 | Excel & 导入 | 页面配置 |
+| --- | --- | --- | --- | --- | --- |
+| label | 标签的文本 | ![](/right.png) | ![](/wrong.png) | ![](/right.png) | ![](/right.png) |
+| name | 字段名 | ![](/right.png) | ![](/wrong.png) | ![](/right.png) | ![](/right.png) |
+| type | 录入项类别 | ![](/right.png) | ![](/wrong.png) | ![](/right.png) | ![](/right.png) |
+| tooltip | 配置提示信息 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| defaultValue | 默认值 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+| list | 设置Select、TreeSelect选项 | ![](/right.png) | ![](/wrong.png) | ![](/wrong.png) | ![](/wrong.png) |
+
+<!-- ### config.grid_setting_sort
+| 参数 | 参数说明 | Json编码 | Excel & 批处理 | Excel & 导入 | 页面配置 |
+| --- | --- | --- | --- | --- | --- |
+| name | ✔ | --- | --- | --- |
+| col | ✔ | --- | --- | --- |
+| asc | ✔ | --- | --- | --- | -->
+
+## 数据驱动视图组件树
+
+![](/dataToView/compontTree.png)
+
+
+
+---
+url: /rspress-sdp-n/component/index.md
+---
+
+为 Web 应用提供了丰富的基础 UI 组件，我们还将持续探索企业级应用的最佳 UI 实践。
+
+
+
+---
+url: /rspress-sdp-n/component/basegrid/api_event.md
+---
+
+import { Prompt } from '@rspress/core/theme';
+
+# 事件 & API
+
+<Prompt
+  title="一键创建 Sheet.模块"
+  description="复制这段 Prompt 发送给你的 AI Agent，将他作为开发基础列表模块的开发指南。"
+  prompt={`按照基础列表事件 & API文档 http://localhost:3000/frontdocv2/component/basegrid/api_event.html
+创建一个基础列表模块。
+
+1. 引入并使用 DDBaseGrid 组件，通过 config 配置 api_grid_query 等基础属性。
+2. 在 config.grid_columns 中定义列表列，设置 title、dataIndex、width 等基础字段。
+3. 按数据类型为列配置 render，支持数值、日期、码表、图标等格式化方式。
+4. 按需配置列的 filter、codeTable 及 func、actionRef、queryParam、onRow 等扩展能力。`}
+/>
+
+## API
+
+### DDBaseGrid
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| [config](/rspress-sdp-n/component/basegrid/api_event.md#config) | 基础配置 | object | - |
+| func | 列的自定义渲染、操作列设置、行单/双击事件，参照 [后端分页---复杂示例](/rspress-sdp-n/component/basegrid/eg_code.md#后端分页---复杂示例) | object | - |
+| actionRef | 列表ref，参照 [后端分页---复杂示例](/rspress-sdp-n/component/basegrid/eg_code.md#后端分页---复杂示例) | RefObject | - |
+| queryParam | 查询接口携带参数，参照 [后端分页---复杂示例](/rspress-sdp-n/component/basegrid/eg_code.md#后端分页---复杂示例) | object | - |
+| onRow | 行事件，参照 [后端分页---复杂示例](/rspress-sdp-n/component/basegrid/eg_code.md#后端分页---复杂示例) | object | - |
+| afterReloadGridData | 数据加载后执行，参照 [后端分页---复杂示例](/rspress-sdp-n/component/basegrid/eg_code.md#后端分页---复杂示例) | function | - |
+| userDataSource | 直接传入列表数据，参照 [传入数据---前端分页](/rspress-sdp-n/component/basegrid/eg_code.md#传入数据--前端分页) | function | - |
+| [Antd Table](https://ant.design/component/table-cn#api) | 支持所有Antd Table属性设置 | - | - |
+
+### config
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| api\_grid\_query | 列表查询api | string | - |
+| grid\_sticky\_affix | 列表锁定高度 | number | - |
+| grid\_scroll\_y | y轴滚动条，默认null | number | - |
+| grid\_scroll\_x | x轴滚动条，默认700px | number | 700 |
+| grid\_border | 是否显示序号 | boolean | true |
+| grid\_handle\_width | 自定义操作列宽度 | number | - |
+| grid\_row\_key | 主键 | string|array | uuid |
+| grid\_show\_serial\_number | 是否显示序号 | boolean | false |
+| grid\_click\_checked |  是否开启单击或双击勾选事件，1单击勾选，2双击勾选 | `1`|`2`|`-` | - |
+| [grid\_columns](/rspress-sdp-n/component/basegrid/api_event.md#configgrid_columns) | 列表列 | array | - |
+
+### config.grid\_columns
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| title | 列头显示文字 | string | - |
+| dataIndex | 数据key | string | - |
+| width | 列宽度 | number | - |
+| fixed | 列是否固定 | `left`|`right` | - |
+| titleTooltip | 列头说明文字 | string | - |
+| align | 列对齐方式 | `left`|`right`|`center` | `left` |
+| ellipsis | 超过宽度自动省略 | boolean | false |
+| hidden | 隐藏列 | boolean | false |
+| sorter | 排序 | boolean | false |
+| sum | 是否开启求和 | boolean | false |
+| sum2 | 是否开启后端求和 | boolean | false |
+| children | 分组表头 | grid\_columns\[] | - |
+| [render](/rspress-sdp-n/component/basegrid/api_event.md#configgrid_columnsrender) | 列渲染 | objcet | - |
+| [filter](/rspress-sdp-n/component/basegrid/api_event.md#configgrid_columnsfilter) | 表头筛选 | objcet | - |
+| [codeTable](/rspress-sdp-n/component/basegrid/api_event.md#configgrid_columnscodetable) | 码表转换 | objcet | - |
+
+### config.grid\_columns.render
+
+#### 格式化数值
+
+```ts
+render: { type: 'number', format: '0,0.0000' }
+render: { type: 'number', format: '0,0.00' }
+```
+
+#### 格式化时间
+
+```ts
+render: { type: 'date', format: 'YYYY-MM-DD' }
+render: { type: 'date', format: 'YYYY-MM-DD HH:mm:ss' }
+```
+
+#### 前端格式化码表
+
+* 也可以利用 [codeTable](/rspress-sdp-n/component/basegrid/api_event.md#configgrid_columnscodetable) 属性格式化码表
+* 可结合 [格式化图标类](/rspress-sdp-n/component/basegrid/api_event.md#格式化图标类) 配套使用
+
+```ts
+render: {
+  map: [
+    { value: 'Y', text: '检查通过' },
+    { value: 'N', text: '检查未通过' },
+    { value: '', text: '未检查' },
+  ]
+}
+```
+
+#### 格式化图标类
+
+```ts
+// color可选: default|success|processing|error|warning
+render: {
+  // Tag
+  tag: [
+    { value: '0139', color: 'default' },
+    { value: '0130', color: 'error' },
+    { value: '', color: 'processing' },
+  ],
+  // 图标
+  icon: [
+    { value: '0139', icon: 'CheckOutlined', color: 'default' },
+    { value: '0130', icon: 'CoffeeOutlined', color: 'error' },
+    { value: '', icon: 'RobotOutlined', color: 'processing' },
+  ],
+  // 状态点
+  circle: [
+    { value: '0139', color: 'default' },
+    { value: '0130', color: 'error' },
+    { value: '', color: 'processing' },
+  ]
+}
+
+```
+
+#### 自定义格式化
+
+* 需要结合func属性配套使用
+* 参照示例 [后端分页 - 复杂示例](/rspress-sdp-n/component/basegrid/eg_code.md#后端分页---复杂示例)
+
+```ts
+render: { func: 'renderExampleXh4' }
+```
+
+### config.grid\_columns.codeTable
+
+* 也可以利用 config.grid\_columns.render [前端格式化码表](/rspress-sdp-n/component/basegrid/api_event.md#前端格式化码表) 属性格式化码表
+* 可结合 [格式化图标类](/rspress-sdp-n/component/basegrid/api_event.md#格式化图标类) 配套使用
+
+```ts
+codeTable: ['code_dm_ckts_hgjldw', '01']
+```
+
+### config.grid\_columns.filter
+
+#### 多选
+
+```ts
+// 基于码表取值
+filter: {
+  type: 'Select',
+  codeTable: ['code_dm_ckts_hgjgfs', '01'],
+  showCode: true,
+}
+// 基于前端取值
+filter: {
+  type: 'Select',
+  list: [
+    { text: '已结关', value: 'yjg' },
+    { text: '未结关', value: 'wjg' },
+  ],
+}
+```
+
+#### 单选
+
+```ts
+// 基于码表取值
+filter: {
+  type: 'Radio',
+  codeTable: ['code_dm_ckts_hgzfjsfs', '01'],
+},
+// 基于前端取值
+filter: {
+  type: 'Radio',
+  list: [
+    { text: '全部', value: 'qb' },
+    { text: '通过', value: 'tg' },
+    { text: '驳回', value: 'bh' },
+  ],
+},
+```
+
+#### 录入框
+
+```ts
+filter: {
+  type: 'Input',
+}
+```
+
+
+
+---
+url: /rspress-sdp-n/component/basegrid/eg_code.md
+---
+
+# 代码演示
+
+## 后端分页 - 简单示例
+
+![](/component/basegrid01.png)
+
+### config.ts
+
+```ts title="config.ts"
+export default {
+  api_grid_query: '/hx/ty/crud/queryPager',
+  grid_columns: [
+    { title: '报关单号', dataIndex: 'ckbgdh', width: 180, fixed: 'left' },
+    { title: '项号', dataIndex: 'xh4', width: 60, fixed: 'left' },
+    { title: '银行账号', dataIndex: 'yhzh', width: 160 },
+    { title: '监管方式', dataIndex: 'jgfsDm', width: 155, sorter: true, codeTable: 'code_dm_ckts_hgjgfs', },
+    { title: '出口日期', dataIndex: 'ckrq1', width: 120, sorter: true, render: { type: 'date', format: 'YYYY-MM-DD' } },
+    { title: '商品代码', dataIndex: 'ckspDm', width: 95 },
+    { title: '商品名称', dataIndex: 'ckspmc', width: 180, ellipsis: true, },
+    { title: '海关商品名称', dataIndex: 'hgspmc', width: 180 },
+    { title: '出口合同号', dataIndex: 'ckhth', width: 115 },
+    { title: '成交方式', dataIndex: 'hgcjfsmc', width: 85 },
+    { title: '成交单位', dataIndex: 'hgjldwmc', width: 90, ellipsis: true },
+    { title: '成交数量', dataIndex: 'cjsl1', width: 140, align: 'right', render: { type: 'number', format: '0,0.0000' } },
+    { title: '成交币制', dataIndex: 'cjhghbzmDm', width: 85 },
+    { title: '成交金额', dataIndex: 'cjzj', width: 140, align: 'right', render: { type: 'number', format: '0,0.00' } },
+    { title: '美元离岸价', dataIndex: 'mylaj', width: 140, align: 'right', render: { type: 'number', format: '0,0.00' } },
+    { title: '法定单位', dataIndex: 'dyjldwDm', width: 90, codeTable: 'code_dm_ckts_hgjldw', ellipsis: true },
+    { title: '法定单位数量', dataIndex: 'cksl', width: 140, align: 'right', render: { type: 'number', format: '0,0.0000' } },
+    { title: '第二单位', dataIndex: 'dejldwDm', width: 90, codeTable: 'code_dm_ckts_hgjldw', ellipsis: true },
+    { title: '第二单位数量', dataIndex: 'decksl', width: 140, align: 'right', render: { type: 'number', format: '0,0.0000' } },
+  ],
+};
+```
+
+### index.tsx
+
+```ts title="index.tsx"
+import React from 'react';
+import DDBaseGrid from '@/components/DDBaseGrid';
+import ProCard from '@ant-design/pro-card';
+import tableConfig from './config';
+import { Typography } from 'antd';
+
+const TableList: React.FC<unknown> = () => {
+  return (<>
+    <Typography.Title level={4}>后端分页 - 简单示例</Typography.Title>
+    <ProCard>
+      <DDBaseGrid config={tableConfig} />
+    </ProCard>
+    </>);
+};
+
+export default TableList;
+```
+
+## 后端分页 - 复杂示例
+
+![](/component/basegrid02.png)
+
+### config.ts
+
+```ts title="config.ts"
+export default {
+  api_grid_query: '/hx/ty/crud/queryPager',
+  // grid_show_serial_number: false,
+  grid_row_key: 'uuid', // 列表：主键，默认uuid
+  // grid_row_key: ['uuid1', 'uuid2'], // 列表：主键，联合主键，array格式
+  // grid_click_checked: '1', // 列表：是否开启单击或双击勾选事件，1单击勾选，2双击勾选，默认null点击不勾选
+  // grid_sticky_affix: 44, // 列表：列表锁定高度，默认null
+  // grid_scroll_y: '200px', // 列表：y轴滚动条，默认null
+  // grid_scroll_x: '700px', // 列表：x轴滚动条，默认700px
+  // grid_border: false, // 列表：边框，默认true
+  // grid_handle_width: 500, // 列表：自定义操作列宽度，默认null
+  grid_columns: [
+    // { title: 'uuid1', dataIndex: 'uuid1', width: 260, fixed: 'left' },
+    // { title: 'uuid2', dataIndex: 'uuid2', width: 260, fixed: 'left' },
+    {
+      title: '报关单号', titleTooltip: '报关单号说明......{br}报关单号说明......', dataIndex: 'ckbgdh', width: 180, fixed: 'left', sorter: true,
+      render: { func: 'renderCkbgdh' },
+      filter: {
+        type: 'Select',
+        codeTable: 'code_dm_ckts_hgjgfs',
+        showCode: true,
+      }
+    },
+    { title: '项号', dataIndex: 'xh4', width: 60, render: { func: 'renderExampleXh4' }, fixed: 'left' },
+    { title: '银行账号', dataIndex: 'yhzh', width: 160, render: { func: 'renderExampleYhzh' },
+      filter: {
+        type: 'Select',
+        list: [
+          { text: '已结关', value: 'yjg' },
+          { text: '未结关', value: 'wjg' },
+        ],
+      }
+    },
+    {
+      title: '监管方式', dataIndex: 'jgfsDm', width: 155, sorter: true,
+      codeTable: 'code_dm_ckts_hgjgfs',
+      filter: {
+        type: 'Tree',
+        list: [
+          {
+            text: '数据状态', value: 'sjzt', children: [
+              { text: '已结关', value: 'yjg', },
+              { text: '未结关', value: 'wjg', },
+            ]
+          },
+          {
+            text: '报关单', value: 'bgd', children: [
+              { text: '18位', value: '18', },
+              { text: '21位', value: '21', },
+            ]
+          },
+        ]
+      },
+      render: {
+        // 可以使用codeTable或自定义map中的一种
+        // map: [
+        //   { value: '0139', text: 'aaa' },
+        //   { value: '0130', text: 'BBB' },
+        //   { value: '', text: 'CCC' },
+        // ],
+        tag: [
+          { value: '0139', color: 'default' },
+          { value: '0130', color: 'error' },
+          { value: '', color: 'processing' },
+        ],
+        icon: [
+          { value: '0139', icon: 'CheckOutlined', color: 'default' },
+          { value: '0130', icon: 'CoffeeOutlined', color: 'error' },
+          { value: '', icon: 'RobotOutlined', color: 'processing' },
+        ],
+        circle: [
+          { value: '0139', color: 'default' },
+          { value: '0130', color: 'error' },
+          { value: '', color: 'processing' },
+        ]
+      }
+    },
+    { title: '出口日期', dataIndex: 'ckrq1', width: 120, sorter: true, render: { type: 'date', format: 'YYYY-MM-DD' } },
+    {
+      title: '数据检查状态', dataIndex: 'cytgbz', width: 145, sorter: true,
+      filter: {
+        type: 'Radio',
+        codeTable: 'code_dm_ckts_hgzfjsfs',
+      },
+      render: { map: [
+        { value: 'Y', text: '检查通过' },
+        { value: 'N', text: '检查未通过' },
+        { value: '', text: '未检查' },
+      ], circle: [
+        { value: 'Y', color: 'default' },
+        { value: 'N', color: 'processing' },
+        { value: '', color: 'success' },
+      ] }
+    },
+    {
+      title: '审批状态', dataIndex: 'spzt', width: 125, sorter: true,
+      filter: {
+        type: 'Radio',
+        list: [
+          { text: '全部', value: 'qb' },
+          { text: '通过', value: 'tg' },
+          { text: '驳回', value: 'bh' },
+        ],
+      },
+      render: { map: [
+        { value: 'Y', text: '通过' },
+        { value: 'N', text: '未通过' },
+        { value: '', text: '未检查' },
+      ]}
+    },
+    { title: '征免{br}类型', dataIndex: 'zmlx', width: 95, render: { map: [
+        { value: '4', text: '免税' },
+        { value: '5', text: '征税' },
+        { value: '', text: '退税' },
+      ], tag: [
+        { value: '4', color: 'warning' },
+        { value: '5', color: 'processing' },
+        { value: '6', color: 'default' },
+        { value: '7', color: 'error' },
+        { value: '', color: 'success' },
+      ] }
+    },
+    { title: '申报{br}业务', dataIndex: 'sbyw', width: 105, render: { map: [
+        { value: '1', text: '退税申报' },
+        { value: '2', text: '代理出口' },
+        { value: '6', text: '代办退税' },
+      ], icon: [
+        { value: '1', icon: 'CheckOutlined', color: 'success' },
+        { value: '2', icon: 'CoffeeOutlined', color: 'processing' },
+        { value: '6', icon: 'RobotOutlined', color: 'default' },
+      ] },
+    },
+    { title: '商品代码', dataIndex: 'ckspDm', width: 95 },
+    {
+      title: '商品名称', dataIndex: 'ckspmc', width: 180, ellipsis: true,
+      filter: {
+        type: 'Input',
+      }
+    },
+    { title: '海关商品名称', dataIndex: 'hgspmc', width: 180 },
+    { title: '出口合同号', dataIndex: 'ckhth', width: 115 },
+    {
+      title: '成交信息', dataIndex: 'cjxxGroup', children: [
+        { title: '成交方式', dataIndex: 'hgcjfsmc', width: 85 },
+        { title: '成交单位', dataIndex: 'hgjldwmc', width: 90, ellipsis: true },
+        { title: '成交数量', dataIndex: 'cjsl1', width: 140, align: 'right', render: { type: 'number', format: '0,0.0000' } },
+        { title: '成交币制', dataIndex: 'cjhghbzmDm', width: 85 },
+        { title: '成交金额', dataIndex: 'cjzj', width: 140, align: 'right', render: { type: 'number', format: '0,0.00' }, sum: true },
+      ]
+    },
+    { title: '美元离岸价', dataIndex: 'mylaj', width: 140, align: 'right', render: { type: 'number', format: '0,0.00' }, sum: true },
+    { title: '法定单位', dataIndex: 'dyjldwDm', width: 90, codeTable: 'code_dm_ckts_hgjldw', ellipsis: true },
+    { title: '法定单位数量', dataIndex: 'cksl', width: 140, align: 'right', render: { type: 'number', format: '0,0.0000' }, sum: true },
+    { title: '第二单位', dataIndex: 'dejldwDm', width: 90, codeTable: 'code_dm_ckts_hgjldw', ellipsis: true },
+    { title: '第二单位数量', dataIndex: 'decksl', width: 140, align: 'right', render: { type: 'number', format: '0,0.0000' } },
+    { title: '隐藏列', dataIndex: 'hiddenCol', width: 130, hidden: true },
+  ],
+  handle_columns: [
+    { name: '事项通知书', key: 'cs1', func: 'handleColumns1' },
+    { name: '随附单据', key: 'cs2', func: 'handleColumns2', disabled: 'setCs2Disabled' }
+  ]
+};
+```
+
+### index.tsx
+
+```ts title="index.tsx"
+import React, { useState, useRef } from 'react';
+import DDBaseGrid from '@/components/DDBaseGrid';
+import tableUtil from '@/components/DDBaseGrid/tableUtil';
+import ProCard from '@ant-design/pro-card';
+import { Tooltip, Badge, Space, message } from 'antd';
+import tableConfig from './config';
+import myUtil from '@/components/DDAssist/util';
+import { Typography } from 'antd';
+
+const TableList: React.FC<unknown> = () => {
+  const [selectionRowKeys, setSelectionRowKeys] = useState<any>([]);
+  const [selectionRows, setSelectionRows] = useState<any>([]);
+  const [queryParam, setQueryParam] = useState({}); // 设置列表查询条件
+  const refGrid: any = useRef();
+  const Func: any = {};
+
+  // 列表自定义渲染
+  Func.columnsRender = {
+    renderExampleYhzh: (param: any) => {
+      return myUtil.grid.formatBankNo(param);
+    },
+    renderCkbgdh: (param: any) => {
+      const { text, record } = param;
+      const badgeSuccess = <Badge status="success" key='success' />;
+      const badgeError = <Badge status="error" key='error' />;
+      const sybz = record.sybz; // N=未使用; Y=已使用
+      const html = [];
+      html.push(sybz === 'Y' ? badgeSuccess : badgeError);
+      html.push(<a key='ckbgdh_ele_link' type="link" >{text}</a>);
+      return <Tooltip title='tooltip'><Space>{html}</Space></Tooltip>;
+    },
+    renderExampleXh4: (param: any) => {
+      const { text } = param;
+      return <a onClick={(event: any) => {
+        event.stopPropagation();
+        Func.openDrawer(param);
+      }}>{text}
+      </a>;
+    },
+  }
+
+  // 配置项：自定义操作列是否可用
+  Func.setCs2Disabled = (record: any) => {
+    if (record.jgfsDm === '0139' || record.jgfsDm === '0110') {
+      return true;
+    }
+    return false;
+  }
+
+  // 配置项：自定义操作列
+  Func.handleColumns1 = (param: any, event: any) => {
+    event.stopPropagation();
+    const { record } = param;
+    message.info(`事项通知书: ${record?.ckbgdh}`);
+    refGrid.current!.reload({
+      afterReload: () => {
+        setTimeout(() => {
+          message.info('列表加载后执行');
+        }, 1500);
+      }
+    });
+  }
+
+  // 配置项：自定义操作列
+  Func.handleColumns2 = (param: any, event: any) => {
+    event.stopPropagation();
+    const { record } = param;
+    message.info(`随附单据: ${record?.ckbgdh}`);
+    setQueryParam({a: 112});
+  }
+
+  // 列表行单击事件
+  Func.gridOnRowClick = (param: any) => {
+    console.info(param);
+  }
+
+  // 列表行双击击事件
+  Func.gridOnRowDoubleClick = (param: any) => {
+    console.info(param);
+  }
+
+  // 列选择
+  const rowSelection = tableUtil.initRowSelection({
+    selectionType: 'checkbox',
+    selectedRowKeys: selectionRowKeys,
+    onChange: (selectedRowKeys: any, selectedRows: any[]) => {
+      setSelectionRowKeys(selectedRowKeys);
+      console.info(selectedRowKeys, selectedRows);
+    },
+    onSelect: ( record: any, selected: any, selectedRows: any, nativeEvent: any ) => {
+      console.info(record, selected, selectedRows, nativeEvent);
+    },
+    onSelectAll: (selected: any, selectedRows: any, changeRows: any) => {
+      console.info(selected, selectedRows, changeRows);
+    },
+  });
+
+  // 列表数据加载后执行
+  const afterReloadGridData = (param: any) => {
+    console.info('列表数据加载后执行', param);
+  };
+
+  return (<>
+    <Typography.Title level={4}>后端分页 - 复杂示例</Typography.Title>
+    <ProCard>
+      <DDBaseGrid
+        config={tableConfig}
+        func={Func}
+        actionRef={refGrid}
+        queryParam={queryParam}
+        onRow={tableUtil.initOnRow({
+          refGrid,
+          selectionRows,
+          selectionRowKeys,
+          setSelectionRowKeys,
+          setSelectionRows,
+          func: Func,
+          config: tableConfig,
+        })}
+        afterReloadGridData={afterReloadGridData}
+        {...rowSelection}
+      />
+    </ProCard>
+  </>);
+};
+
+export default TableList;
+
+```
+
+## 传入数据 & 前端分页
+
+![](/component/basegrid03.png)
+
+### config.ts
+
+```ts title="config.ts"
+export default {
+  api_grid_query: '/hx/ty/crud/queryPager',
+  grid_columns: [
+    { title: '报关单号', dataIndex: 'ckbgdh', width: 180, fixed: 'left' },
+    { title: '项号', dataIndex: 'xh4', width: 60, fixed: 'left' },
+    { title: '银行账号', dataIndex: 'yhzh', width: 160 },
+    { title: '监管方式', dataIndex: 'jgfsDm', width: 155, sorter: true, codeTable: ['code_dm_ckts_hgjgfs', '01'], },
+    { title: '出口日期', dataIndex: 'ckrq1', width: 120, sorter: true, render: { type: 'date', format: 'YYYY-MM-DD' } },
+    { title: '商品代码', dataIndex: 'ckspDm', width: 95 },
+    { title: '商品名称', dataIndex: 'ckspmc', width: 180, ellipsis: true, },
+    { title: '海关商品名称', dataIndex: 'hgspmc', width: 180 },
+    { title: '出口合同号', dataIndex: 'ckhth', width: 115 },
+    { title: '成交方式', dataIndex: 'hgcjfsmc', width: 85 },
+    { title: '成交单位', dataIndex: 'hgjldwmc', width: 90, ellipsis: true },
+    { title: '成交数量', dataIndex: 'cjsl1', width: 140, align: 'right', render: { type: 'number', format: '0,0.0000' } },
+    { title: '成交币制', dataIndex: 'cjhghbzmDm', width: 85 },
+    { title: '成交金额', dataIndex: 'cjzj', width: 140, align: 'right', render: { type: 'number', format: '0,0.00' } },
+    { title: '美元离岸价', dataIndex: 'mylaj', width: 140, align: 'right', render: { type: 'number', format: '0,0.00' } },
+    { title: '法定单位', dataIndex: 'dyjldwDm', width: 90, codeTable: ['code_dm_ckts_hgjldw', '01'], ellipsis: true },
+    { title: '法定单位数量', dataIndex: 'cksl', width: 140, align: 'right', render: { type: 'number', format: '0,0.0000' } },
+    { title: '第二单位', dataIndex: 'dejldwDm', width: 90, codeTable: ['code_dm_ckts_hgjldw', '01'], ellipsis: true },
+    { title: '第二单位数量', dataIndex: 'decksl', width: 140, align: 'right', render: { type: 'number', format: '0,0.0000' } },
+  ],
+};
+```
+
+### index.tsx
+
+```ts title="index.tsx"
+import React, { useState, useEffect } from 'react';
+import DDBaseGrid from '@/components/DDBaseGrid';
+import ProCard from '@ant-design/pro-card';
+import tableConfig from './config';
+import { Typography } from 'antd';
+import { getGridData } from '@/services/hts/api';
+
+const TableList: React.FC<unknown> = () => {
+  const [gridData, setGridData] = useState<any>([]);
+
+  // 获取数据
+  const getData = () => {
+    getGridData(`${API_URL_BASE}/hx/ty/crud/queryPager2`, {}).then((response) => {
+      setGridData(response?.body || []);
+    });
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  return (<>
+    <Typography.Title level={4}>传入数据 & 前端分页</Typography.Title>
+    <ProCard>
+      <DDBaseGrid config={tableConfig} userDataSource={gridData} />
+    </ProCard>
+  </>);
+};
+
+export default TableList;
+
+```
+
+## 传入数据 & 无分页
+
+![](/component/basegrid04.png)
+
+### config.ts
+
+```ts title="config.ts"
+export default {
+  api_grid_query: '/hx/ty/crud/queryPager',
+  grid_columns: [
+    { title: '报关单号', dataIndex: 'ckbgdh', width: 180, fixed: 'left' },
+    { title: '项号', dataIndex: 'xh4', width: 60, fixed: 'left' },
+    { title: '银行账号', dataIndex: 'yhzh', width: 160 },
+    { title: '监管方式', dataIndex: 'jgfsDm', width: 155, sorter: true, codeTable: 'code_dm_ckts_hgjgfs', },
+    { title: '出口日期', dataIndex: 'ckrq1', width: 120, sorter: true, render: { type: 'date', format: 'YYYY-MM-DD' } },
+    { title: '商品代码', dataIndex: 'ckspDm', width: 95 },
+    { title: '商品名称', dataIndex: 'ckspmc', width: 180, ellipsis: true, },
+    { title: '海关商品名称', dataIndex: 'hgspmc', width: 180 },
+    { title: '出口合同号', dataIndex: 'ckhth', width: 115 },
+    { title: '成交方式', dataIndex: 'hgcjfsmc', width: 85 },
+    { title: '成交单位', dataIndex: 'hgjldwmc', width: 90, ellipsis: true },
+    { title: '成交数量', dataIndex: 'cjsl1', width: 140, align: 'right', render: { type: 'number', format: '0,0.0000' } },
+    { title: '成交币制', dataIndex: 'cjhghbzmDm', width: 85 },
+    { title: '成交金额', dataIndex: 'cjzj', width: 140, align: 'right', render: { type: 'number', format: '0,0.00' } },
+    { title: '美元离岸价', dataIndex: 'mylaj', width: 140, align: 'right', render: { type: 'number', format: '0,0.00' } },
+    { title: '法定单位', dataIndex: 'dyjldwDm', width: 90, codeTable: 'code_dm_ckts_hgjldw', ellipsis: true },
+    { title: '法定单位数量', dataIndex: 'cksl', width: 140, align: 'right', render: { type: 'number', format: '0,0.0000' } },
+    { title: '第二单位', dataIndex: 'dejldwDm', width: 90, codeTable: 'code_dm_ckts_hgjldw', ellipsis: true },
+    { title: '第二单位数量', dataIndex: 'decksl', width: 140, align: 'right', render: { type: 'number', format: '0,0.0000' } },
+  ],
+};
+```
+
+### index.tsx
+
+```ts title="index.tsx"
+import React, { useState, useEffect } from 'react';
+import DDBaseGrid from '@/components/DDBaseGrid';
+import ProCard from '@ant-design/pro-card';
+import tableConfig from './config';
+import { Typography } from 'antd';
+import { getGridData } from '@/services/hts/api';
+
+const TableList: React.FC<unknown> = () => {
+  const [gridData, setGridData] = useState<any>([]);
+
+  // 获取数据
+  const getData = () => {
+    getGridData(`${API_URL_BASE}/hx/ty/crud/queryPager2`, {}).then((response) => {
+      setGridData(response?.body || []);
+    });
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  return (<>
+    <Typography.Title level={4}>传入数据 & 前端分页</Typography.Title>
+    <ProCard>
+      <DDBaseGrid config={tableConfig} userDataSource={gridData} />
+    </ProCard>
+    <Typography.Title level={4}>传入数据 & 无分页</Typography.Title>
+    <ProCard>
+      <DDBaseGrid config={tableConfig} userDataSource={gridData} pagination={false} />
+    </ProCard>
+  </>);
+};
+
+export default TableList;
+
+```
+
+
+
+---
+url: /rspress-sdp-n/component/baseform/api_event.md
+---
+
+# 事件 & API
+
+## API
+
+### DDBaseForm
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| [config](/rspress-sdp-n/component/baseform/api_event.md#config) | 基础配置 | object | - |
+| func | 表单校验、表单事件，参照 [自定义事件及校验](/rspress-sdp-n/component/baseform/api_event.md#configform_itemsrules) | object | - |
+| form | 经 Form.useForm() 创建的 form 控制实例，不提供时会自动创建 | FormInstance | - |
+| initialValues | 表单默认值，只有初始化以及重置时生效 | object | - |
+
+### config
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| form\_layout\_type | 表单整体一列或多列布局 | `horizontal`|`vertical`|2、3、4、6、8、12... | `vertical`
+| form\_label\_input\_layout | 标签与录入框排列方式 | `horizontal`|`vertical` |
+| form\_submit\_type | 表单提交方式 | `FormData` | - |
+| [form\_items](/rspress-sdp-n/component/baseform/api_event.md#configform_items) | 表单项 | array | - |
+
+### config.form\_items
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| label | 标签的文本 | string | - |
+| name | 字段名 | string | - |
+| tooltip | 配置提示信息 | string | - |
+| [type](/rspress-sdp-n/component/baseform/api_event.md#configform_itemstype) | 录入项类别 | enum | - |
+| [codeTable](/rspress-sdp-n/component/baseform/api_event.md#configform_itemscodetable) | 码表转换 | objcet | - |
+| [treeTable](/rspress-sdp-n/component/baseform/api_event.md#configform_itemstreetable) | 码表转换 | objcet | - |
+| [list](/rspress-sdp-n/component/baseform/api_event.md#configform_itemslist) | 设置Select、TreeSelect选项 | array | - |
+| showSearch | 是否支持搜索框，用于Selete及TreeSelect | boolean | - |
+| mode | 设置 Select 的模式为多选或标签 | `multiple`|`tags` | - |
+| labelInValue | 是否把每个选项的 label 包装到 value 中 | boolean | false |
+| isSelectLeaf | TreeSelect 只能选择叶子节点 | boolean | - |
+| [rules](/rspress-sdp-n/component/baseform/api_event.md#configform_itemsrules) | 校验规则，设置字段的校验逻辑。 | Rule\[] | - |
+| readOnly | 是否只读 | boolean | - |
+| eventOnChange | 内容变化时的回调，参照 [自定义事件及校验](/rspress-sdp-n/component/baseform/api_event.md#configform_itemsrules) | function | - |
+| eventOnBlur | 失去焦点时回调，参照 [自定义事件及校验](/rspress-sdp-n/component/baseform/api_event.md#configform_itemsrules) | function | - |
+| eventOnFocus | 获得焦点时回调，参照 [自定义事件及校验](/rspress-sdp-n/component/baseform/api_event.md#configform_itemsrules) | function | - |
+| enterFocus | 按下回车的回调，参照 [自定义事件及校验](/rspress-sdp-n/component/baseform/api_event.md#configform_itemsrules) | function | - |
+| [format](/rspress-sdp-n/component/baseform/api_event.md#configform_itemsformat) | 格式化日期、数值 | string | - |
+| layout | 表单项布局，参照 [简单示例](/rspress-sdp-n/component/baseform/eg_code.md#简单示例) | object | - |
+| range | 日期或文本是否是范围控件 | boolean | - |
+| placeholder | 文本框的占位符 | string | array | - |
+| defaultValue | 默认值 | object | - |
+| maxCount | type为Upload时，上传附件最大数量 | number | - |
+
+### config.form\_items.type
+
+* Hidden、Input、Password、InputNumber、Select、DatePicker、TimePicker、Radio、Checkbox、AutoComplete、ComplexPicker、Cascader、GroupTitle、Avatar、Upload、UploadVideo、UploadAudio、UploadPicture、TextArea、TreeSelect、InputTags、Blank、Switch、RichTextEditor、MarkdownEditor
+
+### config.form\_items.codeTable
+
+* 用于设置 Select 选项
+* 也可以利用 [config.form\_items.list](/rspress-sdp-n/component/baseform/api_event.md#configform_itemslist) 属性格式化码表
+
+```ts
+codeTable: ['code_dm_ckts_hgjldw', '01']
+```
+
+### config.form\_items.treeTable
+
+* 用于设置 TreeSelect 选项
+* 也可以利用 [config.form\_items.list](/rspress-sdp-n/component/baseform/api_event.md#configform_itemslist) 属性格式化码表
+
+```ts
+treeTable: ['CODE_DM_BADZ_BADZ', '01']
+```
+
+### config.form\_items.list
+
+* 用于设置Select、TreeSelect选项
+* Select 也可以利用 [config.form\_items.codeTable](/rspress-sdp-n/component/baseform/api_event.md#configform_itemscodetable) 属性格式化码表
+* TreeSelect 也可以利用 [config.form\_items.treeTable](/rspress-sdp-n/component/baseform/api_event.md#configform_itemstreetable) 属性格式化码表
+
+```ts
+// select
+list: [
+    { name: '中国', value: 'china' },
+    { name: '日本', value: 'japan' },
+    { name: '韩国', value: 'korea' },
+]
+// treeSelect
+list: [
+  { title: '退税单证', value: '1',
+    children: [
+      {title: '出口发票', value: '1-1', children: [{title: '出口发票1', value: '1-1-1'}]},
+      {title: '进口发票', value: '1-2'}
+    ]
+  },
+  { title: '退税单证2', value: '2'},
+  { title: '退税单证3', value: '3', children: [
+      { title: '退税单证3-1', value: '3-1', children: [{title: '退税单证3-1-1', value: '3-1-1'}, {title: '退税单证3-1-2', value: '3-1-2'}]},
+      { title: '退税单证3-2', value: '3-2'}
+  ]},
+]
+```
+
+### config.form\_items.format
+
+```ts
+// 格式化日期
+format: 'YYYY-MM-DD HH:mm:ss'
+// 格式化数值
+format: '0,0.00'
+```
+
+### config.form\_items.rules
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| [type](/rspress-sdp-n/component/baseform/api_event.md#基础校验) | 类型 | string | - |
+| message | 错误信息 | string | - |
+| range | 校验范围 | string|array | - |
+| func | 自定义校验，参照 [自定义事件及校验](/rspress-sdp-n/component/baseform/api_event.md#configform_itemsrules) | function | - |
+
+#### 基础校验
+
+config.form\_items.rules.type
+
+* **base\_required** 必录
+* **base\_string** 字符
+* **base\_date** 日期
+* **base\_number** 数值
+* **base\_type\_number** 数字
+* **base\_type\_number\_english** 数字字母
+* **base\_type\_phone** 电话
+* **base\_type\_idcard** 身份证
+* **base\_type\_chinese** 中文
+* **base\_type\_mail** 邮件
+
+#### 数值校验
+
+config.form\_items.rules.range
+
+* **+** 正数
+* **-** 负数
+* **+-** 非0
+* **+0** 大于等于0
+* **-0** 小于等于0
+
+#### 数值范围
+
+* **config.form\_items.rules.length** 整数位
+* **config.form\_items.rules.decimal** 小数位
+
+#### 字符校验
+
+* **config.form\_items.rules.range** 范围
+* **config.form\_items.rules.length** 长度
+
+
+
+---
+url: /rspress-sdp-n/component/baseform/eg_code.md
+---
+
+# 代码演示
+
+## 简单示例
+
+![](/component/baseform01.png)
+
+### config.ts
+
+```ts title="config.ts"
+export default {
+  form_layout_type: 4, // 表单整体一列或多列布局: horizontal vertical 2 3 4 6 8 12
+  form_label_input_layout: 'vertical', // 标签与录入框排列方式: horizontal vertical
+  // 配置项：表单项
+  form_items: [
+    { label: 'ID', type: 'Hidden', name: 'uuid' },
+    { label: '基本信息', type: 'GroupTitle', name: 'jbxx' },
+    { label: '报关单号', type: 'Input', name: 'ckbgdh', tooltip: '报关单号说明...', rules: [
+      { type: 'base_required', message: '必录项可选提示信息' },
+    ] },
+    { label: '出口日期', type: 'DatePicker', name: 'ckrq1', format: 'YYYY-MM-DD' },
+    { label: '出口合同号', type: 'Input', name: 'ckhth' },
+    { label: '核销单号', type: 'Input', name: 'hxdh' },
+    { label: '运输工具名称', type: 'Input', name: 'ysgjmc' },
+    { label: '单证', name: 'dz1', type: 'TreeSelect', isSelectLeaf: true, showSearch: true, labelInValue: false, treeTable: ['CODE_DM_BADZ_BADZ', '01'] },
+    { label: '单证', name: 'dz2', type: 'TreeSelect', isSelectLeaf: true, showSearch: true, labelInValue: false, list: [
+        { title: '退税单证', value: '1',
+          children: [
+            {title: '出口发票', value: '1-1', children: [{title: '出口发票1', value: '1-1-1'}]},
+            {title: '进口发票', value: '1-2'}
+          ]
+        },
+        { title: '退税单证2', value: '2'},
+        { title: '退税单证3', value: '3', children: [
+            { title: '退税单证3-1', value: '3-1', children: [{title: '退税单证3-1-1', value: '3-1-1'}, {title: '退税单证3-1-2', value: '3-1-2'}]},
+            { title: '退税单证3-2', value: '3-2'}
+        ]},
+        ]
+    },
+    { label: '监管方式代码', type: 'Input', name: 'jgfsDm' },
+    { label: '海关成交方式', type: 'Select', name: 'hgcjfsmc', codeTable: 'code_static_hgcjfs_mc' },
+    { label: '国别', type: 'Select', name: 'gb',  list: [
+        { name: '中国', value: 'china' },
+        { name: '日本', value: 'japan' },
+        { name: '韩国', value: 'korea' },
+    ] },
+    { label: '成交海关货币字母代码', type: 'Input', name: 'cjhghbzmDm' },
+    { label: '成交总价', type: 'InputNumber', name: 'cjzj', format: '0,0.00' },
+    { label: '运费海关货币字母代码', type: 'Input', name: 'yfhghbzmDm' },
+    { label: '运费金额', type: 'InputNumber', name: 'yfje', format: '0,0.00' },
+    { label: '运费计算方式代码', type: 'Select', name: 'yfjsfsDm', codeTable: 'code_dm_ckts_hgyfjsfs' },
+    { label: '运费折算数量', type: 'InputNumber', name: 'yfzssl', format: '0,0.0000' },
+    { label: '保费海关货币字母代码', type: 'Input', name: 'bfhghbzmDm' },
+    { label: '保费金额', type: 'InputNumber', name: 'bfje', format: '0,0.00' },
+    { label: '保费计算方式代码', type: 'Select', name: 'bfjsfsDm', codeTable: 'code_dm_ckts_hgbfjsfs' },
+    { label: '杂费海关货币字母代码', type: 'Input', name: 'zfhghbzmDm' },
+    { label: '杂费金额', type: 'InputNumber', name: 'zfje1', format: '0,0.00' },
+    { label: '杂费计算方式代码', type: 'Select', name: 'zfjsfsDm', codeTable: 'code_dm_ckts_hgzfjsfs' },
+    { label: '商品信息', type: 'GroupTitle', name: 'spxx' },
+    { label: '出口商品代码', type: 'Input', name: 'ckspDm' },
+    { label: '出口商品名称', type: 'Input', name: 'ckspmc', readOnly: true },
+    { label: '海关商品名称', type: 'Input', name: 'hgspmc' },
+    { label: '成交计量单位', type: 'Input', name: 'hgjldwmc' },
+    { label: '成交数量', type: 'InputNumber', name: 'cjsl1', format: '0,0.0000' },
+    { label: '法定计量单位', type: 'Input', name: 'dyjldwDm' },
+    { label: '法定数量', type: 'InputNumber', name: 'cksl', format: '0,0.0000' },
+    { label: '第二计量单位', type: 'Input', name: 'dejldwDm' },
+    { label: '第二出口数量', type: 'InputNumber', name: 'decksl', format: '0,0.0000' },
+    { label: '规格型号', type: 'Input', name: 'ggxh' },
+    { label: '数据检查标志', type: 'Hidden', name: 'cytgbz' },
+    { label: '其他信息', type: 'GroupTitle', name: 'qtxx' },
+    { label: '备注', type: 'TextArea', name: 'bz', autoSize: { minRows:3, maxRows: 3}, layout: {
+      xs: {span: 24, offset: 0, pull: 0},
+      sm: {span: 24, offset: 0, pull: 0},
+      md: {span: 24, offset: 0, pull: 0},
+      lg: {span: 24, offset: 0, pull: 0},
+      xl: {span: 24, offset: 0, pull: 0},
+      xxl: {span: 24, offset: 0, pull: 0}
+    } },
+  ],
+};
+```
+
+### index.tsx
+
+```ts title="index.tsx"
+import React, { useEffect } from 'react';
+import { ProCard } from '@ant-design/pro-components';
+import { Button, Form } from 'antd';
+import DDBaseForm from '@/components/DDForm/DDBaseForm';
+import formConfig from './config';
+import { Typography } from 'antd';
+import { FooterToolbar } from '@ant-design/pro-components';
+
+const TableList: React.FC<unknown> = () => {
+  const [form] = Form.useForm();
+  useEffect(() => {
+  }, []);
+
+  const onReset = () => {
+    form.resetFields();
+  };
+
+  const onSave = () => {
+    form.validateFields().then(async (values: any) => {
+      console.info(values)
+    });
+  };
+
+  return (<>
+    <Typography.Title level={4}>表单 - 简单示例</Typography.Title>
+    <ProCard>
+      <DDBaseForm config={formConfig} form={form} initialValues={{}}/>
+      <FooterToolbar >
+        <Button type='default' onClick={onReset}>重置</Button>
+        <Button type='primary' onClick={onSave}>保存</Button>
+      </FooterToolbar>
+    </ProCard>
+  </>);
+};
+
+export default TableList;
+
+```
+
+## 自定义事件及校验
+
+![](/component/baseform02.png)
+
+### config.ts
+
+```ts title="config.ts"
+export default {
+  form_layout_type: 4, // 表单整体一列或多列布局: horizontal vertical 2 3 4 6 8 12
+  form_label_input_layout: 'vertical', // 标签与录入框排列方式: horizontal vertical
+  // 配置项：表单项
+  form_items: [
+    { label: 'Select', type: 'GroupTitle', name: 'zdsj' },
+    { label: 'Select1', type: 'Select', name: 'test81', codeTable: 'code_dm_ckts_cktmsywlx', showSearch: true, layout: {
+      xs: {span: 5, offset: 0, pull: 0},
+      sm: {span: 5, offset: 0, pull: 0},
+      md: {span: 5, offset: 0, pull: 0},
+      lg: {span: 5, offset: 0, pull: 0},
+      xl: {span: 5, offset: 0, pull: 0},
+      xxl: {span: 5, offset: 0, pull: 0}
+    } },
+    { label: 'Select3', type: 'Select', name: 'test82', showType: '2', codeTable: 'code_dm_ckts_cktmsywlx' },
+    { label: 'Select2', type: 'Select', name: 'test83', showType: '3', codeTable: 'code_dm_ckts_cktmsywlx', eventOnChange: 'test83', mode: 'multiple', layout: {
+      xs: {span: 2, offset: 0, pull: 0},
+      sm: {span: 2, offset: 0, pull: 0},
+      md: {span: 2, offset: 0, pull: 0},
+      lg: {span: 2, offset: 0, pull: 0},
+      xl: {span: 2, offset: 0, pull: 0},
+      xxl: {span: 2, offset: 0, pull: 0}
+    } },
+    { label: 'Select2Name', type: 'Input', name: 'test84', readOnly: true, layout: {
+      xs: {span: 6, offset: 0, pull: 0},
+      sm: {span: 6, offset: 0, pull: 0},
+      md: {span: 6, offset: 0, pull: 0},
+      lg: {span: 6, offset: 0, pull: 0},
+      xl: {span: 6, offset: 0, pull: 0},
+      xxl: {span: 6, offset: 0, pull: 0}
+    } },
+    { label: '字段事件', type: 'GroupTitle', name: 'zdsj' },
+    { label: 'OnChange1', type: 'Input', name: 'test91', eventOnChange: 'test91' },
+    { label: 'OnBlur', type: 'Input', name: 'test92', eventOnBlur: 'test92' },
+    { label: 'OnFocus', type: 'Input', name: 'test93', eventOnFocus: 'test93' },
+    { label: 'OnChange2', type: 'Select', name: 'test94', eventOnChange: 'test94', list: [
+      { value: 'a', name: 'A' },
+      { value: 'b', name: 'B' },
+    ]},
+    { label: 'OnChange3', type: 'DatePicker', name: 'test95', eventOnChange: 'test95' },
+    { label: '必录信息', type: 'GroupTitle', name: 'blxx' },
+    { label: '必填字段', type: 'Input', name: 'test01', rules: [
+      { type: 'base_required', message: '必录项可选提示信息' },
+    ]},
+    { label: '按需必填字段', type: 'Input', name: 'test02', tooltip: 'OnChange1字段非空，则必录', rules: [
+      { func: 'myValidator02' },
+    ]},
+    { label: '按需只读字段', type: 'Input', name: 'test03', tooltip: 'OnChange1字段非空，则只读' },
+    { label: '按需只读字段', type: 'Select', name: 'test04', tooltip: 'OnChange1字段非空，则只读', list: [
+      { value: 'a', name: 'A' },
+      { value: 'b', name: 'B' },
+    ]},
+    { label: '字符校验', type: 'GroupTitle', name: 'zfjy' },
+    { label: '字符长度3', type: 'Input', name: 'test11', rules: [
+      { type: 'base_string', length: 3},
+    ]},
+    { label: '字符范围0-5', type: 'Input', name: 'test12', rules: [
+      { type: 'base_string', range: 5 },
+    ]},
+    { label: '字符范围3-10', type: 'Input', name: 'test13', rules: [
+      { type: 'base_string', range: [3, 10]},
+    ]},
+    { label: '日期校验', type: 'GroupTitle', name: 'rqjy' },
+    { label: '日期yyyyMMdd', type: 'Input', name: 'test21', rules: [
+      { type: 'base_date', format: 'yyyyMMdd'},
+    ]},
+    { label: '日期yyyyMM', type: 'Input', name: 'test22', rules: [
+      { type: 'base_date', format: 'yyyyMM'},
+    ]},
+    { label: '日期yyyy', type: 'Input', name: 'test23', rules: [
+      { type: 'base_date', format: 'yyyy'},
+    ]},
+    { label: '日期MM', type: 'Input', name: 'test24', rules: [
+      { type: 'base_date', format: 'MM'},
+    ]},
+    { label: '数值校验', type: 'GroupTitle', name: 'szjy' },
+    { label: '数值NUMBER(10, 2)', type: 'InputNumber', name: 'test31', format: '0,0.00', rules: [
+      { type: 'base_number', length: 10, decimal: 2 },
+    ]},
+    { label: '数值NUMBER(5)', type: 'InputNumber', name: 'test32', format: '0,0', rules: [
+      { type: 'base_number', length: 5 },
+    ]},
+    { label: '数值+', type: 'InputNumber', name: 'test33', format: '0,0', rules: [
+      { type: 'base_number', range: '+'},
+    ]},
+    { label: '数值-', type: 'InputNumber', name: 'test34', format: '0,0', rules: [
+      { type: 'base_number', range: '-'},
+    ]},
+    { label: '数值0', type: 'InputNumber', name: 'test35', format: '0,0', rules: [
+      { type: 'base_number', range: '0'},
+    ]},
+    { label: '数值+-', type: 'InputNumber', name: 'test36', format: '0,0', rules: [
+      { type: 'base_number', range: '+-'},
+    ]},
+    { label: '数值+0', type: 'InputNumber', name: 'test37', rules: [
+      { type: 'base_number', range: '+0'},
+    ]},
+    { label: '数值-0', type: 'InputNumber', name: 'test38', format: '0,0', rules: [
+      { type: 'base_number', range: '-0'},
+    ]},
+    { label: '类型校验', type: 'GroupTitle', name: 'szjy' },
+    { label: '数字', type: 'Input', name: 'test41', rules: [
+      { type: 'base_type_number' },
+    ]},
+    { label: '数字及字母', type: 'Input', name: 'test42', rules: [
+      { type: 'base_type_number_english' },
+    ]},
+    { label: '邮件', type: 'Input', name: 'test43', rules: [
+      { type: 'base_type_mail' },
+    ]},
+    { label: '电话', type: 'Input', name: 'test44', enterFocus: false, tooltip: '取消默认回车焦点后移', rules: [
+      { type: 'base_type_phone' },
+    ]},
+    { label: '身份证', type: 'Input', name: 'test45', rules: [
+      { type: 'base_type_idcard' },
+    ]},
+    { label: '汉字', type: 'Input', name: 'test46', rules: [
+      { type: 'base_type_chinese' },
+    ]},
+    { label: '自定义校验', type: 'GroupTitle', name: 'zdyjy' },
+    { label: '后端校验', type: 'Input', name: 'test52', rules: [
+      { func: 'myValidator52' },
+    ]},
+    { label: '自定义', type: 'Input', name: 'test51', rules: [
+      { func: 'myValidator51' },
+    ]},
+    { label: '测试回车焦点', type: 'GroupTitle', name: 'szjy' },
+    { label: 'TextArea', type: 'TextArea', name: 'test61', rules: [
+      { type: 'base_type_number' },
+    ]},
+  ],
+};
+```
+
+### index.tsx
+
+```ts title="index.tsx"
+import React from 'react';
+import { ProCard } from '@ant-design/pro-components';
+import { Button, Form } from 'antd';
+import DDBaseForm from '@/components/DDForm/DDBaseForm';
+import formConfig from './config';
+import { Typography } from 'antd';
+import { FooterToolbar } from '@ant-design/pro-components';
+import myUtil from '@/components/DDAssist/util';
+import formUtil from '@/components/DDForm/formUtil';
+
+const TableList: React.FC<unknown> = () => {
+  const [form] = Form.useForm();
+  const Func: any = {};
+  // 表单校验
+  Func.validator = {
+    // 自定义校验
+    myValidator51: (form: any) => {
+      const formId = form?.__INTERNAL__?.name;    // 表单id
+      const test01 = form?.getFieldValue('test01');    // 表单其他项目
+      console.info(formId);
+      console.info(test01);
+      const validator = async (_rule: any, value: any) => {
+        if (value !== '111') {
+          return Promise.reject(new Error('自定义校验error'));
+        }
+        return Promise.resolve();
+      };
+      return { validator };
+    },
+
+    // 自定义校验 后端
+    myValidator52: (form: any) => {
+      const formId = form?.__INTERNAL__?.name;    // 表单id
+      const test01 = form?.getFieldValue('test01');    // 表单其他项目
+      console.info(formId);
+      console.info(test01);
+      const validator = async (_rule: any, value: any) => {
+        console.info(_rule);
+        console.info(value);
+        await testReturnCode500({}).then((response) => {
+          if (response.code === '500') {
+            return Promise.reject(new Error('error 测试后端校验'));
+          }
+          return Promise.resolve();
+        }).catch((err) => {
+          return Promise.reject(err);
+        });
+        return Promise.resolve();
+      };
+      return { validator };
+    },
+
+    // 自定义校验
+    myValidator02: (form: any) => {
+      const test91 = form?.getFieldValue('test91');    // 表单其他项目
+      const validator = async (_rule: any, value: any) => {
+        if (test91) {
+          if (!value) {
+            return Promise.reject(new Error('按需必录项目'));
+          }
+        }
+        return Promise.resolve();
+      };
+      return { validator };
+    },
+  }
+
+  // 表单事件：OnChange
+  Func.eventOnChange = {
+    test91: (param: any) => {
+      const { event, form, myItems, setMyItems } = param;
+      // 表单id、录入值
+      const inputValue = event.target.value;
+      // 获取其他项目值
+      const test31 = form.getFieldValue('test31') || 0;
+      // 表单赋值
+      form.setFieldsValue({
+        test01: 'onBlur测试数据',
+        test11: myUtil.text.leadingZeroize(inputValue, 8),
+        test13: test31,
+      });
+      // 按需必填字段
+      myItems[1].rules = [{ type: 'base_required', message: '必录项可选提示信息' }];
+      // 设置只读非只读
+      myItems[15].disabled = true;
+      setMyItems([...formUtil.init({ items: myItems || [] })]);
+    },
+    test94: (param: any) => {
+      const { value, form, option } = param;
+      console.info(value);
+      console.info(form);
+      console.info(option);
+    },
+    test95: (param: any) => {
+      const { date, dateString, form } = param;
+      console.info(date);
+      console.info(dateString);
+      console.info(form);
+    },
+    test83: (param: any) => {
+      const { value, form } = param;
+      form.setFieldsValue({
+        test84: myUtil.code.getCodeValByKey(value, 'code_dm_ckts_cktmsywlx'),
+      });
+    },
+  }
+
+  // 表单事件：OnBlur
+  Func.eventOnBlur = {
+    test92: (param: any) => {
+      console.info('表单事件OnBlur', param.event.target.value, param);
+    }
+  }
+
+  // 表单事件：OnFocus
+  Func.eventOnFocus = {
+    test93: (param: any) => {
+      console.info('表单事件OnFocus', param.event.target.value, param);
+    }
+  }
+
+  const onReset = () => {
+    form.resetFields();
+  };
+
+  const onSave = () => {
+    form.validateFields().then(async (values: any) => {
+      console.info(values)
+    });
+  };
+
+  return (<>
+    <Typography.Title level={4}>表单 - 自定义事件及校验</Typography.Title>
+    <ProCard>
+      <DDBaseForm config={formConfig} form={form} initialValues={{}} func={Func}/>
+      <FooterToolbar >
+        <Button type='default' onClick={onReset}>重置</Button>
+        <Button type='primary' onClick={onSave}>保存</Button>
+      </FooterToolbar>
+    </ProCard>
+  </>);
+};
+
+export default TableList;
+
+```
+
+
+
+---
+url: /rspress-sdp-n/component/unit/api_event.md
+---
+
+import { Badge } from '@theme';
+
+# 事件 & API
+
+## 事件 f.tsx
+
+### useEffectEnd
+
+页面元素初始化后执行。
+
+### afterReload
+
+列表数据加载后执行，操作需要依赖当前列表数据，如获取加载后的第一行数据等。
+
+### initAddForm
+
+表单新建初始化，打开新建弹窗前执行，如提前填充表单值、设置某项只读。
+
+### initEditForm
+
+表单编辑初始化，打开编辑弹窗前执行，如提前填充表单值、设置某项只读。
+
+### formBeforeSubmit
+
+表单提交前调用，返回tree则正常提交，返回false则阻断提交。
+
+### beforeDelete
+
+删除前执行，如需要验证删除数据的合理性，返回tree则正常提交，返回false则阻断提交。
+
+### afterDeletionFailure
+
+删除失败后调用，如弹窗后端返回的特殊格式异常信息。
+
+### afterFormSaveSuccess
+
+表单保存成功后回调，如更新码表。
+
+### afterFormDeleteSuccess
+
+表单删除成功后回调，如更新码表。
+
+### gridOnRowClick
+
+列表行单击事件。
+
+### gridOnRowDoubleClick
+
+列表行双击击事件。
+
+### rowSelection
+
+列表首选项改变时回调，即选择Chexcbox、Radion回调。
+
+### handleExport
+
+自定义导出。
+
+### columnsRender
+
+列表自定义渲染
+
+```ts title="f.tsx"
+Func.columnsRender = {
+  // 对应的列表列配置 { title: 'xxx', dataIndex: 'xxx', width: 100, render: { func: 'renderXX1' } }
+  renderXX1: (param: any) => {
+    return <span>自定义内容1</span>;
+  },
+  // 对应的列表列配置 { title: 'xxx', dataIndex: 'xxx', width: 100, render: { func: 'renderXX2' } }
+  renderXX2: (param: any) => {
+    return <span>自定义内容2</span>;
+  },
+}
+```
+
+### statistics
+
+列表合计自定义渲染
+
+```ts title="f.tsx"
+Func.statistics = {
+  sum2: {
+    je: ({sum2}: any) => '自行格式化： ' + sum2?.je || 0
+  },
+  min2: {
+    je: ({min2}: any) => '自行格式化： ' + min2?.je || 0
+  },
+  max2: {
+    je: ({max2}: any) => '自行格式化： ' + max2?.je || 0
+  },
+  avg2: {
+    je: ({avg2}: any) => '自行格式化： ' + avg2?.je || 0
+  }
+}
+```
+
+### isSonTableEdit
+
+子表数据是否可以编辑（新建、编辑、删除按钮是否可用）
+
+```ts title="f.tsx"
+Func.isSonTableEdit = ({record}: any) => {
+  if (record.xxx === '1') {
+    return false;
+  }
+  return true;
+}
+```
+
+### poweroff
+
+开关图标点击回调
+
+```ts title="f.tsx"
+// 开关图标点击回调
+Func.poweroff = {
+// 对应的列表列配置 { title: '状态', dataIndex: 'spzt', width: 95, render: { poweroff: 'handleSetStatus1' } },
+  handleSetStatus1: (param: any) => {
+    console.info('开关图标点击回调', param);
+  },
+}
+```
+
+### setGridTitle
+
+// 自定义列表标题区域
+
+```ts title="f.tsx"
+Func.setGridTitle = (param: any) => {
+  console.info('配置项：自定义列表标题区域', param);
+  return <span>自定义标题</span>;
+}
+```
+
+### setEditDisabled\_moduleKey
+
+默认操作列编辑只读属性的自定义渲染，如根据列表数据中的某一项动态设置编辑、删除按钮的只读状态。
+
+```ts title="f.tsx"
+Func.setEditDisabled_mdouleKey = (param: any) => {
+  if (param.xxx ===  '1') {
+    return true;
+  }
+  return false;
+}
+```
+
+### setDeleteDisabled\_moduleKey
+
+默认操作列删除只读属性的自定义渲染，如根据列表数据中的某一项动态设置编辑、删除按钮的只读状态。
+
+```ts title="f.tsx"
+Func.setDeleteDisabled_mdouleKey = (param: any) => {
+  if (param.xxx ===  '1') {
+    return true;
+  }
+  return false;
+}
+```
+
+### 自定义工具栏
+
+```ts title="f.tsx"
+// 配置项：自定义工具栏
+// 对应配置 customer_toobar: [ { name: 'xxx', key: 'xxx', func: 'handleCostomerToobar1' }, ];
+Func.handleCostomerToobar1 = (param: any) => {
+  console.info('配置项：自定义工具栏', param);
+}
+```
+
+### 自定义操作列
+
+```ts title="f.tsx"
+// 配置项：自定义操作列
+// 对应配置 handle_columns: [ { name: 'xxx', key: 'xxx', func: 'handleColumns1' }, ];
+Func.handleColumns1 = (param: any, event: any) => {
+  console.info('配置项：自定义操作列', param, event);
+}
+```
+
+### 自定义操作列是否可用
+
+根据当前数据状态判断操作列disabled状态。
+
+```ts title="f.tsx"
+// 配置项：自定义操作列是否可用
+// 对应配置 handle_columns: [ { name: 'xxx', key: 'xxx', func: 'xxx', disabled: 'setCs3Disabled' }, ];
+Func.setCs3Disabled = (record: any) => {
+  if (record.jgfsDm === '0139' || record.jgfsDm === '0110' || record.jgfsDm === '0160') {
+    return true;
+  }
+  return false;
+}
+```
+
+### 自定义表单项校验
+
+```ts title="f.tsx"
+Func.validator = {
+  // itemXXX
+  // 对应的表单项配置 form_items: [{ label: 'xxx', type: 'xxx', name: 'xxx', rules: [ { func: 'itemXXX' } ]},
+  itemXXX: (form: any) => {},
+}
+```
+
+### 自定义表单项事件 OnChange
+
+```ts title="f.tsx"
+Func.eventOnChange = {
+  // itemXXX
+  // 对应的表单项配置 form_items: [{ label: 'xxx', type: 'xxx', name: 'xxx', eventOnChange: 'itemXXX' },
+  itemXXX: (param: any) => {},
+}
+```
+
+### 自定义表单项事件 OnBlur
+
+```ts title="f.tsx"
+Func.OnBlur = {
+  // itemXXX
+  // 对应的表单项配置 form_items: [{ label: 'xxx', type: 'xxx', name: 'xxx', eventOnBlur: 'itemXXX' },
+  itemXXX: (param: any) => {},
+}
+```
+
+### 自定义表单项事件 OnFocus
+
+```ts title="f.tsx"
+Func.eventOnFocus = {
+  // itemXXX
+  // 对应的表单项配置 form_items: [{ label: 'xxx', type: 'xxx', name: 'xxx', eventOnFocus: 'itemXXX' },
+  itemXXX: (param: any) => {},
+}
+```
+
+## API
+
+### DDBunit2
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| [config](/rspress-sdp-n/component/unit/api_event.md#config) | 基础配置 | object | - |
+| func | 列的自定义渲染、操作列设置、行单/双击事件...，参照 \[代码演示]\(/component/unit/eg\_code.html | object | - |
+
+### config
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| unit\_key | 业务单元key，对应后端接口 | string | - |
+| page\_id | 页面id | string | - |
+| layout\_type | 页面类型 | `default`|`modal`|`tabs` | `default` |
+| form\_title | 表单：标题，可选 | string | - |
+| form\_save\_check | 表单：编辑是否执行后端校验，默认false不执行 | boolean | false |
+| grid\_show\_serial\_number | 列表：是否显示序号 | boolean | false |
+| grid\_title | 列表：标题 | string/object | - |
+| grid\_click\_checked | 列表：开启单击或双击勾选，1单击勾选，2双击勾选 | `1`|`2` | - |
+| grid\_sticky\_affix | 列表：列表锁定高度，如果layout\_type=default=>94；tabs=>134 | number | - |
+| grid\_scroll\_y | 列表：y轴滚动条，默认null | number | - |
+| grid\_scroll\_x | 列表：x轴滚动条，默认700px | number | 700 |
+| grid\_selection\_type | 列表：首选项类别 | `false`|`radio`|`checkbox` | `checkbox` |
+| grid\_border | 列表：边框 | boolean | true |
+| grid\_handle\_width | 列表：自定义操作列宽度 | number | - |
+| grid\_row\_key | 列表：主键 | string|array | uuid |
+| toolbar\_show\_grid\_checked\_num | 工具栏：是否显示数据条数及选中数 | boolean | false |
+| toolbar\_open | 工具栏：是否开启，默认true显示 | boolean | true |
+| toobar\_affix | 工具栏：锁定高度，如果layout\_type=default=>44；tabs=>84 | number | - |
+| api\_grid\_query | api：列表查询 | string | - |
+| api\_form\_query | api：表单查询 | string | - |
+| api\_form\_edit | api：表单更新 | string | - |
+| api\_form\_delete | api：表单删除 | string | - |
+| api\_excel\_export | api：导入 | string | - |
+| api\_excel\_import | api：导出 | string | - |
+| api\_excel\_template | api：模板下载 | string | - |
+| api\_form\_check | api：表单校验 | string | - |
+| form\_items | 表单项，参照[基础表单](/rspress-sdp-n/component/baseform/api_event.md#configform_items) | array | - |
+| grid\_columns | 列表列，参照[基础列表](/rspress-sdp-n/component/basegrid/api_event.md#configgrid_columns) | array | - |
+| filter\_items | 普通筛选，参照[基础表单](/rspress-sdp-n/component/baseform/api_event.md#configform_items) | array | - |
+| grid\_filter\_quick  | 快捷筛选，参照[基础表单](/rspress-sdp-n/component/baseform/api_event.md#configform_items) | array | - |
+| [grid\_sum\_field](/rspress-sdp-n/component/unit/api_event.md#configgrid_sum_field) | 列表统计字段 | array | - |
+| [toolbar\_default](/rspress-sdp-n/component/unit/api_event.md#configtoolbar_default) | 工具栏默认模块 | object | - |
+| [costomer\_toobar](/rspress-sdp-n/component/unit/api_event.md#configcostomer_toobar) | 工具栏自定义模块 | array | - |
+| [grid\_handle\_columns\_default](/rspress-sdp-n/component/unit/api_event.md#configgrid_handle_columns_default) | 列表默认操作列 | object | - |
+| [handle\_columns](/rspress-sdp-n/component/unit/api_event.md#confighandle_columns) | 列表自定义操作列 | array | - |
+| [grid\_setting\_sort](/rspress-sdp-n/component/unit/api_event.md#configgrid_setting_sort) | 列表排序字段设置 | array | - |
+
+### config.grid\_sum\_field
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| label | 显示名称 | string | - |
+| field | 对应列表字段 | string | - |
+| unit | 单位 | string | - |
+| format | 格式化 | string | - |
+
+### config.toolbar\_default
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| add | 是否显示增加按钮 | boolean | false |
+| edit | 是否显示修改按钮 | boolean | false |
+| delete | 是否显示删除按钮 | boolean | false |
+| setting | 是否显示设置按钮 | boolean | false |
+| full | 是否显示全屏按钮 | boolean | false |
+| download | 是否显示导出按钮 | boolean | false |
+| upload | 是否显示导入按钮 | boolean | false |
+| reload | 是否显示刷新按钮 | boolean | false |
+| delete\_by\_condition <Badge text="2025-09-23" type="tip" /> | 筛选删除按钮 | boolean | false |
+
+### config.grid\_handle\_columns\_default
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| edit | 是否显示编辑链接 | boolean | false |
+| delete | 是否显示删除链接 | boolean | false |
+| detail | 是否显示详情链接 | boolean | false |
+
+### config.grid\_setting\_sort
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| name | 排序字段英文名 | string | - |
+| col | 排序字段中文名 | string | - |
+| asc | 排序规则 |  `asc`|`desc` | - |
+
+### config.costomer\_toobar
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| name | 按钮名称 | string | - |
+| key | 按钮键值 | string | - |
+| func | 按钮方法 | function | - |
+| disabled | 是否可用 | boolean | - |
+| type | 按钮类型 | string | - |
+| list | 下拉按钮 | array | - |
+
+### config.handle\_columns
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| name | 链接名称 | string | - |
+| key | 链接键值 | string | - |
+| func | 链接方法 | function | - |
+| disabled | 是否可用 | boolean | - |
+
+
+
+---
+url: /rspress-sdp-n/component/unit/eg_code.md
+---
+
+# 代码演示
+
+## config.tsx
+
+```ts title="config.tsx"
+/**
+ * title: 数据封装页面
+ */
+const unitConfig: any = {};
+
+// 配置项
+// 如果配置unit_key 则采用预计crud方法，也可自定义crud接口链接，覆盖默认配置
+unitConfig.unit_key = 'EXAMPLE_DATA_PAGE_1';                                          // 业务单元key，对应后端接口
+unitConfig.page_id = 'example_list_1';                                                // 页面id
+unitConfig.layout_type = 'default';                                                   // 页面类型，默认default 可选 default modal tabs
+unitConfig.form_title = 'BGD';                                                        // 表单：标题，可选
+unitConfig.grid_show_serial_number = false;                                           // 列表：是否显示序号，默认不显示
+unitConfig.grid_title = { type: 'function', func: 'setGridTitle' };                   // 列表：标题，可选 object 或 string
+unitConfig.grid_click_checked = '1';                                                  // 列表：是否开启单击或双击勾选事件，1单击勾选，2双击勾选，默认点击不勾选
+unitConfig.toolbar_show_grid_checked_num = true;                                      // 工具栏：是否显示数据条数及选中数，默认false关闭
+// unitConfig.grid_pagination = false;                                                // 列表：是否含有分页，默认 true
+// unitConfig.form_width = 1200;                                                      // 表单：宽度，默认1200，可选 480 720 960 1200 max
+// unitConfig.form_layout_type = 'horizontal';                                        // 表单：整体一列或多列布局，默认vertical，可选 horizontal vertical 2 3 4 6 8 12
+// unitConfig.toolbar_open = true;                                                    // 工具栏：是否开启，默认true显示
+// unitConfig.toobar_affix = 44;                                                      // 工具栏：锁定高度，如果layout_type=default=>44；tabs=>84
+// unitConfig.grid_sticky_affix = 94;                                                 // 列表：列表锁定高度，如果layout_type=default=>94；tabs=>134
+// unitConfig.grid_title = 'BGD';                                                     // 列表：标题，可选 object 或 string
+// unitConfig.grid_scroll_y = '200px';                                                // 列表：y轴滚动条，默认null
+// unitConfig.grid_scroll_x = '700px';                                                // 列表：x轴滚动条，默认700px
+// unitConfig.grid_selection_type = 'checkbox';                                       // 列表：首选项类别，默认 checkbox，可选 false radio checkbox
+// unitConfig.grid_border = false;                                                    // 列表：边框，默认true
+// unitConfig.grid_handle_width = 500;                                                // 列表：自定义操作列宽度
+// unitConfig.grid_row_key = 'uuid';                                                  // 列表：主键，默认uuid
+// unitConfig.grid_row_key = ['uuid1', 'uuid2'];                                      // 列表：主键，联合主键，array格式
+// unitConfig.gridIsInitSearch = true;                                                // 列表：是否开启默认查询，默认true开启
+// unitConfig.form_save_check = false;                                                // 表单：编辑是否执行后端校验，默认false不执行
+// unitConfig.api_grid_query = `${API_URL_BASE}/yw/bszx/wbsj/bgd/queryBgd18Page`;     // api：列表查询
+// unitConfig.api_form_query=`${API_URL_BASE}/yw/bszx/wbsj/bgd/queryBgdByKey`;        // api：表单查询
+// unitConfig.api_form_edit=`${API_URL_BASE}/yw/bszx/wbsj/bgd/updateBgd`;             // api：表单更新
+// unitConfig.api_form_delete=`${API_URL_BASE}/yw/bszx/wbsj/bgd/deleteBgd21`;         // api：表单删除
+// unitConfig.api_form_check=`${API_URL_BASE}/yw/bszx/wbsj/bgd/checkCkbgdh`;          // api：表单校验
+unitConfig.delete_key='uuids';                                                     // 删除时的参数键：主键，默认uuids
+
+// 配置项：列表列
+unitConfig.grid_columns = [
+  // { title: 'uuid1', dataIndex: 'uuid1', width: 260, fixed: 'left' },
+  // { title: 'uuid2', dataIndex: 'uuid2', width: 260, fixed: 'left' },
+  {
+    title: '报关单号', titleTooltip: '报关单号说明......{br}报关单号说明......', dataIndex: 'ckbgdh', width: 220, fixed: 'left', sorter: true,
+    render: { func: 'renderCkbgdh' },
+    filter: {
+      type: 'Select',
+      codeTable: 'code_dm_ckts_hgjgfs',
+      showCode: true,
+    }
+  },
+  { title: '项号', dataIndex: 'xh4', width: 60, render: { func: 'renderExampleXh4' }, fixed: 'left' },
+  { title: '银行账号', dataIndex: 'yhzh', width: 160, render: { func: 'renderExampleYhzh' },
+    filter: {
+      type: 'Select',
+      list: [
+        { text: '已结关', value: 'yjg' },
+        { text: '未结关', value: 'wjg' },
+      ],
+    }
+  },
+  { title: '监管方式代码', dataIndex: 'jgfsDm', width: 155 },
+  {
+    title: '监管方式', dataIndex: 'jgfsDm', width: 155, sorter: true,
+    codeTable: 'code_dm_ckts_hgjgfs',
+    filter: {
+      type: 'Tree',
+      list: [
+        {
+          text: '数据状态', value: 'sjzt', children: [
+            { text: '已结关', value: 'yjg', },
+            { text: '未结关', value: 'wjg', },
+          ]
+        },
+        {
+          text: '报关单', value: 'bgd', children: [
+            { text: '18位', value: '18', },
+            { text: '21位', value: '21', },
+          ]
+        },
+      ]
+    },
+    render: {
+      tag: [
+        { value: '0139', color: 'default' },
+        { value: '0130', color: 'error' },
+        { value: '', color: 'processing' },
+      ],
+      icon: [
+        { value: '0139', icon: 'CheckOutlined', color: 'default' },
+        { value: '0130', icon: 'CoffeeOutlined', color: 'error' },
+        { value: '', icon: 'RobotOutlined', color: 'processing' },
+      ],
+      circle: [
+        { value: '0139', color: 'default' },
+        { value: '0130', color: 'error' },
+        { value: '', color: 'processing' },
+      ]
+    }
+  },
+  { title: '出口日期', dataIndex: 'ckrq1', width: 120, sorter: true, render: { type: 'date', format: 'YYYY-MM-DD' } },
+  {
+    title: '数据检查状态', dataIndex: 'cytgbz', width: 145, sorter: true,
+    filter: {
+      type: 'Radio',
+      codeTable: 'code_dm_ckts_hgzfjsfs',
+    },
+    render: { map: [
+      { value: 'Y', text: '检查通过' },
+      { value: 'N', text: '检查未通过' },
+      { value: '', text: '未检查' },
+    ], circle: [
+      { value: 'Y', color: 'default' },
+      { value: 'N', color: 'processing' },
+      { value: '', color: 'success' },
+    ] }
+  },
+  {
+    title: '审批状态', dataIndex: 'spzt', width: 125, sorter: true,
+    filter: {
+      type: 'Radio',
+      list: [
+        { text: '全部', value: 'qb' },
+        { text: '通过', value: 'tg' },
+        { text: '驳回', value: 'bh' },
+      ],
+    },
+    render: { map: [
+      { value: 'Y', text: '通过' },
+      { value: 'N', text: '未通过' },
+      { value: '', text: '未检查' },
+    ]}
+  },
+  { title: '征免{br}类型', dataIndex: 'zmlx', width: 95, render: { map: [
+      { value: '4', text: '免税' },
+      { value: '5', text: '征税' },
+      { value: '', text: '退税' },
+    ], tag: [
+      { value: '4', color: 'warning' },
+      { value: '5', color: 'processing' },
+      { value: '6', color: 'default' },
+      { value: '7', color: 'error' },
+      { value: '', color: 'success' },
+    ] }
+  },
+  { title: '申报{br}业务', dataIndex: 'sbyw', width: 105, render: { map: [
+      { value: '1', text: '退税申报' },
+      { value: '2', text: '代理出口' },
+      { value: '6', text: '代办退税' },
+    ], icon: [
+      { value: '1', icon: 'CheckOutlined', color: 'success' },
+      { value: '2', icon: 'CoffeeOutlined', color: 'processing' },
+      { value: '6', icon: 'RobotOutlined', color: 'default' },
+    ] },
+  },
+  { title: '商品代码', dataIndex: 'ckspDm', width: 95, render: { type: 'mask' } },
+  { title: '状态', dataIndex: 'spzt', width: 95, render: { poweroff: 'handleSetStatus' } },
+  { title: '调用耗时', dataIndex: 'usedTime', width: 70, align: 'right', render: { timeEasyRead: true } },
+  {
+    title: '商品名称', dataIndex: 'ckspmc', width: 180, ellipsis: true,
+    filter: {
+      type: 'Input',
+    }
+  },
+  { title: '海关商品名称', dataIndex: 'hgspmc', width: 180, render: { copy: true } },
+  { title: '出口合同号', dataIndex: 'ckhth', width: 115 },
+  {
+    title: '成交信息', dataIndex: 'cjxxGroup', children: [
+      { title: '成交方式', dataIndex: 'hgcjfsmc', width: 85 },
+      { title: '成交单位', dataIndex: 'hgjldwmc', width: 90, ellipsis: true },
+      { title: '成交数量', dataIndex: 'cjsl1', width: 140, align: 'right', render: { type: 'number', format: '0,0.0000' } },
+      { title: '成交币制', dataIndex: 'cjhghbzmDm', width: 85 },
+      { title: '成交金额', dataIndex: 'cjzj', width: 140, align: 'right', render: { type: 'number', format: '0,0.00' }, sum: true, sum2: true },
+    ]
+  },
+  { title: '美元离岸价', dataIndex: 'mylaj', width: 140, align: 'right', render: { type: 'number', format: '0,0.00' }, sum: true },
+  { title: '法定单位', dataIndex: 'dyjldwDm', width: 90, codeTable: 'code_dm_ckts_hgjldw', ellipsis: true },
+  { title: '法定单位数量', dataIndex: 'cksl', width: 140, align: 'right', render: { type: 'number', format: '0,0.0000' }, sum: true, sum2: true },
+  { title: '第二单位', dataIndex: 'dejldwDm', width: 90, codeTable: 'code_dm_ckts_hgjldw', ellipsis: true },
+  { title: '第二单位数量', dataIndex: 'decksl', width: 140, align: 'right', render: { type: 'number', format: '0,0.0000' } },
+  { title: '隐藏列', dataIndex: 'hiddenCol', width: 130, hidden: true },
+];
+
+// 配置项：筛选_普通筛选 页面最上方 第一层筛选
+unitConfig.filter_items = [
+  { name: 'sbyw', label: '申报业务', type: 'Select', codeTable: 'code_static_bgd_sbyw_dm', tooltip: '申报业务说明...' },
+  { name: 'sybz', label: '生成状态', type: 'Select', showType: '3', codeTable: 'code_static_bgd_sbyw_dm' },
+  { name: 'zmlx', label: '征免类型', type: 'Select', codeTable: 'code_static_bgd_zmlx_dm' },
+  { name: 'czbz1', label: '关单信息', type: 'Select', codeTable: 'code_static_bgd_gdxx_dm' },
+  { name: 'ckhth', label: '出口合同号', type: 'Input', },
+  { name: 'ckrq1', label: '出口日期', type: 'DatePicker' },
+  { name: 'kprq', label: '开票日期', type: 'DatePicker', range: true, layout: {
+    xs: {span: 23, offset:1, pull: 1},
+    sm: {span: 23, offset:1, pull: 1},
+    md: {span: 23, offset:1, pull: 1},
+    lg: {span: 23, offset:1, pull: 1},
+    xl: {span: 15, offset:1, pull: 1},
+    xxl: {span: 15, offset:1, pull: 1}
+  } }, // , placeholder: ['aaa', 'bbb'] 日期范围的placeholder属性需要传递数组
+  { name: 'ckbgdh', label: '报关单号', type: 'Input' },
+  { name: 'jgfsDm', label: '监管方式', type: 'Input' },
+  { name: 'cytgbz', label: '数据检查状态', type: 'Select', codeTable: 'code_static_bgd_cytgbz_dm' },
+  { name: 'cylv', label: '差异率', type: 'Input', range: true },
+  {
+    name: 'treeSelect', label: '单证', type: 'TreeSelect', isSelectLeaf: true, showSearch: true, labelInValue: false, treeTable: ['CODE_DM_BADZ_BADZ', '01']
+    // , list: [
+    //   { title: '退税单证', value: '1',
+    //     children: [
+    //       {title: '出口发票', value: '1-1', children: [{title: '出口发票1', value: '1-1-1'}]},
+    //       {title: '进口发票', value: '1-2'}
+    //     ]
+    //   },
+    //   { title: '退税单证2', value: '2'},
+    //   { title: '退税单证3', value: '3', children: [
+    //       { title: '退税单证3-1', value: '3-1', children: [{title: '退税单证3-1-1', value: '3-1-1'}, {title: '退税单证3-1-2', value: '3-1-2'}]},
+    //       { title: '退税单证3-2', value: '3-2'}
+    //   ]},
+    //   ]
+  },
+  { name: 'bgdhgbh', label: '18位或后4位报关单号', type: 'InputTags' },
+];
+
+// 配置项：筛选_快捷筛选 列表上方，标题和区域 第二层筛选
+unitConfig.grid_filter_quick = [
+  {
+    label: '是否结关', name: 'sfjg', type: 'Select', tooltip: '是否结关tooltip', defaultValue: '2',
+    codeTable: 'code_static_bgd_sbyw_dm'
+    // list: [
+    //   { label: '全部', value: 'qb' },
+    //   { label: '已结', value: 'yjg' },
+    //   { label: '未结', value: 'wjg' },
+    // ]
+  },
+  { label: '报关单号', name: 'bgd', type: 'Input', defaultValue: '1234567890' }, // defaultValue 可选
+  // { label: '差异率', name: 'cyl', type: 'Input', tooltip: '差异率tooltip', range: true },
+  // { name: 'jgzrhl', type: 'Checkbox', tooltip: '关注日tooltip', list: [
+  //   { label: '关注日', value: 'gzr' },
+  // ]},
+  // { label: '出口日期', name: 'ckrq1', type: 'DatePicker', tooltip: '出口日期tooltip', defaultValue: ['2021-10-10', '2021-10-20'], range: true },
+  // { label: '出口日期', name: 'ckrq2', type: 'DatePicker', tooltip: '出口日期tooltip', defaultValue: '2021-11-12' },
+  // { label: '报关单', name: 'bgd', type: 'Select', defaultValue: '21', list: [
+  //   { label: '18位', value: '18' },
+  //   { label: '21位', value: '21' },
+  // ]},
+];
+
+// 配置项：列表统计字段
+unitConfig.grid_sum_field = [
+  { label: '成交金额', field: 'cjzj', unit: '元', format: '0,0.00' },
+  { label: '成交数量', field: 'cjsl1', format: '0,0.0000' },
+];
+
+// 配置项：列表排序字段
+unitConfig.grid_setting_sort = [
+  { col: '报关单号', order: 'asc', name: 'bgd' },
+  { col: '出口日期', order: 'desc', name: 'ckrq' },
+  { col: '数据检查状态', order: 'default', name: 'sjjczt' },
+  { col: '征免类型', order: 'default', name: 'zmlx' }
+];
+
+// 配置项：列表高级筛选字段
+unitConfig.grid_setting_filter_advanced = {
+  range: [
+    {
+      name: 'ckrq', label: '出口日期', type: 'DatePicker', range: true, quickOption: {
+        type: 'Radio',
+        list: [
+          { value: 'ckrqv1', name: '本月' },
+          { value: 'ckrqv2', name: '三个月' },
+          { value: 'ckrqv3', name: '本年' },
+        ]
+      }
+    },
+    {
+      name: 'ckgb', label: '出口国别', mode: 'multiple', type: 'Select', list: [
+        { value: 'ckgb1', name: '出口国别1' },
+        { value: 'ckgb2', name: '出口国别2' },
+      ], quickOption: {
+        type: 'Radio',
+        list: [
+          { value: 'ckgbv1', name: '亚洲' },
+          { value: 'ckgbv2', name: '欧洲' },
+          { value: 'ckgbv3', name: '美国' },
+        ]
+      }
+    },
+    {
+      name: 'myfs', label: '贸易方式', type: 'Select', list: [
+        { value: 'myfs1', name: '贸易方式1' },
+        { value: 'myfs2', name: '贸易方式2' },
+      ]
+    },
+    {
+      name: 'ckka', label: '出口口岸', type: 'Select', list: [
+        { value: 'ckka1', name: '出口口岸1' },
+        { value: 'ckka2', name: '出口口岸2' },
+      ]
+    },
+    {
+      name: 'ysfs', label: '运输方式', type: 'Select', list: [
+        { value: 'ysfs1', name: '运输方式1' },
+        { value: 'ysfs2', name: '运输方式2' },
+      ]
+    },
+    {
+      name: 'hwlx', label: '货物类型', type: 'Checkbox', list: [
+        { value: 'bqf', name: '不区分' },
+        { value: 'tshw', name: '退税货物' },
+        { value: 'yzshw', name: '应征税货物' },
+      ],
+    },
+    {
+      name: 'ckfslx', label: '出口方式类型', type: 'Radio', list: [
+        { value: 'bqf', name: '不区分' },
+        { value: 'zyck', name: '自营出口' },
+        { value: 'wtck', name: '委托出口' },
+      ],
+    },
+    {
+      name: 'spdm', label: '商品代码', type: 'Select', list: [
+        { value: 'spdm1', name: '商品代码1' },
+        { value: 'spdm2', name: '商品代码2' },
+      ]
+    },
+    {
+      name: 'sjzt', label: '数据状态', type: 'Select', list: [
+        { value: 'sjzt1', name: '数据状态1' },
+        { value: 'sjzt2', name: '数据状态2' },
+      ]
+    },
+    { name: 'sybz', label: '生成状态', type: 'Radio', codeTable: 'code_static_bgd_zt_dm' },
+    { name: 'zmlx', label: '征免类型', type: 'Checkbox', codeTable: 'code_static_bgd_zmlx_dm' },
+    { name: 'czbz1', label: '关单信息', type: 'Select', codeTable: 'code_static_bgd_gdxx_dm' },
+  ],
+  condition: [
+    {
+      groupLabel: '报关单表头',
+      items: [
+        { value: 'bgdh', label: '报关单号' },
+        { value: 'ckhth', label: '出口合同号' },
+        { value: 'cke', label: '出口额' },
+        { value: 'jldw', label: '计量单位' },
+      ]
+    },
+    {
+      groupLabel: '报关单表体',
+      items: [
+        { value: 'xh', label: '项号' },
+        { value: 'fddw', label: '法定单位' },
+      ]
+    },
+    {
+      groupLabel: '商品维度',
+      items: [
+        { value: 'spdm', label: '商品代码' },
+        { value: 'spmc', label: '商品名称' },
+      ]
+    },
+    {
+      groupLabel: '贸易方式',
+      items: [
+        { value: 'myfsdm', label: '贸易方式代码' },
+        { value: 'myfsmc', label: '贸易方式名称' },
+      ]
+    }
+  ]
+};
+
+// 配置项：表单项
+unitConfig.form_items = [
+  { label: 'ID', type: 'Hidden', name: 'uuid' },
+  { label: '基本信息', type: 'GroupTitle', name: 'jbxx' },
+  { label: '报关单号', type: 'Input', name: 'ckbgdh', tooltip: '报关单号说明...', rules: [
+    { type: 'base_required', message: '必录项可选提示信息' },
+  ] },
+  { label: '出口日期', type: 'DatePicker', name: 'ckrq1', format: 'YYYY-MM-DD', range: true  },
+  { label: '出口合同号', type: 'Input', name: 'ckhth', range: true },
+  { label: '核销单号', type: 'Input', name: 'hxdh', defaultValue:'12311234' },
+  { label: '运输工具名称', type: 'Input', name: 'ysgjmc' },
+  { label: '单证1', name: 'dz1', type: 'TreeSelect', isSelectLeaf: true, showSearch: true, labelInValue: false, treeTable: ['CODE_DM_BADZ_BADZ', '01'] },
+  { label: '单证2', name: 'dz2', type: 'TreeSelect', isSelectLeaf: true, showSearch: true, labelInValue: false, list: [
+      { title: '退税单证', value: '1',
+        children: [
+          {title: '出口发票', value: '1-1', children: [{title: '出口发票1', value: '1-1-1'}]},
+          {title: '进口发票', value: '1-2'}
+        ]
+      },
+      { title: '退税单证2', value: '2'},
+      { title: '退税单证3', value: '3', children: [
+          { title: '退税单证3-1', value: '3-1', children: [{title: '退税单证3-1-1', value: '3-1-1'}, {title: '退税单证3-1-2', value: '3-1-2'}]},
+          { title: '退税单证3-2', value: '3-2'}
+      ]},
+      ]
+  },
+  { label: '监管方式代码', type: 'Input', name: 'jgfsDm' },
+  { label: '海关成交方式', type: 'Select', name: 'hgcjfsmc', codeTable: 'code_static_hgcjfs_mc' },
+  { label: '国别', type: 'Select', name: 'gb',  list: [
+      { name: '中国', value: 'china' },
+      { name: '日本', value: 'japan' },
+      { name: '韩国', value: 'korea' },
+  ] },
+  { label: '成交海关货币字母代码', type: 'Input', name: 'cjhghbzmDm' },
+  { label: '成交总价', type: 'InputNumber', name: 'cjzj', format: '0,0.00' },
+  { label: '运费海关货币字母代码', type: 'Input', name: 'yfhghbzmDm' },
+  { label: '运费金额', type: 'InputNumber', name: 'yfje', format: '0,0.00' },
+  { label: '运费计算方式代码', type: 'Select', name: 'yfjsfsDm', codeTable: 'code_dm_ckts_hgyfjsfs' },
+  { label: '运费折算数量', type: 'InputNumber', name: 'yfzssl', format: '0,0.0000' },
+  { label: '保费海关货币字母代码', type: 'Input', name: 'bfhghbzmDm' },
+  { label: '保费金额', type: 'InputNumber', name: 'bfje', format: '0,0.00' },
+  { label: '保费计算方式代码', type: 'Select', name: 'bfjsfsDm', codeTable: 'code_dm_ckts_hgbfjsfs' },
+  { label: '杂费海关货币字母代码', type: 'Input', name: 'zfhghbzmDm' },
+  { label: '杂费金额', type: 'InputNumber', name: 'zfje1', format: '0,0.00' },
+  { label: '杂费计算方式代码', type: 'Select', name: 'zfjsfsDm', codeTable: 'code_dm_ckts_hgzfjsfs' },
+  { label: '商品信息', type: 'GroupTitle', name: 'spxx' },
+  { label: '出口商品代码', type: 'Input', name: 'ckspDm' },
+  { label: '出口商品名称', type: 'Input', name: 'ckspmc', readOnly: true },
+  { label: '海关商品名称', type: 'Input', name: 'hgspmc' },
+  { label: '成交计量单位', type: 'Input', name: 'hgjldwmc' },
+  { label: '成交数量', type: 'InputNumber', name: 'cjsl1', format: '0,0.0000' },
+  { label: '法定计量单位', type: 'Input', name: 'dyjldwDm' },
+  { label: '法定数量', type: 'InputNumber', name: 'cksl', format: '0,0.0000' },
+  { label: '第二计量单位', type: 'Input', name: 'dejldwDm' },
+  { label: '第二出口数量', type: 'InputNumber', name: 'decksl', format: '0,0.0000' },
+  { label: '规格型号', type: 'Input', name: 'ggxh' },
+  { label: '数据检查标志', type: 'Hidden', name: 'cytgbz' },
+  { label: '其他信息', type: 'GroupTitle', name: 'qtxx' },
+  { label: '备注', type: 'TextArea', name: 'bz', layout: {
+    item: { xs: 24, sm: 24, md: 24, lg: 24, xl: 24, xxl: 24 },
+    labelcol: { xs: 2, sm: 2, md: 2, lg: 2, xl: 2, xxl: 2 },
+    wrappercol: { xs: 22, sm: 22, md: 22, lg: 22, xl: 22, xxl: 22 },
+  } },
+];
+
+// 配置项：批量修改表单项
+unitConfig.batch_update_items = [
+  { dataIndex: 'ssq', label: '所属期', type: "Input" },
+  { dataIndex: 'ybhl', label: '原币汇率', type: "InputNumber" },
+  { dataIndex: 'myhl', label: '美元汇率', type: "InputNumber" },
+  { dataIndex: 'ckfph', label: '出口发票号', type: "Input" },
+  { dataIndex: 'ckrq1', label: '出口日期', type: "Date" },
+  { dataIndex: 'cktmsywlxdmjh', label: '业务类型代码', type: "tableSelect", codeTable: 'CODE_DM_CKTS_CKTMSYWLX' },
+  { dataIndex: 'szch', label: '手（账）册号', type: "Input" },
+];
+
+// 配置项：工具栏
+unitConfig.toolbar_default = {
+  add: true,                        // 是否显示增加按钮，默认关闭
+  edit: true,                        // 是否显示修改按钮，默认关闭
+  delete: true,                    // 是否显示删除按钮，默认关闭
+  setting: true,                    // 是否显示设置按钮，默认关闭
+  full: true,                       // 是否显示全屏按钮，默认关闭
+  download: true,                   // 是否显示导出按钮，默认关闭
+  upload: true,                     // 是否显示导入按钮，默认关闭
+  reload: true,                     // 是否显示刷新按钮，默认关闭
+};
+
+// 配置项：列表操作列
+unitConfig.grid_handle_columns_default = {
+  edit: true,                       // 是否显示编辑链接，默认关闭
+  delete: true,                     // 是否显示删除链接，默认关闭
+};
+
+// 配置项：自定义工具栏
+unitConfig.customer_toobar = [
+  { name: '测一', key: 'cs1', func: 'handleCostomerToobar1' },
+  { name: '测二', key: 'cs2', func: 'handleCostomerToobar2', disabled: true },
+  {
+    name: '红冲', type: 'dropdown', list: [
+      { name: '设置红冲', func: 'handleCostomerToobar1' },
+      { name: '取消红冲', func: 'handleCostomerToobar2' },
+    ]
+  },
+  { name: '导入', key: 'mydr', func: 'handleCostomerImport' }
+];
+
+// 配置项：自定义操作列
+unitConfig.handle_columns = [
+  { name: '测试1', key: 'cs11', func: 'handleColumns1' },
+  { name: '测试2', key: 'cs12', func: 'handleColumns2' },
+  { name: '测试3', key: 'cs13', func: 'handleColumns3', disabled: 'setCs3Disabled' },  // disabled: true false 自定义方法
+];
+
+export default unitConfig;
+```
+
+## index.tsx
+
+```ts title="index.tsx"
+import React, { useRef } from 'react';
+import DDBunit2 from '@/components/DDBunit/DDBunit2';
+import unitConfig from './config';
+import Func from './f';
+import { history } from 'umi';
+import DrawerList from './drawer_list';
+import DDImportNodeEnv from '@/components/DDImportNodeEnv';
+
+const Unit: React.FC<unknown> = () => {
+  // 改变默认配置项
+  const myConfig = { ...unitConfig };
+  if (history?.location?.pathname === '/example/data_page/list2') {
+    myConfig.grid_columns = [
+      { title: '报关单号', dataIndex: 'ckbgdh', width: 180 },
+      { title: '海关商品名称', dataIndex: 'hgspmc', width: 180 },
+      { title: '出口合同号', dataIndex: 'ckhth', width: 115 },
+    ];
+    myConfig.grid_title = '修改默认标题';
+  }
+
+  // 添加私有页面或组件
+  const drawerRef: any = useRef();
+  const ModalRef: any = useRef();
+  Func.getOtherRef = () => {
+    const otherRef = [];
+    otherRef.push(drawerRef);
+    otherRef.push(ModalRef);
+    return otherRef;
+  };
+
+  return <>
+    <DDBunit2 config={myConfig} func={Func} />
+    <DrawerList onRef={drawerRef} />
+    <DDImportNodeEnv onRef={ModalRef} />
+  </>;
+};
+export default Unit;
+```
+
+## f.tsx
+
+```ts title="f.tsx"
+import { message, Tooltip, Badge, Space, Segmented } from 'antd';
+import React from 'react';
+import myUtil from '@/components/DDAssist/util';
+import { testReturnCode200 } from '@/services/hts/api';
+import { FilePdfTwoTone } from '@ant-design/icons';
+import { history } from '@umijs/max';
+
+const Func: any = {
+  refUnit: React.createRef(),
+};
+
+const badgeSuccess = <Badge status="success" key='success' />;
+const badgeError = <Badge status="error" key='error' />;
+
+// 页面元素初始化后执行 useEffectEnd -> afterReload
+Func.useEffectEnd = (param: any) => {
+  console.info('页面元素初始化后执行', param);
+}
+
+// 列表数据加载后执行 useEffectEnd -> afterReload
+Func.afterReload = (param: any) => {
+  console.info('列表数据加载后执行', param);
+};
+
+// 表单新建初始化
+Func.initAddForm = (param: any) => {
+  console.info('表单新建初始化', param);
+  const { form, handleModalVisible, pageId, unitKey, refUnit } = param;
+  refUnit.current?.setMasker(true);
+  testReturnCode200().then((response) => {
+    const { code } = response;
+    refUnit.current?.setMasker(false);
+    if (code === '200') {
+      form.setFieldsValue({
+        ckbgdh: '123456789012345678',
+      });
+      handleModalVisible(true);
+    }
+  })
+}
+
+// 表单编辑初始化
+Func.initEditForm = (param: any) => {
+  console.info('表单编辑初始化', param);
+  const { handleModalVisible } = param;
+  handleModalVisible(true);
+}
+
+// 表单提交前调用
+Func.formBeforeSubmit = (param: any) => {
+  console.info('表单提交前调用', param);
+  return true;
+}
+
+// 删除前调用
+Func.beforeDelete = (param: any) => {
+  console.info('删除前调用', param);
+  return true;
+}
+
+// 删除失败后调用
+Func.afterDeletionFailure = (param: any) => {
+  console.info('删除失败后调用', param);
+}
+
+// 列表行单击事件
+Func.gridOnRowClick = (param: any) => {
+  console.info('列表行单击事件', param);
+}
+
+// 列表行双击击事件
+Func.gridOnRowDoubleClick = (param: any) => {
+  console.info('列表行双击击事件', param);
+}
+
+// 配置项：列表首选项改变时回调，即选择Chexcbox、Radion回调
+Func.rowSelection = (param: any) => {
+  console.info('列表首选项改变时回调', param);
+  const { refUnit } = param;
+  // 设置按钮屏蔽
+  const btnFunc: any = refUnit.current!.handleCustomerToobarBtn();
+  btnFunc.setBtnDisabled('cs2', false);
+  btnFunc.setBtnDisabled('cs1', true);
+}
+
+// 列表自定义渲染
+Func.columnsRender = {
+  // 银行账号
+  renderExampleYhzh: (param: any) => {
+    return myUtil.grid.formatBankNo(param);
+  },
+  // 报关单号
+  renderCkbgdh: (param: any) => {
+    const sybz = param?.record.sybz; // N=未使用; Y=已使用
+    const czbz1 = param?.record.czbz1; // N=不存在; Y=存在
+    const ckbgdh = param?.record.ckbgdh;
+    const fileIcon = (
+      <span
+        key='ckbgdh_ele_span'
+        style={{ marginLeft: '5px', cursor: 'pointer' }}
+        onClick={(event: any) => {
+          event.stopPropagation();
+        }}
+      >
+        <FilePdfTwoTone />
+      </span>
+    );
+    const html = [];
+    const ckbgdhEle = (
+      <a key='ckbgdh_ele_link' type="link" onClick={(event: any) => {
+          event.stopPropagation();
+        }}
+      >
+        {ckbgdh}
+      </a>
+    );
+    html.push(sybz === 'Y' ? badgeSuccess : badgeError);
+    html.push(czbz1 === 'Y' ? badgeSuccess : badgeError);
+    html.push(ckbgdhEle);
+    html.push(fileIcon);
+    // 列表列tooltip
+    const tip = () => {
+      const info = [];
+      info.push(
+        sybz === 'Y' ? (
+          <div>使用状态：{badgeSuccess} 已使用</div>
+        ) : (
+          <div>使用状态：{badgeError} 未使用</div>
+        ),
+      );
+      info.push(
+        czbz1 === 'Y' ? <div>关单信息：{badgeSuccess} 有</div> : <div>关单信息：{badgeError} 无</div>,
+      );
+      return info;
+    };
+    return <Tooltip title={() => tip()}><Space>{html}</Space></Tooltip>;
+  },
+  // 数据检查状态
+  renderExampleXh4: (param: any) => {
+    const { text } = param;
+    return <a onClick={(event: any) => {
+      event.stopPropagation();
+      Func.openDrawer(param);
+    }}>{text}
+    </a>;
+  },
+}
+
+// 开关图标点击回调
+Func.poweroff = {
+  // 状态列
+  handleSetStatus: (param: any) => {
+    console.info('开关图标点击回调', param);
+  },
+}
+
+// 配置项：自定义工具栏
+Func.handleCostomerToobar1 = (param: any) => {
+  const { selectionRowKeys, refGrid, refUnit } = param;
+  // 获取列表数据
+  const gridData = refUnit.current?.getGridData();
+  // 获取页头筛选区域数据
+  const headerFilterValue = refGrid.current?.getHeaderFilter();
+  console.info('配置项：自定义工具栏', param, gridData, headerFilterValue);
+  if (!selectionRowKeys || selectionRowKeys.length === 0) {
+    message.info('请选择要操作的数据！');
+    return;
+  } else {
+    message.info({
+      content: `当前选中 ${selectionRowKeys.length} 条数据！`,
+      onClose: () => {
+        // testFlag, 演示用数据
+        refGrid.current?.reload({ testFlag: 111 }); // 刷新并清空SelectionRows、SelectionRowKeys
+      }
+    });
+  }
+}
+
+// 配置项：自定义工具栏
+Func.handleCostomerToobar2 = (param: any) => {
+  console.info('配置项：自定义工具栏', param);
+  const { refUnit } = param;
+  refUnit.current?.setMasker(true);
+  testReturnCode200({ id: 1 }).then((response) => {
+    const { code, desc } = response;
+    refUnit.current?.setMasker(false);
+    refUnit.current?.setSelectionRowKeys([]);  // 设置SelectionRows
+    refUnit.current?.setSelectionRows([]);     // 设置SelectionRowKeys
+    refUnit.current?.reload(); // 刷新并清空SelectionRows、SelectionRowKeys
+    if (code === '200') {
+      message.info(desc);
+    } else {
+      message.error(desc);
+    }
+  })
+}
+
+// 配置项：自定义工具栏
+Func.handleCostomerImport = (param: any) => {
+  const { refUnit } = param;
+  const otherRef = refUnit.current?.getOtherRefs();
+  if (otherRef && otherRef[1]) {
+    param.columns = [
+      { title: '姓名', dataIndex: 'name_chi' },
+      { title: '登录名', dataIndex: 'name' },
+      { title: '密码', dataIndex: 'password' },
+      { title: '权限', dataIndex: 'authority' },
+      { title: 'svn登录名', dataIndex: 'svn_name' },
+      { title: 'svn密码', dataIndex: 'svn_password' },
+      { title: 'svn权限', dataIndex: 'svn_authority' },
+    ];
+    param.templateUrl = '/import_template/user.xlsx';
+    param.tableKey = 'user';
+    otherRef[1].current?.showModal(param);
+  }
+}
+
+// 配置项：自定义操作列
+Func.handleColumns1 = (param: any, event: any) => {
+  event.stopPropagation();
+  const { target, currentTarget } = event;
+  console.info('配置项：自定义操作列', param, event, target);
+  currentTarget.disabled = true;
+  currentTarget.innerText = '测试11';
+  const antBtnLink: any = document.querySelectorAll(".ant-table-cell .ant-btn.cs12");
+  antBtnLink.forEach((item: any) => {
+    item.disabled = true;
+    item.innerText = '测试22';
+  });
+}
+
+// 配置项：自定义操作列
+Func.handleColumns2 = (param: any, event: any) => {
+  event.stopPropagation();
+  const { record, refGrid } = param;
+  console.info('配置项：自定义操作列', param, event, record);
+  message.info({
+    content: '配置项：自定义操作列2',
+    onClose: () => {
+      refGrid.current!.reload({
+        afterReload: () => {
+          const antBtnLink: any = document.querySelectorAll(".toobar-right .ant-btn");
+          if (antBtnLink?.length > 0) {
+            antBtnLink[0].disabled = true;
+            antBtnLink[0].innerText = '测试222';
+          }
+        }
+      }); // 仅刷新列表数据
+    }
+  });
+}
+
+// 配置项：自定义操作列
+Func.handleColumns3 = (param: any, event: any) => {
+  event.stopPropagation();
+  const { refUnit } = param;
+  refUnit.current?.setMasker(true);
+  testReturnCode200().then((response) => {
+    const { code, desc } = response;
+    refUnit.current?.setMasker(false);
+    if (code === '200') {
+      message.info(desc);
+      // 设置按钮屏蔽
+      const btnFunc: any = refUnit.current!.handleCustomerToobarBtn();
+      btnFunc.setBtnDisabled('cs1', true);
+    } else {
+      message.error(desc);
+    }
+  })
+}
+
+// 配置项：自定义操作列是否可用
+Func.setCs3Disabled = (record: any) => {
+  if (record.jgfsDm === '0139' || record.jgfsDm === '0110' || record.jgfsDm === '0160') {
+    return true;
+  }
+  return false;
+}
+
+// 配置项：自定义列表标题区域
+Func.setGridTitle = (param: any) => {
+  console.info('配置项：自定义列表标题区域', param);
+  const options = ['选择A', '选择B', '跳转C']
+  const ele = <Segmented options={options} onChange={(value: any) => {
+    if (value === '跳转C') {
+      history.push('/example/json_page/unit2');
+    }
+  }}/>
+  return ele;
+}
+
+// 开启自定义Drawer
+Func.openDrawer = (param: any) => {
+  console.info('开启自定义Drawer', param);
+  const { otherRef } = param;
+  // const otherRef = param.refUnit.current?.getOtherRefs();
+  if (otherRef && otherRef[0]) {
+    otherRef[0].current?.showModal(param);
+  }
+};
+
+export default Func;
+```
+
+## drawer\_list\_config.tsx
+
+```ts title="drawer_list_config.tsx"
+/**
+ * title: 数据封装页面
+ * author: zn
+ */
+const unitConfig: any = {};
+
+// 配置项
+unitConfig.unit_key = 'EXAMPLE_DATA_PAGE_1';                                          // 业务单元key，对应后端接口
+unitConfig.show_toolbar = true;                                                       // 是否开启工具栏，默认true开启
+unitConfig.layout_type = 'modal';                                                     // 页面类型，默认default 可选 default modal tabs
+// unitConfig.grid_sticky_affix = 51;                                                    // 列表锁定高度， 默认页头高度94
+// unitConfig.toobar_affix = 44;                                                       // 工具条锁定高度， 默认页头高度44
+
+// 配置项：列表列
+unitConfig.grid_columns = [
+  { title: '出口日期', dataIndex: 'ckrq1', width: 120, sorter: true, render: { type: 'date', format: 'yyyy-MM-DD' }},
+  { title: '出口合同号', dataIndex: 'ckhth', width: 115 },
+  { title: '成交方式', dataIndex: 'hgcjfsmc', width: 85 },
+  { title: '成交单位', dataIndex: 'hgjldwmc', width: 90, ellipsis: true },
+  { title: '成交数量', dataIndex: 'cjsl1', width: 140, align: 'right', render: { type: 'number', format: '0,0.0000' } },
+  { title: '成交币制', dataIndex: 'cjhghbzmDm', width: 85 },
+  { title: '成交金额', dataIndex: 'cjzj', width: 140, align: 'right', render: { type: 'number', format: '0,0.00' } },
+  { title: '美元离岸价', dataIndex: 'mylaj', width: 140, align: 'right', render: { type: 'number', format: '0,0.00' } },
+  { title: '法定单位', dataIndex: 'dyjldwDm', width: 90, codeTable: 'code_dm_ckts_hgjldw', ellipsis: true },
+];
+
+// 配置项：筛选_普通筛选 页面最上方 第一层筛选
+unitConfig.filter_items = [
+  { name: 'zmlx', label: '征免类型', type: 'Select', codeTable: 'code_static_bgd_zmlx_dm' },
+  { name: 'ckhth', label: '出口合同号', type: 'Input', },
+  { name: 'ckrq1', label: '出口日期', type: 'DatePicker' },
+  { name: 'jgfsDm', label: '监管方式', type: 'Input' },
+];
+
+// 配置项：筛选_快捷筛选 列表上方，标题和区域 第二层筛选
+unitConfig.grid_filter_quick = [
+  { label: '是否结关', name: 'sfjg', type: 'Select', list: [
+    { label: '全部', value: 'qb' },
+    { label: '已结', value: 'yjg' },
+  ]},
+];
+
+// 配置项：工具栏
+unitConfig.toolbar_default = {
+  delete: true,                    // 是否显示删除按钮，默认关闭
+  setting: true,                    // 是否显示设置按钮，默认关闭
+  full: true,                       // 是否显示全屏按钮，默认关闭
+  download: true,                   // 是否显示导出按钮，默认关闭
+  upload: true,                     // 是否显示导入按钮，默认关闭
+  reload: true,                     // 是否显示刷新按钮，默认关闭
+};
+
+export default unitConfig;
+```
+
+## drawer\_list.tsx
+
+```ts title="drawer_list.tsx"
+import React, { useImperativeHandle, useState } from 'react';
+import DDBunit2 from '@/components/DDBunit/DDBunit2';
+import CONSTANTS from '@/components/DDAssist/constants';
+import { Drawer, Button, message } from 'antd';
+import drawer_list_config from './drawer_list_config';
+import Func from './drawer_list_fun';
+
+export interface BdjgProps {
+  onRef?: any;
+}
+
+const DrawerList: React.FC<BdjgProps> = ({
+  onRef,
+}) => {
+  const [modalVisible, setModalVisible] = useState<boolean>(false);
+  const [myConfig, setMyconfig] = useState<any>(drawer_list_config);
+  const [refGrid, setRefGrid] = useState<any>();
+
+  // 开启
+  const showModal = (param: any) => {
+    const c = { ...myConfig };
+    c.grid_title = `报关单号：${param.record.ckbgdh}`;
+
+    const gridParams: any = {
+      initSearchModal: [
+        { property: 'aaa', value: '11', op: 'al' },
+        { property: 'bbb', value: '22', op: 'al' },
+        { property: 'gdh', value: param.record.ckbgdh, op: 'al' },
+      ],
+    }
+    c.gridParams = gridParams;
+
+    setMyconfig(c);
+    setModalVisible(true);
+    setRefGrid(param.refGrid);
+
+  };
+
+  // 测试
+  const test = () => {
+    message.info('测试');
+    refGrid.current!.reload(); // 仅刷新列表数据
+  }
+
+  useImperativeHandle(onRef, () => {
+    return {
+      showModal,
+    };
+  });
+
+  return (
+    <Drawer
+      title="DrawerList"
+      open={modalVisible}
+      onClose={() => {setModalVisible(false)}}
+      width={CONSTANTS.C_MODAL_WIDTH_X3}
+      destroyOnClose={true}
+      className="dd_modal_bg"
+    >
+      <DDBunit2 config={myConfig} func={Func} />
+      <Button onClick={() => {test()}}>测试</Button>
+    </Drawer>
+  );
+};
+
+export default DrawerList;
+
+```
+
+## drawer\_list\_fun.tsx
+
+```ts title="drawer_list_fun.tsx"
+import React from 'react';
+
+const Func: any = {
+  refUnit: React.createRef(),
+};
+
+export default Func;
+```
+
+
+
+---
+url: /rspress-sdp-n/component/unit_tree/api_event.md
+---
+
+import { Badge } from '@theme';
+
+# 事件 & API
+
+文档完善中...
+
+## API
+
+文档完善中...
+
+
+
+---
+url: /rspress-sdp-n/component/unit_tree/eg_code.md
+---
+
+# 代码演示
+
+文档完善中...
+
+
+
+---
+url: /rspress-sdp-n/component/util.md
+---
+
+## localStore
+
+### setItem
+
+设置键值key的localStore数据
+
+### getItem
+
+根据键值key从localStore里获取数据
+
+### getStorage
+
+从localStore里获取全部数据
+
+### clear
+
+根据键值key删除localStore里的数据
+
+## sessionStore
+
+### setItem
+
+设置键值key的sessionStore数据
+
+### getItem
+
+根据键值key从sessionStore里获取数据
+
+### getStorage
+
+从sessionStore里获取全部数据
+
+### clear
+
+根据键值key删除sessionStore里的数据
+
+### clearAll
+
+删除sessionStore里的所有数据
+
+## 文字处理
+
+### formatNum
+
+基于Numeral.js 处理数字
+
+### getNumVal
+
+基于Numeral.js 获取数值
+
+### leadingZeroize
+
+补0并截取字符
+
+### toUpper
+
+字符转大写
+
+### toLower
+
+字符转小写
+
+### arrayToStr
+
+数组转字符串
+
+### uuid
+
+生成uuid
+
+### formatRepalce
+
+字符窜占位符替换
+
+## 日期处理
+
+### formatDate
+
+将日期格式化成指定格式的字符串\
+获取当前月的最后一天 （精确到秒23:59:59）
+
+### accurateDate
+
+毫秒数精确到秒
+
+### compareTime
+
+判断日期是否在几个月得范围内 (YYYY-MM-DD | YYYY-MM-DD Hi:mm:ss | 时间戳)
+
+## 列表组件
+
+### formatDate
+
+格式化日期格式
+
+### formatNum
+
+格式化数值格式
+
+### formatBankNo
+
+格式化银行卡号格式
+
+### formatBankNo
+
+格式化\*符号
+
+## 码表
+
+### getHeaderFilterOption
+
+码表内容格式为页头筛选
+
+### getSelectOption
+
+码表内容格式为下拉选项
+
+### getUrlCodeParams
+
+码表内容,单独使用url请求,参数初始化
+
+### getCodeFromServerT1
+
+获取指定码表，服务器端
+
+### saveCodeToLocalTable
+
+保存码表值本地存贮
+
+### getCode
+
+获取指定码表
+
+### getCodeValByKey
+
+根据key获取指定码表的指定值，如果码表中无标准 code、name， 则采用match进行匹配
+
+### getCodeValByKey2
+
+根据key及获取指定码表的指定值
+
+### getCodeTableParam
+
+根据key及获取指定码表的指定值
+
+### getCodeTableParamFromJson
+
+获取表单参数
+
+### getCodeTablePromise
+
+获取表单promise
+
+## 文件
+
+
+
+---
+url: /rspress-sdp-n/ui/index.md
+---
+
+
+
+
+
+---
+url: /rspress-sdp-n/ui/sdp.md
+---
+
+# 敏捷开发平台
+
+## m1 - 列表
+
+![](/ui/1.png)
+
+## m1 - 表单
+
+![](/ui/2.png)
+
+## m1 - 详情
+
+![](/ui/5.png)
+
+## m1 - 高级筛选
+
+![](/ui/6.png)
+
+## m1 - 视图设置
+
+![](/ui/7.png)
+
+## m1 - 图表统计
+
+![](/excel_intro/module_intro_40.png)
+
+## m1 - 维度表统计 - 设置
+
+![](/ui/3.png)
+
+## m1 - 维度表统计 - 结果查询
+
+![](/ui/4.png)
+
+## m2
+
+![](/ui/12.png)
+
+## m3
+
+![](/ui/11.png)
+
+## m4
+
+![](/ui/10.png)
+
+## m5
+
+![](/ui/8.png)
+
+## m6
+
+![](/ui/1.png)
+
+## 主题
+
+![](/ui/19.png)
+
+![](/ui/20.png)
+
+![](/ui/17.png)
+
+![](/ui/15.png)
+
+![](/ui/16.png)
+
+![](/ui/18.png)
+
+## 文档生成管理
+
+![](/ui/21.png)
+
+## 皮肤设置
+
+![](/ui/22.png)
+
+## AI生成主题
+
+![](/ui/23.png)
+
+## AI模块生成
+
+![](/ui/24.png)
+
+## 主题设置
+
+![](/ui/25.png)
+
+
+
+---
+url: /rspress-sdp-n/ui/hts.md
+---
+
+# 开发文档
+
+## 基础组件
+
+### 布局
+
+![image](/img/hts_layout_MarkMan.png)
+
+### 文字
+
+#### 开发说明
+
+1. 默认字号均为14px。
+2. 颜色#32363a。
+3. 字体：-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"。
+
+### 色彩
+
+#### 标准色
+
+![image](/img/hts_color3_MarkMan.png)
+![image](/img/hts_color5_MarkMan.png)
+![image](/img/hts_color1_MarkMan.png)
+![image](/img/hts_color2_MarkMan.png)
+
+* \#32363A：默认文本颜色。
+* \#999999：录入框边框、placeholder、Checkbox、Radio、弹窗关闭图标文本色。
+* \#BBBBBB：普通按钮边框、只读属性文本颜色。
+* \#CFCFCF：屏蔽按钮或链接文本色。
+* \#DBDBDB：列表边线色。
+* \#E6E6E6：屏蔽按钮边框色。
+* \#EDEDED：列表列头背景色。
+* \#F5F5F5：列表划过背景色、屏蔽状态录入框背景色。
+* \#F8F8F8：屏蔽按钮背景色。
+* \#0A6ED1：主按钮背景色、链接文本色、录入框图标色、Radio及Checkbox选中、Tab标签选中色。
+* \#085CAF：主按钮hover背景、链接按钮文本色、链接按钮hover边框色、链钮hover文本色、图标按钮文本色。
+* \#E6F0FA：列表选中背景色。
+* \#52C41A：成功类圆点图标背景色。
+* \#FF4D4F：失败类圆点图标背景色。
+* \#FAAD14：警告类圆点图标背景色、表单必录项目标识文本色。
+
+#### 辅助色
+
+![image](/img/hts_color4_MarkMan.png)
+
+* \#EAEAEA：业务区域背景色、弹窗页头页脚边线色。
+* \#F7F7F7：基础页面列表区域背景色。
+* \#F1F4F7：表单标题区域背景色。
+* \#FA6E00：区域间需显著区别的分割线。
+
+### 按钮
+
+##### Normal
+
+![image](/img/hts_btn_normal_MarkMan.png)
+
+##### Hover
+
+![image](/img/hts_btn_hover_MarkMan.png)
+
+##### Disable
+
+![image](/img/hts_btn_disable_MarkMan.png)
+
+##### 其他
+
+![image](/img/hts_btn_toolbar_right_MarkMan.png)
+
+### 链接
+
+![image](/img/hts_link_MarkMan.png)
+
+### 编辑组件
+
+![image](/img/hts_input_MarkMan.png)
+
+### 列表
+
+![image](/img/hts_table_MarkMan.png)
+
+#### 开发说明
+
+1. 对齐方式：数字居右，操作列（含开关）居中，其他居左。特例：‘’数字/数字‘’格式居右。
+2. 数字：千分位展示，金额2位小数，汇率5位、税率2位小数、数量4位。
+3. 列宽：固定字数或可以确定字数的列（如码表、日期）按照其最多字数设置。
+4. 列宽：除特殊要求，显示内容不允许折行，超出设定单元格或表格x轴宽度，显示省略符。
+5. 列宽：能够确定字数的列，需要显示完整，内容不要折行。
+6. 列宽：测试1280分辨率，列不能折行。
+7. 列宽：如果数据列较少，至少有一列列宽宽度是自适应，即不设置宽度，防止列宽等比放大。
+8. 列表中单位，写到工具栏左侧，标题所在区域。
+9. Mock数据完整，且真实数据，不要出现111、222、aaa、bbb。
+10. 关于表头折行，原则上表头不允许折行，如果表头过长，字数超过10个字，可考虑适当位置换行，换行除需考虑语义与断句。
+
+#### 常见列表字段列宽
+
+* **格式：0,0.00**
+  列宽：140px
+  示例：同比占比、单价、金额、总价、保费、退税到账额、退税额、计税金额、美元离岸价、成交总价、人民币离岸价、成交金额、运费金额、保费金额、杂费金额、申报价格、收款金额(本币)、收款金额(原币)、征税率、退税率
+* **格式：0,0.0000**
+  列宽：140px
+  示例：数量、申报数量、法定数量、第二数量、剩余数量、出口数量、成交数量、法定单位数量、第二单位数、成交剩余数量
+* **格式：0,0.00000**
+  列宽：100px
+  示例：汇率、征税率、退税率
+* **格式：0,0**
+  列宽：100px
+  示例：条数
+* **格式：yyyy-MM-DD**
+  列宽：120px
+* **格式：yyyy-MM-DD hh:mm**
+  列宽：140px
+* **格式：yyyy-MM-DD hh:mm:ss**
+  列宽：150px
+* **格式：名称类**
+  列宽：180px
+  示例：海关商品名称、商品名称、生产销售单位名称、企业商品名称、备注、供应商名称、对方账户名称、银行名称、银行分行、用途、纳税人名称、对方开户行名
+
+### 分页符
+
+![image](/img/hts_pagination_MarkMan.png)
+
+### Tab标签页
+
+![image](/img/hts_tab_MarkMan.png)
+
+### 弹窗
+
+![image](/img/hts_modal_MarkMan.png)
+
+#### 开发说明
+
+1. 弹窗可选宽度：480px|720px|960px|1200px|max
+2. 弹窗高度根据内容进行设置，但不得高于浏览器高度。
+
+### 蒙版
+
+![image](/img/hts_masker_MarkMan.png)
+
+### 消息提示
+
+![image](/img/hts_alert_MarkMan.png)
+
+#### 开发说明
+
+1. 前端的提升统一用info类型， 蓝色图标。
+2. 后端返回成功success类型，绿色图标。
+3. 后端返回异常，error类型，红色图标。
+4. 后端返回提示信息，info类型， 蓝色图标。
+5. 暂不使用warning类型的展示。
+
+### 加载中
+
+![image](/img/hts_loading0_MarkMan.png)
+![image](/img/hts_loading1.png)
+![image](/img/hts_loading2.png)
+![image](/img/hts_loading3.png)
+
+#### 开发说明
+
+1. 根据业务需求添加蒙版。
+
+### 滚动条
+
+##### 默认样式
+
+![image](/img/hts_scrollbar1_MarkMan.png)
+
+##### 鼠标划过样式
+
+![image](/img/hts_scrollbar2_MarkMan.png)
+
+#### 开发说明
+
+1. 左侧菜单栏滚动条样式与其他滚动条不一致。
+
+## 封装组件
+
+### 筛选区
+
+![image](/img/hts_filter_MarkMan.png)
+
+#### 开发说明
+
+1. 两个及以下筛选条件的，放到工具栏所在行。
+2. 列头筛选，如果只有两种状态，则用radio类型，且增加全部；两种以上状态，且10个以内，采用Checkbox；其他或特殊码表筛选，按需求说明开发。
+3. 列排序、列筛选：严格按照需求文档，如果和上述规范冲突，及时与需求协商调整。
+4. 列表上方的快捷筛选，在最后一个查询录入框中保留查询按钮。
+5. 栅格布局说明：
+   1200px以上分辨率时，默认显示3列布局。
+   992px至1200间分辨率时，显示2列布局。
+   小于992px分辨率时，显示1列布局。
+
+### 工具栏
+
+![image](/img/hts_toolbar_MarkMan.png)
+
+#### 开发说明
+
+1. 右侧除图标按钮外的其他按钮数量如果小于5个，则依次将设置下的通用按钮（导入、导出、刷新、全屏）移到外侧，直到外侧按钮数量为5个。
+
+### 普通表单
+
+![image](/img/hts_form_MarkMan.png)
+
+#### 开发说明
+
+1. 栅格布局说明：
+   1200px以上分辨率时，默认显示3列布局。
+   992px至1200间分辨率时，显示2列布局。
+   小于992px分辨率时，显示1列布局。
+
+### 工作台/主页
+
+![image](/img/hts_workspace_MarkMan.png)
+
+#### 开发说明
+
+1. 工作台尺寸：无左侧菜单时，最大宽度1300px。
+
+## 通用页面布局
+
+### 设置
+
+![image](/img/hts_table_setting.png)
+
+### 导入
+
+![image](/img/hts_import.png)
+
+
+
+---
+url: /rspress-sdp-n/ui/ckts.md
+---
+
+# 出口退税
+
+## 主页
+
+![](/img/ckts_list_MarkMan.png)
+
+## 表单页
+
+![](/img/ckts_form_MarkMan.png)
+
+
+
+---
+url: /rspress-sdp-n/backend/index.md
+---
+
+# 后端总览
+
+SDP 后端是一个独立的 **Egg.js** 工程仓库，为前端 SDP 提供接口、数据存储、权限与运行日志。它不是前端项目的子模块，而是另一个仓库（下文简称"后端工程"），通过 HTTP 接口与前端协作。
+
+> 如果你只关心"怎么把前端跑起来"，看 [快速开始](/rspress-sdp-n/sdp/env_init.md) 就够了 —— 本页是给**需要理解、改动、扩展后端**的人看的。
+
+***
+
+## 1. 这是什么 & 给谁看
+
+**一句话：** 它是 SDP 平台所有 CRUD、Excel 导入导出、登录鉴权、日志分析背后的**那个 Node 服务**。
+
+**适合看：**
+
+* 需要给 SDP 加自定义接口 / 自定义 SQL 的后端开发者
+* 需要接入或排查 JWT、用户角色、菜单权限的人
+* 需要看 API 日志、应用日志统计的人（平台自带分析模块）
+* 排查"前端报 401 / 500 / 接口 404"等问题的前端工程师
+
+**不适合看：**
+
+* 只做 Excel 配模块、不写代码的"业务配置人员"——他们不需要碰后端
+* 想要"全栈一键搞定"的人——SDP 的核心价值在前端 + Excel，后端是底层支撑
+
+***
+
+## 2. 技术栈
+
+| 项 | 选型 | 备注 |
+| --- | --- | --- |
+| **框架** | Egg.js 3.x（基于 Koa） | 约定式目录，内置插件机制 |
+| **语言** | JavaScript（Node.js ≥ 18.0.0） | 非 TypeScript，无 tsconfig |
+| **数据访问** | `egg-mysql` 直连 SQL | 无 ORM 层，Service 直接拼 SQL，约定优于配置 |
+| **数据库** | MySQL（库名见 `config/config.default.js`） | 默认账号 / 密码 / host 见后端工程配置文件，**勿硬编码到文档或 git** |
+| **认证** | `egg-jwt`，Token 通过 `AccessToken` 头传递 | **不是** 标准的 `Authorization: Bearer` |
+| **跨域** | `egg-cors`，默认 `origin: '*'` | 生产环境按需收紧 |
+| **参数校验** | `egg-validate` + `app/contract/` | 配合 Swagger 自动生成 schema |
+| **API 文档** | `egg-swagger-doc` | 从 controller JSDoc 自动生成，**无需手写 swagger.json** |
+| **Excel** | `exceljs` | 流式导入/导出，单文件上限 100mb |
+| **包管理** | yarn 1.22.22（亦支持 npm/pnpm） | 见 `package.json#packageManager` |
+
+***
+
+## 3. 一图看能力
+
+后端能力分两层：**Controller 负责路由，Service 负责业务**。所有"由 Excel 自动生成的模块"都走 **baseService** 这一个万能 Service。
+
+### 3.1 Controller（8 个）
+
+| 文件 | 路由前缀 | 职责 |
+| --- | --- | --- |
+| `home.js` | `/` | 默认首页 |
+| `example.js` | `/example/*` | 示例 CRUD（test01/02/03） |
+| `common.js` | `/ns/base/*` | 通用 CRUD + Excel 导入导出 |
+| `db.js` | `/ns/db/*` | 建表 / 删表 / 初始化数据 |
+| `sdp.js` | `/dict/automatic/exp/*` | **敏捷开发核心**：pageDef / baseList2 / baseEdit / baseShow / baseDelete |
+| `authority.js` | `/dict/security/*` `/ns/base/authority/*` | 登录、Token、用户角色、菜单权限 |
+| `apiAnalysis.js` | `/api/analysis/*` | API 日志 8 维统计 |
+| `appLog.js` | `/api/appLog/*` | 应用日志 8 维统计 |
+
+### 3.2 Service（5 个）
+
+| 文件 | 职责 |
+| --- | --- |
+| `baseService.js`（≈ 1700 行） | **万能 CRUD / Excel / 建表 / 初始化 / 角色权限** —— 平台所有自动生成模块都走它 |
+| `example.js` | 示例模块业务 |
+| `apiAnalysis.js` | 对应 `apiAnalysis` 控制器，读 `sys_api_log` |
+| `appLog.js` | 对应 `appLog` 控制器，读 `sys_app_log` |
+| `ddit/user.js` | 登录态、用户信息 |
+
+> **关键认知：** 新增一个业务模块，**通常不需要新增 Service**——只要在 Excel 里把表/字段/模块/菜单配齐，`baseService` 就够用了。只在 Excel 表达不了（自定义 SQL、复杂权限、外部对接）时才写自己的 Service。
+
+***
+
+## 4. 怎么跑起来
+
+```bash title="后端工程根目录"
+npm i          # 或 yarn / pnpm install
+npm run dev    # 端口 7001
+```
+
+启动后：
+
+1. 浏览器打开 <http://localhost:7001/swagger-ui.html> —— 应能看到所有接口
+2. 默认管理员账号见后端工程配置或初始化脚本，**勿提交明文到 git**
+3. 前端 SDP 在另一仓库跑起来后，把 `API_URL_BASE_NODE` 指到 `http://localhost:7001` 即可联通
+
+**生产环境** 用 `npm start`（守护进程）/ `npm stop` 启停。
+
+> ⚠️ **端口说明：** 后端默认 **7001**；前端 [env\_init.mdx](/rspress-sdp-n/sdp/env_init.md) 默认配的 `API_URL_BASE_NODE=http://localhost:8080` 是个**占位/历史值**，并不是后端真实端口。前后端联通前，请按 [Q\&A · 改变后端接口地址](/rspress-sdp-n/sdp/qa.md#改变后端接口地址) 把前端配置指到 `http://localhost:7001`（或通过反代统一为 8080）。
+
+***
+
+## 5. 关键约定
+
+### 5.1 URL 风格
+
+* **所有新接口统一用 POST**（GET 仅保留示例）
+* 路径以业务域分桶：`/ns/*` = node server 通用，`/dict/*` = 字典/业务，`/api/*` = 平台能力
+
+### 5.2 响应格式
+
+```json
+{ "code": "200", "msg": "ok", "body": { /* 数据 */ } }
+```
+
+非 2xx 时 `code` 是业务错误码（如 `E900110`），`msg` 是可读说明。
+
+### 5.3 JWT
+
+* Token 放在请求头 **`AccessToken`**（不是 `Authorization`）
+* 登录接口：`POST /dict/security/login`
+* 鉴权白名单见 `config/config.default.js#config.authorization.ignore`
+
+### 5.4 日志
+
+* **API 日志**（`sys_api_log`）由 `writeApiLog` 中间件自动写入
+* **应用日志**（`sys_app_log`）由 `RemoteErrorTransport` 写入
+* 两者分别对应前端"统计分析"菜单下挂的 API 日志分析 / 应用日志分析两个模块
+
+***
+
+## 6. API 文档从哪里看
+
+后端**不维护手写 `API.md`**。接口文档只有一个权威源：
+
+* **Swagger UI**：`http://localhost:7001/swagger-ui.html`（后端启动后访问）
+* 由 `egg-swagger-doc` 扫描 `app/controller/` 下的 JSDoc 注释（`@Controller`、`@Router`、`@summary`、`@request`、`@response`）自动生成
+* 改了 controller 注释后**重启服务**即可刷新
+
+需要新增接口时，在对应 controller 上写 JSDoc 注释 + 在 `app/router.js` 登记路由即可。
+
+***
+
+## 7. 下一步
+
+| 你想做的事 | 看哪里 |
+| --- | --- |
+| 跑通前后端联调 | [快速开始](/rspress-sdp-n/sdp/env_init.md) + [Q\&A · 改变后端接口地址](/rspress-sdp-n/sdp/qa.md#改变后端接口地址) |
+| 加自定义接口 / SQL | 后端工程的 `app/controller/` 与 `app/service/baseService.js` |
+| 看某张表的字段定义 | 后端工程的 MySQL 库；核心表：`sys_user / sys_role / sys_menu / app_module / app_module_field / dict / dict_field` |
+| 看 API / 应用日志统计 | 启动前端后，菜单"统计分析"下挂的两个分析模块 |
+| 排错（401 / 500） | Swagger UI 在线试 + 后端工程根目录 `logs/` 日志 |
+
+
+
+---
+url: /rspress-sdp-n/index.md
+---
+
+
+
+

@@ -1,0 +1,251 @@
+import { Badge } from '@theme';
+
+# Sheet.字段
+
+## 填写示例
+
+详见填写说明
+
+## 填写说明
+
+### 字段
+
+#### 模块分组标题、数据字典、字段名称、字段中文名、关联字段表达式、字段初始排序
+
+![](/excel_intro/module_intro_86.png)
+
+* 参数取值说明
+
+| 参数 | 可选值 | 对应api参数 | 说明 |
+| --- | --- | --- | --- |
+| 模块分组标题 | | | 表名称，格式：`模块中文名 模块英文名` |
+| 数据字典 | | | 字段所属表 |
+| 字段名称 | | grid\_columns\[].dataIndex & \*\_items\[].name | 字段名，用于列表及表单展示中的基于数据库主表的字段，格式：表名.字段名 |
+| 字段中文名 | | grid\_columns\[].title & \*\_items\[].label | 用于页面展示：列表列标题，表单项名称，筛选项名称 |
+| 关联字段表达式 | | | 用于描述表间关系，如`left join ...` |
+| 字段初始排序 | | | 如`asc,10`、`desc,20`|
+
+* 数据字典取自`表sheet页`分组中的英文表名。
+* 字段名称取自`表sheet页``字段`。
+* 关联字段表达式，用于描述表间关系，如`left join eg_mts_tssb on eg_mts_tsjh.ssq = eg_mts_tssb.ssq`、`left join eg_mts_tssb`
+* 字段初始排序：如`asc,10`、`desc,20`，标识当前字段用于列表展示时的初始排序及排序顺位。
+
+### 列表项
+
+#### 对齐方式、固定列、合并列头
+
+![](/excel_intro/module_intro_07.png)
+
+* 参数取值说明
+
+| 参数 | 默认值 | 可选值 | 对应api参数 |
+| --- | --- | --- | --- |
+| 列表项对齐方式 | `L` | `L` | `R` | `C` | grid\_columns\[].align |
+| 列表项固定列 | | `L` | `R` | grid\_columns\[].fixed |
+| 列表项合并列头 | | number | grid\_columns\[].children |
+
+#### 列宽、排序开关、超出隐藏、格式化列、开启标识、主键标识、隐藏标识、序列
+
+![](/excel_intro/module_intro_08.png)
+
+* 参数取值说明
+
+| 参数 | 默认值 | 可选值 | 对应api参数 |
+| --- | --- | --- | --- |
+| 列表项列宽 | | number |  grid\_columns\[].width |
+| 列表项排序开关 | | `1` | `mul` | grid\_columns\[].sorter |
+| 列表项超出隐藏 | | `1` | grid\_columns\[].ellipsis |
+| 列表项格式化列 | | `YYYY-MM-DD HH:mm:ss` | `0,0.00` | string (自定义方法的名称) | grid\_columns\[].render |
+| 列表项开启标识 | | `1` | - |
+| 列表项主键标识 | | `1` | - |
+| 列表项隐藏标识 | | `1` | grid\_columns\[].hidden |
+| 列表项序列 | | number | - |
+
+* 列表项开启标识，标识当前字段是否用于列表中。
+* 列表项主键标识，标识当前字段为列表主键。如果需要对当前行数据进行操作，如单选、多选、编辑当前行数据，则必须开启。
+* 列表项隐藏标识，一般用于配置列表主键时开启，开启后当前字段不显示在页面中。
+* 列表项排序开关，如填写`mul`，表示开启多列排序
+* 列表项序列，    如配置列表项序列数值，则列表列展示顺序通过配置的数值由小到大排列。
+
+##### 列表项格式化列
+
+* 日期格式示例：**YYYY-MM-DD HH:mm:ss**
+* 数值格式示例：**0,0.00**
+* 自定义格式化：**formatXXX** (自定义方法的名称)
+* 卡片格式化  <Badge text="2024-11-19" type="tip" /> \
+  卡片图片地址：`media:imagepath` \
+  卡片视频地址：`media:videopath` \
+  卡片标题：`media:title` \
+  卡片描述：`media:description` \\
+
+![](/excel_intro/module_intro_21.png)
+
+* 树格式化  <Badge text="2024-12-12" type="tip" /> \
+  树结构数据id：`tree:key` \
+  树结构数据名称：`tree:title` \
+  树结构数据父级id：`tree:parent_key`
+* 一对多关系数据  <Badge text="2025-01-06" type="tip" /> \
+  格式：`leaf:模块名&子列表显示标题字段`，如：`leaf:eg_m_staff_education&staff_name`
+* json数据弹窗展示示例：`json` <Badge text="2025-01-01" type="tip" />
+* copy图标展示及快速复制示例：`copy` <Badge text="2025-01-01" type="tip" />
+* color颜色标签渲染示例：`color` <Badge text="2025-05-29" type="tip" />
+* RichText数据弹窗展示示例：`RichText` <Badge text="2025-09-23" type="tip" />
+* Markdown数据弹窗展示示例：`MarkdownEditor` <Badge text="2025-09-23" type="tip" />
+* 一对多关系数据1  <Badge text="2025-05-29" type="tip" /> \
+  格式：`rel:关联模块名&关联模块名称字段`，如：`rel:eg_m_tag&tag_name`
+* 一对多关系数据2  <Badge text="2025-05-29" type="tip" /> \
+  格式：`rel:关联模块名&关联模块名称字段&关联表模块名`，如：`rel2:eg_m_honor&honor_name&eg_m_staff_honor_ref`
+* switch  <Badge text="2025-11-28" type="tip" /> \
+  格式：`switch:开启值,关闭值`，如：`switch:1,0`。同步调用表单的编辑接口进行数据处理。
+* timeEasyRead  <Badge text="2025-11-28" type="tip" /> \
+  格式：`timeEasyRead`。将毫秒数转为xx毫秒、xx秒或xx分。
+* timeEasyRead  <Badge text="2025-11-28" type="tip" /> \
+  格式：`tagColor`，将数据用Tag包装，需配合自定义开发，如：
+  ```ts
+  customerIconMapping.response_code_tag_color = [
+    {code: '200', color: myUtil.theme.getColor({type: 'success'})},
+    {code: 'ELSE', color: myUtil.theme.getColor({type: 'error'})},
+  ]
+  ```
+
+#### 统计
+
+![](/excel_intro/module_intro_13.png)
+
+* 参数取值说明
+
+| 参数 | 默认值 | 可选值 | 对应api参数 |
+| --- | --- | --- | --- |
+| 列表项统计 | | `1` | `min` | `max` | `avg` | `sum` | grid\_columns\[].min2/max2/avg2/sum2 |
+
+* 列表项统计，用于对数值字段的统计，按需配置最大、最小、合计、平均，如填写1，则表示统计全部4项信息。
+
+### 筛选项
+
+#### 类型、类型扩展参数、名称、位置、占位符
+
+![](/excel_intro/module_intro_09.png)
+
+#### 序列、布局
+
+![](/excel_intro/module_intro_10.png)
+
+* 筛选项序列，如配置筛选项序列数值，则筛选列展示顺序通过配置的数值由小到大排列。
+
+* 参数取值说明
+
+| 参数 | 默认值 | 可选值 | 对应api参数 |
+| --- | --- | --- | --- |
+| 筛选项类型 | | `input` | `select` | `date` | `radio` | `checkbox` | `treeSelect` <Badge text="2025-05-29" type="tip" /> | filter\_items\[].type |
+| 筛选项类型扩展参数 | | `range` | string (码表key) | filter\_items\[].range & filter\_items\[].codeTable & filter\_items\[].treeTable |
+| 筛选项序列 | | number | - |
+| 筛选项名称 | | string | filter\_items\[].label |
+| 筛选项位置 | | `工具栏` | `列表头` | grid\_columns\[].filter & filter\_items & grid\_filter\_quick |
+| 筛选项占位符 | | string | filter\_items\[].placeholder |
+| 筛选项布局 | | `100` | `66` | filter\_items\[].layout |
+
+* 筛选项位置，如配置为`列表头`，则需要同步配置`筛选项类型`为`Radio`(单选radio形式）或`Select`(多选select形式）,同时配置`筛选项类型扩展参数`，增加对应码表。
+
+<Badge text="2024-10-17" type="tip" />
+
+### 表单项
+
+#### 表单项开启、类型、格式化、只读、类型扩展参数、布局、事件失去焦点、事件得到焦点、事件值改变、事件查询、验证、序列
+
+![](/excel_intro/module_intro_11.png)
+
+* 参数取值说明
+
+| 参数 | 默认值 | 可选值 | 对应api参数 |
+| --- | --- | --- | --- |
+| 表单项开启 | | `1` | - |
+| 表单项类型 | | [参数2.表单项类型](/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.md#参数2表单项类型) | form\_items\[].type |
+| 表单项格式化 | | [参数3.表单项格式化](/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.md#参数3表单项格式化) | form\_items\[].format |
+| 表单项只读 | | `1` | form\_items\[].readOnly |
+| 表单项类型扩展参数 | | `range` | string (码表key) | form\_items\[].range & form\_items\[].codeTable & form\_items\[].maxCount & filter\_items\[].treeTable |
+| 表单项布局 | | `100` | `66` | form\_items\[].layout |
+| 表单项事件失去焦点 | | string (自定义方法的名称) | form\_items\[].eventOnBlur |
+| 表单项事件得到焦点 | | string (自定义方法的名称) | form\_items\[].eventOnFocus |
+| 表单项事件值改变 | | string (自定义方法的名称) | form\_items\[].eventOnChange |
+| 表单项事件查询 <Badge text="2024-11-19" type="tip" /> | | string (自定义方法的名称) | form\_items\[].eventOnChange |
+| 表单项验证 | | [参数10.表单项验证](/rspress-sdp-n/sdp/build_by_excel/3-sheet_dict.md#参数10表单项验证) | form\_items\[].rules |
+| 表单项序列 | | number | - |
+
+* 表单项开启，标识当前字段是否用于表单中。
+* 表单项事件失去焦点，表单项onblur事件，仅表示方法名称，后续需要自行开发对应方法。
+* 表单项事件得到焦点，表单项onfocus事件，仅表示方法名称，后续需要自行开发对应方法。
+* 表单项事件值改变，表单项onchange事件，仅表示方法名称，后续需要自行开发对应方法。
+* 表单项事件查询，表单项onsearch事件，仅表示方法名称，后续需要自行开发对应方法。<Badge text="2024-11-19" type="tip" />
+* 表单项序列，如配置表单项序列数值，则表单项展示顺序通过配置的数值由小到大排列。
+
+##### 表单项类型
+
+* Input
+* InputNumber
+* Select
+* DatePicker
+* Radio
+* Checkbox
+* TextArea
+* GroupTitle
+* TreeSelect <Badge text="2025-05-29" type="tip" />
+* Upload
+* UploadVideo
+* UploadAudio
+* UploadPicture
+* RichTextEditor
+* Cascader <Badge text="2025-09-23" type="tip" />
+* MarkdownEditor <Badge text="2025-09-23" type="tip" />
+* MediaLibrary <Badge text="2024-11-19" type="tip" /> \
+  当配置`MediaLibrary`类型时，点击表单项中放大镜，弹出如下媒体选择窗体。
+
+![](/excel_intro/module_intro_22.png)
+
+##### 表单项格式化
+
+* 日期格式 **YYYY-MM-DD HH:mm:ss**
+* 数值格式 **0,0.00**
+* 自定义方法，string类型，后续需要自行开发对应方法
+
+##### 表单项类型扩展参数
+
+* `maxCount`：Upload、UploadVideo、UploadAudio、UploadPicture类型时，可配置如：`maxCount=3`，标识最大上传数量为3
+* `multiple`：Select类型时，可配置，标识多选类型
+* `showTime` <Badge text="2024-11-19" type="tip" />：日历组件中展示时间，通常需要与表单项格式化同步使用，如设置`YYYY-MM-DD HH:mm:ss`
+* `formula`<Badge text="2024-11-26" type="tip" />: 当前项目公式，如填写：`formula:{flp1}+{flp2}`。表示当前表单项目取值来自flp1、flp2字段之和。表单中用到项目需要`大括号`包裹
+
+##### 表单项验证
+
+* [必录](/rspress-sdp-n/component/baseform/api_event.md#基础校验)
+* [数字](/rspress-sdp-n/component/baseform/api_event.md#基础校验)
+* [数字字母](/rspress-sdp-n/component/baseform/api_event.md#基础校验)
+* [电话](/rspress-sdp-n/component/baseform/api_event.md#基础校验)
+* [邮件](/rspress-sdp-n/component/baseform/api_event.md#基础校验)
+* [身份证](/rspress-sdp-n/component/baseform/api_event.md#基础校验)
+* [中文](/rspress-sdp-n/component/baseform/api_event.md#基础校验)
+* [日期](/rspress-sdp-n/component/baseform/api_event.md#基础校验)
+* [数值范围+](/rspress-sdp-n/component/baseform/api_event.md#数值校验)
+* [数值范围-](/rspress-sdp-n/component/baseform/api_event.md#数值校验)
+* [数值范围+-](/rspress-sdp-n/component/baseform/api_event.md#数值校验)
+* [数值范围+0](/rspress-sdp-n/component/baseform/api_event.md#数值校验)
+* [数值范围-0](/rspress-sdp-n/component/baseform/api_event.md#数值校验)
+* [NUMBER(15,5)](/rspress-sdp-n/component/baseform/api_event.md#数值范围)
+* [VARCHAR2(6)](/rspress-sdp-n/component/baseform/api_event.md#字符校验)
+* [长度范围2~10](/rspress-sdp-n/component/baseform/api_event.md#字符校验)
+* [长度=21](/rspress-sdp-n/component/baseform/api_event.md#字符校验)
+* yyyy-MM-dd
+* yyyyMM
+* \[string (自定义方法的名称)]
+
+### 其他
+
+#### 扩展信息
+
+* 参数取值说明
+
+| 参数 | 默认值 | 可选值 | 对应api参数 |
+| --- | --- | --- | --- |
+| 扩展信息 | - | - | - |
+
+* 扩展信息，当前可用于配置列表列头、筛选、表单采集时的tooltip。
+  如：`tooltipForm:表单提示&&&tooltipGrid:列表提示&&&tooltipFilter:筛选提示`

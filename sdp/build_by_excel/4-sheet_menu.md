@@ -1,0 +1,57 @@
+import { Badge } from '@theme';
+
+# Sheet.菜单
+
+## 填写示例
+
+![](/excel_intro/module_intro_16.png)
+
+![](/excel_intro/module_intro_17.png)
+
+![](/excel_intro/module_intro_18.png)
+
+## 填写说明
+
+* 参数取值说明
+
+| 参数 | 可选值 | 说明 |
+| --- | --- | --- |
+| 菜单id | | |
+| 父级菜单id | | |
+| [前端资源代码](/rspress-sdp-n/sdp/build_by_excel/4-sheet_menu.md#参数3前端资源代码) <Badge text="2024-11-26" type="tip" /> | | |
+| 菜单名称 | | |
+| [菜单路径](/rspress-sdp-n/sdp/build_by_excel/4-sheet_menu.md#菜单路径--组件) | | 浏览器展现路径 |
+| 高亮节点路径 | | 打开隐藏菜单页面时，菜单所处的高亮节点 |
+| 菜单图标 | | |
+| 隐藏 | `0` | `1` | 菜单是否隐藏 |
+| 路径重定向 | | |
+| [组件](/rspress-sdp-n/sdp/build_by_excel/4-sheet_menu.md#菜单路径--组件) | | |
+| 有效标记 | `0` | `1` | |
+| 默认全屏 | `0` | `1` | 开启后，仅显示引用组件，不显示页头，菜单 |
+| 菜单类型 | `1` | `9` | 1-菜单，9-按钮 |
+| 菜单序列 | | |
+| 角色 | | 当前菜单的可用角色 |
+
+### 前端资源代码
+
+* 参照[`资源权限开发使用说明。`](/rspress-sdp-n/sdp/customer_dev.md#3-资源权限开发)
+
+### 菜单路径 & 组件
+
+* 通过配置生成的页面可以直接通过组件调用，但仅适合不需要额外开发的页面。
+  1. 数据列表页面：`./common/automatic_page`
+     * 格式：`.../cfgp/列表模块标识`
+     * 示例：`/dynamicbs1/cfgp/eg_m_mts_tsjh`
+     * 对应组件: `./common/automatic_page`
+  2. 树状结构页面：`./common/automatic_page_tree`
+     * 格式：`.../cfgp/树模块表示`
+     * 示例：`/dynamicbs1/cfgp/eg_m_tree`
+     * 对应组件: `./common/automatic_page_tree`
+  3. 树状结构数据+数据列表页面：`./common/automatic_page_tree_grid`
+     * 格式：`.../cfgp/模块表示/树模块表示/列表模块标识`
+     * 示例：`/dynamicbs1/cfgp/eg_m_org_staff/eg_m_org/eg_m_staff`
+     * 对应组件: `./common/automatic_page_tree_grid`
+* 菜单路径格式为`/a/b/c/..../cfgp/key1/key2/key3`
+* `cfgp`为模块配置页面标识，不可改变。
+* `key`作为模块标识，串联模块sheet页标识。
+* 下级节点路径与上级节点路径起始部分必须一致。如：下级路径`/aa/bb/cc`，则上级路径`/aa/bb`
