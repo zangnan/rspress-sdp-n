@@ -2,7 +2,8 @@ import * as path from 'node:path';
 import { defineConfig } from '@rspress/core';
 import readingTime from 'rspress-plugin-reading-time';
 import ghPages from 'rspress-plugin-gh-pages';
-import pdfGenerator from 'rspress-plugin-pdf-generator'
+import { pluginLlms } from '@rspress/plugin-llms';
+import pdfGenerator from 'rspress-plugin-pdf-generator';
 
 export default defineConfig({
   root: path.join(__dirname, 'docs'),
@@ -28,6 +29,13 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', mode: 'link', content: 'https://github.com/zangnan/rspress-sdp-n' },
     ],
+    llmsUI: true,
+    // 或者使用自定义选项：
+    // llmsUI: {
+    //   injectLlmsHint: false, // 禁用面向大语言模型的 HTML/Markdown directive hint
+    //   viewOptions: ['markdownLink', 'chatgpt', 'claude'],
+    //   placement: 'outline', // 在大纲面板中显示而非 H1 下方
+    // },
   },
   plugins: [
     readingTime({
@@ -38,6 +46,7 @@ export default defineConfig({
       branch: 'gh-pages',
       siteBase: '/rspress-sdp-n/',
     }),
+    pluginLlms(),
     // pdfGenerator({
     //   mode: 'multiple', // single multiple
     //   outputDir: 'pdf',

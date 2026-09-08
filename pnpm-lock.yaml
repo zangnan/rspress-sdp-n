@@ -18,6 +18,9 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0(@rspress/core@2.0.19(@rspack/core@2.1.8(@swc/helpers@0.5.23))(micromark-util-types@2.0.2)(micromark@4.0.2))
     devDependencies:
+      '@rspress/plugin-llms':
+        specifier: ^2.0.21
+        version: 2.0.21(@rspress/core@2.0.19(@rspack/core@2.1.8(@swc/helpers@0.5.23))(micromark-util-types@2.0.2)(micromark@4.0.2))
       '@types/node':
         specifier: ^22.8.1
         version: 22.20.1
@@ -195,6 +198,12 @@ packages:
     resolution: {integrity: sha512-m0KfQNNXxjP975652nIOwUTqrvbJapRp4NpnoQMc5heawGhkC4+F7zTHvxY+huvzGYnKtL2fMMTrgWhEjKkrug==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
+
+  '@rspress/plugin-llms@2.0.21':
+    resolution: {integrity: sha512-Uc+3TLqgJU43X3ryC6Aw+rzvGe2O3feYJ9eyoDYFKbcIRKezcq1nW1axiaHNXDbr3g584myslDF+gYjg7/9RHw==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    peerDependencies:
+      '@rspress/core': ^2.0.10
 
   '@rspress/shared@2.0.19':
     resolution: {integrity: sha512-INrETllWuR49lksqCz+xeLSO6rKtHA+5Ix2YQWcP9nerCuTSyGYwH8eBC0HrIacJkGHxB8wkkbV99tyzGtY8Wg==}
@@ -1446,6 +1455,17 @@ snapshots:
       - core-js
       - micromark
       - micromark-util-types
+      - supports-color
+
+  '@rspress/plugin-llms@2.0.21(@rspress/core@2.0.19(@rspack/core@2.1.8(@swc/helpers@0.5.23))(micromark-util-types@2.0.2)(micromark@4.0.2))':
+    dependencies:
+      '@rspress/core': 2.0.19(@rspack/core@2.1.8(@swc/helpers@0.5.23))(micromark-util-types@2.0.2)(micromark@4.0.2)
+      remark-mdx: 3.1.1
+      remark-parse: 11.0.0
+      remark-stringify: 11.0.0
+      unified: 11.0.5
+      unist-util-visit: 5.1.0
+    transitivePeerDependencies:
       - supports-color
 
   '@rspress/shared@2.0.19':
