@@ -23,6 +23,7 @@ export default defineConfig({
     versions: ['v0.31'],
     // versions: ['v0.1', 'v0.3'],
   },
+  // globalStyles: path.join(__dirname, 'docs/theme/custom.css'),
   themeConfig: {
     lastUpdated: true,
     footer: { message: '© 2026 zn. All Rights Reserved.', },

@@ -1,0 +1,9 @@
+/* SDP 站点品牌色覆盖:logo 橙色系 */
+:where(:root) {
+  --rp-c-brand:        #E67E22;                /* 主品牌色(与 logo 同色) */
+  --rp-c-brand-light:  #F5A65B;                /* 浅一档:用于悬停、辅元素 */
+  --rp-c-brand-lighter:#FAD7B5;                /* 最浅:用于背景 tint */
+  --rp-c-brand-dark:   #D35400;                /* 深一档:用于按钮按下、文字 */
+  --rp-c-brand-darker: #A04000;                /* 最深:用于深色模式高对比 */
+  --rp-c-brand-tint:   rgba(230, 126, 34, 0.16); /* 半透明橙:用于 hover/选中背景 */
+}
